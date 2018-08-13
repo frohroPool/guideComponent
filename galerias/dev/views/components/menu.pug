@@ -1,0 +1,43 @@
+
+section.blockContainer
+	.finder
+		.wrapper
+			.inFinder
+				input(placeholder="Buscar por palabra o SKU#", type="text")
+				span.icoFinder.icon-search
+
+	include structureConfiguration
+	.wrapper-navMenu
+		nav.menuList
+			ul
+				each v0,i0 in config.menu
+					li(id='menuOp-'+i0, class=v0.dataClass ? '' + v0.dataClass : '')
+						a(href="" + v0.src, target="" + v0.target, class=v0.active ? 'op active' : 'op') #{v0.name}
+						
+	each v0,i0 in config.menu
+		if v0.subMenu
+			div(class="wrapperSubMenu " + v0.dataClass)
+				each v1,i1 in v0.subMenu
+					dl.subMenuList
+						each v2,i2 in v1.list
+							if v2.header
+								dt(class=v2.alt ? 'adSuMenu' : '')
+									if v2.alt
+										a(href="" + v2.ref, target="" + v2.target)
+											figure
+												img(src="" + v2.src, alt=""+ v2.alt)
+												if v2.caption
+													figcaption !{v2.caption}
+									else
+										a(href="" + v2.ref, target="" + v2.target) #{v2.name}
+							else
+								dd(class=v2.alt ? 'adSuMenu' : '')
+									if v2.alt
+										a(href="" + v2.ref, target="" + v2.target)
+											figure
+												img(src="" + v2.src, alt=""+ v2.alt)
+												if v2.caption
+													figcaption !{v2.caption}
+									else
+										a(href="" + v2.ref, target="" + v2.target) #{v2.name}
+
