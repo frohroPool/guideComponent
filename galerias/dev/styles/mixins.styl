@@ -1,0 +1,164 @@
+mx-nav-horizontal(txtColor,hTxtColor,fontSize,hBackColor,decoration)
+	a
+		font-size fontSize
+		color: txtColor
+		mx-a()
+		padding fontSize
+		
+		text-align center
+		&:hover
+			text-decoration decoration
+			color: hTxtColor;
+			cursor pointer
+			background hBackColor
+	a.active
+		color: colorActive;
+	a.halloween
+		color: orange
+	a.christmas
+		color red
+		
+mx-list-horizontal(background, borderPx, borderColor, colorText, sizeFont, displayList,colorActive)
+	display displayList
+	list-style-type none
+	background background
+	padding 0
+	li
+		mx-p-hz-space()
+		text-align center
+		border borderPx solid borderColor
+		color colorText
+		font-size sizeFont
+		a
+			mx-a()
+		a.active
+			color: colorActive;
+		a.halloween
+			color: orange
+		a.christmas
+			color red
+
+mx-list-threeEntry(background, displayList, imageHeight)
+	mx-width(100%)
+	list-style-type none
+	background background
+	// border 1px solid red
+	li
+		display inline-block
+		// border 1px solid red
+		mx-width(33%)
+		mx-reduce()
+		mx-m-hz-space()
+		figure
+			mx-reduce()
+			mx-width(100%)
+			img
+				mx-width(100%)
+			figcaption
+				text-align center
+			
+			
+mx-list-simpleCarousel(background, colorText, sizeFont, displayList,imageHeight)
+	mx-reduce()
+	mx-width(100%)
+	background background
+	list-style-type none
+	li
+		display displayList
+		vertical-align top
+		mx-reduce()
+		mx-width(100%)
+		mx-height(imageHeight)
+		figure
+			position relative
+			mx-reduce()
+			mx-height(imageHeight)
+			img,figcaption
+				position absolute
+				mx-width(100%)
+			img
+				left 0
+				top 0
+				mx-height(imageHeight)
+			figcaption
+				left 0
+				top 90%
+				mx-width(99.99%)
+				text-align center
+				mx-height(10%)
+				color: colorText;
+				font-size sizeFont
+				background: colors.black;
+	.next
+		display none
+				
+			
+
+mx-finder(maxW,maxH,maxWInput,maxWIcon,backgroundColor,textColor,iconColor)
+	.wrapper
+		background: backgroundColor;
+		mx-width(maxW)
+		mx-height(maxH)
+		.inFinder, p
+			display inline-block
+			vertical-align top
+			line-height maxH
+			mx-height(maxH)
+			mx-reduce()
+		.inFinder input
+			background transparent
+			color: textColor;
+			border 0
+			text-align center
+			&::placeholder
+				color: textColor
+			mx-width(maxWInput)
+			outline 0
+				
+		p
+			mx-width(maxWIcon)
+			left maxWInput + 1px
+		p span
+			color: iconColor;
+			mx-width(100%)
+			mx-reduce()
+			&:hover
+				cursor pointer
+			
+mx-reduce()
+	margin 0
+	padding 0
+
+mx-m-hz-space()
+	margin 0 5px
+
+mx-p-hz-space()
+	padding 0 5px
+
+mx-m-vrt-space()
+	margin 5px 0
+
+mx-p-vrt-space()
+	padding 5px 0
+	
+mx-width(w)
+	width w
+	
+mx-upperCase()
+	text-transform uppercase
+	
+mx-height(h)
+	height h
+	
+mx-a()
+	text-decoration none
+	
+mx-center-img()
+	img
+		mx-center-container()
+
+mx-center-container()
+	display block
+	margin-left auto
+	margin-right auto
+	border non
