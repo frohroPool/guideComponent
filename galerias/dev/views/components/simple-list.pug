@@ -1,0 +1,11 @@
+h3(class="main-article__component--device")
+	| Desktop
+ul(class="simple-list--desktop")
+	each v0,i0 in config.lists
+		li(class='simple-list-item--desktop') #{v0.txt}
+
+h3(class="main-article__component--device")
+	| Mobile
+ul(class="simple-list--mobile")
+	each v0,i0 in config.lists
+		li(class='simple-list-item--mobile') #{v0.txt}

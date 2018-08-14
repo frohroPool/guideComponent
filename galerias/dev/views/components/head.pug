@@ -1,64 +1,72 @@
 include structureConfiguration
-header#header-container
-	#ws-header-brand-links.ws-header
-	section.cross-brand-bar
-		include brand
-	section#sub-brand-bar-container.sub-brand-bar-container.fixed-header
-		section.sub-brand-bar
-			include subBrand
-			
-	#brand-logo
-		img.logo-image(src=''+ config.logoSite, alt=''+ config.siteName)
-		.promo
-			.default
-				.parsys.contentpar
-					.section.imagerollover
-						#imagerollover-569336159
-							img(title=''+ config.siteRollover.title, alt=''+ config.siteRollover.alt, src=''+ config.siteRollover.src)
-	#nav-search-box
-		input#itIsSearchPage(type='hidden', value='false')
-		form.search_box_form(onsubmit="if(this.s.value == '')return false;", autocomplete='off', action='/tienda')
-			input#search-field.field-search.cross_site_script_val_pop(type='text', placeholder='Buscar por palabra o SKU#', name='s', autocomplete='off', maxlength='50')
-			input(type='submit', value='buscar', class='btn-search btnSearch', id="btnSearch")
-			label(for="btnSearch" class="iBtnSearch icon-search")
-			input#hiddenSearchValues(type='hidden', data-url='', data-caturl='/shop', data-path='/tienda', data-locale='es__MX', data-imageurl='http://assets.williams-sonoma.com.mx/web/images/products/es_MX')
-			#typeahead.displayNone
-				#type-main-list
-					#type-ver-todos
-	ul#nav-secondary.wsk
-	nav#topnav-container
-		input(type="checkbox" id="menu-toggle")
-		label(for="menu-toggle" class="label-toggle icon-menu")
-		ul.nav-menu
-			each v0,i0 in config.menu
-				li(id='menuOp-'+i0, class=v0.class ? 'dropDown hoverFade ' + v0.class : '')
-					a(href="" + v0.src, target="" + v0.target, class=v0.anchorClass ? '' + v0.anchorClass : 'op', onclick= v0.event ? ''+ v0.event : '') #{v0.name}
-					if v0.subMenu
-						.nav-columns.equalizeHeights.hoverFadeTarget
-							.col
-								each v1,i1 in v0.subMenu
-									.col2
-										h3 !{v1.header}
-										ul(class='' + v1.classList)
-											each v2,i2 in v1.list
-												li(class='' + v2.classItem)
-													a(href="" + v2.src, target="" + v2.target, onclick= v2.event ? ''+ v2.event : '') #{v2.name}
+section.header
+	section.projectName
+	section.breadcrums
+	section.mainMenu
 
-							.spotlight.hasDivider
-								.personalized-placement.hiding-default-content
-									a.product-image(href='' + v0.spotlight.anchorSrc)
-										img(alt='', src='' + v0.spotlight.srcImage, height='339', width='339')
-									font(size='2') Más descuentos
-									p
-										a(href='/tienda/baterías-y-sartenes/cat_307_1000')
-											| Compra Ya
-											span.arrow-right 
+
+
+
+//- header#header-container
+//- 	#ws-header-brand-links.ws-header
+//- 	section.cross-brand-bar
+//- 		include brand
+//- 	section#sub-brand-bar-container.sub-brand-bar-container.fixed-header
+//- 		section.sub-brand-bar
+//- 			include subBrand
+			
+//- 	#brand-logo
+//- 		img.logo-image(src=''+ config.logoSite, alt=''+ config.siteName)
+//- 		.promo
+//- 			.default
+//- 				.parsys.contentpar
+//- 					.section.imagerollover
+//- 						#imagerollover-569336159
+//- 							img(title=''+ config.siteRollover.title, alt=''+ config.siteRollover.alt, src=''+ config.siteRollover.src)
+//- 	#nav-search-box
+//- 		input#itIsSearchPage(type='hidden', value='false')
+//- 		form.search_box_form(onsubmit="if(this.s.value == '')return false;", autocomplete='off', action='/tienda')
+//- 			input#search-field.field-search.cross_site_script_val_pop(type='text', placeholder='Buscar por palabra o SKU#', name='s', autocomplete='off', maxlength='50')
+//- 			input(type='submit', value='buscar', class='btn-search btnSearch', id="btnSearch")
+//- 			label(for="btnSearch" class="iBtnSearch icon-search")
+//- 			input#hiddenSearchValues(type='hidden', data-url='', data-caturl='/shop', data-path='/tienda', data-locale='es__MX', data-imageurl='http://assets.williams-sonoma.com.mx/web/images/products/es_MX')
+//- 			#typeahead.displayNone
+//- 				#type-main-list
+//- 					#type-ver-todos
+//- 	ul#nav-secondary.wsk
+//- 	nav#topnav-container
+//- 		input(type="checkbox" id="menu-toggle")
+//- 		label(for="menu-toggle" class="label-toggle icon-menu")
+//- 		ul.nav-menu
+//- 			each v0,i0 in config.menu
+//- 				li(id='menuOp-'+i0, class=v0.class ? 'dropDown hoverFade ' + v0.class : '')
+//- 					a(href="" + v0.src, target="" + v0.target, class=v0.anchorClass ? '' + v0.anchorClass : 'op', onclick= v0.event ? ''+ v0.event : '') #{v0.name}
+//- 					if v0.subMenu
+//- 						.nav-columns.equalizeHeights.hoverFadeTarget
+//- 							.col
+//- 								each v1,i1 in v0.subMenu
+//- 									.col2
+//- 										h3 !{v1.header}
+//- 										ul(class='' + v1.classList)
+//- 											each v2,i2 in v1.list
+//- 												li(class='' + v2.classItem)
+//- 													a(href="" + v2.src, target="" + v2.target, onclick= v2.event ? ''+ v2.event : '') #{v2.name}
+
+//- 							.spotlight.hasDivider
+//- 								.personalized-placement.hiding-default-content
+//- 									a.product-image(href='' + v0.spotlight.anchorSrc)
+//- 										img(alt='', src='' + v0.spotlight.srcImage, height='339', width='339')
+//- 									font(size='2') Más descuentos
+//- 									p
+//- 										a(href='/tienda/baterías-y-sartenes/cat_307_1000')
+//- 											| Compra Ya
+//- 											span.arrow-right 
 	
-	.header-banner
-		#SWB-WS-placement.personalized-placement.hiding-default-content
-			.promo
-				#imagerollover793188967.section.imagerollover
-					a.overlayTrigger(href='#', data-overlay="{id: 'Overlay_885836295_1419443229', classname: '', mask: true, loadingThrobber: false, fixedScroll: true, destroyOnHide: true, preventCache: false}", data-overlaydata='{}')
-						img(title='Free shipping on all orders over $49* Use code: SHIP4FREE', alt='Free shipping on all orders over $49* Use code: SHIP4FREE', src='//assets.williams-sonoma.com.mx/assets/multisites/williamsonoma/images/001.gif')
-	.ifGiftGiver.return-to-registry-link
-		a.reg-link(href='#') < regresar al registro
+//- 	.header-banner
+//- 		#SWB-WS-placement.personalized-placement.hiding-default-content
+//- 			.promo
+//- 				#imagerollover793188967.section.imagerollover
+//- 					a.overlayTrigger(href='#', data-overlay="{id: 'Overlay_885836295_1419443229', classname: '', mask: true, loadingThrobber: false, fixedScroll: true, destroyOnHide: true, preventCache: false}", data-overlaydata='{}')
+//- 						img(title='Free shipping on all orders over $49* Use code: SHIP4FREE', alt='Free shipping on all orders over $49* Use code: SHIP4FREE', src='//assets.williams-sonoma.com.mx/assets/multisites/williamsonoma/images/001.gif')
+//- 	.ifGiftGiver.return-to-registry-link
+//- 		a.reg-link(href='#') < regresar al registro
