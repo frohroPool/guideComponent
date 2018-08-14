@@ -35,11 +35,7 @@
 </ul>
 <h2>Nombre de los sitios dentro del poryecto [site-name]</h2>
 <ul>
-	<li>pottery-barn</li>
-	<li>pottery-barn-kids</li>
-	<li>pottery-barn-teen</li>
-	<li>williams-sonoma</li>
-	<li>west-elm</li>
+	<li>galerias</li>
 </ul>
 <h2>Descripción de las tareas a ejecutar para poder compilar los archivos [task]</h2>
 <ul>
