@@ -1,0 +1,12 @@
+section
+	.wrapperSimpleCarousel
+		span(class="btn-back")
+		span(class="btn-next")
+		include structureConfiguration
+		ul(class="simpleCarousel")
+			each v,i in config.simpleCarousel
+				li(id='item'+i, class=v.active ? 'current' : 'next')
+					figure
+						img(src="" + v.src, alt=""+ config.siteName)
+						if v.caption
+							figcaption !{v.caption}

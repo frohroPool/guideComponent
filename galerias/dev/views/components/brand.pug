@@ -1,0 +1,4 @@
+//- include structureConfiguration
+nav.brand-links-container
+	each v,i in config.siteList
+		a(href="" + v.src, target="" + v.target) #{v.name}

@@ -1,0 +1,29 @@
+.wrapperSimpleCarousel
+		mx-reduce()
+		mx-width(80%)
+		mx-height(700px)
+		mx-center-container()
+		position relative
+		pading-top 30px
+		.simpleCarousel, .btn-back, .btn-next
+			position absolute
+			
+		.simpleCarousel
+			z-index 1
+			mx-list-simpleCarousel(transparent, colors.white, 1.3em, inline-block, 700px)
+		.btn-back, .btn-next
+			z-index 2
+			mx-width 15px
+			mx-height 15px
+			border 1px solid yellow
+			&:hover
+				cursor pointer
+			mx-reduce()
+		.btn-back
+			left 5%
+			top 50%
+		.btn-next
+			left 93%
+			top 50%
+			background yellow
+			

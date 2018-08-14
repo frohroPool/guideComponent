@@ -1,0 +1,205 @@
+.wrapper-navBar
+	display flex
+	justify-content  space-between
+	
+.siteList, .quickAccessList
+	padding 5px
+	mx-nav-horizontal(colors.gray,colors.black,10px,colors.white,underline)
+	// FLEX
+	display flex
+	flex-wrap nowrap
+	// align-items center
+	
+.siteList
+	width 40%
+	justify-content flex-start
+.quickAccessList
+	width 30%
+	justify-content flex-end
+
+.account-links-secondary
+	list-style-type none
+	li
+		display flex
+		
+.navBar
+	.wrapper-navBar
+		width 100%
+		#menu-toggle, .label-toggle
+			display none
+
+
+
+@media screen and (max-width: 750px) {
+	.wrapper-navBar{
+		display: none;
+	}	
+}
+
+/*
+
+.navBar
+	.wrapper-navBar
+		width 100%
+		border 1px solid red
+		// FLEX
+		display flex
+		#menu-toggle, .label-toggle
+			display none
+	@media screen and (max-width: 750px) {
+		.siteList, .quickAccessList{
+			display: block;
+			height: 0;
+			opacity: 0;
+			text-align: center;
+			width: 100%;
+			visibility: hidden;
+		}
+		
+		a {
+			border-bottom: 1px solid colors.darkGray;
+			display: block;
+			font-size: 1.5em;
+			padding: 2em 0;
+		}
+		
+		#menu-toggle:checked ~ .siteList, #menu-toggle:checked ~ .quickAccessList {
+			opacity: 1;
+			height: 100vh;
+			visibility: visible;
+			background:red;
+		}
+		
+		.label-toggle {
+			color: red
+			// background: colors.white;
+			cursor: pointer;
+			display: block !important;
+			float: right;
+			height: 35px;
+			margin-top: 1em;
+			width: 35px;
+		}
+		.wrapper-navBar{
+			display: block !important;
+		}
+		
+	}
+
+
+*/
+// -------------------------------------------------------
+// // Content Wrapper
+// .wrapper {
+//   margin: 0 auto;
+//   max-width: 960px;
+//   padding: 0 2%;
+// }
+
+// // Full Navigation, including mobile menu
+// nav {
+//   ul {
+//     display: flex;
+//     justify-content: space-between;
+//     list-style-type: none;
+//     width: 100%;
+		
+//     a {
+//       color: $color1;
+//       text-decoration: none;
+//       transition: all .5s ease;
+
+//       &:hover {color: $color3;}
+//     }
+//   }
+	
+//   li  {
+//     display: inline-block;
+//   }
+	
+//   #menu-toggle {display: none;}
+	
+//   .label-toggle {display: none;}
+	
+//   .wrapper {
+//     align-items: center;
+//     display: flex;
+//     justify-content: space-between;
+//   }
+	
+//   @media screen and (max-width: 768px) {
+//     nav {
+//       ul {
+//         a {
+//           color: $color2;
+//         }
+//       }
+//     }
+//     ul {
+//       background-color: $color1;
+//       display: block;
+//       height: 0;
+//       list-style-type: none;
+//       opacity: 0;
+//       text-align: center;
+//       transition: all 1s ease;
+//       width: 100%;
+//       visibility: hidden;
+//     }
+		
+//     li {
+//       border-bottom: 2px solid $color2;
+//       color: $color2;
+//       display: block;
+//       font-size: 1.5em;
+//       padding: 2em 0;
+//     }
+	
+//     #menu-toggle:checked ~ ul {
+//       opacity: 1;
+//       height: 100vh;
+//       visibility: visible;
+//       background:red;
+//     }
+		
+//     .label-toggle {
+//       background: linear-gradient(to bottom, $color1 0%, $color1 20%, transparent 20%, transparent 40%, $color1 40%, $color1 60%, transparent 60%, transparent 80%, $color1 80%, $color1 100%); //Gradient Hamburger
+//       cursor: pointer;
+//       display: block;
+//       float: right;
+//       height: 35px;
+//       margin-top: 1em;
+//       width: 35px;
+//     }
+		
+//     .wrapper {display: block;}
+//   }
+// }
+
+// -------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ================= MEDIA QUERIES =================
+// Iphone 5 
+// @media (max-width: 320px) {
+// 	.siteList, .quickAccessList{
+// 		width 100%
+// 		flex-flow column wrap
+// 		align-items left
+// 	}
+// }
+
+// ====================== Icons used within the component ======================
+icon-menu(before)

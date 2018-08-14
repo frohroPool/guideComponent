@@ -1,0 +1,11 @@
+section
+	.wrapperQuickEntries
+		include structureConfiguration
+		h2(class="entryTitle") #{entryTitle}
+		ul(class="threeEntry")
+			each v,i in config.smallImagesEntry
+				li(id='item'+i)
+					figure
+						img(src="" + v.src, alt=""+ config.siteName)
+						if v.caption
+							figcaption !{v.caption}

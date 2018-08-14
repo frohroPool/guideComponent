@@ -1,0 +1,43 @@
+.accessBar, .logoSite
+	width 100%
+	// FLEX
+	display flex
+
+.logoSite
+	padding-top 30px
+	// FLEX
+	align-items center
+	justify-content center
+
+// .sub-brand-bar-container.fixed-header
+// 	width 100%
+
+.accessBar
+	padding-right 10%
+	list-style-type none
+	background: colors.gray2;
+	li
+		padding 10px
+		p
+			font-size 11px
+			mx-upperCase()
+			color: colors.black;			
+	.logIn
+		p:hover		
+			text-decoration underline
+			cursor pointer
+	.hightlight
+		background: colors.red;
+		p
+			color: colors.white;
+	// FLEX
+	justify-content flex-end
+	
+// ====================== Icons used within the component ======================
+icon-cart(before)
+
+@media screen and (max-width: 750px) {
+	.accessBar{
+		display: none;
+	}	
+}
