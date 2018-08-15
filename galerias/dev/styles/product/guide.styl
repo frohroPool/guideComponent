@@ -18,6 +18,21 @@ a
 
 img
 	width 100%
+	
+pre
+	background-color #212124
+	color #fff
+	width 100%
+	white-space pre-wrap
+	padding 5px
+	overflow scroll
+	
+
+code
+	font-size 1.1em
+	font-family 'Roboto Condensed',sans-serif
+	width 100%
+	color #4da570
 
 .header
 	mx-height(72px)
@@ -46,6 +61,13 @@ img
 	
 
 
+.breadcrums
+	margin-left 30vw
+	font-family 'Roboto Mono', monospace
+	olor #fff
+	font-size 16px
+	text-transform uppercase
+	letter-spacing 3px
 
 .side-nav
 	background #fff
@@ -99,7 +121,8 @@ img
 	left 320px
 	top 80px
 	width calc(90vw - 300px)
-	height calc(100vh - 100px)
+	// height calc(100vh - 100px)
+	height auto
 	font-family 'Roboto Condensed',sans-serif
 	
 .main-article
@@ -116,8 +139,8 @@ img
 
 
 .main-article__component
-	width 70%
-	height auto
+	width 80%
+	height 60vh
 	
 	display flex
 	flex-direction row
@@ -125,7 +148,7 @@ img
 	padding-bottom 10px
 	border-bottom 1px solid #202124
 	
-.main-article__component--view
+.main-article__component--view, .main-article__component--code
 	overflow-y scroll
 
 .main-article__component > *
