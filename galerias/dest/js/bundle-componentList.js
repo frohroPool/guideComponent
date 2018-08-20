@@ -29,6 +29,7 @@ var Lists = exports.Lists = function () {
 			if (!showCssRule) {
 				showCssRule = true;
 				var currentBasicStyle = document.styleSheets[2];
+				console.log(currentBasicStyle);
 				var rules = currentBasicStyle.cssRules;
 				var listCssRules = document.createElement("ul");
 				var itemCssRules, txtRule;
