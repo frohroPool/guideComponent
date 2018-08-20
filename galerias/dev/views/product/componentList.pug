@@ -36,17 +36,26 @@ html(lang="es")
 				article(class="main-article")
 					h1(class="main-article__title")
 						| Lists
+					button(id="allCssList" class="getStyle all") Show CSS
+					div(class="showAllCssRules hiddeCssRule" id="showAllCssRules")
 					p(class="main-article__description")
 						| Navigational transitions occur when users move between screens, such as from a home screen to a detail screen.
 					div(class="main-article__component")
 						div(class="main-article__component--view")
 							h2(class="main-article__component--title")
 								| Simple-list
+							- var menu = ['styles', 'html'];
+							- var menuColor = ['btnCss', 'btnHtml'];
+							include ../components/buttonText-list
+
+
 							include ../components/simple-list
 						div(class="main-article__component--code")
 							h2(class="main-article__component--title")
 								| Simple-list-code
 							include ../components/simple-list-code
+
+					// --------------------------------------------------------
 
 					div(class="main-article__component")
 						div(class="main-article__component--view")
@@ -58,6 +67,8 @@ html(lang="es")
 								| Icon-list-code
 							include ../components/icon-list-code
 
+					// --------------------------------------------------------
+
 					div(class="main-article__component")
 						div(class="main-article__component--view")
 							h2(class="main-article__component--title")
@@ -67,4 +78,18 @@ html(lang="es")
 							h2(class="main-article__component--title")
 								| IconText-list-code
 							include ../components/iconText-list-code
+
+
+					// --------------------------------------------------------
+
+					div(class="main-article__component")
+						div(class="main-article__component--view")
+							h2(class="main-article__component--title")
+								| ButtonText-list
+							- var menu = false;
+							include ../components/buttonText-list
+						div(class="main-article__component--code")
+							h2(class="main-article__component--title")
+								| ButtonText-list-code
+							// include ../components/buttonText-list-code
 

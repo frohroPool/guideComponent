@@ -34,6 +34,10 @@ code
 	width 100%
 	color #4da570
 
+button
+	font-size 0.8em
+	font-family 'Roboto Condensed',sans-serif
+
 .header
 	mx-height(72px)
 	display flex
@@ -59,7 +63,10 @@ code
 .header .projectName a span
 	margin-right 10px
 	
-
+.body
+	mx-width(100%)
+	display flex
+	flex-flow row wrap
 
 .breadcrums
 	margin-left 30vw
@@ -120,7 +127,7 @@ code
 	position relative
 	left 320px
 	top 80px
-	width calc(90vw - 300px)
+	width calc(90vw - 100px)
 	// height calc(100vh - 100px)
 	height auto
 	font-family 'Roboto Condensed',sans-serif
@@ -151,10 +158,10 @@ code
 .main-article__component--view, .main-article__component--code
 	overflow-y scroll
 
-.main-article__component > *
-	width 48%
-	// border 1px solid rgba(0,0,0,.2)
-	
+.main-article__component--view
+	width 40%
+.main-article__component--code
+	width 55%
 .main-article__component--title
 	font-size 30px
 	margin-bottom 20px
@@ -163,6 +170,14 @@ code
 	font-size 15px
 	margin-bottom 5px
 
+
+.action
+	justify-content flex-start !important
+	
+.btnCss
+	background #4da570 !important
+.btnHtml
+	background #e94d42 !important
 
 icon-home(before)
 icon-office(before)

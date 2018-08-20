@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../css/guide.css" type="text/css"/>
     <link rel="stylesheet" href="../css/componentList.css" type="text/css"/>
     <script src="../js/bundle-index.js" type="text/javascript"></script>
+    <script src="../js/bundle-componentList.js" type="text/javascript"></script>
   </head>
   <body>
     <section class="header">
@@ -40,10 +41,20 @@
       <section class="main">
         <article class="main-article">
           <h1 class="main-article__title">Lists</h1>
+          <button class="getStyle all" id="allCssList">Show CSS</button>
+          <div class="showAllCssRules hiddeCssRule" id="showAllCssRules"></div>
           <p class="main-article__description">Navigational transitions occur when users move between screens, such as from a home screen to a detail screen.</p>
           <div class="main-article__component">
             <div class="main-article__component--view">
               <h2 class="main-article__component--title">Simple-list</h2>
+              <ul class="buttonText-list action">
+                <li class="buttonText-list-item">
+                  <button class="btnCss">styles</button>
+                </li>
+                <li class="buttonText-list-item">
+                  <button class="btnHtml">html</button>
+                </li>
+              </ul>
               <h3 class="main-article__component--device">Responsive</h3>
               <ul class="simple-list">
                 <li class="simple-list-item">Mercury</li>
@@ -73,6 +84,7 @@
 &lt;/ul&gt;</code></pre>
             </div>
           </div>
+          <!-- ---------------------------------------------------------->
           <div class="main-article__component">
             <div class="main-article__component--view">
               <h2 class="main-article__component--title">Icon-list</h2>
@@ -105,6 +117,7 @@
 &lt;/ul&gt;</code></pre>
             </div>
           </div>
+          <!-- ---------------------------------------------------------->
           <div class="main-article__component">
             <div class="main-article__component--view">
               <h2 class="main-article__component--title">IconText-list</h2>
@@ -171,6 +184,46 @@
 	&lt;p&gt;Pluto&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;</code></pre>
+            </div>
+          </div>
+          <!-- ---------------------------------------------------------->
+          <div class="main-article__component">
+            <div class="main-article__component--view">
+              <h2 class="main-article__component--title">ButtonText-list</h2>
+              <h3 class="main-article__component--device">Responsive</h3>
+              <ul class="buttonText-list">
+                <li class="buttonText-list-item">
+                  <button>Mercury</button>
+                </li>
+                <li class="buttonText-list-item">
+                  <button>Venus</button>
+                </li>
+                <li class="buttonText-list-item">
+                  <button>Earth</button>
+                </li>
+                <li class="buttonText-list-item">
+                  <button>Mars</button>
+                </li>
+                <li class="buttonText-list-item">
+                  <button>Jupiter</button>
+                </li>
+                <li class="buttonText-list-item">
+                  <button>Saturn</button>
+                </li>
+                <li class="buttonText-list-item">
+                  <button>Uranus</button>
+                </li>
+                <li class="buttonText-list-item">
+                  <button>Neptune</button>
+                </li>
+                <li class="buttonText-list-item">
+                  <button>Pluto</button>
+                </li>
+              </ul>
+            </div>
+            <div class="main-article__component--code">
+              <h2 class="main-article__component--title">ButtonText-list-code</h2>
+              <!-- include ../components/buttonText-list-code-->
             </div>
           </div>
         </article>

@@ -1,0 +1,13 @@
+if menu
+	ul(class="buttonText-list action")
+		each val, index in menu
+			li(class='buttonText-list-item')
+				button(class=""+menuColor[index]) #{val}
+
+else
+	h3(class="main-article__component--device")
+		| Responsive
+	ul(class="buttonText-list")
+		each v0,i0 in config.lists
+			li(class='buttonText-list-item')
+				button #{v0.txt}
