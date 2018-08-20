@@ -1,19 +1,27 @@
-// Desktop ----------
-.icon-list--desktopMobile
+// Responsive ----------
+.icon-list
 	margin-bottom 10px
 	overflow hidden
-	// border 1px solid #4da570
-.icon-list--desktopMobile
 	display flex
 	flex-direction row
 	justify-content space-around
-.icon-list-item--desktopMobile
+.icon-list-item
 	width 100%
 	text-align center
 	padding 5px
-.icon-list-item--desktopMobile:last-child
+.icon-list-item:last-child
 	border-right 0px solid transparent
-.icon-list-item--desktopMobile:hover
+.icon-list-item:hover
 	cursor pointer
 	color #4da570
 	border-bottom 2px solid #4da570
+	
+
+@media screen and (max-width:1300px){
+	.icon-list{
+		flex-direction: column;
+	}
+	.icon-list-item{
+		text-align: left;
+	}
+}

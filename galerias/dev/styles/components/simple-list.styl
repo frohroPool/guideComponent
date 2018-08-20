@@ -1,35 +1,31 @@
-// Desktop ----------
-.simple-list--desktop
+// Responsive ----------
+.simple-list
 	margin-bottom 10px
 	overflow hidden
 	display flex
 	flex-direction row
 	justify-content space-around
-.simple-list-item--desktop
+.simple-list-item
 	width 100%
 	border-right 1px solid gray
 	text-align center
 	padding 5px
-.simple-list-item--desktop:last-child
+.simple-list-item:last-child
 	border-right 0px solid transparent
-.simple-list-item--desktop:hover
+.simple-list-item:hover
 	cursor pointer
 	background-color #f5f5f5
-
-
-// Mobile ----------
-.simple-list--mobile
-	margin-bottom 10px
-	overflow hidden
-	display flex
-	flex-direction column
-	justify-content space-around
-.simple-list-item--mobile
-	width 100%
-	border-bottom 1px solid gray
-	padding 5px
-.simple-list-item--mobile:last-child
-	border-bottom 0px solid transparent
-.simple-list-item--mobile:hover
-	cursor pointer
-	background-color #f5f5f5
+	
+@media screen and (max-width:1300px){
+	.simple-list{
+		flex-direction: column;
+	}
+	.simple-list-item{
+		border-right: 0px;
+		text-align: left;
+		border-bottom: 1px solid gray;
+	}
+	.simple-list-item:last-child{
+		border-bottom: 0px solid transparent;
+	}
+}
