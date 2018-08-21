@@ -36,8 +36,11 @@ html(lang="es")
 				article(class="main-article")
 					h1(class="main-article__title")
 						| Lists
-					button(id="allCssList" class="getStyle all") Show CSS
+					nav(class="main-article__btnCodes")
+						button(id="allCssList" class="getStyle all") Show CSS
+						button(id="allHtmlList" class="getHTML all") Show HTML
 					div(class="showAllCssRules hiddeCssRule" id="showAllCssRules")
+					div(class="showAllHtmlRules hiddeHtmlRule" id="showAllHtmlRules")
 					p(class="main-article__description")
 						| Navigational transitions occur when users move between screens, such as from a home screen to a detail screen.
 					

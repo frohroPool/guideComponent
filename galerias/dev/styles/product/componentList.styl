@@ -7,26 +7,30 @@
 // .main-article__component--view
 // 	resize both
 
-.getStyle
-	width 80px
+.getStyle, .getHTML
+	width auto
 	padding 10px
-	background #3434b9
+	margin-right 20px
 	color white
 	border 0
 	font-weight bold
-.getStyle:hover
+.getStyle
+	background #3434b9
+.getHTML
+	background #f95204
+.getStyle:hover, .getHTML:hover
 	cursor pointer
 	
-.showAllCssRules
+.showAllCssRules, .showAllHtmlRules
 	width auto
 	height auto
 	padding 20px
-	background #212124
 	color white
-	
-.hiddeCssRule
+	background #212124
+
+.hiddeCssRule, .hiddeHtmlRule
 	display none
-.showCssRule
+.showCssRule, .showHtmlRule
 	display block
 	
 
