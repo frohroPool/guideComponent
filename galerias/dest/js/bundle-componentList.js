@@ -67,7 +67,6 @@ var Lists = exports.Lists = function () {
 				var arrayHtml = [];
 				var htmlCode, ulNode, liNode, divNode, htmlText, brNode;
 				for (var i = 0; i < trigger.length; i++) {
-					// trigger[i].click();
 					htmlCode = document.getElementById(trigger[i].classList[0]);
 
 					brNode = document.createElement("br");
@@ -85,21 +84,6 @@ var Lists = exports.Lists = function () {
 					arrayHtml.push(htmlCode);
 				}
 				console.log('componentes encontrados ......', arrayHtml);
-
-				// let currentBasicStyle = document.styleSheets[2];
-				// console.log(currentBasicStyle);
-				// let rules = currentBasicStyle.cssRules;
-				// let listCssRules = document.createElement("ul");
-				// var itemCssRules,txtRule;
-				// for (var i = 0; i < rules.length; i++) {
-				// 	// console.log(rules[i].cssText,'\n');
-				// 	txtRule = document.createTextNode(rules[i].cssText);
-				// 	itemCssRules = document.createElement("li");
-				// 	itemCssRules.appendChild(txtRule);
-				// 	listCssRules.appendChild(itemCssRules);
-				// }
-
-				// htmlContainer.appendChild(listCssRules);
 			}
 			if (htmlContainer.classList.contains("hiddeHtmlRule")) {
 				htmlContainer.classList.remove("hiddeHtmlRule");
