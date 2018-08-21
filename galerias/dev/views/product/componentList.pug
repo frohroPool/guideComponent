@@ -40,12 +40,16 @@ html(lang="es")
 					div(class="showAllCssRules hiddeCssRule" id="showAllCssRules")
 					p(class="main-article__description")
 						| Navigational transitions occur when users move between screens, such as from a home screen to a detail screen.
+					
+
+					// --------------------------------------------------------
+					
 					div(class="main-article__component")
 						div(class="main-article__component--view")
 							h2(class="main-article__component--title")
 								| Simple-list
 							- var menu = ['styles', 'html'];
-							- var menuColor = ['btnCss', 'btnHtml'];
+							- var menuColor = ['simple-list btnCss', 'simple-list btnHtml'];
 							include ../components/buttonText-list
 
 
@@ -53,7 +57,8 @@ html(lang="es")
 						div(class="main-article__component--code")
 							h2(class="main-article__component--title")
 								| Simple-list-code
-							include ../components/simple-list-code
+							- var codeComponent = 'code-simple-list';
+							include ../components/code
 
 					// --------------------------------------------------------
 
@@ -61,11 +66,17 @@ html(lang="es")
 						div(class="main-article__component--view")
 							h2(class="main-article__component--title")
 								| Icon-list
+							- var menu = ['styles', 'html'];
+							- var menuColor = ['icon-list btnCss', 'icon-list btnHtml'];
+							include ../components/buttonText-list
+
+
 							include ../components/icon-list
 						div(class="main-article__component--code")
 							h2(class="main-article__component--title")
 								| Icon-list-code
-							include ../components/icon-list-code
+							- var codeComponent = 'code-icon-list';
+							include ../components/code
 
 					// --------------------------------------------------------
 
@@ -73,11 +84,17 @@ html(lang="es")
 						div(class="main-article__component--view")
 							h2(class="main-article__component--title")
 								| IconText-list
+							- var menu = ['styles', 'html'];
+							- var menuColor = ['iconText-list btnCss', 'iconText-list btnHtml'];
+							include ../components/buttonText-list
+
+
 							include ../components/iconText-list
 						div(class="main-article__component--code")
 							h2(class="main-article__component--title")
 								| IconText-list-code
-							include ../components/iconText-list-code
+							- var codeComponent = 'code-iconText-list';
+							include ../components/code
 
 
 					// --------------------------------------------------------
@@ -86,10 +103,16 @@ html(lang="es")
 						div(class="main-article__component--view")
 							h2(class="main-article__component--title")
 								| ButtonText-list
+							- var menu = ['styles', 'html'];
+							- var menuColor = ['buttonText-list btnCss', 'buttonText-list btnHtml'];
+							include ../components/buttonText-list
+
+
 							- var menu = false;
 							include ../components/buttonText-list
 						div(class="main-article__component--code")
 							h2(class="main-article__component--title")
 								| ButtonText-list-code
-							// include ../components/buttonText-list-code
+							- var codeComponent = 'code-buttonText-list';
+							include ../components/code
 

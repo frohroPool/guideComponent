@@ -7,7 +7,7 @@ if menu
 else
 	h3(class="main-article__component--device")
 		| Responsive
-	ul(class="buttonText-list")
+	ul(class="buttonText-list" id="buttonText-list")
 		each v0,i0 in config.lists
 			li(class='buttonText-list-item')
 				button #{v0.txt}

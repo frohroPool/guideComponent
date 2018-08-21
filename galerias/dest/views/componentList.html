@@ -44,19 +44,20 @@
           <button class="getStyle all" id="allCssList">Show CSS</button>
           <div class="showAllCssRules hiddeCssRule" id="showAllCssRules"></div>
           <p class="main-article__description">Navigational transitions occur when users move between screens, such as from a home screen to a detail screen.</p>
+          <!-- ---------------------------------------------------------->
           <div class="main-article__component">
             <div class="main-article__component--view">
               <h2 class="main-article__component--title">Simple-list</h2>
               <ul class="buttonText-list action">
                 <li class="buttonText-list-item">
-                  <button class="btnCss">styles</button>
+                  <button class="simple-list btnCss">styles</button>
                 </li>
                 <li class="buttonText-list-item">
-                  <button class="btnHtml">html</button>
+                  <button class="simple-list btnHtml">html</button>
                 </li>
               </ul>
               <h3 class="main-article__component--device">Responsive</h3>
-              <ul class="simple-list">
+              <ul class="simple-list" id="simple-list">
                 <li class="simple-list-item">Mercury</li>
                 <li class="simple-list-item">Venus</li>
                 <li class="simple-list-item">Earth</li>
@@ -71,58 +72,54 @@
             <div class="main-article__component--code">
               <h2 class="main-article__component--title">Simple-list-code</h2>
               <h3 class="main-article__component--device">Responsive </h3>
-              <pre><code>&lt;ul class="simple-list"&gt;
-	&lt;li class="simple-list-item"&gt;Mercury&lt;/li&gt;
-	&lt;li class="simple-list-item"&gt;Venus&lt;/li&gt;
-	&lt;li class="simple-list-item"&gt;Earth&lt;/li&gt;
-	&lt;li class="simple-list-item"&gt;Mars&lt;/li&gt;
-	&lt;li class="simple-list-item"&gt;Jupiter&lt;/li&gt;
-	&lt;li class="simple-list-item"&gt;Saturn&lt;/li&gt;
-	&lt;li class="simple-list-item"&gt;Uranus&lt;/li&gt;
-	&lt;li class="simple-list-item"&gt;Neptune&lt;/li&gt;
-	&lt;li class="simple-list-item"&gt;Pluto&lt;/li&gt;
-&lt;/ul&gt;</code></pre>
+              <pre><code id="code-simple-list"></code></pre>
             </div>
           </div>
           <!-- ---------------------------------------------------------->
           <div class="main-article__component">
             <div class="main-article__component--view">
               <h2 class="main-article__component--title">Icon-list</h2>
+              <ul class="buttonText-list action">
+                <li class="buttonText-list-item">
+                  <button class="icon-list btnCss">styles</button>
+                </li>
+                <li class="buttonText-list-item">
+                  <button class="icon-list btnHtml">html</button>
+                </li>
+              </ul>
               <h3 class="main-article__component--device">Responsive</h3>
-              <ul class="icon-list">
-                <li class="icon-list-item"> <span class="icon-office"></span></li>
-                <li class="icon-list-item"> <span class="icon-home"></span></li>
-                <li class="icon-list-item"> <span class="icon-eyedropper"></span></li>
-                <li class="icon-list-item"> <span class="icon-droplet"></span></li>
-                <li class="icon-list-item"> <span class="icon-pencil"></span></li>
-                <li class="icon-list-item"> <span class="icon-headphones"></span></li>
-                <li class="icon-list-item"> <span class="icon-film"></span></li>
-                <li class="icon-list-item"> <span class="icon-dice"></span></li>
-                <li class="icon-list-item"> <span class="icon-library"></span></li>
+              <ul class="icon-list" id="icon-list">
+                <li class="icon-list-item"><span class="icon-office"></span></li>
+                <li class="icon-list-item"><span class="icon-home"></span></li>
+                <li class="icon-list-item"><span class="icon-eyedropper"></span></li>
+                <li class="icon-list-item"><span class="icon-droplet"></span></li>
+                <li class="icon-list-item"><span class="icon-pencil"></span></li>
+                <li class="icon-list-item"><span class="icon-headphones"></span></li>
+                <li class="icon-list-item"><span class="icon-film"></span></li>
+                <li class="icon-list-item"><span class="icon-dice"></span></li>
+                <li class="icon-list-item"><span class="icon-library"></span></li>
               </ul>
             </div>
             <div class="main-article__component--code">
               <h2 class="main-article__component--title">Icon-list-code</h2>
-              <h3 class="main-article__component--device">Responsive</h3>
-              <pre><code>&lt;ul class="icon-list"&gt;
-	&lt;li class="icon-list-item"&gt; &lt;span class="icon-office"&gt;&lt;/span&gt;&lt;/li&gt;
-	&lt;li class="icon-list-item"&gt; &lt;span class="icon-home"&gt;&lt;/span&gt;&lt;/li&gt;
-	&lt;li class="icon-list-item"&gt; &lt;span class="icon-eyedropper"&gt;&lt;/span&gt;&lt;/li&gt;
-	&lt;li class="icon-list-item"&gt; &lt;span class="icon-droplet"&gt;&lt;/span&gt;&lt;/li&gt;
-	&lt;li class="icon-list-item"&gt; &lt;span class="icon-pencil"&gt;&lt;/span&gt;&lt;/li&gt;
-	&lt;li class="icon-list-item"&gt; &lt;span class="icon-headphones"&gt;&lt;/span&gt;&lt;/li&gt;
-	&lt;li class="icon-list-item"&gt; &lt;span class="icon-film"&gt;&lt;/span&gt;&lt;/li&gt;
-	&lt;li class="icon-list-item"&gt; &lt;span class="icon-dice"&gt;&lt;/span&gt;&lt;/li&gt;
-	&lt;li class="icon-list-item"&gt; &lt;span class="icon-library"&gt;&lt;/span&gt;&lt;/li&gt;
-&lt;/ul&gt;</code></pre>
+              <h3 class="main-article__component--device">Responsive </h3>
+              <pre><code id="code-icon-list"></code></pre>
             </div>
           </div>
           <!-- ---------------------------------------------------------->
           <div class="main-article__component">
             <div class="main-article__component--view">
               <h2 class="main-article__component--title">IconText-list</h2>
+              <ul class="buttonText-list action">
+                <li class="buttonText-list-item">
+                  <button class="iconText-list btnCss">styles</button>
+                </li>
+                <li class="buttonText-list-item">
+                  <button class="iconText-list btnHtml">html</button>
+                </li>
+              </ul>
               <h3 class="main-article__component--device">Responsive</h3>
-              <ul class="iconText-list">
+              <ul class="iconText-list" id="iconText-list">
                 <li class="iconText-list-item"> <span class="icon-office"> </span>
                   <p>Mercury</p>
                 </li>
@@ -155,43 +152,23 @@
             <div class="main-article__component--code">
               <h2 class="main-article__component--title">IconText-list-code</h2>
               <h3 class="main-article__component--device">Responsive </h3>
-              <pre><code>&lt;ul class="iconText-list"&gt;
-	&lt;li class="iconText-list-item"&gt; &lt;span class="icon-office"&gt; &lt;/span&gt;
-	&lt;p&gt;Mercury&lt;/p&gt;
-&lt;/li&gt;
-&lt;li class="iconText-list-item"&gt; &lt;span class="icon-home"&gt; &lt;/span&gt;
-	&lt;p&gt;Venus&lt;/p&gt;
-&lt;/li&gt;
-&lt;li class="iconText-list-item"&gt; &lt;span class="icon-eyedropper"&gt; &lt;/span&gt;
-	&lt;p&gt;Earth&lt;/p&gt;
-&lt;/li&gt;
-&lt;li class="iconText-list-item"&gt; &lt;span class="icon-droplet"&gt; &lt;/span&gt;
-	&lt;p&gt;Mars&lt;/p&gt;
-&lt;/li&gt;
-&lt;li class="iconText-list-item"&gt; &lt;span class="icon-pencil"&gt; &lt;/span&gt;
-	&lt;p&gt;Jupiter&lt;/p&gt;
-&lt;/li&gt;
-&lt;li class="iconText-list-item"&gt; &lt;span class="icon-headphones"&gt; &lt;/span&gt;
-	&lt;p&gt;Saturn&lt;/p&gt;
-&lt;/li&gt;
-&lt;li class="iconText-list-item"&gt; &lt;span class="icon-film"&gt; &lt;/span&gt;
-	&lt;p&gt;Uranus&lt;/p&gt;
-&lt;/li&gt;
-&lt;li class="iconText-list-item"&gt; &lt;span class="icon-dice"&gt; &lt;/span&gt;
-	&lt;p&gt;Neptune&lt;/p&gt;
-&lt;/li&gt;
-&lt;li class="iconText-list-item"&gt; &lt;span class="icon-library"&gt; &lt;/span&gt;
-	&lt;p&gt;Pluto&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;</code></pre>
+              <pre><code id="code-iconText-list"></code></pre>
             </div>
           </div>
           <!-- ---------------------------------------------------------->
           <div class="main-article__component">
             <div class="main-article__component--view">
               <h2 class="main-article__component--title">ButtonText-list</h2>
+              <ul class="buttonText-list action">
+                <li class="buttonText-list-item">
+                  <button class="buttonText-list btnCss">styles</button>
+                </li>
+                <li class="buttonText-list-item">
+                  <button class="buttonText-list btnHtml">html</button>
+                </li>
+              </ul>
               <h3 class="main-article__component--device">Responsive</h3>
-              <ul class="buttonText-list">
+              <ul class="buttonText-list" id="buttonText-list">
                 <li class="buttonText-list-item">
                   <button>Mercury</button>
                 </li>
@@ -223,7 +200,8 @@
             </div>
             <div class="main-article__component--code">
               <h2 class="main-article__component--title">ButtonText-list-code</h2>
-              <!-- include ../components/buttonText-list-code-->
+              <h3 class="main-article__component--device">Responsive </h3>
+              <pre><code id="code-buttonText-list"></code></pre>
             </div>
           </div>
         </article>

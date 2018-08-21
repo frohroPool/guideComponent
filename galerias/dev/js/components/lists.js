@@ -17,6 +17,8 @@ export const Lists = (function() {
 
 	let all = function() {
 		let btn = document.getElementsByClassName("getStyle");
+		
+		// Evento para obtener el codigo CSS de la lista de componentes
 		// Revisar que el evento exista 
 		btn[0].addEventListener("click", function(){
 			let cssContainer = document.getElementById("showAllCssRules");
@@ -44,6 +46,21 @@ export const Lists = (function() {
 				cssContainer.classList.add("hiddeCssRule");
 			}
 		},false);
+
+
+		// Evento para obtener el codigo HTMl del componente seleccionado
+		// Revisar que el evento exista 
+
+		let btnHtml = document.getElementsByClassName("btnHtml");
+		for (var i = 0; i < btnHtml.length; i++) {
+			btnHtml[i].addEventListener("click", function(event){
+				console.log('clases contenidas dentro del componente selecionados ....',this.classList);
+				let idComponent = document.getElementById(this.classList[0]);
+				console.log(idComponent.outerHTML);
+				document.getElementById('code-'+this.classList[0]).innerText = idComponent.outerHTML;
+			}, false);
+		}
+	
 
 	}
 

@@ -1,7 +1,7 @@
 - var ico = ['office', 'home', 'eyedropper', 'droplet', 'pencil', 'headphones', 'film', 'dice', 'library'];
 h3(class="main-article__component--device")
 	| Responsive
-ul(class="iconText-list")
+ul(class="iconText-list" id="iconText-list")
 	each v0,i0 in config.lists
 		li(class='iconText-list-item') 
 			span(class='icon-'+ico[i0]) 
