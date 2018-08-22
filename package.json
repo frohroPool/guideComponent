@@ -1,7 +1,7 @@
 {
   "name": "guideComponent",
   "version": "1.0.0",
-  "description": "",
+  "description": "<h2>!Configuración del proyecto¡</h2>\r <ul>\r \t<li>\r \t\t<h3>Instalación de Node Version Manager</h3>\r \t\t<label><a href=\"http://www.nodenica.com/como-instalar-nvm/\">Documentación</a></label>\r \t\t<p>\r \t\t\tcurl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash\r \t\t</p>\r \t</li>\r \t<li>\r \t\t<h3>Instalación de Node con NVM</h3>\r \t\t<p>nvm install [versión] <a href=\"https://nodejs.org/en/download/current/\">Ver la última versión de Node</a></p>\r \t\t<label>Nota: Para este proyecto usamos la versión v8.7.0 de Node</label>\r \t</li>\r \t<li>\r \t\t<h3>Creación del package.json</h3>\r \t\t<p>npm init -y</p>\r \t</li>\r \t<li>\r \t\t<h3>Instalación de dependencias</h3>\r \t\t<p>npm i -g gulp</p>\r \t\t<p>npm i -save gulp</p>\r \t\t<p>npm i -save gulp-pug</p>\r \t\t<p>npm i -save gulp-stylus</p>\r \t\t<p>npm i babel-core</p>\r \t\t<p>npm i -save babel-preset-env</p>\r \t\t<p>npm i -save babelify</p>\r \t\t<p>npm i -save browserify</p>\r \t\t<p>npm i -save vinyl-source-stream</p>\r \t\t<p>npm i -save vinyl-buffer</p>\r \t\t<p>npm i -save glob</p>\r \t\t<p>npm i -save gulp-notify</p>\r \t</li>\r </ul>\r <h2>Nombre de los sitios dentro del poryecto [site-name]</h2>\r <ul>\r \t<li>galerias</li>\r </ul>\r <h2>Descripción de las tareas a ejecutar para poder compilar los archivos [task]</h2>\r <ul>\r \t<li>\r \t\t<p>\r \t\t\t<h3>html</h3>\r \t\t\t<label>Compila todos los archivos con exensión [pug]</label>\r \t\t</p>\r \t</li>\r \t<li>\r \t\t<p>\r \t\t\t<h3>css</h3>\r \t\t\t<label>Compila todos los archivos con exensión [styl]</label>\r \t\t</p>\r \t</li>\r \t<li>\r \t\t<p>\r \t\t\t<h3>js</h3>\r \t\t\t<label>Transpila los archivos escritos con ES6 a ES5, (Son archivos js)</label>\r \t\t</p>\r \t</li>\r </ul>\r <h3>SITE_NAME=[site-name] gulp [task]</h3>",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -23,5 +23,13 @@
     "gulp-stylus": "^2.7.0",
     "vinyl-buffer": "^1.0.1",
     "vinyl-source-stream": "^2.0.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/frohroPool/guideComponent.git"
+  },
+  "bugs": {
+    "url": "https://github.com/frohroPool/guideComponent/issues"
+  },
+  "homepage": "https://github.com/frohroPool/guideComponent#readme"
 }
