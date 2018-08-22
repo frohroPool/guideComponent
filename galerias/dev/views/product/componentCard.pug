@@ -47,3 +47,21 @@ html(lang="es")
 						| Navigational transitions occur when users move between screens, such as from a home screen to a detail screen.
 					
 
+					div(class="main-article__component")
+						div(class="main-article__component--view")
+							h2(class="main-article__component--title")
+								| Card-text
+							- var menu = ['styles', 'html'];
+							- var menuColor = ['card-text btnCss', 'card-text btnHtml'];
+							include ../components/buttonText-list
+
+
+							include ../components/card-text
+						div(class="main-article__component--code")
+							h2(class="main-article__component--title")
+								| Card-text-code
+							- var codeComponent = 'code-card-text';
+							include ../components/code
+
+
+							- var menu = false;
