@@ -102,7 +102,6 @@ var Lists = exports.Lists = function () {
 
 		// Evento para obtener el codigo HTMl del componente seleccionado
 		// Revisar que el evento exista 
-
 		var btnHtml = document.getElementsByClassName("btnHtml");
 		for (var i = 0; i < btnHtml.length; i++) {
 			btnHtml[i].addEventListener("click", function (event) {

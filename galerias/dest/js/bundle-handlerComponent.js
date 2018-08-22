@@ -1,34 +1,27 @@
-export const Lists = (function() {
-	let privateVariable = "list";
+(function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+var Handler = exports.Handler = function () {
+	var privateVariable = "list";
 	var showCssRule = false;
 	var showHtmlRule = false;
 
-	let simpleList = function() {
-		console.log("simpleList JS");
-	}
-
-	let iconList = function() {
-		console.log("iconList JS");
-	}
-
-	let iconTextList = function() {
-		// privateMethod();
-		console.log("iconTextList JS");
-	}
-
-	let getAllCss = function(){
+	var getAllCss = function getAllCss() {
 		// Evento para obtener el codigo CSS de la lista de componentes
 		// Revisar que el evento exista 
-		let btn = document.getElementsByClassName("getStyle");
-		btn[0].addEventListener("click", function(){
-			let cssContainer = document.getElementById("showAllCssRules");
-			if(!showCssRule){
+		var btn = document.getElementsByClassName("getStyle");
+		btn[0].addEventListener("click", function () {
+			var cssContainer = document.getElementById("showAllCssRules");
+			if (!showCssRule) {
 				showCssRule = true;
-				let currentBasicStyle = document.styleSheets[2];
+				var currentBasicStyle = document.styleSheets[2];
 				console.log(currentBasicStyle);
-				let rules = currentBasicStyle.cssRules;
-				let listCssRules = document.createElement("ul");
-				var itemCssRules,txtRule;
+				var rules = currentBasicStyle.cssRules;
+				var listCssRules = document.createElement("ul");
+				var itemCssRules, txtRule;
 				for (var i = 0; i < rules.length; i++) {
 					// console.log(rules[i].cssText,'\n');
 					txtRule = document.createTextNode(rules[i].cssText);
@@ -38,25 +31,25 @@ export const Lists = (function() {
 				}
 				cssContainer.appendChild(listCssRules);
 			}
-			if(cssContainer.classList.contains("hiddeCssRule")){
+			if (cssContainer.classList.contains("hiddeCssRule")) {
 				cssContainer.classList.remove("hiddeCssRule");
 				cssContainer.classList.add("showCssRule");
-			}else{
+			} else {
 				cssContainer.classList.remove("showCssRule");
 				cssContainer.classList.add("hiddeCssRule");
 			}
-		},false);
-	}
+		}, false);
+	};
 
-	let getAllHtml = function(){
+	var getAllHtml = function getAllHtml() {
 		// Evento para obtener el codigo HTMl de todas las variantes del componente actual
 		// Revisar que el evento exista 
-		let btn = document.getElementsByClassName("getHTML");
-		btn[0].addEventListener("click", function(){
-			let htmlContainer = document.getElementById("showAllHtmlRules");
-			if(!showHtmlRule){
+		var btn = document.getElementsByClassName("getHTML");
+		btn[0].addEventListener("click", function () {
+			var htmlContainer = document.getElementById("showAllHtmlRules");
+			if (!showHtmlRule) {
 				showHtmlRule = true;
-	
+
 				var trigger = document.getElementsByClassName("btnHtml");
 				var arrayHtml = [];
 				var htmlCode, ulNode, liNode, divNode, htmlText, brNode;
@@ -77,43 +70,48 @@ export const Lists = (function() {
 					htmlContainer.appendChild(brNode);
 					arrayHtml.push(htmlCode);
 				}
-				console.log('componentes encontrados ......',arrayHtml)
+				console.log('componentes encontrados ......', arrayHtml);
 			}
-			if(htmlContainer.classList.contains("hiddeHtmlRule")){
+			if (htmlContainer.classList.contains("hiddeHtmlRule")) {
 				htmlContainer.classList.remove("hiddeHtmlRule");
 				htmlContainer.classList.add("showHtmlRule");
-			}else{
+			} else {
 				htmlContainer.classList.remove("showHtmlRule");
 				htmlContainer.classList.add("hiddeHtmlRule");
 			}
-		},false);
-	}
+		}, false);
+	};
 
-	let all = function() {
-			
-			getAllCss();
-			getAllHtml();
+	var all = function all() {
+
+		getAllCss();
+		getAllHtml();
 
 		// Evento para obtener el codigo HTMl del componente seleccionado
 		// Revisar que el evento exista 
-
-		let btnHtml = document.getElementsByClassName("btnHtml");
+		var btnHtml = document.getElementsByClassName("btnHtml");
 		for (var i = 0; i < btnHtml.length; i++) {
-			btnHtml[i].addEventListener("click", function(event){
+			btnHtml[i].addEventListener("click", function (event) {
 				// console.log('clases contenidas dentro del componente selecionados ....',this.classList);
-				let idComponent = document.getElementById(this.classList[0]);
+				var idComponent = document.getElementById(this.classList[0]);
 				// console.log(idComponent.outerHTML);
-				document.getElementById('code-'+this.classList[0]).innerText = idComponent.outerHTML;
+				document.getElementById('code-' + this.classList[0]).innerText = idComponent.outerHTML;
 			}, false);
 		}
-	
-
-	}
+	};
 
 	return {
-			simpleList: simpleList,
-			iconList: iconList,
-			iconTextList: iconTextList,
-			all: all
+		all: all
 	};
-})();
+}();
+
+},{}],2:[function(require,module,exports){
+"use strict";
+
+var _handler = require("../components/handler");
+
+document.addEventListener("DOMContentLoaded", function (event) {
+	_handler.Handler.all();
+});
+
+},{"../components/handler":1}]},{},[2]);

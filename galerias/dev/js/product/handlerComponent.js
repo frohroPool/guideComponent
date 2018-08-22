@@ -1,5 +1,5 @@
-import {Lists} from '../components/lists';
+import {Handler} from '../components/handler';
 
 document.addEventListener("DOMContentLoaded", function(event) {
-	Lists.all();
+	Handler.all();
 });
