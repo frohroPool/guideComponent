@@ -1,0 +1,31 @@
+.empty-mosaic
+    padding: 0;
+    list-style: none;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: center;
+    -webkit-flex-flow: wrap;
+
+.mosaic-item    
+    padding 0
+    margin-top 1%
+    flex-grow 1
+    border 2px solid silver
+    border-radius 20px
+    background #DDD    
+    width 150px
+    height 150px
+    align-self center
+
+@media screen and (max-width:1300px){
+	.empty-mosaic{
+		flex-direction: column;
+	}
+	.mosaic-item{
+		text-align: center;
+	}	
+}
