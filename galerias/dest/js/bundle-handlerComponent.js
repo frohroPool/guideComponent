@@ -18,13 +18,14 @@ var Handler = exports.Handler = function () {
 			if (!showCssRule) {
 				showCssRule = true;
 				var currentBasicStyle = document.styleSheets[2];
-				console.log(currentBasicStyle);
+				// console.log(currentBasicStyle);
 				var rules = currentBasicStyle.cssRules;
 				var listCssRules = document.createElement("ul");
 				var itemCssRules, txtRule;
 				for (var i = 0; i < rules.length; i++) {
 					// console.log(rules[i].cssText,'\n');
 					txtRule = document.createTextNode(rules[i].cssText);
+
 					itemCssRules = document.createElement("li");
 					itemCssRules.appendChild(txtRule);
 					listCssRules.appendChild(itemCssRules);
@@ -70,7 +71,7 @@ var Handler = exports.Handler = function () {
 					htmlContainer.appendChild(brNode);
 					arrayHtml.push(htmlCode);
 				}
-				console.log('componentes encontrados ......', arrayHtml);
+				// console.log('componentes encontrados ......',arrayHtml)
 			}
 			if (htmlContainer.classList.contains("hiddeHtmlRule")) {
 				htmlContainer.classList.remove("hiddeHtmlRule");
@@ -82,11 +83,7 @@ var Handler = exports.Handler = function () {
 		}, false);
 	};
 
-	var all = function all() {
-
-		getAllCss();
-		getAllHtml();
-
+	var getHtmlComponent = function getHtmlComponent() {
 		// Evento para obtener el codigo HTMl del componente seleccionado
 		// Revisar que el evento exista 
 		var btnHtml = document.getElementsByClassName("btnHtml");
@@ -98,6 +95,44 @@ var Handler = exports.Handler = function () {
 				document.getElementById('code-' + this.classList[0]).innerText = idComponent.outerHTML;
 			}, false);
 		}
+	};
+
+	var getCssComponent = function getCssComponent() {
+		// Evento para obtener el codigo HTMl del componente seleccionado
+		// Revisar que el evento exista 
+		var currentBasicStyle = document.styleSheets[2];
+		var rules = currentBasicStyle.cssRules;
+		var currentRule,
+		    currentComponent,
+		    css = '';
+		var btnCss = document.getElementsByClassName("btnCss");
+		for (var i = 0; i < btnCss.length; i++) {
+			btnCss[i].addEventListener("click", function (event) {
+				var idComponent = document.getElementById(this.classList[0]);
+				currentComponent = '.' + this.classList[0];
+				for (var i = 0; i < rules.length; i++) {
+					currentRule = rules[i].selectorText;
+					if (currentRule != undefined) {
+						if (_.includes(currentRule, currentComponent)) {
+							css += rules[i].cssText + '\n';
+						}
+					} else {
+						if (_.includes(rules[i].cssText, currentComponent)) {
+							css += rules[i].cssText + '\n';
+						}
+					}
+				}
+				document.getElementById('code-' + this.classList[0]).innerText = css;
+				css = '';
+			}, false);
+		}
+	};
+
+	var all = function all() {
+		getAllCss();
+		getAllHtml();
+		getCssComponent();
+		getHtmlComponent();
 	};
 
 	return {

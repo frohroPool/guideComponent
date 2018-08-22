@@ -1,7 +1,7 @@
 export const Handler = (function() {
 	let privateVariable = "list";
-	var showCssRule = false;
-	var showHtmlRule = false;
+	let showCssRule = false;
+	let showHtmlRule = false;
 
 	let getAllCss = function(){
 		// Evento para obtener el codigo CSS de la lista de componentes
@@ -12,13 +12,14 @@ export const Handler = (function() {
 			if(!showCssRule){
 				showCssRule = true;
 				let currentBasicStyle = document.styleSheets[2];
-				console.log(currentBasicStyle);
+				// console.log(currentBasicStyle);
 				let rules = currentBasicStyle.cssRules;
 				let listCssRules = document.createElement("ul");
 				var itemCssRules,txtRule;
 				for (var i = 0; i < rules.length; i++) {
 					// console.log(rules[i].cssText,'\n');
 					txtRule = document.createTextNode(rules[i].cssText);
+
 					itemCssRules = document.createElement("li");
 					itemCssRules.appendChild(txtRule);
 					listCssRules.appendChild(itemCssRules);
@@ -64,7 +65,7 @@ export const Handler = (function() {
 					htmlContainer.appendChild(brNode);
 					arrayHtml.push(htmlCode);
 				}
-				console.log('componentes encontrados ......',arrayHtml)
+				// console.log('componentes encontrados ......',arrayHtml)
 			}
 			if(htmlContainer.classList.contains("hiddeHtmlRule")){
 				htmlContainer.classList.remove("hiddeHtmlRule");
@@ -76,11 +77,7 @@ export const Handler = (function() {
 		},false);
 	}
 
-	let all = function() {
-			
-			getAllCss();
-			getAllHtml();
-
+	let getHtmlComponent = function(){
 		// Evento para obtener el codigo HTMl del componente seleccionado
 		// Revisar que el evento exista 
 		let btnHtml = document.getElementsByClassName("btnHtml");
@@ -92,8 +89,42 @@ export const Handler = (function() {
 				document.getElementById('code-'+this.classList[0]).innerText = idComponent.outerHTML;
 			}, false);
 		}
-	
+	}
 
+	let getCssComponent = function(){
+		// Evento para obtener el codigo HTMl del componente seleccionado
+		// Revisar que el evento exista 
+		let currentBasicStyle = document.styleSheets[2];
+		let rules = currentBasicStyle.cssRules;
+		var currentRule,currentComponent,css='';
+		let btnCss = document.getElementsByClassName("btnCss");
+		for (var i = 0; i < btnCss.length; i++) {
+			btnCss[i].addEventListener("click", function(event){
+				let idComponent = document.getElementById(this.classList[0]);
+				currentComponent = '.'+this.classList[0];
+				for (var i = 0; i < rules.length; i++) {
+					currentRule = rules[i].selectorText;
+					if(currentRule != undefined){
+						if(_.includes(currentRule,currentComponent)){
+							css += rules[i].cssText + '\n';
+						}
+					}else{
+						if(_.includes(rules[i].cssText,currentComponent)){
+							css += rules[i].cssText + '\n';
+						}
+					}
+				}
+				document.getElementById('code-'+this.classList[0]).innerText = css;
+				css='';
+			}, false);
+		}
+	}
+
+	let all = function() {
+			getAllCss();
+			getAllHtml();
+			getCssComponent();
+			getHtmlComponent();
 	}
 
 	return {
