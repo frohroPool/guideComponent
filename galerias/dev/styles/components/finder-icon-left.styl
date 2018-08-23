@@ -1,17 +1,17 @@
 .finder-icon-left-container
   display grid
   grid-template-columns repeat(4, 1fr)
-  grid-template-rows 0 5vw
+  grid-template-rows 0 1vw
   grid-gap: 5px;
   border 1px solid #111735
   border-radius 5px
 
-.finder-icon-left-item 
+.finder-icon-left-item-button 
+  grid-column 1 / span 1
   padding 0
   margin-top 1%  
 
-.finder-icon-left-button
-  grid-column 1 / span 1
+.finder-icon-left-button  
   width: 40px;
   height: 36px;
   border: 1px solid #ffffff;
@@ -21,6 +21,11 @@
   border-radius: 5px;
   cursor: pointer;
   font-size: 20px;
+
+.finder-icon-left-item-text
+  grid-column 2 / span 2
+  padding 0
+  margin-top 1% 
 
 .finder-icon-left-text  
   grid-column 2 / span 3
