@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 html(lang="es")
-	- var currentPage = 'componentMosaic'
+	- var currentPage = 'componentFinder'
 	include ../components/structureConfiguration
 	include ../components/headers
+	link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous")
 	body
 		section(class="header")
 			section.projectName
@@ -13,7 +14,7 @@ html(lang="es")
 
 			section(class="breadcrums")
 				p(class="breadcrums-title")
-					| Components > Mosaic
+					| Components > Finder
 			section.mainMenu
 		section(class="body")
 			nav(class="side-nav")
@@ -50,15 +51,55 @@ html(lang="es")
 					div(class="main-article__component")
 						div(class="main-article__component--view")
 							h2(class="main-article__component--title")
-								| Simple-mosaic
+								| Simple-Finder
 							- var menu = ['styles', 'html'];
-							- var menuColor = ['simple-mosaic btnCss', 'simple-mosaic btnHtml'];
+							- var menuColor = ['simple-finder btnCss', 'simple-finder btnHtml'];
 							include ../components/buttonText-list
 
-
-							include ../components/simple-mosaic
+							h3(class="main-article__component--device")
+								| Responsive
+							include ../components/simple-finder
 						div(class="main-article__component--code")
 							h2(class="main-article__component--title")
-								| Simple-mosaic-code
-							- var codeComponent = 'code-simple-mosaic';
+								| Simple-finder-code
+							- var codeComponent = 'code-simple-finder';
+							include ../components/code
+
+
+
+					div(class="main-article__component")
+						div(class="main-article__component--view")
+							h2(class="main-article__component--title")
+								| Finder-icon
+							- var menu = ['styles', 'html'];
+							- var menuColor = ['finder-icon btnCss', 'finder-icon btnHtml'];
+							include ../components/buttonText-list
+
+							h3(class="main-article__component--device")
+								| Responsive
+							include ../components/finder-icon
+						div(class="main-article__component--code")
+							h2(class="main-article__component--title")
+								| Finder-icon-code
+							- var codeComponent = 'code-finder-icon';
+							include ../components/code
+
+
+
+
+					div(class="main-article__component")
+						div(class="main-article__component--view")
+							h2(class="main-article__component--title")
+								| Finder-animated
+							- var menu = ['styles', 'html'];
+							- var menuColor = ['finder-animated btnCss', 'finder-animated btnHtml'];
+							include ../components/buttonText-list
+
+							h3(class="main-article__component--device")
+								| Responsive
+							include ../components/finder-animated
+						div(class="main-article__component--code")
+							h2(class="main-article__component--title")
+								| Finder-animated-code
+							- var codeComponent = 'code-finder-animated';
 							include ../components/code
