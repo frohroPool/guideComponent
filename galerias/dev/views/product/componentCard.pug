@@ -55,7 +55,8 @@ html(lang="es")
 							- var menuColor = ['card-text btnCss', 'card-text btnHtml'];
 							include ../components/buttonText-list
 
-
+							h3(class="main-article__component--device")
+								| Responsive
 							include ../components/card-text
 						div(class="main-article__component--code")
 							h2(class="main-article__component--title")
@@ -63,5 +64,57 @@ html(lang="es")
 							- var codeComponent = 'code-card-text';
 							include ../components/code
 
+
+					div(class="main-article__component")
+						div(class="main-article__component--view")
+							h2(class="main-article__component--title")
+								| Card-brief
+							- var menu = ['styles', 'html'];
+							- var menuColor = ['card-brief btnCss', 'card-brief btnHtml'];
+							include ../components/buttonText-list
+
+							h3(class="main-article__component--device")
+								| Responsive
+							include ../components/card-brief
+						div(class="main-article__component--code")
+							h2(class="main-article__component--title")
+								| Card-brief-code
+							- var codeComponent = 'code-card-brief';
+							include ../components/code
+
+
+					div(class="main-article__component")
+						div(class="main-article__component--view")
+							h2(class="main-article__component--title")
+								| Card-image
+							- var menu = ['styles', 'html'];
+							- var menuColor = ['card-image btnCss', 'card-image btnHtml'];
+							include ../components/buttonText-list
+
+							h3(class="main-article__component--device")
+								| Responsive
+							include ../components/card-image
+						div(class="main-article__component--code")
+							h2(class="main-article__component--title")
+								| Card-image-code
+							- var codeComponent = 'code-card-image';
+							include ../components/code
+
+					div(class="main-article__component")
+						div(class="main-article__component--view")
+							h2(class="main-article__component--title")
+								| Card-video
+							- var menu = ['styles', 'html'];
+							- var menuColor = ['card-video btnCss', 'card-video btnHtml'];
+							include ../components/buttonText-list
+
+							h3(class="main-article__component--device")
+								| Responsive
+							include ../components/card-video
+						div(class="main-article__component--code")
+							h2(class="main-article__component--title")
+								| Card-video-code
+							- var codeComponent = 'code-card-video';
+							include ../components/code					
 
 							- var menu = false;
