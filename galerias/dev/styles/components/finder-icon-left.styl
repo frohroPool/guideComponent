@@ -1,0 +1,42 @@
+.finder-icon-left-container
+  display grid
+  grid-template-columns repeat(4, 1fr)
+  grid-template-rows 0 5vw
+  grid-gap: 5px;
+  border 1px solid #111735
+  border-radius 5px
+
+.finder-icon-left-item 
+  padding 0
+  margin-top 1%  
+
+.finder-icon-left-button
+  grid-column 1 / span 1
+  width: 40px;
+  height: 36px;
+  border: 1px solid #ffffff;
+  background: #ffffff;
+  text-align: center;
+  color: #5d5d5d;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 20px;
+
+.finder-icon-left-text  
+  grid-column 2 / span 3
+  width: 100%;
+  border: 3px solid #ffffff;  
+  height: 20px;  
+  outline: none;
+  color: #DDD;
+
+.finder-icon-left-text:focus
+  color: #000;
+
+@media screen and (max-width:1300px)
+    .finder-icon-left-text        
+        padding 5px
+        font-size 11px
+    
+    .finder-icon-left-button 
+        font-size: 10px;

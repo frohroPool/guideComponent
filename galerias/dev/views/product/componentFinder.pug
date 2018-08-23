@@ -85,6 +85,28 @@ html(lang="es")
 							include ../components/code
 
 
+					
+					
+					div(class="main-article__component")
+						div(class="main-article__component--view")
+							h2(class="main-article__component--title")
+								| Finder-icon-left
+							- var menu = ['styles', 'html'];
+							- var menuColor = ['finder-icon-left btnCss', 'finder-icon-left btnHtml'];
+							include ../components/buttonText-list
+
+							h3(class="main-article__component--device")
+								| Responsive
+							include ../components/finder-icon-left
+						div(class="main-article__component--code")
+							h2(class="main-article__component--title")
+								| Finder-icon-left-code
+							- var codeComponent = 'code-finder-icon-left';
+							include ../components/code
+
+					
+
+
 
 
 					div(class="main-article__component")
