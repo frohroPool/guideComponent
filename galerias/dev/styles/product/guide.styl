@@ -24,7 +24,7 @@ pre
 	color #fff
 	width 100%
 	white-space pre-wrap
-	padding 5px
+	// padding 5px
 	overflow scroll
 	
 
@@ -155,12 +155,13 @@ button
 .main-article__component
 	width 90%
 	height 40vh
-	
 	display flex
 	flex-direction row
 	justify-content space-around
 	padding-bottom 10px
 	border-bottom 1px solid #202124
+.main-article__component:last-child
+	margin-bottom 50px
 	
 .main-article__component--view, .main-article__component--code
 	overflow-y scroll
@@ -175,7 +176,8 @@ button
 
 .main-article__component--device
 	font-size 15px
-	margin-bottom 5px
+	margin-bottom 20px
+	border-bottom 1px solid black
 
 
 .action

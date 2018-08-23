@@ -100,6 +100,42 @@ html(lang="es")
 							- var codeComponent = 'code-card-image';
 							include ../components/code
 
+
+					div(class="main-article__component")
+						div(class="main-article__component--view")
+							h2(class="main-article__component--title")
+								| Card-mall
+							- var menu = ['styles', 'html'];
+							- var menuColor = ['card-mall btnCss', 'card-mall btnHtml'];
+							include ../components/buttonText-list
+
+							h3(class="main-article__component--device")
+								| Responsive
+							include ../components/card-mall
+						div(class="main-article__component--code")
+							h2(class="main-article__component--title")
+								| Card-mall-code
+							- var codeComponent = 'code-card-mall';
+							include ../components/code		
+
+
+					div(class="main-article__component")
+						div(class="main-article__component--view")
+							h2(class="main-article__component--title")
+								| Card-coverMagazine
+							- var menu = ['styles', 'html'];
+							- var menuColor = ['card-coverMagazine btnCss', 'card-coverMagazine btnHtml'];
+							include ../components/buttonText-list
+
+							h3(class="main-article__component--device")
+								| Responsive
+							include ../components/card-coverMagazine
+						div(class="main-article__component--code")
+							h2(class="main-article__component--title")
+								| Card-coverMagazine-code
+							- var codeComponent = 'code-card-coverMagazine';
+							include ../components/code
+
 					div(class="main-article__component")
 						div(class="main-article__component--view")
 							h2(class="main-article__component--title")
@@ -115,6 +151,8 @@ html(lang="es")
 							h2(class="main-article__component--title")
 								| Card-video-code
 							- var codeComponent = 'code-card-video';
-							include ../components/code					
+							include ../components/code
+
+										
 
 							- var menu = false;
