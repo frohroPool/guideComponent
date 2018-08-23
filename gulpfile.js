@@ -23,7 +23,7 @@ gulp.task('es6', function(){
 				bundle.pipe(source('bundle-' + fileName ))
 							.pipe(buffer())
 							// .pipe(uglify())
-							.pipe(notify('ES6 to JS ('+ fileName +') in ('+env+') -> OK'))
+							// .pipe(notify('ES6 to JS ('+ fileName +') in ('+env+') -> OK'))
 							.pipe(gulp.dest(destDir));
 		});
 	};
@@ -37,7 +37,7 @@ gulp.task('pug', () =>
 		.pipe(pug({
 			pretty:true
 		}))
-		.pipe(notify('PUG to HTML ('+env+') -> OK'))
+		// .pipe(notify('PUG to HTML ('+env+') -> OK'))
 		.pipe(gulp.dest('./'+env+'/dest/views/'))
 );
 
@@ -47,7 +47,7 @@ gulp.task('styl', () =>
 		.pipe(styl({ 
 			compress : true 
 		}))
-		.pipe(notify('STYL to CSS ('+env+') -> OK'))
+		// .pipe(notify('STYL to CSS ('+env+') -> OK'))
 		// .pipe(cleanCss({compatibility: 'ie8'}))
 		.pipe(gulp.dest('./'+env+'/dest/css/'))
 );
