@@ -23,7 +23,11 @@ gulp.task('es6', function(){
 				bundle.pipe(source('bundle-' + fileName ))
 							.pipe(buffer())
 							// .pipe(uglify())
+<<<<<<< HEAD
 							//.pipe(notify('ES6 to JS ('+ fileName +') in ('+env+') -> OK'))
+=======
+							// .pipe(notify('ES6 to JS ('+ fileName +') in ('+env+') -> OK'))
+>>>>>>> 687f3eb2eb6899aa56a98b10a02b18a21ef68b87
 							.pipe(gulp.dest(destDir));
 		});
 	};
@@ -37,7 +41,11 @@ gulp.task('pug', () =>
 		.pipe(pug({
 			pretty:true
 		}))
+<<<<<<< HEAD
 		//.pipe(notify('PUG to HTML ('+env+') -> OK'))
+=======
+		// .pipe(notify('PUG to HTML ('+env+') -> OK'))
+>>>>>>> 687f3eb2eb6899aa56a98b10a02b18a21ef68b87
 		.pipe(gulp.dest('./'+env+'/dest/views/'))
 );
 
@@ -47,7 +55,11 @@ gulp.task('styl', () =>
 		.pipe(styl({ 
 			compress : true 
 		}))
+<<<<<<< HEAD
 		//.pipe(notify('STYL to CSS ('+env+') -> OK'))
+=======
+		// .pipe(notify('STYL to CSS ('+env+') -> OK'))
+>>>>>>> 687f3eb2eb6899aa56a98b10a02b18a21ef68b87
 		// .pipe(cleanCss({compatibility: 'ie8'}))
 		.pipe(gulp.dest('./'+env+'/dest/css/'))
 );
