@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+html(lang="es")
+	- var currentPage = 'componentFinder'
+	include ../components/structureConfiguration
+	include ../components/headers
+	link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous")
+	body
+		section(class="header")
+			section.projectName
+				a(href="/")
+					span(class="icon-home")
+					span
+						|	UX Design
+
+			section(class="breadcrums")
+				p(class="breadcrums-title")
+					| Components > Finder
+			section.mainMenu
+		section(class="body")
+			nav(class="side-nav")
+				span(class="side-nav__section-title")
+					|	Material Organisms
+				ul(class="side-nav__menu side-nav__menu--sections")
+					each v0,i0 in config.organisms
+						li(class='side-nav__menu-item')
+							a(href="" + v0.src, target="" + v0.target, class='side-nav__link') #{v0.name}
+
+				span(class="side-nav__section-title")
+					|	Material Components
+				ul(class="side-nav__menu side-nav__menu--sections")
+					each v0,i0 in config.components
+						li(class='side-nav__menu-item')
+							a(href="" + v0.src, target="" + v0.target, class='side-nav__link') #{v0.name}
+			
+
+			section(class="main")
+				article(class="main-article")
+					h1(class="main-article__title")
+						| Finder
+					nav(class="main-article__btnCodes")
+						button(id="allCssList" class="getStyle all") Show CSS
+						button(id="allHtmlList" class="getHTML all") Show HTML
+					div(class="showAllCssRules hiddeCssRule" id="showAllCssRules")
+					div(class="showAllHtmlRules hiddeHtmlRule" id="showAllHtmlRules")
+					p(class="main-article__description")
+						| Navigational transitions occur when users move between screens, such as from a home screen to a detail screen.
+					
+
+					// --------------------------------------------------------				
+
+					div(class="main-article__component")
+						div(class="main-article__component--view")
+							h2(class="main-article__component--title")
+								| Simple-Finder
+							- var menu = ['styles', 'html'];
+							- var menuColor = ['simple-finder btnCss', 'simple-finder btnHtml'];
+							include ../components/buttonText-list
+
+							h3(class="main-article__component--device")
+								| Responsive
+							include ../components/simple-finder
+						div(class="main-article__component--code")
+							h2(class="main-article__component--title")
+								| Simple-finder-code
+							- var codeComponent = 'code-simple-finder';
+							include ../components/code
+
+
+
+					div(class="main-article__component")
+						div(class="main-article__component--view")
+							h2(class="main-article__component--title")
+								| Finder-icon
+							- var menu = ['styles', 'html'];
+							- var menuColor = ['finder-icon btnCss', 'finder-icon btnHtml'];
+							include ../components/buttonText-list
+
+							h3(class="main-article__component--device")
+								| Responsive
+							include ../components/finder-icon
+						div(class="main-article__component--code")
+							h2(class="main-article__component--title")
+								| Finder-icon-code
+							- var codeComponent = 'code-finder-icon';
+							include ../components/code
+
+
+					
+					
+					div(class="main-article__component")
+						div(class="main-article__component--view")
+							h2(class="main-article__component--title")
+								| Finder-icon-left
+							- var menu = ['styles', 'html'];
+							- var menuColor = ['finder-icon-left btnCss', 'finder-icon-left btnHtml'];
+							include ../components/buttonText-list
+
+							h3(class="main-article__component--device")
+								| Responsive
+							include ../components/finder-icon-left
+						div(class="main-article__component--code")
+							h2(class="main-article__component--title")
+								| Finder-icon-left-code
+							- var codeComponent = 'code-finder-icon-left';
+							include ../components/code
+
+					
+
+
+
+
+					div(class="main-article__component")
+						div(class="main-article__component--view")
+							h2(class="main-article__component--title")
+								| Finder-animated
+							- var menu = ['styles', 'html'];
+							- var menuColor = ['finder-animated btnCss', 'finder-animated btnHtml'];
+							include ../components/buttonText-list
+
+							h3(class="main-article__component--device")
+								| Responsive
+							include ../components/finder-animated
+						div(class="main-article__component--code")
+							h2(class="main-article__component--title")
+								| Finder-animated-code
+							- var codeComponent = 'code-finder-animated';
+							include ../components/code

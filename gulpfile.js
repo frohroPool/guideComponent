@@ -7,8 +7,8 @@ const gulp = require('gulp'),
 	buffer = require('vinyl-buffer'),
 	// util = require('gulp-util'),
 	// cleanCss = require('gulp-clean-css'),
-	glob = require('glob'),
-	notify = require('gulp-notify');
+	glob = require('glob');
+	//notify = require('gulp-notify');
 
 var env = process.env.SITE_NAME;
 
@@ -23,7 +23,7 @@ gulp.task('es6', function(){
 				bundle.pipe(source('bundle-' + fileName ))
 							.pipe(buffer())
 							// .pipe(uglify())
-							// .pipe(notify('ES6 to JS ('+ fileName +') in ('+env+') -> OK'))
+							//.pipe(notify('ES6 to JS ('+ fileName +') in ('+env+') -> OK'))
 							.pipe(gulp.dest(destDir));
 		});
 	};
