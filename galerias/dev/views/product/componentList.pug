@@ -56,7 +56,7 @@ html(lang="es")
 								| List-simple
 							- var menu = ['styles', 'html'];
 							- var menuColor = ['list-simple btnCss', 'list-simple btnHtml'];
-							include ../components/buttonText-list
+							include ../components/list-buttonText
 
 							h3(class="main-article__component--device")
 								| Responsive
@@ -76,19 +76,19 @@ html(lang="es")
 					div(class="main-article__component")
 						div(class="main-article__component--view")
 							h2(class="main-article__component--title")
-								| Icon-list
+								| List-icon
 							- var menu = ['styles', 'html'];
-							- var menuColor = ['icon-list btnCss', 'icon-list btnHtml'];
-							include ../components/buttonText-list
+							- var menuColor = ['list-icon btnCss', 'list-icon btnHtml'];
+							include ../components/list-buttonText
 
 
 							h3(class="main-article__component--device")
 								| Responsive
-							include ../components/icon-list
+							include ../components/list-icon
 						div(class="main-article__component--code")
 							h2(class="main-article__component--title")
-								| Icon-list-code
-							- var codeComponent = 'code-icon-list';
+								| List-icon-code
+							- var codeComponent = 'code-list-icon';
 							include ../components/code
 
 					// --------------------------------------------------------
@@ -96,18 +96,18 @@ html(lang="es")
 					div(class="main-article__component")
 						div(class="main-article__component--view")
 							h2(class="main-article__component--title")
-								| IconText-list
+								| List-iconText
 							- var menu = ['styles', 'html'];
-							- var menuColor = ['iconText-list btnCss', 'iconText-list btnHtml'];
-							include ../components/buttonText-list
+							- var menuColor = ['list-iconText btnCss', 'list-iconText btnHtml'];
+							include ../components/list-buttonText
 
 							h3(class="main-article__component--device")
 								| Responsive
-							include ../components/iconText-list
+							include ../components/list-iconText
 						div(class="main-article__component--code")
 							h2(class="main-article__component--title")
-								| IconText-list-code
-							- var codeComponent = 'code-iconText-list';
+								| List-iconText-code
+							- var codeComponent = 'code-list-iconText';
 							include ../components/code
 
 
@@ -116,19 +116,19 @@ html(lang="es")
 					div(class="main-article__component")
 						div(class="main-article__component--view")
 							h2(class="main-article__component--title")
-								| ButtonText-list
+								| List-buttonText
 							- var menu = ['styles', 'html'];
-							- var menuColor = ['buttonText-list btnCss', 'buttonText-list btnHtml'];
-							include ../components/buttonText-list
+							- var menuColor = ['list-buttonText btnCss', 'list-buttonText btnHtml'];
+							include ../components/list-buttonText
 
 
 							- var menu = false;
 							h3(class="main-article__component--device")
 								| Responsive
-							include ../components/buttonText-list
+							include ../components/list-buttonText
 						div(class="main-article__component--code")
 							h2(class="main-article__component--title")
-								| ButtonText-list-code
-							- var codeComponent = 'code-buttonText-list';
+								| List-buttonText-code
+							- var codeComponent = 'code-list-buttonText';
 							include ../components/code
 

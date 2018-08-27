@@ -1,0 +1,11 @@
+if menu
+	ul(class="list-buttonText action")
+		each val, index in menu
+			li(class='list-buttonText-item')
+				button(class=""+menuColor[index]) #{val}
+
+else
+	ul(class="list-buttonText" id="list-buttonText")
+		each v0,i0 in config.lists
+			li(class='list-buttonText-item')
+				button #{v0.txt}
