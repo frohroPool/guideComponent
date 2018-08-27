@@ -53,22 +53,22 @@ html(lang="es")
 					div(class="main-article__component")
 						div(class="main-article__component--view")
 							h2(class="main-article__component--title")
-								| Simple-list
+								| List-simple
 							- var menu = ['styles', 'html'];
-							- var menuColor = ['simple-list btnCss', 'simple-list btnHtml'];
+							- var menuColor = ['list-simple btnCss', 'list-simple btnHtml'];
 							include ../components/buttonText-list
 
 							h3(class="main-article__component--device")
 								| Responsive
-							- var cmp = 'simple-list';
+							- var cmp = 'list-simple';
 							- var variants = ['list-bold', 'list-light', 'list-pipe'];
 							- var mode = cmp+'__'+variants[2]
 							include ../components/variants
-							include ../components/simple-list
+							include ../components/list-simple
 						div(class="main-article__component--code")
 							h2(class="main-article__component--title")
-								| Simple-list-code
-							- var codeComponent = 'code-simple-list';
+								| List-simple-code
+							- var codeComponent = 'code-list-simple';
 							include ../components/code
 
 					// --------------------------------------------------------
