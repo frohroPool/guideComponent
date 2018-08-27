@@ -1,47 +1,56 @@
-.left-icon-finder-container
-  display: grid;
-  grid-template-columns: repeat(10,1fr);  
-  grid-gap: 1px;
-  border: 1px solid #111735;
-  border-radius: 5px; 
+.left-icon-finder-background
+  display grid
+  grid-template-columns repeat(10,1fr)
+  background rgba(17, 23, 53, 0.5)
+  padding 2%
+  opacity 0.7
 
-.left-icon-finder-item-button 
-  grid-column 1 / span 1
-  padding 0
+.left-icon-finder-container
+  grid-column 2 / span 8
+  background rgba(255, 255, 255, 0.5)
+  border-radius 3px
+  display grid
+  grid-template-columns repeat(6,1fr)
+  grid-gap: 1px
+
+.left-icon-finder-item-button
+  grid-column 1 / span 1  
   align-self center
 
-.left-icon-finder-button  
-  width: 40px;
-  height: 36px;
-  border: 1px solid #ffffff;
-  background: #ffffff;
-  text-align: center;
-  color: #5d5d5d;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 20px;
+.left-icon-finder-button      
+  color #ffffff
+  cursor pointer
+  font-size 20px
+  padding-left 20px
 
-.left-icon-finder-item-text
-  grid-column 2 / span 8
+
+.left-icon-finder-item-text  
+  grid-column 2 / span 4
   padding 0
   margin-top 1%
   align-self center 
 
 .left-icon-finder-text    
-  width: 100%;
-  border: 3px solid #ffffff;  
-  height: 20px;  
-  outline: none;
-  color: #DDD;
-  font-size 14px
+  width 100%
+  border none
+  background none
+  height 30px
+  outline none
+  color #FFF
+  font-size 13px
+  font-style normal
+  font-weight lighter
+
+.left-icon-finder-text::placeholder
+  color: #fff;
 
 .left-icon-finder-text:focus
-  color: #000;
+  color: #fff
 
 @media screen and (max-width:1300px)
     .left-icon-finder-text        
-        padding 5px
-        font-size 11px
-    
+      padding 5px
+      font-size 11px    
+
     .left-icon-finder-button 
-        font-size: 10px;
+      font-size 10px
