@@ -60,6 +60,10 @@ html(lang="es")
 
 							h3(class="main-article__component--device")
 								| Responsive
+							- var cmp = 'simple-list';
+							- var variants = ['list-bold', 'list-light', 'list-pipe'];
+							- var mode = cmp+'__'+variants[2]
+							include ../components/variants
 							include ../components/simple-list
 						div(class="main-article__component--code")
 							h2(class="main-article__component--title")

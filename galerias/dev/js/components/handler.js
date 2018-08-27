@@ -96,16 +96,22 @@ export const Handler = (function() {
 		// Revisar que el evento exista 
 		let currentBasicStyle = document.styleSheets[2];
 		let rules = currentBasicStyle.cssRules;
+
 		var currentRule,currentComponent,css='';
 		let btnCss = document.getElementsByClassName("btnCss");
 		for (var i = 0; i < btnCss.length; i++) {
 			btnCss[i].addEventListener("click", function(event){
+				console.log('rules ...  ',rules);
 				let idComponent = document.getElementById(this.classList[0]);
 				currentComponent = '.'+this.classList[0];
 				for (var i = 0; i < rules.length; i++) {
 					currentRule = rules[i].selectorText;
 					if(currentRule != undefined){
+						console.log( 'currentRule : ',currentRule )
+						console.log( 'currentComponent : ',currentComponent )
 						if(_.includes(currentRule,currentComponent)){
+							css += rules[i].cssText + '\n';
+						}else if(_.includes(currentRule,this.classList[0])){
 							css += rules[i].cssText + '\n';
 						}
 					}else{
@@ -120,11 +126,31 @@ export const Handler = (function() {
 		}
 	}
 
+	let changeModes = function(){
+		// Evento para poder modificar los modos de los componentes
+		// Revisar que el evento exista 
+		let variantComponent = document.getElementsByClassName("variantComponent");
+		let idComponent;
+		for (var i = 0; i < variantComponent.length; i++) {
+			variantComponent[i].addEventListener("click", function(event){
+				document.getElementById(this.getAttribute('for')).checked = true;
+				let preId = this.getAttribute('for').split('__')[0];
+				document.getElementById(preId).setAttribute('data-mode',this.getAttribute('for'));
+				// Verificar si el codigo HTML del componente ya esta visualizado
+				if( document.getElementById('code-'+preId).innerText  != '' ){
+					idComponent = document.getElementById(preId);
+					document.getElementById('code-'+preId).innerText = idComponent.outerHTML;
+				}
+			}, false);
+		}
+	}
+
 	let all = function() {
 			getAllCss();
 			getAllHtml();
 			getCssComponent();
 			getHtmlComponent();
+			changeModes();
 	}
 
 	return {

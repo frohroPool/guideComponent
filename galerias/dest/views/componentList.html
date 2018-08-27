@@ -64,16 +64,32 @@
                 </li>
               </ul>
               <h3 class="main-article__component--device">Responsive</h3>
-              <ul class="simple-list" id="simple-list">
-                <li class="simple-list-item">Mercury</li>
-                <li class="simple-list-item">Venus</li>
-                <li class="simple-list-item">Earth</li>
-                <li class="simple-list-item">Mars</li>
-                <li class="simple-list-item">Jupiter</li>
-                <li class="simple-list-item">Saturn</li>
-                <li class="simple-list-item">Uranus</li>
-                <li class="simple-list-item">Neptune</li>
-                <li class="simple-list-item">Pluto</li>
+              <div class="variants-section">
+                <ul class="variants-section__modes">
+                  <li>
+                    <input type="radio" name="Variant" checked="false" id="simple-list__list-bold"/>
+                    <label class="variantComponent" for="simple-list__list-bold">list-bold</label>
+                  </li>
+                  <li>
+                    <input type="radio" name="Variant" checked="false" id="simple-list__list-light"/>
+                    <label class="variantComponent" for="simple-list__list-light">list-light</label>
+                  </li>
+                  <li>
+                    <input type="radio" name="Variant" checked="checked" id="simple-list__list-pipe"/>
+                    <label class="variantComponent" for="simple-list__list-pipe">list-pipe</label>
+                  </li>
+                </ul>
+              </div>
+              <ul class="simple-list" id="simple-list" data-mode="simple-list__list-pipe">
+                <li class="simple-list-item"><a href="https://planetarynames.wr.usgs.gov/Page/Planets" target="_blank">Mercury</a></li>
+                <li class="simple-list-item"><a href="https://planetarynames.wr.usgs.gov/Page/Planets" target="_blank">Venus</a></li>
+                <li class="simple-list-item"><a href="https://planetarynames.wr.usgs.gov/Page/Planets" target="_blank">Earth</a></li>
+                <li class="simple-list-item"><a href="https://planetarynames.wr.usgs.gov/Page/Planets" target="_blank">Mars</a></li>
+                <li class="simple-list-item"><a href="https://planetarynames.wr.usgs.gov/Page/Planets" target="_blank">Jupiter</a></li>
+                <li class="simple-list-item"><a href="https://planetarynames.wr.usgs.gov/Page/Planets" target="_blank">Saturn</a></li>
+                <li class="simple-list-item"><a href="https://planetarynames.wr.usgs.gov/Page/Planets" target="_blank">Uranus</a></li>
+                <li class="simple-list-item"><a href="https://planetarynames.wr.usgs.gov/Page/Planets" target="_blank">Neptune</a></li>
+                <li class="simple-list-item"><a href="https://planetarynames.wr.usgs.gov/Page/Planets" target="_blank">Pluto</a></li>
               </ul>
             </div>
             <div class="main-article__component--code">
