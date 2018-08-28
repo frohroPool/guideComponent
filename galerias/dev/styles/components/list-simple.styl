@@ -5,9 +5,9 @@
 	overflow hidden
 	display flex
 	flex-direction row
-	justify-content space-around
+	justify-content center
 .list-simple-item
-	width 100%
+	width auto
 	text-align center
 	padding 5px
 .list-simple-item > *
@@ -37,13 +37,22 @@
 @media screen and (max-width:1300px){
 	.list-simple{
 		flex-direction: column;
+		margin-bottom: 0px;
 	}
 	.list-simple-item{
 		border: 0px;
 		text-align: left;
 		margin-bottom: 15px;
+		border: 0px !important;
 	}
 	.list-simple-item:last-child{
 		border-bottom: 0px solid transparent;
 	}
+	
+	[data-mode="list-simple__list-pipe"] li,
+	[data-mode="list-simple__list-light"] li,
+	[data-mode="list-simple__list-bold"] li{
+		font-weight normal
+	}
+		
 }
