@@ -1,0 +1,49 @@
+// Responsive ----------
+.list-simple
+	list-style-type none
+	margin-bottom 10px
+	overflow hidden
+	display flex
+	flex-direction row
+	justify-content space-around
+.list-simple-item
+	width 100%
+	text-align center
+	padding 5px
+.list-simple-item > *
+	color inherit
+	
+.list-simple-item:hover
+	cursor pointer
+	font-weight bold
+	
+
+[data-mode="list-simple__list-pipe"] li
+	font-family 'Source Sans Pro', sans-serif
+	border-right 1px solid gray
+	
+[data-mode="list-simple__list-pipe"] li:last-child
+	border-right 0px solid transparent
+
+[data-mode="list-simple__list-light"] li
+	font-family 'Source Sans Pro', sans-serif
+	font-weight lighter
+
+[data-mode="list-simple__list-bold"] li
+	font-family 'Source Sans Pro', sans-serif
+	font-weight bold
+
+	
+@media screen and (max-width:1300px){
+	.list-simple{
+		flex-direction: column;
+	}
+	.list-simple-item{
+		border: 0px;
+		text-align: left;
+		margin-bottom: 15px;
+	}
+	.list-simple-item:last-child{
+		border-bottom: 0px solid transparent;
+	}
+}

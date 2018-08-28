@@ -102,18 +102,24 @@ var Handler = exports.Handler = function () {
 		// Revisar que el evento exista 
 		var currentBasicStyle = document.styleSheets[2];
 		var rules = currentBasicStyle.cssRules;
+
 		var currentRule,
 		    currentComponent,
 		    css = '';
 		var btnCss = document.getElementsByClassName("btnCss");
 		for (var i = 0; i < btnCss.length; i++) {
 			btnCss[i].addEventListener("click", function (event) {
+				console.log('rules ...  ', rules);
 				var idComponent = document.getElementById(this.classList[0]);
 				currentComponent = '.' + this.classList[0];
 				for (var i = 0; i < rules.length; i++) {
 					currentRule = rules[i].selectorText;
 					if (currentRule != undefined) {
+						console.log('currentRule : ', currentRule);
+						console.log('currentComponent : ', currentComponent);
 						if (_.includes(currentRule, currentComponent)) {
+							css += rules[i].cssText + '\n';
+						} else if (_.includes(currentRule, this.classList[0])) {
 							css += rules[i].cssText + '\n';
 						}
 					} else {
@@ -128,11 +134,31 @@ var Handler = exports.Handler = function () {
 		}
 	};
 
+	var changeModes = function changeModes() {
+		// Evento para poder modificar los modos de los componentes
+		// Revisar que el evento exista 
+		var variantComponent = document.getElementsByClassName("variantComponent");
+		var idComponent = void 0;
+		for (var i = 0; i < variantComponent.length; i++) {
+			variantComponent[i].addEventListener("click", function (event) {
+				document.getElementById(this.getAttribute('for')).checked = true;
+				var preId = this.getAttribute('for').split('__')[0];
+				document.getElementById(preId).setAttribute('data-mode', this.getAttribute('for'));
+				// Verificar si el codigo HTML del componente ya esta visualizado
+				if (document.getElementById('code-' + preId).innerText != '') {
+					idComponent = document.getElementById(preId);
+					document.getElementById('code-' + preId).innerText = idComponent.outerHTML;
+				}
+			}, false);
+		}
+	};
+
 	var all = function all() {
 		getAllCss();
 		getAllHtml();
 		getCssComponent();
 		getHtmlComponent();
+		changeModes();
 	};
 
 	return {
