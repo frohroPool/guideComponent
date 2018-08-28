@@ -53,82 +53,67 @@
           <p class="main-article__description">Navigational transitions occur when users move between screens, such as from a home screen to a detail screen.</p>
           <div class="main-article__component">
             <div class="main-article__component--view">
-              <h2 class="main-article__component--title">Simple-mosaic</h2>
+              <h2 class="main-article__component--title">Mosaic-simple</h2>
               <ul class="list-buttonText action">
                 <li class="list-buttonText-item">
-                  <button class="simple-mosaic btnCss">styles</button>
+                  <button class="mosaic-simple btnCss">styles</button>
                 </li>
                 <li class="list-buttonText-item">
-                  <button class="simple-mosaic btnHtml">html</button>
+                  <button class="mosaic-simple btnHtml">html</button>
                 </li>
               </ul>
               <h3 class="main-article__component--device">Responsive</h3>
-              <div class="simple-mosaic" id="simple-mosaic">
-                <div class="mosaic-item">Contenido</div>
-                <div class="mosaic-item">Contenido</div>
-                <div class="mosaic-item">Contenido</div>
-                <div class="mosaic-item">Contenido</div>
-                <div class="mosaic-item">Contenido</div>
-                <div class="mosaic-item">Contenido</div>
+              <div class="mosaic-simple" id="mosaic-simple">
+                <div class="mosaic-simple__item">Contenido</div>
+                <div class="mosaic-simple__item">Contenido</div>
+                <div class="mosaic-simple__item">Contenido</div>
+                <div class="mosaic-simple__item">Contenido</div>
+                <div class="mosaic-simple__item">Contenido</div>
+                <div class="mosaic-simple__item">Contenido</div>
               </div>
             </div>
             <div class="main-article__component--code">
-              <h2 class="main-article__component--title">Simple-mosaic-code</h2>
-              <pre><code id="code-simple-mosaic"></code></pre>
+              <h2 class="main-article__component--title">Mosaic-simple-code</h2>
+              <pre><code id="code-mosaic-simple"></code></pre>
             </div>
           </div>
           <div class="main-article__component">
             <div class="main-article__component--view">
-              <h2 class="main-article__component--title">Mosaic-full-responsive</h2>
+              <h2 class="main-article__component--title">Mosaic-full</h2>
               <ul class="list-buttonText action">
                 <li class="list-buttonText-item">
-                  <button class="mosaic-full-responsive btnCss">styles</button>
+                  <button class="mosaic-full btnCss">styles</button>
                 </li>
                 <li class="list-buttonText-item">
-                  <button class="mosaic-full-responsive btnHtml">html</button>
+                  <button class="mosaic-full btnHtml">html</button>
                 </li>
               </ul>
-              <h3 class="main-article__component--device">Full Responsive</h3>
-              <div class="mosaic-full-responsive" id="mosaic-full-responsive">
-                <div class="mosaic-full-responsive-content-1">Contenido</div>
-                <div class="mosaic-full-responsive-content-2">Contenido</div>
-                <div class="mosaic-full-responsive-content-3">Contenido</div>
-                <div class="mosaic-full-responsive-content-4">Contenido</div>
-                <div class="mosaic-full-responsive-content-5">Contenido</div>
-                <div class="mosaic-full-responsive-content-6">Contenido</div>
-                <div class="mosaic-full-responsive-content-7">Contenido</div>
+              <h3 class="main-article__component--device">Choose Type</h3>
+              <div class="variants-section">
+                <ul class="variants-section__modes">
+                  <li>
+                    <input type="radio" name="Variant" checked="false" id="mosaic-full__responsive"/>
+                    <label class="variantComponent" for="mosaic-full__responsive">responsive</label>
+                  </li>
+                  <li>
+                    <input type="radio" name="Variant" checked="checked" id="mosaic-full__adaptative"/>
+                    <label class="variantComponent" for="mosaic-full__adaptative">adaptative</label>
+                  </li>
+                </ul>
+              </div>
+              <div class="mosaic-full" id="mosaic-full" data-mode="mosaic-full__adaptative">
+                <div class="mosaic-full__item-1">Contenido</div>
+                <div class="mosaic-full__item-2">Contenido</div>
+                <div class="mosaic-full__item-3">Contenido</div>
+                <div class="mosaic-full__item-4">Contenido</div>
+                <div class="mosaic-full__item-5">Contenido</div>
+                <div class="mosaic-full__item-6">Contenido</div>
+                <div class="mosaic-full__item-7">Contenido</div>
               </div>
             </div>
             <div class="main-article__component--code">
-              <h2 class="main-article__component--title">Mosaic-full-responsive-code</h2>
-              <pre><code id="code-mosaic-full-responsive"></code></pre>
-            </div>
-          </div>
-          <div class="main-article__component">
-            <div class="main-article__component--view">
-              <h2 class="main-article__component--title">Mosaic-adaptative</h2>
-              <ul class="list-buttonText action">
-                <li class="list-buttonText-item">
-                  <button class="mosaic-adaptative btnCss">styles</button>
-                </li>
-                <li class="list-buttonText-item">
-                  <button class="mosaic-adaptative btnHtml">html</button>
-                </li>
-              </ul>
-              <h3 class="main-article__component--device">Responsive</h3>
-              <div class="mosaic-adaptative" id="mosaic-adaptative">
-                <div class="mosaic-adaptative-content-1">Contenido</div>
-                <div class="mosaic-adaptative-content-2">Contenido</div>
-                <div class="mosaic-adaptative-content-3">Contenido</div>
-                <div class="mosaic-adaptative-content-4">Contenido</div>
-                <div class="mosaic-adaptative-content-5">Contenido</div>
-                <div class="mosaic-adaptative-content-6">Contenido</div>
-                <div class="mosaic-adaptative-content-7">Contenido</div>
-              </div>
-            </div>
-            <div class="main-article__component--code">
-              <h2 class="main-article__component--title">Mosaic-adaptative-code</h2>
-              <pre><code id="code-mosaic-adaptative"></code></pre>
+              <h2 class="main-article__component--title">Mosaic-full-code</h2>
+              <pre><code id="code-mosaic-full"></code></pre>
             </div>
           </div>
         </article>

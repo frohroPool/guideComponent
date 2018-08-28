@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Source+Sans+Pro:300,400,700" type="text/css"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" type="text/css"/>
     <script src="../js/bundle-handlerComponent.js" type="text/javascript"></script>
+    <script src="../js/bundle-handlerFinder.js" type="text/javascript"></script>
     <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.10/lodash.min.js" type="text/javascript"></script>
   </head>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous"/>
@@ -55,75 +56,75 @@
           <!-- --------------------------------------------------------				-->
           <div class="main-article__component">
             <div class="main-article__component--view">
-              <h2 class="main-article__component--title">Simple-Finder</h2>
+              <h2 class="main-article__component--title">Finder-simple</h2>
               <ul class="list-buttonText action">
                 <li class="list-buttonText-item">
-                  <button class="simple-finder btnCss">styles</button>
+                  <button class="finder-simple btnCss">styles</button>
                 </li>
                 <li class="list-buttonText-item">
-                  <button class="simple-finder btnHtml">html</button>
+                  <button class="finder-simple btnHtml">html</button>
                 </li>
               </ul>
               <h3 class="main-article__component--device">Responsive</h3>
-              <div class="simple-finder" id="simple-finder">
+              <div class="finder-simple" id="finder-simple">
                 <form id="frm_Busqueda">
-                  <input class="simple-finder-textB" type="search" placeholder="Buscar..." id="simple-finder-textB"/>
+                  <input class="finder-simple__textB" type="search" placeholder="Buscar..." id="finder-simple__textB"/>
                 </form>
               </div>
             </div>
             <div class="main-article__component--code">
-              <h2 class="main-article__component--title">Simple-finder-code</h2>
-              <pre><code id="code-simple-finder"></code></pre>
+              <h2 class="main-article__component--title">Finder-simple-code</h2>
+              <pre><code id="code-finder-simple"></code></pre>
             </div>
           </div>
           <div class="main-article__component">
             <div class="main-article__component--view">
-              <h2 class="main-article__component--title">Finder-icon</h2>
+              <h2 class="main-article__component--title">Finder-right-icon</h2>
               <ul class="list-buttonText action">
                 <li class="list-buttonText-item">
-                  <button class="finder-icon btnCss">styles</button>
+                  <button class="finder-right-icon btnCss">styles</button>
                 </li>
                 <li class="list-buttonText-item">
-                  <button class="finder-icon btnHtml">html</button>
+                  <button class="finder-right-icon btnHtml">html</button>
                 </li>
               </ul>
               <h3 class="main-article__component--device">Responsive</h3>
-              <div class="finder-icon-container">
-                <div class="finder-icon-search">
-                  <input class="finder-icon-text" type="text" placeholder="Buscar..."/>
-                  <button class="finder-icon-button" type="submit"><i class="fa fa-search"></i></button>
+              <div class="finder-right-icon" id="finder-right-icon">
+                <div class="finder-right-icon__search">
+                  <input class="finder-right-icon__text" type="text" placeholder="Buscar..."/>
+                  <button class="finder-right-icon__button" type="submit"><i class="fa fa-search"></i></button>
                 </div>
               </div>
             </div>
             <div class="main-article__component--code">
-              <h2 class="main-article__component--title">Finder-icon-code</h2>
-              <pre><code id="code-finder-icon"></code></pre>
+              <h2 class="main-article__component--title">Finder-right-icon-code</h2>
+              <pre><code id="code-finder-right-icon"></code></pre>
             </div>
           </div>
           <div class="main-article__component">
             <div class="main-article__component--view">
-              <h2 class="main-article__component--title">Finder-icon-left</h2>
+              <h2 class="main-article__component--title">Finder-left-icon</h2>
               <ul class="list-buttonText action">
                 <li class="list-buttonText-item">
-                  <button class="left-icon-finder btnCss">styles</button>
+                  <button class="finder-left-icon btnCss">styles</button>
                 </li>
                 <li class="list-buttonText-item">
-                  <button class="left-icon-finder btnHtml">html</button>
+                  <button class="finder-left-icon btnHtml">html</button>
                 </li>
               </ul>
               <h3 class="main-article__component--device">Responsive</h3>
-              <div class="left-icon-finder-background">
-                <div class="left-icon-finder-container">
-                  <div class="left-icon-finder-item-button"><i class="fas fa-times left-icon-finder-button"></i></div>
-                  <div class="left-icon-finder-item-text">
-                    <input class="left-icon-finder-text" type="text" placeholder="Busca por centro comercial, tienda o ubicación"/>
+              <div class="finder-left-icon hidden-top-search-bar" id="finder-left-icon">
+                <div class="finder-left-icon__container">
+                  <div class="finder-left-icon__item-button"><i class="fas fa-search finder-left-icon__button" id="top-search-bar-icon"></i></div>
+                  <div class="finder-left-icon__item-text">
+                    <input class="finder-left-icon__text show-top-search-bar" type="text" id="top-search-text" placeholder="Busca por centro comercial, tienda o producto"/>
                   </div>
                 </div>
               </div>
             </div>
             <div class="main-article__component--code">
-              <h2 class="main-article__component--title">Finder-icon-left-code</h2>
-              <pre><code id="code-left-icon-finder"></code></pre>
+              <h2 class="main-article__component--title">Finder-right-icon-left-code</h2>
+              <pre><code id="code-finder-left-icon"></code></pre>
             </div>
           </div>
           <div class="main-article__component">
@@ -138,9 +139,9 @@
                 </li>
               </ul>
               <h3 class="main-article__component--device">Responsive</h3>
-              <div class="finder-animated-container">
-                <div class="finder-animated-search-container">
-                  <input class="finder-animated-text" type="text" placeholder="Buscar..."/><a class="finder-animated-button"><i class="fa fa-search"></i></a>
+              <div class="finder-animated" id="finder-animated">
+                <div class="finder-animated__search-container">
+                  <input class="finder-animated__text" type="text" placeholder="Buscar..."/><a class="finder-animated__button"><i class="fa fa-search"></i></a>
                 </div>
               </div>
             </div>
