@@ -68,32 +68,20 @@ html(lang="es")
 					div(class="main-article__component")
 						div(class="main-article__component--view")
 							h2(class="main-article__component--title")
-								| Mosaic-full-responsive
+								| Mosaic-full
 							- var menu = ['styles', 'html'];
-							- var menuColor = ['mosaic-full-responsive btnCss', 'mosaic-full-responsive btnHtml'];
+							- var menuColor = ['mosaic-full btnCss', 'mosaic-full btnHtml'];
 							include ../components/list-buttonText
-
-
-							include ../components/mosaic-full-responsive
+							
+							h3(class="main-article__component--device")
+								| Choose Type
+							- var cmp = 'mosaic-full';
+							- var variants = ['responsive', 'adaptative'];
+							- var mode = cmp+'__'+variants[1]
+							include ../components/variants
+							include ../components/mosaic-full
 						div(class="main-article__component--code")
 							h2(class="main-article__component--title")
-								| Mosaic-full-responsive-code
-							- var codeComponent = 'code-mosaic-full-responsive';
-							include ../components/code
-
-                    
-					div(class="main-article__component")
-						div(class="main-article__component--view")
-							h2(class="main-article__component--title")
-								| Mosaic-adaptative
-							- var menu = ['styles', 'html'];
-							- var menuColor = ['mosaic-adaptative btnCss', 'mosaic-adaptative btnHtml'];
-							include ../components/list-buttonText
-
-
-							include ../components/mosaic-adaptative
-						div(class="main-article__component--code")
-							h2(class="main-article__component--title")
-								| Mosaic-adaptative-code
-							- var codeComponent = 'code-mosaic-adaptative';
+								| Mosaic-full-code
+							- var codeComponent = 'code-mosaic-full';
 							include ../components/code
