@@ -6,7 +6,7 @@
     <title>UX Design</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed|Roboto+Mono" type="text/css"/>
     <link rel="stylesheet" href="../css/guide.css" type="text/css"/>
-    <link rel="stylesheet" href="../css/componentMosaic.css" type="text/css"/>
+    <link rel="stylesheet" href="../css/organismHeader.css" type="text/css"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Source+Sans+Pro:300,400,700" type="text/css"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" type="text/css"/>
     <script src="../js/bundle-handlerComponent.js" type="text/javascript"></script>
@@ -16,7 +16,7 @@
     <section class="header">
       <section class="projectName"><a href="/"><span class="icon-home"></span><span>	UX Design</span></a></section>
       <section class="breadcrums">
-        <p class="breadcrums-title">Components > Mosaic</p>
+        <p class="breadcrums-title">Organism > Header</p>
       </section>
       <section class="mainMenu"></section>
     </section>
@@ -43,7 +43,7 @@
       </nav>
       <section class="main">
         <article class="main-article">
-          <h1 class="main-article__title">Mosaic</h1>
+          <h1 class="main-article__title">Header</h1>
           <nav class="main-article__btnCodes">
             <button class="getStyle all" id="allCssList">Show CSS</button>
             <button class="getHTML all" id="allHtmlList">Show HTML</button>
@@ -53,67 +53,50 @@
           <p class="main-article__description">Navigational transitions occur when users move between screens, such as from a home screen to a detail screen.</p>
           <div class="main-article__component">
             <div class="main-article__component--view">
-              <h2 class="main-article__component--title">Mosaic-simple</h2>
+              <h2 class="main-article__component--title">Organism-header</h2>
               <ul class="list-buttonText action">
                 <li class="list-buttonText-item">
-                  <button class="mosaic-simple btnCss">styles</button>
+                  <button class="org-header btnCss">styles</button>
                 </li>
                 <li class="list-buttonText-item">
-                  <button class="mosaic-simple btnHtml">html</button>
+                  <button class="org-header btnHtml">html</button>
                 </li>
               </ul>
-              <h3 class="main-article__component--device">Responsive</h3>
-              <div class="mosaic-simple" id="mosaic-simple">
-                <div class="mosaic-simple__item">Contenido</div>
-                <div class="mosaic-simple__item">Contenido</div>
-                <div class="mosaic-simple__item">Contenido</div>
-                <div class="mosaic-simple__item">Contenido</div>
-                <div class="mosaic-simple__item">Contenido</div>
-                <div class="mosaic-simple__item">Contenido</div>
+              <div class="org-header" id="org-header">
+                <div class="org-header__login-bar">
+                  <div class="org-header__login-bar__buttons">
+                    <ul class="some"></ul>
+                  </div>
+                </div>
+                <div class="org-header__menu-bar">
+                  <div class="org-header__menu-bar__logo"></div>
+                  <div class="org-header__menu-bar__links">
+                    <ul class="list-simple" id="list-simple" data-mode="list-simple__list-pipe">
+                      <li class="list-simple-item">                 Centros Comerciales</li>
+                      <li class="list-simple-item">                 Tiendas</li>
+                      <li class="list-simple-item">                 Eventos</li>
+                      <li class="list-simple-item">                 Promociones</li>
+                      <li class="list-simple-item">                 Galerías Club</li>
+                      <li class="list-simple-item">                 Galerías Magazine</li>
+                      <li class="list-simple-item">                 Galerias TV</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="org-header__search-bar">
+                  <div class="finder-left-icon hidden-top-search-bar" id="finder-left-icon">
+                    <div class="finder-left-icon__container">
+                      <div class="finder-left-icon__item-button"><i class="fas fa-search finder-left-icon__button" id="top-search-bar-icon"></i></div>
+                      <div class="finder-left-icon__item-text">
+                        <input class="finder-left-icon__text show-top-search-bar" type="text" id="top-search-text" placeholder="Busca por centro comercial, tienda o producto"/>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
             <div class="main-article__component--code">
-              <h2 class="main-article__component--title">Mosaic-simple-code</h2>
-              <pre><code id="code-mosaic-simple"></code></pre>
-            </div>
-          </div>
-          <div class="main-article__component">
-            <div class="main-article__component--view">
-              <h2 class="main-article__component--title">Mosaic-full</h2>
-              <ul class="list-buttonText action">
-                <li class="list-buttonText-item">
-                  <button class="mosaic-full btnCss">styles</button>
-                </li>
-                <li class="list-buttonText-item">
-                  <button class="mosaic-full btnHtml">html</button>
-                </li>
-              </ul>
-              <h3 class="main-article__component--device">Choose Type</h3>
-              <div class="variants-section">
-                <ul class="variants-section__modes">
-                  <li>
-                    <input type="radio" name="Variant" checked="false" id="mosaic-full__responsive"/>
-                    <label class="variantComponent" for="mosaic-full__responsive">responsive</label>
-                  </li>
-                  <li>
-                    <input type="radio" name="Variant" checked="checked" id="mosaic-full__adaptative"/>
-                    <label class="variantComponent" for="mosaic-full__adaptative">adaptative</label>
-                  </li>
-                </ul>
-              </div>
-              <div class="mosaic-full" id="mosaic-full" data-mode="mosaic-full__adaptative">
-                <div class="mosaic-full__item-1">Contenido</div>
-                <div class="mosaic-full__item-2">Contenido</div>
-                <div class="mosaic-full__item-3">Contenido</div>
-                <div class="mosaic-full__item-4">Contenido</div>
-                <div class="mosaic-full__item-5">Contenido</div>
-                <div class="mosaic-full__item-6">Contenido</div>
-                <div class="mosaic-full__item-7">Contenido</div>
-              </div>
-            </div>
-            <div class="main-article__component--code">
-              <h2 class="main-article__component--title">Mosaic-full-code</h2>
-              <pre><code id="code-mosaic-full"></code></pre>
+              <h2 class="main-article__component--title">Organism-header-code</h2>
+              <pre><code id="code-org-header"></code></pre>
             </div>
           </div>
         </article>
