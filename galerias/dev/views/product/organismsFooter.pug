@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+html(lang="es")
+	- var currentPage = 'componentList'
+	include ../components/structureConfiguration
+	include ../components/headers
+	body
+		section(class="header")
+			section.projectName
+				a(href="/")
+					span(class="icon-home")
+					span
+						|	UX Design
+
+			section(class="breadcrums")
+				p(class="breadcrums-title")
+					| Components > List
+			section.mainMenu
+		section(class="body")
+			nav(class="side-nav")
+				span(class="side-nav__section-title")
+					|	Material Organisms
+				ul(class="side-nav__menu side-nav__menu--sections")
+					each v0,i0 in config.organisms
+						li(class='side-nav__menu-item')
+							a(href="" + v0.src, target="" + v0.target, class='side-nav__link') #{v0.name}
+
+				span(class="side-nav__section-title")
+					|	Material Components
+				ul(class="side-nav__menu side-nav__menu--sections")
+					each v0,i0 in config.components
+						li(class='side-nav__menu-item')
+							a(href="" + v0.src, target="" + v0.target, class='side-nav__link') #{v0.name}
+			
+
+
+			// ============================================================================================
+			section(class="main")
+				article(class="main-article")
+					h1(class="main-article__title")
+						| Lists
+					nav(class="main-article__btnCodes")
+						button(id="allCssList" class="getStyle all") Show CSS
+						button(id="allHtmlList" class="getHTML all") Show HTML
+					div(class="showAllCssRules hiddeCssRule" id="showAllCssRules")
+					div(class="showAllHtmlRules hiddeHtmlRule" id="showAllHtmlRules")
+					p(class="main-article__description")
+						| Navigational transitions occur when users move between screens, such as from a home screen to a detail screen.
+					
+
+
+					// --------------------------------------------------------
+					
+					div(class="main-article__component")
+						div(class="main-article__component--view")
+							h2(class="main-article__component--title")
+								| List-simple
+							- var menu = ['styles', 'html'];
+							- var menuColor = ['list-simple btnCss', 'list-simple btnHtml'];
+							include ../components/list-buttonText
+
+							h3(class="main-article__component--device")
+								| Responsive
+							- var cmp = 'list-simple';
+							- var variants = ['list-bold', 'list-light', 'list-pipe'];
+							- var mode = cmp+'__'+variants[2]
+							include ../components/variants
+							include ../components/list-simple
+						div(class="main-article__component--code")
+							h2(class="main-article__component--title")
+								| List-simple-code
+							- var codeComponent = 'code-list-simple';
+							include ../components/code
+
+					// --------------------------------------------------------
+
+					div(class="main-article__component")
+						div(class="main-article__component--view")
+							h2(class="main-article__component--title")
+								| List-icon
+							- var menu = ['styles', 'html'];
+							- var menuColor = ['list-icon btnCss', 'list-icon btnHtml'];
+							include ../components/list-buttonText
+
+
+							h3(class="main-article__component--device")
+								| Responsive
+							include ../components/list-icon
+						div(class="main-article__component--code")
+							h2(class="main-article__component--title")
+								| List-icon-code
+							- var codeComponent = 'code-list-icon';
+							include ../components/code
+
+					// --------------------------------------------------------
+
+					div(class="main-article__component")
+						div(class="main-article__component--view")
+							h2(class="main-article__component--title")
+								| List-iconText
+							- var menu = ['styles', 'html'];
+							- var menuColor = ['list-iconText btnCss', 'list-iconText btnHtml'];
+							include ../components/list-buttonText
+
+							h3(class="main-article__component--device")
+								| Responsive
+							include ../components/list-iconText
+						div(class="main-article__component--code")
+							h2(class="main-article__component--title")
+								| List-iconText-code
+							- var codeComponent = 'code-list-iconText';
+							include ../components/code
+
+
+					// --------------------------------------------------------
+
+					div(class="main-article__component")
+						div(class="main-article__component--view")
+							h2(class="main-article__component--title")
+								| List-buttonText
+							- var menu = ['styles', 'html'];
+							- var menuColor = ['list-buttonText btnCss', 'list-buttonText btnHtml'];
+							include ../components/list-buttonText
+
+
+							- var menu = false;
+							h3(class="main-article__component--device")
+								| Responsive
+							include ../components/list-buttonText
+						div(class="main-article__component--code")
+							h2(class="main-article__component--title")
+								| List-buttonText-code
+							- var codeComponent = 'code-list-buttonText';
+							include ../components/code
+
