@@ -1,9 +1,8 @@
 if customList
-	ul(class="list-buttonText action")
+	ul(class=action ? 'list-buttonText action' : 'list-buttonText')
 		each val, index in customList
 			li(class='list-buttonText-item')
 				button(class=""+val.cls) #{val.txt}
-
 else
 	ul(class="list-buttonText" id="list-buttonText")
 		each v0,i0 in config.lists

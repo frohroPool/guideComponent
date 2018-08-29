@@ -68,15 +68,15 @@
               <div class="variants-section">
                 <ul class="variants-section__modes">
                   <li>
-                    <input type="radio" name="Variant" checked="false" id="list-simple__list-bold"/>
+                    <input type="radio" name="Variant__list-simple" checked="true" id="list-simple__list-bold"/>
                     <label class="variantComponent" for="list-simple__list-bold">list-bold</label>
                   </li>
                   <li>
-                    <input type="radio" name="Variant" checked="false" id="list-simple__list-light"/>
+                    <input type="radio" name="Variant__list-simple" checked="true" id="list-simple__list-light"/>
                     <label class="variantComponent" for="list-simple__list-light">list-light</label>
                   </li>
                   <li>
-                    <input type="radio" name="Variant" checked="checked" id="list-simple__list-pipe"/>
+                    <input type="radio" name="Variant__list-simple" checked="true" id="list-simple__list-pipe"/>
                     <label class="variantComponent" for="list-simple__list-pipe">list-pipe</label>
                   </li>
                 </ul>
@@ -138,14 +138,33 @@
                 </li>
               </ul>
               <h3 class="main-article__component--device">Responsive</h3>
-              <ul class="list-complete" id="list-complete">
-                <li class="list-complete-item"> <span class="icon-office"> </span>
-                  <p></p>
+              <div class="variants-section">
+                <ul class="variants-section__modes">
+                  <li>
+                    <input type="radio" name="Variant__list-complete" checked="true" id="list-complete__list-vrtPipe"/>
+                    <label class="variantComponent" for="list-complete__list-vrtPipe">list-vrtPipe</label>
+                  </li>
+                  <li>
+                    <input type="radio" name="Variant__list-complete" checked="true" id="list-complete__list-hrtPipe"/>
+                    <label class="variantComponent" for="list-complete__list-hrtPipe">list-hrtPipe</label>
+                  </li>
+                  <li>
+                    <input type="radio" name="Variant__list-complete" checked="true" id="list-complete__list-vrt"/>
+                    <label class="variantComponent" for="list-complete__list-vrt">list-vrt</label>
+                  </li>
+                  <li>
+                    <input type="radio" name="Variant__list-complete" checked="true" id="list-complete__list-hrt"/>
+                    <label class="variantComponent" for="list-complete__list-hrt">list-hrt</label>
+                  </li>
+                </ul>
+              </div>
+              <ul class="list-complete" id="list-complete" data-mode="list-complete__list-vrt">
+                <li class="list-complete-item"><span class="icon-office"></span>
                 </li>
-                <li class="list-complete-item"> <span class="icon-"> </span>
+                <li class="list-complete-item">
                   <p>Inicia session</p>
                 </li>
-                <li class="list-complete-item"> <span class="icon-office"> </span>
+                <li class="list-complete-item"><span class="icon-office"></span>
                   <p>Cart</p>
                 </li>
               </ul>

@@ -1,12 +1,14 @@
 if customList
-	ul(class="list-complete" id="list-complete")
+	ul(class="list-complete" id="list-complete" data-mode=mode)
 		each v0,i0 in customList
-			li(class='list-complete-item') 
-				span(class='icon-'+v0.ico) 
-				p #{v0.txt}
+			li(class='list-complete-item')
+				if v0.ico
+					span(class='icon-'+v0.ico)
+				if v0.txt
+					p #{v0.txt}
 else
 	- var ico = ['office', 'home', 'eyedropper', 'droplet', 'pencil', 'headphones', 'film', 'dice', 'library'];
-	ul(class="list-complete" id="list-complete")
+	ul(class="list-complete" id="list-complete" data-mode=mode)
 		each v0,i0 in config.lists
 			li(class='list-complete-item') 
 				span(class='icon-'+ico[i0]) 
