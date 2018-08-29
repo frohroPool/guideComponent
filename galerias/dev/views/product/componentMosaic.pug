@@ -85,3 +85,26 @@ html(lang="es")
 								| Mosaic-full-code
 							- var codeComponent = 'code-mosaic-full';
 							include ../components/code
+
+
+					div(class="main-article__component")
+						div(class="main-article__component--view")
+							h2(class="main-article__component--title")
+								| Mosaic-square
+							- var action = true;
+							- var customList = [{"txt" : "styles", "cls" : "mosaic-square btnCss"},{"txt" : "html", "cls" : "mosaic-square btnHtml"}];
+							include ../components/list-buttonText
+
+							h3(class="main-article__component--device")
+								| Responsive
+							- var cmp = 'mosaic-square';
+							- var variants = ['mosaic-2', 'mosaic-3', 'mosaic-4'];
+							- var mode = cmp+'__'+variants[2]
+							include ../components/variants
+							- var customList = false;
+							include ../components/mosaic-square
+						div(class="main-article__component--code")
+							h2(class="main-article__component--title")
+								| Mosaic-square-code
+							- var codeComponent = 'code-mosaic-square';
+							include ../components/code
