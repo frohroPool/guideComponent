@@ -1,8 +1,8 @@
-if menu
+if customList
 	ul(class="list-buttonText action")
-		each val, index in menu
+		each val, index in customList
 			li(class='list-buttonText-item')
-				button(class=""+menuColor[index]) #{val}
+				button(class=""+val.cls) #{val.txt}
 
 else
 	if customList
