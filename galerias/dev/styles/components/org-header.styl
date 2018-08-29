@@ -1,0 +1,90 @@
+/*INICIA HEADER CONTAINER*/
+.org-header
+    display grid
+    grid-template-columns repeat(12, 1fr)
+    grid-template-rows auto
+
+.org-header__login-bar
+    grid-column 1 / span 12    
+    background #343851    
+
+.org-header__login-bar__buttons
+    padding-right 10%
+
+.org-header__login-bar__buttons ul
+  justify-content right !important
+
+.org-header__menu-bar
+    grid-column 1 / span 12    
+    background #111735    
+    display grid
+    grid-template-columns repeat(8, 1fr)
+    grid-template-rows auto
+    align-items center
+    justify-items center
+
+.org-header__menu-bar__logo
+    grid-column 2 / span 1
+    justify-self start
+    
+.org-header__menu-bar__logo img
+    width 100px
+    height 100px    
+
+.org-header__menu-bar__links
+    grid-column 3 / span 4
+    justify-self flex-end
+
+.org-header__menu-bar__searchIcon
+    grid-column 7 / span 2
+    color #FFF
+    justify-self center
+
+.searchIcon-pressed
+    color #343851;
+
+.searchIcon:hover
+   cursor pointer
+
+.org-header__search-bar
+    grid-column 1 / span 12
+
+.hidden-top-search-bar
+    opacity 0
+    transition height 0s, width 0s, padding 0s, visibility 0s, opacity 0.3s ease-out
+
+.show-top-search-bar
+    background none
+    transition height 1s, width 1s, padding 1s, visibility 1s, opacity 0.3s ease-out
+
+/*INICIAN REGLAS EXTERNAS DE COMPONENTES*/
+.list-buttonText
+    margin-bottom 0
+    overflow hidden
+    display flex
+    flex-direction row
+    justify-content right
+
+.list-buttonText-item  
+    background #343851
+    width 13%
+    text-align center
+
+.list-buttonText-item button 
+    border 0
+    background none
+    color:#fff
+
+.list-buttonText-item:hover, .list-buttonText-item button:hover
+    cursor pointer
+    background #e0e1e6
+    color #111735
+
+
+.list-simple-item
+    color:#fff
+
+[data-mode="list-simple__list-pipe"] li {
+ border-right:1px solid #fff;
+ font-size: 12px;
+}
