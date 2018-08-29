@@ -22,6 +22,7 @@ var HandlerFinder = exports.HandlerFinder = function () {
     //MUESTRA LA CAJA DE BUSQUEDA
     var evtOpenSearchBar = function evtOpenSearchBar() {
         var searchButon = document.getElementById("btn-search");
+        var textBar = document.getElementById("top-search-text");
         searchButon.addEventListener("click", function () {
             var searchBar = document.getElementById("top-search-bar");
             if (searchBar.classList.contains("hidden-top-search-bar")) {
@@ -30,7 +31,7 @@ var HandlerFinder = exports.HandlerFinder = function () {
                 searchBar.classList.add("show-top-search-bar");
                 searchButon.classList.remove("searchIcon");
                 searchButon.classList.add("searchIcon-pressed");
-                searchBarAnimation();
+                textBar.focus();
             }
         }, false);
     };
