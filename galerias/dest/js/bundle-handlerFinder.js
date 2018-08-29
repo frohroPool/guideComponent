@@ -30,6 +30,7 @@ var HandlerFinder = exports.HandlerFinder = function () {
                 searchBar.classList.add("show-top-search-bar");
                 searchButon.classList.remove("searchIcon");
                 searchButon.classList.add("searchIcon-pressed");
+                searchBarAnimation();
             }
         }, false);
     };
@@ -38,9 +39,14 @@ var HandlerFinder = exports.HandlerFinder = function () {
     var evtCloseSearchBar = function evtCloseSearchBar() {
         var textBar = document.getElementById("top-search-text");
         var searchBar = document.getElementById("top-search-bar");
+        var searchButon = document.getElementById("btn-search");
         textBar.onblur = function () {
             searchBar.classList.add("hidden-top-search-bar");
             searchBar.classList.remove("show-top-search-bar");
+            searchButon.classList.add("searchIcon");
+            searchButon.classList.remove("searchIcon-pressed");
+            textBar.value = "";
+            document.getElementById("top-search-bar-icon").innerText = "search";
         };
     };
 

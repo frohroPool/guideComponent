@@ -1,6 +1,7 @@
 div(class="org-header" id="org-header")
     div(class="org-header__login-bar")
         div(class="org-header__login-bar__buttons")
+            - var action = false;
             - var customList = [{"txt" : "ACCEDER", "cls" : "list-buttonText"},{"txt" : "REGÍSTRATE", "cls" : "list-buttonText"}];
             - var menu = false
             include list-buttonText
@@ -9,7 +10,8 @@ div(class="org-header" id="org-header")
         div(class="org-header__menu-bar__logo")
             img(src="https://www.galerias.com/img/270317_MX.png")            
         
-        div(class="org-header__menu-bar__links")            
+        div(class="org-header__menu-bar__links")
+            - var action = false;            
             - var customList =  ['Centros Comerciales','Tiendas','Eventos','Promociones','Galerías Club','Galerías Magazine','Galerias TV']
             - var menu = false
             - var mode = "list-simple__list-pipe"

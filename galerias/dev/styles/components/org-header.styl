@@ -50,10 +50,12 @@
     grid-column 1 / span 12
 
 .hidden-top-search-bar
-    display none
+    opacity 0
+    transition height 0s, width 0s, padding 0s, visibility 0s, opacity 0.3s ease-out
 
 .show-top-search-bar
     background none
+    transition height 1s, width 1s, padding 1s, visibility 1s, opacity 0.3s ease-out
 
 /*INICIAN REGLAS EXTERNAS DE COMPONENTES*/
 .list-buttonText
