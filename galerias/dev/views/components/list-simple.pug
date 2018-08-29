@@ -1,14 +1,8 @@
 if customList
-	if navBar
-		ul(class="list-simple" id="list-simple" data-mode="list-simple__list-pipe")
-			each v0,i0 in customList
-				li(class='list-simple-item')
-					a(href="https://planetarynames.wr.usgs.gov/Page/Planets" target='_blank') #{v0}
-	else
-		ul(class="list-simple" id="list-simple" data-mode=mode)
-			each v0,i0 in customList
-				li(class='list-simple-item')
-					a(href="https://planetarynames.wr.usgs.gov/Page/Planets" target='_blank') #{v0}
+	ul(class="list-simple" id="list-simple" data-mode=mode)
+		each v0,i0 in customList
+			li(class='list-simple-item')
+				a(href="https://planetarynames.wr.usgs.gov/Page/Planets" target='_blank') #{v0}
 else
 	ul(class="list-simple" id="list-simple" data-mode=mode)
 		each v0,i0 in config.lists

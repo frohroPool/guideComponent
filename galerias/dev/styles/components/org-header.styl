@@ -1,7 +1,10 @@
+/*INICIA HEADER CONTAINER*/
 .org-header
     display grid
     grid-template-columns repeat(12, 1fr)
-    grid-template-rows 5vw 5vw  5vw 5vw    
+    grid-template-rows 2vw 4vw
+    justify-items stretch
+
 
 .org-header__login-bar
     grid-column 1 / span 12    
@@ -10,17 +13,57 @@
 .org-header__menu-bar
     grid-column 1 / span 12    
     background #111735
+    display grid
+    grid-template-columns repeat(8, 1fr)
+    grid-template-rows 2vw 2vw
+    justify-items center
+
+.org-header__menu-bar__logo
+    grid-column 2 / span 1
+    
+.org-header__menu-bar__logo img
+    width 100px
+    height 100px
+
+.org-header__menu-bar__links
+    grid-column 3 / span 4    
+
+.org-header__menu-bar__searchIcon
+    grid-column 7 / span 1
+    color #FFF
     
 .org-header__search-bar
-    grid-column 1 / span 12    
+    grid-column 1 / span 12
     background orange
 
 
+.list-buttonText
+    margin-bottom 0
+    overflow hidden
+    display flex
+    flex-direction row
+    justify-content right
+
+.list-buttonText-item  
+    background #343851
+    width 13%
+    text-align center
+
+.list-buttonText-item button 
+    border 0
+    background none
+    color:#fff
+
+.list-buttonText-item:hover, .list-buttonText-item button:hover
+    cursor pointer
+    background #e0e1e6
+    color #111735
 
 
-/*ESTILOS TEMPORALES*/    
-.list-simple-item     
-    color #FFF
+.list-simple-item
+    color:#fff
 
-[data-mode="list-simple__list-pipe"] li  
- border-right:1px solid #FFF
+[data-mode="list-simple__list-pipe"] li {
+ border-right:1px solid #fff;
+ font-size: 12px;
+}

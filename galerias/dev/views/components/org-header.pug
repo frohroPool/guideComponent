@@ -2,18 +2,23 @@ div(class="org-header" id="org-header")
     div(class="org-header__login-bar")
         div(class="org-header__login-bar__buttons")
             - var customList = ['ACCEDER','REGÍSTRATE']
-            - var menu= false
+            - var menu = false
             include list-buttonText
 
     div(class="org-header__menu-bar")
         div(class="org-header__menu-bar__logo")
+            img(src="https://www.galerias.com/img/270317_MX.png")            
         
-        div(class="org-header__menu-bar__links")
-            
+        div(class="org-header__menu-bar__links")            
             - var customList =  ['Centros Comerciales','Tiendas','Eventos','Promociones','Galerías Club','Galerías Magazine','Galerias TV']
             - var menu = false
-            - var navBar = true 
+            - var mode = "list-simple__list-pipe"
             include list-simple
+            span(class="material-icons")
+                | search
+        
+        div(class="org-header__menu-bar__searchIcon")
+           
 
     div(class="org-header__search-bar") 
         include finder-left-icon 
