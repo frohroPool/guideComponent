@@ -1,5 +1,6 @@
-export const HandlerFinder = (function(){
+export const HandlerFinder = (function(){   
     
+
     //CAMBIA EL ICONO DE BUSQUEDA POR X SI LA CAJA DE BUSQUEDA CONTIENE TEXTO
     let evtChangeSearchBarIcon = function(){        
         let textBar = document.getElementById("top-search-text");       
@@ -30,9 +31,20 @@ export const HandlerFinder = (function(){
         }, false);
     }
 
+    //OCULTA LA CAJA DE BUSQUEDA
+    let evtCloseSearchBar = function(){
+        let textBar = document.getElementById("top-search-text");
+        let searchBar = document.getElementById("top-search-bar");            
+        textBar.onblur = function(){
+            searchBar.classList.add("hidden-top-search-bar");                
+            searchBar.classList.remove("show-top-search-bar");
+        }
+    }
+
     let evtFinder = function(){
         evtChangeSearchBarIcon();
         evtOpenSearchBar();
+        evtCloseSearchBar();
     }
 
     return{

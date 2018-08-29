@@ -34,9 +34,20 @@ var HandlerFinder = exports.HandlerFinder = function () {
         }, false);
     };
 
+    //OCULTA LA CAJA DE BUSQUEDA
+    var evtCloseSearchBar = function evtCloseSearchBar() {
+        var textBar = document.getElementById("top-search-text");
+        var searchBar = document.getElementById("top-search-bar");
+        textBar.onblur = function () {
+            searchBar.classList.add("hidden-top-search-bar");
+            searchBar.classList.remove("show-top-search-bar");
+        };
+    };
+
     var evtFinder = function evtFinder() {
         evtChangeSearchBarIcon();
         evtOpenSearchBar();
+        evtCloseSearchBar();
     };
 
     return {
