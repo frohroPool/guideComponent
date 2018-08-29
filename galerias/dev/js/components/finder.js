@@ -19,10 +19,13 @@ export const HandlerFinder = (function(){
     let evtOpenSearchBar = function(){
         let searchButon = document.getElementById("btn-search");
         searchButon.addEventListener("click", function(){
-            if(document.getElementById("top-search-bar").classList.contains("hidden-top-search-bar") )
+            let searchBar = document.getElementById("top-search-bar");            
+            if(searchBar.classList.contains("hidden-top-search-bar") )
             {   //ELIMINA CLASES PARA OCULTAR BARRA Y AGREGA LAS DE VISUALIZACION
-                document.getElementById("top-search-bar").classList.remove("hidden-top-search-bar");                
-                document.getElementById("top-search-bar").classList.add("show-top-search-bar");
+                searchBar.classList.remove("hidden-top-search-bar");                
+                searchBar.classList.add("show-top-search-bar");
+                searchButon.classList.remove("searchIcon");
+                searchButon.classList.add("searchIcon-pressed");                
             }
         }, false);
     }
