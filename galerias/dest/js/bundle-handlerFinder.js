@@ -18,22 +18,22 @@ var HandlerFinder = exports.HandlerFinder = function () {
             }
         }, false);
     };
-    /*
-        //MUESTRA LA CAJA DE BUSQUEDA
-        let evtOpenSearchBar = function(){
-            let searchButon = document.getElementById("btn-search");
-            searchButon.addEventListener("click", function(){
-                if(document.getElementById("top-search-bar").classList.contains("hidden-top-search-bar") )
-                {   //ELIMINA CLASES PARA OCULTAR BARRA Y AGREGA LAS DE VISUALIZACION
-                    document.getElementById("top-search-bar").classList.remove("hidden-top-search-bar");                
-                    document.getElementById("top-search-bar").classList.add("show-top-search-bar");
-                }
-            }, false);
-        }*/
+
+    //MUESTRA LA CAJA DE BUSQUEDA
+    var evtOpenSearchBar = function evtOpenSearchBar() {
+        var searchButon = document.getElementById("btn-search");
+        searchButon.addEventListener("click", function () {
+            if (document.getElementById("top-search-bar").classList.contains("hidden-top-search-bar")) {
+                //ELIMINA CLASES PARA OCULTAR BARRA Y AGREGA LAS DE VISUALIZACION
+                document.getElementById("top-search-bar").classList.remove("hidden-top-search-bar");
+                document.getElementById("top-search-bar").classList.add("show-top-search-bar");
+            }
+        }, false);
+    };
 
     var evtFinder = function evtFinder() {
         evtChangeSearchBarIcon();
-        //evtOpenSearchBar();
+        evtOpenSearchBar();
     };
 
     return {

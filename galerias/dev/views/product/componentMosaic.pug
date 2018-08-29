@@ -51,8 +51,7 @@ html(lang="es")
 						div(class="main-article__component--view")
 							h2(class="main-article__component--title")
 								| Mosaic-simple
-							- var menu = ['styles', 'html'];
-							- var menuColor = ['mosaic-simple btnCss', 'mosaic-simple btnHtml'];
+							- var customList = [{"txt" : "styles", "cls" : "mosaic-simple btnCss"},{"txt" : "html", "cls" : "mosaic-simple btnHtml"}];
 							include ../components/list-buttonText
 
 
@@ -69,8 +68,7 @@ html(lang="es")
 						div(class="main-article__component--view")
 							h2(class="main-article__component--title")
 								| Mosaic-full
-							- var menu = ['styles', 'html'];
-							- var menuColor = ['mosaic-full btnCss', 'mosaic-full btnHtml'];
+							- var customList = [{"txt" : "styles", "cls" : "mosaic-full btnCss"},{"txt" : "html", "cls" : "mosaic-full btnHtml"}];
 							include ../components/list-buttonText
 							
 							h3(class="main-article__component--device")

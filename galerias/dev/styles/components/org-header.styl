@@ -2,41 +2,56 @@
 .org-header
     display grid
     grid-template-columns repeat(12, 1fr)
-    grid-template-rows 2vw 4vw
-    justify-items stretch
-
+    grid-template-rows auto
 
 .org-header__login-bar
     grid-column 1 / span 12    
-    background #343851
+    background #343851    
+
+.org-header__login-bar__buttons
+    padding-right 10%
+
+.org-header__login-bar__buttons ul
+  justify-content right !important
 
 .org-header__menu-bar
     grid-column 1 / span 12    
-    background #111735
+    background #111735    
     display grid
     grid-template-columns repeat(8, 1fr)
-    grid-template-rows 2vw 2vw
+    grid-template-rows auto
+    align-items center
     justify-items center
 
 .org-header__menu-bar__logo
     grid-column 2 / span 1
+    justify-self start
     
 .org-header__menu-bar__logo img
     width 100px
-    height 100px
+    height 100px    
 
 .org-header__menu-bar__links
-    grid-column 3 / span 4    
+    grid-column 3 / span 4
+    justify-self flex-end
 
 .org-header__menu-bar__searchIcon
-    grid-column 7 / span 1
+    grid-column 7 / span 2
     color #FFF
-    
+    justify-self center
+
+.searchIcon:hover
+   cursor pointer    
 .org-header__search-bar
     grid-column 1 / span 12
+
+.hidden-top-search-bar
+    display none
+
+.show-top-search-bar
     background orange
 
-
+/*INICIAN REGLAS EXTERNAS DE COMPONENTES*/
 .list-buttonText
     margin-bottom 0
     overflow hidden

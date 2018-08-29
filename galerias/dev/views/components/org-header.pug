@@ -1,7 +1,7 @@
 div(class="org-header" id="org-header")
     div(class="org-header__login-bar")
         div(class="org-header__login-bar__buttons")
-            - var customList = ['ACCEDER','REGÍSTRATE']
+            - var customList = [{"txt" : "ACCEDER", "cls" : "list-buttonText"},{"txt" : "REGÍSTRATE", "cls" : "list-buttonText"}];
             - var menu = false
             include list-buttonText
 
@@ -14,12 +14,11 @@ div(class="org-header" id="org-header")
             - var menu = false
             - var mode = "list-simple__list-pipe"
             include list-simple
-            span(class="material-icons")
-                | search
         
         div(class="org-header__menu-bar__searchIcon")
-           
+           span(class="material-icons searchIcon" id="btn-search")
+                | search
 
-    div(class="org-header__search-bar") 
+    div(class="org-header__search-bar hidden-top-search-bar" id="top-search-bar") 
         include finder-left-icon 
 

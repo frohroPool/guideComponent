@@ -14,7 +14,7 @@ export const HandlerFinder = (function(){
             }
         }, false);
     }
-/*
+
     //MUESTRA LA CAJA DE BUSQUEDA
     let evtOpenSearchBar = function(){
         let searchButon = document.getElementById("btn-search");
@@ -25,11 +25,11 @@ export const HandlerFinder = (function(){
                 document.getElementById("top-search-bar").classList.add("show-top-search-bar");
             }
         }, false);
-    }*/
+    }
 
     let evtFinder = function(){
         evtChangeSearchBarIcon();
-        //evtOpenSearchBar();
+        evtOpenSearchBar();
     }
 
     return{
