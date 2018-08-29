@@ -54,6 +54,7 @@ html(lang="es")
 						div(class="main-article__component--view")
 							h2(class="main-article__component--title")
 								| List-simple
+							- var action = true;
 							- var customList = [{"txt" : "styles", "cls" : "list-simple btnCss"},{"txt" : "html", "cls" : "list-simple btnHtml"}];
 							include ../components/list-buttonText
 
@@ -77,6 +78,7 @@ html(lang="es")
 						div(class="main-article__component--view")
 							h2(class="main-article__component--title")
 								| List-icon
+							- var action = true;
 							- var customList = [{"txt" : "styles", "cls" : "list-icon btnCss"},{"txt" : "html", "cls" : "list-icon btnHtml"}];
 							include ../components/list-buttonText
 
@@ -97,11 +99,17 @@ html(lang="es")
 						div(class="main-article__component--view")
 							h2(class="main-article__component--title")
 								| List-complete
+							- var action = true;
 							- var customList = [{"txt" : "styles", "cls" : "list-complete btnCss"},{"txt" : "html", "cls" : "list-complete btnHtml"}];
 							include ../components/list-buttonText
 
 							h3(class="main-article__component--device")
 								| Responsive
+							- var cmp = 'list-complete';
+							- var variants = ['list-vrtPipe', 'list-hrtPipe', 'list-vrt', 'list-hrt'];
+							- var mode = cmp+'__'+variants[2];
+							include ../components/variants
+
 							- var customList = [{"txt" : "", "ico" : "office"},{"txt" : "Inicia session", "ico" : ""},{"txt" : "Cart", "ico" : "office"}];
 							include ../components/list-complete
 						div(class="main-article__component--code")
@@ -117,6 +125,7 @@ html(lang="es")
 						div(class="main-article__component--view")
 							h2(class="main-article__component--title")
 								| List-buttonText
+							- var action = true;
 							- var customList = [{"txt" : "styles", "cls" : "list-buttonText btnCss"},{"txt" : "html", "cls" : "list-buttonText btnHtml"}];
 							include ../components/list-buttonText
 
