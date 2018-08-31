@@ -3,7 +3,9 @@ if customList
 		each v0,i0 in customList
 			li(class='list-complete-item')
 				if v0.ico
-					span(class='icon-'+v0.ico)
+					span(class=v0.ico id= idB)
+						if v0.icoName
+							| #{v0.icoName}
 				if v0.txt
 					p #{v0.txt}
 else

@@ -61,3 +61,20 @@ html(lang="es")
 								| Organism-header-code
 							- var codeComponent = 'code-org-header';
 							include ../components/code
+
+
+
+					div(class="main-article__organisms")
+						div(class="main-article__organisms--view")
+							h2(class="main-article__organisms--title")
+								| Organism-header-single
+							- var action = true;
+							- var customList = [{"txt" : "styles", "cls" : "org-header-single btnCss"},{"txt" : "html", "cls" : "org-header-single btnHtml"}];
+							include ../components/list-buttonText
+
+							include ../components/org-header-single
+						div(class="main-article__organisms--code")
+							h2(class="main-article__organisms--title")
+								| Organism-header-single-code
+							- var codeComponent = 'code-org-header-single';
+							include ../components/code
