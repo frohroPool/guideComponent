@@ -141,3 +141,24 @@ html(lang="es")
 							- var codeComponent = 'code-list-buttonText';
 							include ../components/code
 
+					// --------------------------------------------------------
+
+					div(class="main-article__component")
+						div(class="main-article__component--view")
+							h2(class="main-article__component--title")
+								| List-galerias-login
+							- var action = true;
+							- var customList = [{"txt" : "styles", "cls" : "list-galerias-login btnCss"},{"txt" : "html", "cls" : "list-galerias-login btnHtml"}];
+							include ../components/list-buttonText
+
+
+							- var menu = false;
+							h3(class="main-article__component--device")
+								| Responsive
+							- var customList = [{"txt" : "ACCEDER", "cls" : "list-buttonText"},{"txt" : "REGÍSTRATE", "cls" : "list-buttonText"}];                        				
+							include ../components/list-galerias-login
+						div(class="main-article__component--code")
+							h2(class="main-article__component--title")
+								| List-galerias-login-code
+							- var codeComponent = 'code-list-galerias-login';
+							include ../components/code

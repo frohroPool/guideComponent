@@ -19,6 +19,7 @@ export const HandlerFinder = (function(){
     //MUESTRA LA CAJA DE BUSQUEDA
     let evtOpenSearchBar = function(){
         let searchButon = document.getElementById("btn-search");
+        let textBar = document.getElementById("top-search-text"); 
         searchButon.addEventListener("click", function(){
             let searchBar = document.getElementById("top-search-bar");            
             if(searchBar.classList.contains("hidden-top-search-bar") )
@@ -27,7 +28,7 @@ export const HandlerFinder = (function(){
                 searchBar.classList.add("show-top-search-bar");
                 searchButon.classList.remove("searchIcon");
                 searchButon.classList.add("searchIcon-pressed");
-                searchBarAnimation();                
+                textBar.focus();                               
             }
         }, false);
     }
