@@ -51,6 +51,7 @@ html(lang="es")
 						div(class="main-article__component--view")
 							h2(class="main-article__component--title")
 								| Mosaic-simple
+							- var action = true;
 							- var customList = [{"txt" : "styles", "cls" : "mosaic-simple btnCss"},{"txt" : "html", "cls" : "mosaic-simple btnHtml"}];
 							include ../components/list-buttonText
 
@@ -68,6 +69,7 @@ html(lang="es")
 						div(class="main-article__component--view")
 							h2(class="main-article__component--title")
 								| Mosaic-full
+							- var action = true;
 							- var customList = [{"txt" : "styles", "cls" : "mosaic-full btnCss"},{"txt" : "html", "cls" : "mosaic-full btnHtml"}];
 							include ../components/list-buttonText
 							
@@ -96,7 +98,7 @@ html(lang="es")
 							h3(class="main-article__component--device")
 								| Responsive
 							- var cmp = 'mosaic-square';
-							- var variants = ['mosaic-2', 'mosaic-3', 'mosaic-4'];
+							- var variants = ['mosaic-2', 'mosaic-3', 'mosaic-4', 'mosaic-5'];
 							- var mode = cmp+'__'+variants[2]
 							include ../components/variants
 							- var customList = false;
