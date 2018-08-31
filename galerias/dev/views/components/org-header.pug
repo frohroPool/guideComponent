@@ -1,10 +1,8 @@
 div(class="org-header" id="org-header")
     div(class="org-header__login-bar")
-        div(class="org-header__login-bar__buttons")
-            - var action = false;
-            - var customList = [{"txt" : "ACCEDER", "cls" : "list-buttonText"},{"txt" : "REGÍSTRATE", "cls" : "list-buttonText"}];
-            - var menu = false
-            include list-buttonText
+        div(class="org-header__login-bar__buttons")            
+            - var customList = [{"txt" : "ACCEDER", "cls" : "list-buttonText"},{"txt" : "REGÍSTRATE", "cls" : "list-buttonText"}];            
+            include list-galerias-login
 
     div(class="org-header__menu-bar")
         div(class="org-header__menu-bar__logo")
