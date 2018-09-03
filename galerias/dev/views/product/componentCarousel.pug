@@ -53,21 +53,21 @@ html(lang="es")
 					div(class="main-article__component")
 						div(class="main-article__component--view")
 							h2(class="main-article__component--title")
-								| Carousel-simple
+								| Carousel
 							- var action = true;
-							- var customList = [{"txt" : "styles", "cls" : "carousel-simple btnCss"},{"txt" : "html", "cls" : "carousel-simple btnHtml"}];
+							- var customList = [{"txt" : "styles", "cls" : "carousel btnCss"},{"txt" : "html", "cls" : "carousel btnHtml"}];
 							include ../components/list-buttonText
 
 							h3(class="main-article__component--device")
 								| Responsive
-							- var cmp = 'carousel-simple';
-							- var variants = ['100', '80__20', '100__btn'];
+							- var cmp = 'carousel'; // Aqui se puede poner el nombre unico del carrusel (id)
+							- var variants = ['100', '80_20', '100_btn'];
 							- var mode = cmp+'__'+variants[0]
 							include ../components/variants
 							- var customList = false;
-							include ../components/carousel-simple
+							include ../components/carousel
 						div(class="main-article__component--code")
 							h2(class="main-article__component--title")
-								| Carousel-simple-code
-							- var codeComponent = 'code-carousel-simple';
+								| Carousel-code
+							- var codeComponent = 'code-carousel';
 							include ../components/code

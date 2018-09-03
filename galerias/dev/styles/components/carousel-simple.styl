@@ -1,7 +1,12 @@
-.carousel-simple
-	height 200px
+.carousel
+	height 200px // temporal
 	position relative
-.carousel-simple__container
+	width 100%
+	overflow hidden
+	margin 0
+	padding 0
+	
+.carousel__container
 	list-style-type none
 	width 100%
 	height 100%
@@ -10,11 +15,10 @@
 	display flex
 	flex-flow column wrap
 	justify-content flex-start
-	// align-content space-between
-	// align-items stretch
+	position absolute
 	
 
-.carousel-simple__container-item
+.carousel__container-item
 	margin 0
 	padding 0
 	background #7b4397
@@ -24,8 +28,8 @@
 	height 100%
 
 
-.carousel-simple__prev,
-.carousel-simple__next
+.prevBtnCarousel,
+.nextBtnCarousel
 	position absolute
 	width 30px
 	height 30px
@@ -34,20 +38,20 @@
 	border-radius 15px
 	display none
 
-.carousel-simple__prev:hover,
-.carousel-simple__next:hover
+.prevBtnCarousel:hover,
+.nextBtnCarousel:hover
 	cursor pointer
 
-.carousel-simple__prev
+.prevBtnCarousel
 	left 3%
 	top 48%
 
-.carousel-simple__next
+.nextBtnCarousel
 	left 89%
 	top 48%
 
 
-[data-mode="carousel-simple__100__btn"] ul > button
+[data-mode="carousel__100_btn"] > button
 	display: block;
 
 
