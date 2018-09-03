@@ -1,0 +1,45 @@
+// Responsive ----------
+.list-container
+	list-style-type none
+	margin-bottom 10px
+	overflow hidden
+	display flex
+	flex-direction row
+	justify-content center
+.list-container-item
+	width auto
+	text-align center
+	padding 5px
+
+	
+
+[data-mode="list-container__list-background"] li
+	background gray
+
+[data-mode="list-container__list-border"] li
+	border 1px solid gray
+
+[data-mode="list-container__list-shadow"] li
+	box-shadow 1px 1px 5px 1px #92949c
+	
+@media screen and (max-width:1300px){
+	.list-container{
+		flex-direction: column;
+		margin-bottom: 0px;
+	}
+	.list-container-item{
+		border: 0px;
+		text-align: left;
+		margin-bottom: 15px;
+		border: 0px !important;
+	}
+	
+	[data-mode="list-container__list-background"] li,
+	[data-mode="list-container__list-border"] li,
+	[data-mode="list-container__list-shadow"] li{
+		background: #7b4397;
+		background: -webkit-linear-gradient(to right, #7b4397, #dc2430);
+		background: linear-gradient(to right, #7b4397, #dc2430);
+	}
+		
+}
