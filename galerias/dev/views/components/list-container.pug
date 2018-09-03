@@ -1,0 +1,9 @@
+if customList
+	ul(class="list-container" id="list-container" data-mode=mode)
+		- for (var x = 0; x < customList; x++)
+				li(class='list-container-item')
+else
+	ul(class="list-container" id="list-container" data-mode=mode)
+		each v0,i0 in config.lists
+			li(class='list-container-item')
+				
