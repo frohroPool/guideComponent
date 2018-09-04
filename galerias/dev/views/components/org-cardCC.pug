@@ -1,0 +1,12 @@
+div(class="cardCC" id="cardCC")
+    div(class="cardCC-background")
+        img(class="cardCC-background-img" src="https://serviciosapp3.galerias.com/public/fachadasSitio/PS.jpg" alt="Perisur")    
+    div(class="cardCC-caption")
+        p(class="cardCC-title")
+            | Galerías Perisur
+        div(class="cardCC-links")
+            - var cmp = 'list-simple';        
+            - var mode = 'list-simple__list-light';
+            - var menu = false;        
+            - var customList =['Ubicación','Tiendas','Eventos','Promociones'];
+            include ../components/list-simple
