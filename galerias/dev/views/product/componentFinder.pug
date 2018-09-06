@@ -19,16 +19,23 @@ html(lang="es")
 		section(class="body")
 			nav(class="side-nav")
 				span(class="side-nav__section-title")
-					|	Material Organisms
+					|	Atoms
 				ul(class="side-nav__menu side-nav__menu--sections")
-					each v0,i0 in config.organisms
+					each v0,i0 in config.atoms
+						li(class='side-nav__menu-item')
+							a(href="" + v0.src, target="" + v0.target, class='side-nav__link') #{v0.name}
+				
+				span(class="side-nav__section-title")
+					|	Molecules
+				ul(class="side-nav__menu side-nav__menu--sections")
+					each v0,i0 in config.components
 						li(class='side-nav__menu-item')
 							a(href="" + v0.src, target="" + v0.target, class='side-nav__link') #{v0.name}
 
 				span(class="side-nav__section-title")
-					|	Material Components
+					|	Organisms
 				ul(class="side-nav__menu side-nav__menu--sections")
-					each v0,i0 in config.components
+					each v0,i0 in config.organisms
 						li(class='side-nav__menu-item')
 							a(href="" + v0.src, target="" + v0.target, class='side-nav__link') #{v0.name}
 			
