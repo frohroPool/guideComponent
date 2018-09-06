@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 html(lang="es")
-	- var currentPage = 'organismCardCC'
+	- var currentPage = 'organismCard-bottom-gradient'
 	include ../components/structureConfiguration
 	include ../components/headers
 	body
@@ -13,7 +13,7 @@ html(lang="es")
 
 			section(class="breadcrums")
 				p(class="breadcrums-title")
-					| Organism > Card Centro Comercial
+					| Organism > Card bottom gradient
 			section.mainMenu
 		section(class="body")
 			nav(class="side-nav")
@@ -42,7 +42,7 @@ html(lang="es")
 			section(class="main")
 				article(class="main-article")
 					h1(class="main-article__title")
-						| Card Centro Comercial
+						| Card bottom gradient
 					nav(class="main-article__btnCodes")
 						button(id="allCssList" class="getStyle all") Show CSS
 						button(id="allHtmlList" class="getHTML all") Show HTML
@@ -57,14 +57,14 @@ html(lang="es")
 					div(class="main-article__organisms")
 						div(class="main-article__organisms--view")
 							h2(class="main-article__organisms--title")
-								| Organism-CardCC
+								| Organism-Card-bottom-gradient
 							- var action = true;
-							- var customList = [{"txt" : "styles", "cls" : "org-cardCC btnCss"},{"txt" : "html", "cls" : "org-cardCC btnHtml"}];
+							- var customList = [{"txt" : "styles", "cls" : "org-Card-bottom-gradient btnCss"},{"txt" : "html", "cls" : "org-Card-bottom-gradient btnHtml"}];
 							include ../components/list-buttonText
 
-							include ../components/org-cardCC
+							include ../components/org-card-bottom-gradient
 						div(class="main-article__organisms--code")
 							h2(class="main-article__organisms--title")
-								| Organism-cardCC-code
-							- var codeComponent = 'code-org-cardCC';
+								| Organism-Card-bottom-gradient-code
+							- var codeComponent = 'code-org-Card-bottom-gradient';
 							include ../components/code

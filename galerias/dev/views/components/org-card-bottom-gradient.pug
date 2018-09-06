@@ -1,0 +1,12 @@
+div(class="org-card-bottom-gradient" id="org-card-bottom-gradient")
+    div(class="org-card-bottom-gradient-background")
+        img(class="org-card-bottom-gradient-background-img" src="https://serviciosapp3.galerias.com/public/fachadasSitio/MAZ.jpg" alt="Perisur")    
+    div(class="org-card-bottom-gradient-caption")
+        p(class="org-card-bottom-gradient-title")
+            | Galerías Perisur
+        div(class="org-card-bottom-gradient-links")
+            - var cmp = 'list-simple';        
+            - var mode = 'list-simple__list-light';
+            - var menu = false;        
+            - var customList =['Ubicación','Tiendas','Eventos','Promociones'];
+            include ../components/list-simple
