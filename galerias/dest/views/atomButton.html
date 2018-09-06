@@ -66,185 +66,38 @@
           <p class="main-article__description">Navigational transitions occur when users move between screens, such as from a home screen to a detail screen.</p>
           <div class="main-article__component">
             <div class="main-article__component--view">
-              <h2 class="main-article__component--title">Card-text</h2>
-              <ul class="list-buttonText action">
+              <h2 class="main-article__component--title">Round-button</h2>
+              <ul class="list-buttonText action" id="list-buttonText">
                 <li class="list-buttonText-item">
-                  <button class="card-text btnCss">styles</button>
+                  <button class="atom-round-button" id="atom-round-button" data-mode="atom-round-button__border">styles</button>
                 </li>
                 <li class="list-buttonText-item">
-                  <button class="card-text btnHtml">html</button>
-                </li>
-              </ul>
-              <h3 class="main-article__component--device">Responsive</h3>
-              <div class="card-text" id="card-text">
-                <p class="card-text-item">Placeholder</p>
-              </div>
-            </div>
-            <div class="main-article__component--code">
-              <h2 class="main-article__component--title">Card-text-code</h2>
-              <pre><code id="code-card-text"></code></pre>
-            </div>
-          </div>
-          <div class="main-article__component">
-            <div class="main-article__component--view">
-              <h2 class="main-article__component--title">Card-brief</h2>
-              <ul class="list-buttonText action">
-                <li class="list-buttonText-item">
-                  <button class="card-brief btnCss">styles</button>
-                </li>
-                <li class="list-buttonText-item">
-                  <button class="card-brief btnHtml">html</button>
+                  <button class="atom-round-button" id="atom-round-button" data-mode="atom-round-button__border">html</button>
                 </li>
               </ul>
-              <h3 class="main-article__component--device">Responsive</h3>
-              <div class="card-brief" id="card-brief">
-                <p class="card-brief-section">Politics</p>
-                <h3 class="card-brief-title"><a>
-                     Trump Predicts Stock Market Crash If He’s Impeached</a></h3>
-                <p class="card-brief-description">Donald Trump says the stock market would plummet and Americans would be poorer if lawmakers impeached him.</p>
-                <time class="card-brief-time">updated 37 minutes ago</time>
-              </div>
-            </div>
-            <div class="main-article__component--code">
-              <h2 class="main-article__component--title">Card-brief-code</h2>
-              <pre><code id="code-card-brief"></code></pre>
-            </div>
-          </div>
-          <div class="main-article__component">
-            <div class="main-article__component--view">
-              <h2 class="main-article__component--title">Card-image</h2>
-              <ul class="list-buttonText action">
-                <li class="list-buttonText-item">
-                  <button class="card-image btnCss">styles</button>
-                </li>
-                <li class="list-buttonText-item">
-                  <button class="card-image btnHtml">html</button>
-                </li>
-              </ul>
-              <h3 class="main-article__component--device">Responsive</h3>
-              <div class="card-image" id="card-image">
-                <figure class="card-image-media"><img src="../images/magazinePicture.png"/></figure>
-                <p class="card-image-section">Politics</p>
-                <h3 class="card-image-title"><a>
-                     Trump Predicts Stock Market Crash If He’s Impeached</a></h3>
-                <time class="card-image-time">updated 37 minutes ago</time>
-              </div>
-            </div>
-            <div class="main-article__component--code">
-              <h2 class="main-article__component--title">Card-image-code</h2>
-              <pre><code id="code-card-image"></code></pre>
-            </div>
-          </div>
-          <div class="main-article__component">
-            <div class="main-article__component--view">
-              <h2 class="main-article__component--title">Card-mall</h2>
-              <ul class="list-buttonText action">
-                <li class="list-buttonText-item">
-                  <button class="card-mall btnCss">styles</button>
-                </li>
-                <li class="list-buttonText-item">
-                  <button class="card-mall btnHtml">html</button>
-                </li>
-              </ul>
-              <h3 class="main-article__component--device">Responsive</h3>
-              <div class="card-mall" id="card-mall">
-                <figure class="card-mall-media"><img src="../images/magazinePicture.png"/></figure>
-                <div class="card-mall__brief">
-                  <div class="card-mall__brief--Title">
-                    <h3>Perisur	</h3>
-                  </div>
-                  <div class="card-mall__brief--reveal"><span class="material-icons revealModalCard modalTo-1">more_vert</span></div>
-                  <div class="card-mall__brief--anchor"><a>Ir a este centro comercial</a></div>
+              <h3 class="main-article__component--device">Responsive
+                <div class="variants-section">
+                  <ul class="variants-section__modes">
+                    <li>
+                      <input type="radio" name="Variant__atom-round-button" checked="true" id="atom-round-button__flat"/>
+                      <label class="variantComponent" for="atom-round-button__flat">flat</label>
+                    </li>
+                    <li>
+                      <input type="radio" name="Variant__atom-round-button" checked="true" id="atom-round-button__border"/>
+                      <label class="variantComponent" for="atom-round-button__border">border</label>
+                    </li>
+                    <li>
+                      <input type="radio" name="Variant__atom-round-button" checked="true" id="atom-round-button__shadow"/>
+                      <label class="variantComponent" for="atom-round-button__shadow">shadow</label>
+                    </li>
+                  </ul>
                 </div>
-                <div class="card-mall__modal modal_hidden" id="modalTo-1">
-                  <div class="card-mall__modal--close"><span class="material-icons closeModalCard modalTo-1">close</span></div>
-                  <div class="card-mall__modal--logo">
-                    <figure><img src="../images/LOGO_PERISUR.png"/></figure>
-                  </div>
-                  <div class="card-mall__modal--direction">
-                    <p>
-                       Anillo Periferico sur No. 4690 Col. Ampliacion del Pedregal, San Angel Mexico, D.F.</p>
-                  </div>
-                  <div class="card-mall__modal--thelepone">
-                    <p>
-                       Tel. 01 55 56 06 8389</p>
-                  </div>
-                  <div class="card-mall__modal--email">
-                    <p>
-                       perisur@galerias.com</p>
-                  </div>
-                  <div class="card-mall__modal--detail">
-                    <h4>Detalles del Centro comercial</h4>
-                    <ul class="card-mall__modal--detail_item">
-                      <li>
-                         Una superficie rentable construida de 51,303 m2</li>
-                      <li>
-                         Locales comerciales</li>
-                      <li>
-                         6,345 lugares de estacionamiento</li>
-                      <li>
-                         Liverpool, Palacio de Hierro, Sears, Cinepolis</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
+              </h3>
+              <button class="atom-round-button" id="atom-round-button" data-mode="atom-round-button__flat">Iniciar sesión</button>
             </div>
             <div class="main-article__component--code">
-              <h2 class="main-article__component--title">Card-mall-code</h2>
-              <pre><code id="code-card-mall"></code></pre>
-            </div>
-          </div>
-          <div class="main-article__component">
-            <div class="main-article__component--view">
-              <h2 class="main-article__component--title">Card-coverMagazine</h2>
-              <ul class="list-buttonText action">
-                <li class="list-buttonText-item">
-                  <button class="card-coverMagazine btnCss">styles</button>
-                </li>
-                <li class="list-buttonText-item">
-                  <button class="card-coverMagazine btnHtml">html</button>
-                </li>
-              </ul>
-              <h3 class="main-article__component--device">Responsive</h3>
-              <div class="card-coverMagazine" id="card-coverMagazine">
-                <div class="card-coverMagazine__wrapper">
-                  <figure class="card-coverMagazine__wrapper-media"><img src="../images/cardMagazine.png"/></figure>
-                  <h3 class="card-coverMagazine__wrapper-title"><a>
-                       Trump Predicts Stock Market Crash If He’s Impeached</a></h3>
-                  <p class="card-coverMagazine__wrapper-brief">Musk has long been celebrated by the business press for his work ethic. His extraordinary schedule – a long working day broken into five-minute increments</p>
-                  <p class="card-coverMagazine__wrapper-author">@TBaez</p>
-                  <time class="card-coverMagazine__wrapper-time">Spring 2017</time>
-                </div>
-              </div>
-            </div>
-            <div class="main-article__component--code">
-              <h2 class="main-article__component--title">Card-coverMagazine-code</h2>
-              <pre><code id="code-card-coverMagazine"></code></pre>
-            </div>
-          </div>
-          <div class="main-article__component">
-            <div class="main-article__component--view">
-              <h2 class="main-article__component--title">Card-video</h2>
-              <ul class="list-buttonText action">
-                <li class="list-buttonText-item">
-                  <button class="card-video btnCss">styles</button>
-                </li>
-                <li class="list-buttonText-item">
-                  <button class="card-video btnHtml">html</button>
-                </li>
-              </ul>
-              <h3 class="main-article__component--device">Responsive</h3>
-              <div class="card-video" id="card-video">
-                <video class="card-video-media" controls="controls" src="https://ak1.picdn.net/shutterstock/videos/8882311/preview/stock-footage--k-few-shots-group-of-paparazzi-photo-shoot-on-green-screen-slow-motion-shot-on-red-epic-cinema.mp4"></video>
-                <p class="card-video-section">Politics</p>
-                <h3 class="card-video-title"><a>
-                     Trump Predicts Stock Market Crash If He’s Impeached</a></h3>
-                <time class="card-video-time">updated 37 minutes ago</time>
-              </div>
-            </div>
-            <div class="main-article__component--code">
-              <h2 class="main-article__component--title">Card-video-code</h2>
-              <pre><code id="code-card-video"></code></pre>
+              <h2 class="main-article__component--title">Round-button-code</h2>
+              <pre><code id="code-atom-round-button"></code></pre>
             </div>
           </div>
         </article>
