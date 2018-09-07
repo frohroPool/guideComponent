@@ -67,7 +67,7 @@ html(lang="es")
 								- var text ="Iniciar sesión"							
 								- var cmp = 'atom-round-button';
 								- var variants = ['flat', 'border', 'shadow'];
-								- var mode = cmp+'__'+variants[0]
+								- var mode = cmp+'__'+variants[1]
 								include ../components/variants							
 								
 							include ../components/atom-round-button
@@ -75,6 +75,32 @@ html(lang="es")
 							h2(class="main-article__component--title")
 								| Round-button-code
 							- var codeComponent = 'code-atom-round-button';
+							include ../components/code
+
+
+
+
+					div(class="main-article__component")
+						div(class="main-article__component--view")
+							h2(class="main-article__component--title")
+								| Carousel-button
+							- var action = true;
+							- var customList = [{"txt" : "styles", "cls" : "atom-carousel-button btnCss"},{"txt" : "html", "cls" : "atom-carousel-button btnHtml"}];
+							include ../components/list-buttonText
+
+							h3(class="main-article__component--device")
+								| Responsive
+								- var icon ="arrow_back"							
+								- var cmp = 'atom-carousel-button';
+								- var variants = ['flat', 'border', 'shadow'];
+								- var mode = cmp+'__'+variants[0]
+								include ../components/variants							
+								
+							include ../components/atom-carousel-button
+						div(class="main-article__component--code")
+							h2(class="main-article__component--title")
+								| Carousel-button-code
+							- var codeComponent = 'code-atom-carousel-button';
 							include ../components/code
 
 

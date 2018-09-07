@@ -1,13 +1,10 @@
 if customList
-	ul(class=action ? 'list-buttonText action' : 'list-buttonText' id="list-buttonText")
+	ul(class=action ? 'list-buttonText action' : 'list-buttonText')
 		each val, index in customList
 			li(class='list-buttonText-item')
-				- var text = val.txt
-				- var mode ="atom-round-button__border"
-				include atom-round-button				
+				button(class=""+val.cls data-mode=mode) #{val.txt}
 else
 	ul(class="list-buttonText" id="list-buttonText")
 		each v0,i0 in config.lists
 			li(class='list-buttonText-item')
-				- var mode ="atom-round-button__border"
-				include atom-round-button
+				button #{v0.txt}

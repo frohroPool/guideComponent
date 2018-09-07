@@ -67,12 +67,12 @@
           <div class="main-article__component">
             <div class="main-article__component--view">
               <h2 class="main-article__component--title">Round-button</h2>
-              <ul class="list-buttonText action" id="list-buttonText">
+              <ul class="list-buttonText action">
                 <li class="list-buttonText-item">
-                  <button class="atom-round-button" id="atom-round-button" data-mode="atom-round-button__border">styles</button>
+                  <button class="atom-round-button btnCss">styles</button>
                 </li>
                 <li class="list-buttonText-item">
-                  <button class="atom-round-button" id="atom-round-button" data-mode="atom-round-button__border">html</button>
+                  <button class="atom-round-button btnHtml">html</button>
                 </li>
               </ul>
               <h3 class="main-article__component--device">Responsive
@@ -93,11 +93,47 @@
                   </ul>
                 </div>
               </h3>
-              <button class="atom-round-button" id="atom-round-button" data-mode="atom-round-button__flat">Iniciar sesión</button>
+              <button class="atom-round-button" id="atom-round-button" data-mode="atom-round-button__border">Iniciar sesión</button>
             </div>
             <div class="main-article__component--code">
               <h2 class="main-article__component--title">Round-button-code</h2>
               <pre><code id="code-atom-round-button"></code></pre>
+            </div>
+          </div>
+          <div class="main-article__component">
+            <div class="main-article__component--view">
+              <h2 class="main-article__component--title">Carousel-button</h2>
+              <ul class="list-buttonText action">
+                <li class="list-buttonText-item">
+                  <button class="atom-carousel-button btnCss" data-mode="atom-round-button__border">styles</button>
+                </li>
+                <li class="list-buttonText-item">
+                  <button class="atom-carousel-button btnHtml" data-mode="atom-round-button__border">html</button>
+                </li>
+              </ul>
+              <h3 class="main-article__component--device">Responsive
+                <div class="variants-section">
+                  <ul class="variants-section__modes">
+                    <li>
+                      <input type="radio" name="Variant__atom-carousel-button" checked="true" id="atom-carousel-button__flat"/>
+                      <label class="variantComponent" for="atom-carousel-button__flat">flat</label>
+                    </li>
+                    <li>
+                      <input type="radio" name="Variant__atom-carousel-button" checked="true" id="atom-carousel-button__border"/>
+                      <label class="variantComponent" for="atom-carousel-button__border">border</label>
+                    </li>
+                    <li>
+                      <input type="radio" name="Variant__atom-carousel-button" checked="true" id="atom-carousel-button__shadow"/>
+                      <label class="variantComponent" for="atom-carousel-button__shadow">shadow</label>
+                    </li>
+                  </ul>
+                </div>
+              </h3>
+              <button class="atom-carousel-button" id="atom-carousel-button" data-mode="atom-carousel-button__flat"><span class="material-icons">arrow_back</span></button>
+            </div>
+            <div class="main-article__component--code">
+              <h2 class="main-article__component--title">Carousel-button-code</h2>
+              <pre><code id="code-atom-carousel-button"></code></pre>
             </div>
           </div>
         </article>
