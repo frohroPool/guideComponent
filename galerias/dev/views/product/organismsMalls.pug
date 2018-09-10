@@ -60,8 +60,17 @@ html(lang="es")
 
 							h3(class="main-article__organisms--device")
 								| Responsive
-							- var customList = {elements : 25};
+							- var cmp = 'malls-list';
+							- var variants = ['list-Vertical', 'list-Horizontal'];
+							- var mode = cmp+'__'+variants[1]
+							include ../components/variants
+							- var customList = {elements : 25, include: 'card-mall'};
 							include ../organisms/malls-list
+
+
+
+
+
 						div(class="main-article__organisms--code")
 							h2(class="main-article__organisms--title")
 								| Malls-list-code

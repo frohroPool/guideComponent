@@ -48,30 +48,6 @@ html(lang="es")
 					
 
 					// --------------------------------------------------------
-
-					div(class="main-article__component")
-						div(class="main-article__component--view")
-							h2(class="main-article__component--title")
-								| List-container
-							- var action = true;
-							- var customList = [{"txt" : "styles", "cls" : "list-container btnCss"},{"txt" : "html", "cls" : "list-container btnHtml"}];
-							include ../components/list-buttonText
-
-							h3(class="main-article__component--device")
-								| Responsive
-							- var cmp = 'list-container';
-							- var variants = ['list-Vertical', 'list-Horizontal'];
-							- var mode = cmp+'__'+variants[2]
-							include ../components/variants
-							- var customList = {elements : 10, include: 'card-mall'};
-							include ../components/list-container
-						div(class="main-article__component--code")
-							h2(class="main-article__component--title")
-								| List-container-code
-							- var codeComponent = 'code-list-container';
-							include ../components/code
-
-					// --------------------------------------------------------
 					
 					div(class="main-article__component")
 						div(class="main-article__component--view")

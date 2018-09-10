@@ -1,10 +1,22 @@
-if customList.elements
-	ul(class="malls-list" id="malls-list")
-		- for (var x = 0; x < customList.elements; x++)
-			li(class='malls-list-item')
-				include ../components/card-mall
-else
-	ul(class="malls-list" id="malls-list")
-		each v0,i0 in config.lists
-			li(class='malls-list-item')
-				
+section(class=cmp+"__wrapper" id=cmp+"__wrapper")
+	if customList.elements
+		ul(class=cmp id=cmp data-mode=mode)
+			- for (var x = 0; x < customList.elements; x++)
+				li(class=cmp+'-item')
+					if customList.include == 'card-brief'
+						include ../components/card-brief
+					if customList.include == 'card-mall'
+						- var idCard = x
+						include ../components/card-mall
+					if customList.include == 'card-image'
+						include ../components/card-image
+					if customList.include == 'card-text'
+						include ../components/card-text
+					if customList.include == 'card-video'
+						include ../components/card-video
+					if customList.include == 'card-coverMagazine'
+						include ../components/card-coverMagazine
+	else
+		ul(class=cmp id=cmp data-mode=mode)
+			each v0,i0 in config.lists
+				li(class=cmp+'-item')
