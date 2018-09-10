@@ -53,17 +53,18 @@ html(lang="es")
 					div(class="main-article__organisms")
 						div(class="main-article__organisms--view")
 							h2(class="main-article__organisms--title")
-								| Malls-basic
+								| Malls-list
 							- var action = true;
-							- var customList = [{"txt" : "styles", "cls" : "malls-home btnCss"},{"txt" : "html", "cls" : "malls-home btnHtml"}];
+							- var customList = [{"txt" : "styles", "cls" : "malls-list btnCss"},{"txt" : "html", "cls" : "malls-list btnHtml"}];
 							include ../components/list-buttonText
 
 							h3(class="main-article__organisms--device")
 								| Responsive
-							include ../organisms/malls-home
+							- var customList = {elements : 25};
+							include ../organisms/malls-list
 						div(class="main-article__organisms--code")
 							h2(class="main-article__organisms--title")
-								| Malls-basic-code
-							- var codeComponent = 'code-malls-home';
+								| Malls-list-code
+							- var codeComponent = 'code-malls-list';
 							include ../components/code
 

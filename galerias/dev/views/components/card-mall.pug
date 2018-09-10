@@ -1,4 +1,4 @@
-div(class="card-mall" id="card-mall")
+div(class="card-mall" id="card-mall__"+idCard)
 	figure(class="card-mall-media")
 		img(src="../images/magazinePicture.png")
 	div(class="card-mall__brief")
@@ -6,14 +6,14 @@ div(class="card-mall" id="card-mall")
 			h3
 				| Perisur	
 		div(class="card-mall__brief--reveal")
-			span(class="material-icons revealModalCard modalTo-1")
+			span(class="material-icons revealModalCard modalTo-"+idCard)
 				| more_vert
 		div(class="card-mall__brief--anchor")
 			a
 				| Ir a este centro comercial
-	div(class="card-mall__modal modal_hidden" id="modalTo-1")
+	div(class="card-mall__modal modal_hidden" id="modalTo-"+idCard)
 		div(class="card-mall__modal--close")
-			span(class="material-icons closeModalCard modalTo-1")
+			span(class="material-icons closeModalCard modalTo-"+idCard)
 				| close
 		div(class="card-mall__modal--logo")
 			figure

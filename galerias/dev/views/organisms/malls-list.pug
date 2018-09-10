@@ -1,0 +1,10 @@
+if customList.elements
+	ul(class="malls-list" id="malls-list")
+		- for (var x = 0; x < customList.elements; x++)
+			li(class='malls-list-item')
+				include ../components/card-mall
+else
+	ul(class="malls-list" id="malls-list")
+		each v0,i0 in config.lists
+			li(class='malls-list-item')
+				

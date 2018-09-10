@@ -3,42 +3,24 @@
 	list-style-type none
 	margin-bottom 10px
 	display flex
-	flex-direction row
+	flex-flow column wrap
 	justify-content center
+	width 100%
+	height 100%
 .list-container-item
 	width auto
-	text-align center
+	height auto
 	padding 5px
 
-	
+[data-mode="list-container__list-Horizontal"]
+	flex-flow column wrap
 
-[data-mode="list-container__list-background"] li
-	background gray
+[data-mode="list-container__list-Vertical"]
+	flex-flow row wrap
 
-[data-mode="list-container__list-border"] li
-	border 1px solid gray
-
-[data-mode="list-container__list-shadow"] li
-	box-shadow 1px 1px 5px 1px #92949c
 	
 @media screen and (max-width:1300px){
 	.list-container{
-		flex-direction: column;
-		margin-bottom: 0px;
+		flex-flow row wrap
 	}
-	.list-container-item{
-		border: 0px;
-		text-align: left;
-		margin-bottom: 15px;
-		border: 0px !important;
-	}
-	
-	[data-mode="list-container__list-background"] li,
-	[data-mode="list-container__list-border"] li,
-	[data-mode="list-container__list-shadow"] li{
-		background: #7b4397;
-		background: -webkit-linear-gradient(to right, #7b4397, #dc2430);
-		background: linear-gradient(to right, #7b4397, #dc2430);
-	}
-		
 }
