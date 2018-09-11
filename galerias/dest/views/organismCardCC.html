@@ -6,6 +6,7 @@
     <title>UX Design</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed|Roboto+Mono" type="text/css"/>
     <link rel="stylesheet" href="../css/guide.css" type="text/css"/>
+    <link rel="stylesheet" href="../css/organismCardCC.css" type="text/css"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Source+Sans+Pro:300,400,700" type="text/css"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" type="text/css"/>
     <script src="../js/bundle-handlerComponent.js" type="text/javascript"></script>
@@ -13,12 +14,14 @@
   </head>
   <body>
     <section class="header">
-      <section class="projectName"><a href="#"><span class="icon-home"></span><span>	UX Design</span></a></section>
-      <section class="breadcrums"></section>
+      <section class="projectName"><a href="/"><span class="icon-home"></span><span>	UX Design</span></a></section>
+      <section class="breadcrums">
+        <p class="breadcrums-title">Organism > Card Centro Comercial</p>
+      </section>
       <section class="mainMenu"></section>
     </section>
     <section class="body">
-      <nav class="side-nav"><span class="side-nav__section-title">	Atomos</span>
+      <nav class="side-nav"><span class="side-nav__section-title">	Atoms</span>
         <ul class="side-nav__menu side-nav__menu--sections">
           <li class="side-nav__menu-item"><a class="side-nav__link" href="atomButton.html" target="_self">Button</a></li>
           <li class="side-nav__menu-item"><a class="side-nav__link" href="atomCheckbox.html" target="_self">Checkbox</a></li>
@@ -36,7 +39,7 @@
           <li class="side-nav__menu-item"><a class="side-nav__link" href="/tienda/utensilios/cat_307_1001" target="_self">Filter</a></li>
           <li class="side-nav__menu-item"><a class="side-nav__link" href="/tienda/utensilios/cat_307_1001" target="_self">Survey</a></li>
           <li class="side-nav__menu-item"><a class="side-nav__link" href="componentFinder.html" target="_self">Finder</a></li>
-          <li class="side-nav__menu-item"><a class="side-nav__link" href="componentCarousel.html" target="_self">Carousel</a></li>
+          <li class="side-nav__menu-item"><a class="side-nav__link" href="/tienda/utensilios/cat_307_1001" target="_self">Carousel</a></li>
         </ul><span class="side-nav__section-title">	Organisms</span>
         <ul class="side-nav__menu side-nav__menu--sections">
           <li class="side-nav__menu-item"><a class="side-nav__link" href="#" target="_self">Grid Malls</a></li>
@@ -46,10 +49,53 @@
           <li class="side-nav__menu-item"><a class="side-nav__link" href="/tienda/utensilios/cat_307_1001" target="_self">Social Carousel</a></li>
           <li class="side-nav__menu-item"><a class="side-nav__link" href="/tienda/utensilios/cat_307_1001" target="_self">Grid Carousel</a></li>
           <li class="side-nav__menu-item"><a class="side-nav__link" href="organismHeader.html" target="_self">Header</a></li>
-          <li class="side-nav__menu-item"><a class="side-nav__link" href="organismCard-bottom-gradient.html" target="_self">Card bottom gradient</a></li>
+          <li class="side-nav__menu-item"><a class="side-nav__link" href="organismCardCC.html" target="_self">CardCC</a></li>
           <li class="side-nav__menu-item"><a class="side-nav__link" href="organismsFooter.html" target="_self">Footer</a></li>
         </ul>
       </nav>
+      <section class="main">
+        <article class="main-article">
+          <h1 class="main-article__title">Card Centro Comercial</h1>
+          <nav class="main-article__btnCodes">
+            <button class="getStyle all" id="allCssList">Show CSS</button>
+            <button class="getHTML all" id="allHtmlList">Show HTML</button>
+          </nav>
+          <div class="showAllCssRules hiddeCssRule" id="showAllCssRules"></div>
+          <div class="showAllHtmlRules hiddeHtmlRule" id="showAllHtmlRules"></div>
+          <p class="main-article__description">Navigational transitions occur when users move between screens, such as from a home screen to a detail screen.</p>
+          <div class="main-article__organisms">
+            <div class="main-article__organisms--view">
+              <h2 class="main-article__organisms--title">Organism-CardCC</h2>
+              <ul class="list-buttonText action">
+                <li class="list-buttonText-item">
+                  <button class="org-cardCC btnCss">styles</button>
+                </li>
+                <li class="list-buttonText-item">
+                  <button class="org-cardCC btnHtml">html</button>
+                </li>
+              </ul>
+              <div class="cardCC" id="cardCC">
+                <div class="cardCC-background"><img class="cardCC-background-img" src="https://serviciosapp3.galerias.com/public/fachadasSitio/MAZ.jpg" alt="Perisur"/></div>
+                <div class="cardCC-caption">
+                  <p class="cardCC-title">Galerías Perisur</p>
+                  <div class="cardCC-links">
+                    <ul class="list-simple" id="list-simple" data-mode="list-simple__list-light">
+                      <li class="list-simple-item"><a href="https://planetarynames.wr.usgs.gov/Page/Planets" target="_blank">Ubicación</a></li>
+                      <li class="list-simple-item"><a href="https://planetarynames.wr.usgs.gov/Page/Planets" target="_blank">Tiendas</a></li>
+                      <li class="list-simple-item"><a href="https://planetarynames.wr.usgs.gov/Page/Planets" target="_blank">Eventos</a></li>
+                      <li class="list-simple-item"><a href="https://planetarynames.wr.usgs.gov/Page/Planets" target="_blank">Promociones</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="main-article__organisms--code">
+              <h2 class="main-article__organisms--title">Organism-cardCC-code</h2>
+              <pre><code id="code-org-cardCC"></code></pre>
+            </div>
+          </div>
+        </article>
+      </section>
     </section>
   </body>
 </html>
