@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 html(lang="es")
-	- var currentPage = 'organismsFooter'
+	- var currentPage = 'organismsMalls'
 	include ../components/structureConfiguration
 	include ../components/headers
 	body
@@ -13,7 +13,7 @@ html(lang="es")
 
 			section(class="breadcrums")
 				p(class="breadcrums-title")
-					| Organisms > Footer
+					| Organisms > Malls
 			section.mainMenu
 		section(class="body")
 			include ../components/awdMenu
@@ -24,7 +24,7 @@ html(lang="es")
 			section(class="main")
 				article(class="main-article")
 					h1(class="main-article__title")
-						| Footer
+						| Malls
 					nav(class="main-article__btnCodes")
 						button(id="allCssList" class="getStyle all") Show CSS
 						button(id="allHtmlList" class="getHTML all") Show HTML
@@ -40,17 +40,27 @@ html(lang="es")
 					div(class="main-article__organisms")
 						div(class="main-article__organisms--view")
 							h2(class="main-article__organisms--title")
-								| Footer-basic
+								| Malls-list
 							- var action = true;
-							- var customList = [{"txt" : "styles", "cls" : "footer-basic btnCss"},{"txt" : "html", "cls" : "footer-basic btnHtml"}];
+							- var customList = [{"txt" : "styles", "cls" : "malls-list btnCss"},{"txt" : "html", "cls" : "malls-list btnHtml"}];
 							include ../components/list-buttonText
 
 							h3(class="main-article__organisms--device")
 								| Responsive
-							include ../components/footer-basic
+							- var cmp = 'malls-list';
+							- var variants = ['list-Vertical', 'list-Horizontal'];
+							- var mode = cmp+'__'+variants[1]
+							include ../components/variants
+							- var customList = {elements : 25, include: 'card-mall'};
+							include ../organisms/malls-list
+
+
+
+
+
 						div(class="main-article__organisms--code")
 							h2(class="main-article__organisms--title")
-								| Footer-basic-code
-							- var codeComponent = 'code-footer-basic';
+								| Malls-list-code
+							- var codeComponent = 'code-malls-list';
 							include ../components/code
 

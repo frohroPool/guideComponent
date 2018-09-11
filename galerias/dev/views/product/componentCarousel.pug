@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 html(lang="es")
-	- var currentPage = 'organismsFooter'
+	- var currentPage = 'componentCarousel'
 	include ../components/structureConfiguration
 	include ../components/headers
 	body
@@ -13,7 +13,7 @@ html(lang="es")
 
 			section(class="breadcrums")
 				p(class="breadcrums-title")
-					| Organisms > Footer
+					| Components > Carousel
 			section.mainMenu
 		section(class="body")
 			include ../components/awdMenu
@@ -24,7 +24,7 @@ html(lang="es")
 			section(class="main")
 				article(class="main-article")
 					h1(class="main-article__title")
-						| Footer
+						| Carousel
 					nav(class="main-article__btnCodes")
 						button(id="allCssList" class="getStyle all") Show CSS
 						button(id="allHtmlList" class="getHTML all") Show HTML
@@ -37,20 +37,24 @@ html(lang="es")
 
 					// --------------------------------------------------------
 					
-					div(class="main-article__organisms")
-						div(class="main-article__organisms--view")
-							h2(class="main-article__organisms--title")
-								| Footer-basic
+					div(class="main-article__component")
+						div(class="main-article__component--view")
+							h2(class="main-article__component--title")
+								| Carousel
 							- var action = true;
-							- var customList = [{"txt" : "styles", "cls" : "footer-basic btnCss"},{"txt" : "html", "cls" : "footer-basic btnHtml"}];
+							- var customList = [{"txt" : "styles", "cls" : "carousel btnCss"},{"txt" : "html", "cls" : "carousel btnHtml"}];
 							include ../components/list-buttonText
 
-							h3(class="main-article__organisms--device")
+							h3(class="main-article__component--device")
 								| Responsive
-							include ../components/footer-basic
-						div(class="main-article__organisms--code")
-							h2(class="main-article__organisms--title")
-								| Footer-basic-code
-							- var codeComponent = 'code-footer-basic';
+							- var cmp = 'carousel'; // Aqui se puede poner el nombre unico del carrusel (id)
+							- var variants = ['100', '80_20', '100_btn'];
+							- var mode = cmp+'__'+variants[0]
+							include ../components/variants
+							- var customList = false;
+							include ../components/carousel
+						div(class="main-article__component--code")
+							h2(class="main-article__component--title")
+								| Carousel-code
+							- var codeComponent = 'code-carousel';
 							include ../components/code
-
