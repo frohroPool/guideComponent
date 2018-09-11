@@ -75,8 +75,21 @@
                   <button class="atom-label-top btnHtml">html</button>
                 </li>
               </ul>
-              <h3 class="main-article__component--device">Responsive</h3>
-              <label class="atom-label-top" id="atom-label-top">Novedades</label>
+              <h3 class="main-article__component--device">Responsive
+                <div class="variants-section">
+                  <ul class="variants-section__modes">
+                    <li>
+                      <input type="radio" name="Variant__atom-label-top" checked="true" id="atom-label-top__title"/>
+                      <label class="variantComponent" for="atom-label-top__title">title</label>
+                    </li>
+                    <li>
+                      <input type="radio" name="Variant__atom-label-top" checked="true" id="atom-label-top__subtitle"/>
+                      <label class="variantComponent" for="atom-label-top__subtitle">subtitle</label>
+                    </li>
+                  </ul>
+                </div>
+              </h3>
+              <label class="atom-label-top" id="atom-label-top" data-mode="atom-label-top__subtitle">Novedades</label>
               <hr class="atom-label-top-hr"/>
             </div>
             <div class="main-article__component--code">

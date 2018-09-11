@@ -64,6 +64,10 @@ html(lang="es")
 
 							h3(class="main-article__component--device")
 								| Responsive
+								- var cmp = 'atom-label-top';
+								- var variants = ['title', 'subtitle'];
+								- var mode = cmp+'__'+variants[1]
+								include ../components/variants
 							-var text ="Novedades"
 							include ../components/atom-label-top
 						div(class="main-article__component--code")
