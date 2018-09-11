@@ -1,0 +1,29 @@
+// Responsive ----------
+.malls-list__wrapper
+	width 100%
+	height 100%
+.malls-list
+	list-style-type none
+	margin-bottom 10px
+	display flex
+	flex-flow column wrap
+	justify-content flex-start
+	width 100%
+	height 100%
+.malls-list-item
+	width auto
+	height auto
+	padding 5px
+
+[data-mode="malls-list__list-Horizontal"]
+	flex-flow column wrap
+
+[data-mode="malls-list__list-Vertical"]
+	flex-flow row wrap
+
+	
+@media screen and (max-width:1300px){
+	.malls-list{
+		flex-flow row wrap
+	}
+}

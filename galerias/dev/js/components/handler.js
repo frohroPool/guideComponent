@@ -81,10 +81,21 @@ export const Handler = (function() {
 		// Evento para obtener el codigo HTMl del componente seleccionado
 		// Revisar que el evento exista 
 		let btnHtml = document.getElementsByClassName("btnHtml");
+		let idComponent;
 		for (var i = 0; i < btnHtml.length; i++) {
 			btnHtml[i].addEventListener("click", function(event){
 				// console.log('clases contenidas dentro del componente selecionados ....',this.classList);
-				let idComponent = document.getElementById(this.classList[0]);
+				let allClassMatch = document.getElementsByClassName(this.classList[0]);
+				// console.log(allClassMatch)
+				if(allClassMatch.length > 1){
+					for (var x = 0; x < allClassMatch.length; x++) {
+						if(allClassMatch[x].id != ""){
+							idComponent = document.getElementById(allClassMatch[x].id);
+						}
+					}
+				}else{
+					idComponent = document.getElementById(this.classList[0]);
+				}
 				// console.log(idComponent.outerHTML);
 				document.getElementById('code-'+this.classList[0]).innerText = idComponent.outerHTML;
 			}, false);
@@ -101,14 +112,14 @@ export const Handler = (function() {
 		let btnCss = document.getElementsByClassName("btnCss");
 		for (var i = 0; i < btnCss.length; i++) {
 			btnCss[i].addEventListener("click", function(event){
-				console.log('rules ...  ',rules);
+				// console.log('rules ...  ',rules);
 				let idComponent = document.getElementById(this.classList[0]);
 				currentComponent = '.'+this.classList[0];
 				for (var i = 0; i < rules.length; i++) {
 					currentRule = rules[i].selectorText;
 					if(currentRule != undefined){
-						console.log( 'currentRule : ',currentRule )
-						console.log( 'currentComponent : ',currentComponent )
+						// console.log( 'currentRule : ',currentRule )
+						// console.log( 'currentComponent : ',currentComponent )
 						if(_.includes(currentRule,currentComponent)){
 							css += rules[i].cssText + '\n';
 						}else if(_.includes(currentRule,this.classList[0])){
