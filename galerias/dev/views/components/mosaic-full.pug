@@ -1,4 +1,5 @@
-div(class="mosaic-full" id="mosaic-full" data-mode=mode)
-    each val, index in ['mosaic-full__item-1', 'mosaic-full__item-2', 'mosaic-full__item-3', 'mosaic-full__item-4', 'mosaic-full__item-5', 'mosaic-full__item-6', 'mosaic-full__item-7']
-        div(class= val)
-            | Contenido
+- var items = 7;
+div(class="mosaic-full" id="mosaic-full", data-mode=mode)
+	- for (var x = 1; x <= items; x++)
+		div(class="mosaic-full__item-"+x)
+			| Contenido

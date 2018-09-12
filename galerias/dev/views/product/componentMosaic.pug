@@ -61,11 +61,12 @@ html(lang="es")
 							include ../components/list-buttonText
 							
 							h3(class="main-article__component--device")
-								| Choose Type
+								| Responsive
 							- var cmp = 'mosaic-full';
 							- var variants = ['responsive', 'adaptative'];
 							- var mode = cmp+'__'+variants[1]
 							include ../components/variants
+							- var customList = false;
 							include ../components/mosaic-full
 						div(class="main-article__component--code")
 							h2(class="main-article__component--title")
