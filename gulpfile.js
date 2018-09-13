@@ -27,13 +27,13 @@ gulp.task('es6', function(){
 							.pipe(gulp.dest(destDir));
 		});
 	};
-	glob('./'+env+'/dev/js/product/*.js',function(er,files){
+	glob('./'+env+'/dev/js/sections/*.js',function(er,files){
 		bundleThis(files);
 	});
 });
 
 gulp.task('pug', () =>
-	gulp.src('./'+env+'/dev/views/product/*.pug')
+	gulp.src('./'+env+'/dev/views/sections/*.pug')
 		.pipe(pug({
 			pretty:true
 		}))
@@ -42,7 +42,7 @@ gulp.task('pug', () =>
 );
 
 gulp.task('styl', () =>
-	gulp.src('./'+env+'/dev/styles/product/*.styl')
+	gulp.src('./'+env+'/dev/styles/sections/*.styl')
 		// .pipe(styl())
 		.pipe(styl({ 
 			compress : true 

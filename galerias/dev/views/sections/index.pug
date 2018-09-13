@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 html(lang="es")
 	- var currentPage = 'home'
-	include ../components/structureConfiguration
-	include ../components/headers
+	include ../resources/configuration
+	include ../resources/headers
 	body
 		section(class="header")
 			section.projectName
@@ -14,5 +14,5 @@ html(lang="es")
 			section.breadcrums
 			section.mainMenu
 		section(class="body")
-			include ../components/awdMenu
+			include ../resources/menu
 
