@@ -1,0 +1,10 @@
+if customList
+	ul(class="lisSimple" id="lisSimple" data-mode=mode)
+		each v0,i0 in customList
+			li(class='lisSimple-item')
+				a(href="https://planetarynames.wr.usgs.gov/Page/Planets" target='_blank') #{v0}
+else
+	ul(class="lisSimple" id="lisSimple" data-mode=mode)
+		each v0,i0 in config.lists
+			li(class='lisSimple-item')
+				a(href="https://planetarynames.wr.usgs.gov/Page/Planets" target='_blank') #{v0.txt}

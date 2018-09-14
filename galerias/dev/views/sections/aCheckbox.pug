@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 html(lang="es")
-	- var currentPage = 'componentList'
+	- var currentPage = 'aCheckbox'
 	include ../components/structureConfiguration
 	include ../components/headers
 	body
@@ -13,7 +13,7 @@ html(lang="es")
 
 			section(class="breadcrums")
 				p(class="breadcrums-title")
-					| Components > List
+					| Atoms > Checkbox
 			section.mainMenu
 		section(class="body")
 			include ../components/awdMenu
@@ -24,7 +24,7 @@ html(lang="es")
 			section(class="main")
 				article(class="main-article")
 					h1(class="main-article__title")
-						| Lists
+						| Checkbox
 					nav(class="main-article__btnCodes")
 						button(id="allCssList" class="getStyle all") Show CSS
 						button(id="allHtmlList" class="getHTML all") Show HTML
@@ -34,117 +34,112 @@ html(lang="es")
 						| Navigational transitions occur when users move between screens, such as from a home screen to a detail screen.
 					
 
-					// --------------------------------------------------------
-					
 					div(class="main-article__component")
 						div(class="main-article__component--view")
 							h2(class="main-article__component--title")
-								| List-simple
+								| Card-text
 							- var action = true;
-							- var customList = [{"txt" : "styles", "cls" : "list-simple btnCss"},{"txt" : "html", "cls" : "list-simple btnHtml"}];
+							- var customList = [{"txt" : "styles", "cls" : "card-text btnCss"},{"txt" : "html", "cls" : "card-text btnHtml"}];
 							include ../components/list-buttonText
 
 							h3(class="main-article__component--device")
 								| Responsive
-							- var cmp = 'list-simple';
-							- var variants = ['list-bold', 'list-light', 'list-pipe'];
-							- var mode = cmp+'__'+variants[2]
-							include ../components/variants
-							- var customList = false;
-							include ../components/list-simple
+							include ../components/card-text
 						div(class="main-article__component--code")
 							h2(class="main-article__component--title")
-								| List-simple-code
-							- var codeComponent = 'code-list-simple';
+								| Card-text-code
+							- var codeComponent = 'code-card-text';
 							include ../components/code
 
-					// --------------------------------------------------------
 
 					div(class="main-article__component")
 						div(class="main-article__component--view")
 							h2(class="main-article__component--title")
-								| List-icon
+								| Card-brief
 							- var action = true;
-							- var customList = [{"txt" : "styles", "cls" : "list-icon btnCss"},{"txt" : "html", "cls" : "list-icon btnHtml"}];
-							include ../components/list-buttonText
-
-
-							h3(class="main-article__component--device")
-								| Responsive
-							- var customList = false;
-							include ../components/list-icon
-						div(class="main-article__component--code")
-							h2(class="main-article__component--title")
-								| List-icon-code
-							- var codeComponent = 'code-list-icon';
-							include ../components/code
-
-					// --------------------------------------------------------
-
-					div(class="main-article__component")
-						div(class="main-article__component--view")
-							h2(class="main-article__component--title")
-								| List-complete
-							- var action = true;
-							- var customList = [{"txt" : "styles", "cls" : "list-complete btnCss"},{"txt" : "html", "cls" : "list-complete btnHtml"}];
+							- var customList = [{"txt" : "styles", "cls" : "card-brief btnCss"},{"txt" : "html", "cls" : "card-brief btnHtml"}];
 							include ../components/list-buttonText
 
 							h3(class="main-article__component--device")
 								| Responsive
-							- var cmp = 'list-complete';
-							- var variants = ['list-vrtPipe', 'list-hrtPipe', 'list-vrt', 'list-hrt'];
-							- var mode = cmp+'__'+variants[2];
-							include ../components/variants
-
-							- var customList = [{"txt" : "", "ico" : "icon-office"},{"txt" : "Inicia session", "ico" : ""},{"txt" : "Cart", "ico" : "material-icons", "icoName" : "search"}];
-							include ../components/list-complete
+							include ../components/card-brief
 						div(class="main-article__component--code")
 							h2(class="main-article__component--title")
-								| List-complete-code
-							- var codeComponent = 'code-list-complete';
+								| Card-brief-code
+							- var codeComponent = 'code-card-brief';
 							include ../components/code
 
-
-					// --------------------------------------------------------
 
 					div(class="main-article__component")
 						div(class="main-article__component--view")
 							h2(class="main-article__component--title")
-								| List-buttonText
+								| Card-image
 							- var action = true;
-							- var customList = [{"txt" : "styles", "cls" : "list-buttonText btnCss"},{"txt" : "html", "cls" : "list-buttonText btnHtml"}];
+							- var customList = [{"txt" : "styles", "cls" : "card-image btnCss"},{"txt" : "html", "cls" : "card-image btnHtml"}];
 							include ../components/list-buttonText
 
+							h3(class="main-article__component--device")
+								| Responsive
+							include ../components/card-image
+						div(class="main-article__component--code")
+							h2(class="main-article__component--title")
+								| Card-image-code
+							- var codeComponent = 'code-card-image';
+							include ../components/code
+
+
+					div(class="main-article__component")
+						div(class="main-article__component--view")
+							h2(class="main-article__component--title")
+								| Card-mall
+							- var action = true;
+							- var customList = [{"txt" : "styles", "cls" : "card-mall btnCss"},{"txt" : "html", "cls" : "card-mall btnHtml"}];
+							include ../components/list-buttonText
+
+							h3(class="main-article__component--device")
+								| Responsive
+							include ../components/card-mall
+						div(class="main-article__component--code")
+							h2(class="main-article__component--title")
+								| Card-mall-code
+							- var codeComponent = 'code-card-mall';
+							include ../components/code		
+
+
+					div(class="main-article__component")
+						div(class="main-article__component--view")
+							h2(class="main-article__component--title")
+								| Card-coverMagazine
+							- var action = true;
+							- var customList = [{"txt" : "styles", "cls" : "card-coverMagazine btnCss"},{"txt" : "html", "cls" : "card-coverMagazine btnHtml"}];
+							include ../components/list-buttonText
+
+							h3(class="main-article__component--device")
+								| Responsive
+							include ../components/card-coverMagazine
+						div(class="main-article__component--code")
+							h2(class="main-article__component--title")
+								| Card-coverMagazine-code
+							- var codeComponent = 'code-card-coverMagazine';
+							include ../components/code
+
+					div(class="main-article__component")
+						div(class="main-article__component--view")
+							h2(class="main-article__component--title")
+								| Card-video
+							- var action = true;
+							- var customList = [{"txt" : "styles", "cls" : "card-video btnCss"},{"txt" : "html", "cls" : "card-video btnHtml"}];
+							include ../components/list-buttonText
+
+							h3(class="main-article__component--device")
+								| Responsive
+							include ../components/card-video
+						div(class="main-article__component--code")
+							h2(class="main-article__component--title")
+								| Card-video-code
+							- var codeComponent = 'code-card-video';
+							include ../components/code
+
+										
 
 							- var menu = false;
-							h3(class="main-article__component--device")
-								| Responsive
-							- var customList = false
-							include ../components/list-buttonText
-						div(class="main-article__component--code")
-							h2(class="main-article__component--title")
-								| List-buttonText-code
-							- var codeComponent = 'code-list-buttonText';
-							include ../components/code
-
-					// --------------------------------------------------------
-
-					div(class="main-article__component")
-						div(class="main-article__component--view")
-							h2(class="main-article__component--title")
-								| List-galerias-login
-							- var action = true;
-							- var customList = [{"txt" : "styles", "cls" : "list-galerias-login btnCss"},{"txt" : "html", "cls" : "list-galerias-login btnHtml"}];
-							include ../components/list-buttonText
-
-
-							- var menu = false;
-							h3(class="main-article__component--device")
-								| Responsive
-							- var customList = [{"txt" : "ACCEDER", "cls" : "list-buttonText"},{"txt" : "REGÍSTRATE", "cls" : "list-buttonText"}];                        				
-							include ../components/list-galerias-login
-						div(class="main-article__component--code")
-							h2(class="main-article__component--title")
-								| List-galerias-login-code
-							- var codeComponent = 'code-list-galerias-login';
-							include ../components/code
