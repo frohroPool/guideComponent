@@ -6,6 +6,7 @@
     <title>UX Design</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed|Roboto+Mono" type="text/css"/>
     <link rel="stylesheet" href="../css/guide.css" type="text/css"/>
+    <link rel="stylesheet" href="../css/aIcon.css" type="text/css"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Source+Sans+Pro:300,400,700" type="text/css"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" type="text/css"/>
     <script src="../js/bundle-handlerComponent.js" type="text/javascript"></script>
@@ -13,8 +14,10 @@
   </head>
   <body>
     <section class="header">
-      <section class="projectName"><a href="#"><span class="icon-home"></span><span>	UX Design</span></a></section>
-      <section class="breadcrums"></section>
+      <section class="projectName"><a href="/"><span class="icon-home"></span><span>	UX Design</span></a></section>
+      <section class="breadcrums">
+        <p class="breadcrums-title">Atoms > Icon</p>
+      </section>
       <section class="mainMenu"></section>
     </section>
     <section class="body">
@@ -50,6 +53,19 @@
           <li class="side-nav__menu-item"><a class="side-nav__link" href="oFooter.html" target="_self">Footer</a></li>
         </ul>
       </nav>
+      <!-- ============================================================================================-->
+      <section class="main">
+        <article class="main-article">
+          <h1 class="main-article__title">Cards</h1>
+          <nav class="main-article__btnCodes">
+            <button class="getStyle all" id="allCssList">Show CSS</button>
+            <button class="getHTML all" id="allHtmlList">Show HTML</button>
+          </nav>
+          <div class="showAllCssRules hiddeCssRule" id="showAllCssRules"></div>
+          <div class="showAllHtmlRules hiddeHtmlRule" id="showAllHtmlRules"></div>
+          <p class="main-article__description">Navigational transitions occur when users move between screens, such as from a home screen to a detail screen.</p>
+        </article>
+      </section>
     </section>
   </body>
 </html>

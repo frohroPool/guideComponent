@@ -1,6 +1,6 @@
 @import '../../resources/colors'
 // Responsive ----------
-.list-galerias-login
+.m-listGaleriasLogin
 	overflow hidden
 	display flex
 	flex-direction row
@@ -8,17 +8,17 @@
 	list-style-type none
 	background #343851
 
-.list-galerias-login-item
+.m-listGaleriasLogin__item
 	width 15%
 
-.list-galerias-login-item:last-child button
+.m-listGaleriasLogin__item:last-child button
 	background #e0e1e6
 	color #343851
 
-.list-galerias-login-item:hover, .list-galerias-login-item button:hover
+.m-listGaleriasLogin__item:hover, .m-listGaleriasLogin__item button:hover
 	cursor pointer
 	
-.list-galerias-login-item button
+.m-listGaleriasLogin__item button
 	border 0
 	padding 10px
 	background none
@@ -26,10 +26,10 @@
 	margin 0 auto
 
 @media screen and (max-width:1300px){
-	.list-galerias-login{
+	.m-listGaleriasLogin{
 		flex-direction: column;
 	}
-	.list-galerias-login-item, .list-galerias-login-item button{
+	.m-listGaleriasLogin__item, .m-listGaleriasLogin__item button{
 		text-align: center;
 		width: 100%;
 	}

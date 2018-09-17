@@ -1,22 +1,22 @@
 @import '../../resources/colors'
 // Responsive ----------
-.list-buttonText
+.m-listButtonText
 	margin-bottom 10px
 	overflow hidden
 	display flex
 	flex-direction row
 	justify-content space-around
 	list-style-type none
-.list-buttonText-item
+.m-listButtonText__item
 	width 100%
 	text-align center
 	padding 5px
 	width auto
 
-.list-buttonText-item:hover, .list-buttonText-item button:hover
+.m-listButtonText__item:hover, .m-listButtonText__item button:hover
 	cursor pointer
 	
-.list-buttonText-item button
+.m-listButtonText__item button
 	border 0
 	padding 10px
 	background: colors.darkGray;
@@ -25,10 +25,10 @@
 	
 	
 @media screen and (max-width:1300px){
-	.list-buttonText{
+	.m-listButtonText{
 		flex-direction: column;
 	}
-	.list-buttonText-item, .list-buttonText-item button{
+	.m-listButtonText__item, .m-listButtonText__item button{
 		text-align: center;
 		width: 100%;
 	}

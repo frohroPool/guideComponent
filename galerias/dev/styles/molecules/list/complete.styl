@@ -1,12 +1,12 @@
 // Responsive ----------
-.list-complete
+.m-listComplete
 	margin-bottom 10px
 	overflow hidden
 	display flex
 	flex-direction row
 	justify-content space-around
 	list-style-type none
-.list-complete-item
+.m-listComplete__item
 	width 100%
 	font-family 'Source Sans Pro', sans-serif
 	text-align center
@@ -15,29 +15,30 @@
 	flex-direction column
 	justify-content center
 	align-items center
-.list-complete-item:last-child
+.m-listComplete__item:last-child
 	border-right 0px solid transparent
-.list-complete-item:hover
+.m-listComplete__item:hover
 	cursor pointer
 	// background-color #f5f5f5
 	
-[data-mode="list-complete__list-vrtPipe"] li
+.m-listComplete--verticalPipe li
 	border-right 1px solid gray
 
-[data-mode="list-complete__list-hrtPipe"] li
+.m-listComplete--horizontalPipe li
 	border-bottom 1px solid gray
-[data-mode="list-complete__list-hrtPipe"] li:hover
+	
+.m-listComplete--horizontalPipe li:hover
 	border-bottom 3px solid gray
 	
-[data-mode="list-complete__list-vrt"] li
+.m-listComplete--vertical li
 	border-right 1px solid gray
 
-[data-mode="list-complete__list-hrt"] li
+.m-listComplete--horizontal li
 	border-right 1px solid gray
 	flex-direction row
-[data-mode="list-complete__list-hrt"] li:hover span
+.m-listComplete--horizontal li:hover span
 	color #F5A623
-[data-mode="list-complete__list-hrt"] li > *
+.m-listComplete--horizontal li > *
 	display inline-block
 	vertical-align top
 	padding 5px	
@@ -45,21 +46,21 @@
 	
 	
 @media screen and (max-width:1300px){
-	.list-complete{
+	.m-listComplete{
 		flex-direction: column;
 	}
-	.list-complete-item{
+	.m-listComplete__item{
 		border-right: 0px;
 		text-align: left;
 		border-bottom: 1px solid gray;
 	}
-	.list-complete-item span, .list-complete-item p{
+	.m-listComplete__item span, .m-listComplete__item p{
 		display: inline-block;
 	}
-	.list-complete-item span{
+	.m-listComplete__item span{
 		margin-right: 10px;
 	}
-	.list-complete-item:last-child{
+	.m-listComplete__item:last-child{
 		border-bottom: 0px solid transparent;
 	}
 }

@@ -1,32 +1,32 @@
-// Responsive list-icon ----------
-.list-icon
+// Responsive m-listIcon ----------
+.m-listIcon
 	// margin-bottom 10px
 	overflow hidden
 	display flex
 	flex-direction row
 	justify-content center
 	list-style-type none
-.list-icon-item
+.m-listIcon__item
 	width 20px
 	height 20px
 	text-align center
 	padding 15px
 	font-size 20px
-.list-icon-item:last-child
+.m-listIcon__item:last-child
 	border-right 0px solid transparent
-.list-icon-item:hover
+.m-listIcon__item:hover
 	cursor pointer
 	color #F5A623
 	
 
 @media screen and (max-width:1300px){
-	.list-icon{
+	.m-listIcon{
 		flex-direction: column;
 	}
-	.list-icon-item{
+	.m-listIcon__item{
 		text-align: left;
 	}
-	.list-icon-item:hover{
+	.m-listIcon__item:hover{
 		cursor: pointer;
 		color: #F5A623;
 		border-bottom: 0;

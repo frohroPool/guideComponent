@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 html(lang="es")
 	- var currentPage = 'mList'
-	include ../resources/structureConfiguration
+	include ../resources/configuration
 	include ../resources/headers
 	body
 		section(class="header")
@@ -13,10 +13,10 @@ html(lang="es")
 
 			section(class="breadcrums")
 				p(class="breadcrums-title")
-					| resources > List
+					| Molecules > List
 			section.mainMenu
 		section(class="body")
-			include ../resources/awdMenu
+			include ../resources/menu
 
 			// ============================================================================================
 			section(class="main")
@@ -38,110 +38,110 @@ html(lang="es")
 							h2(class="main-article__component--title")
 								| listSimple
 							- var action = true;
-							- var customList = [{"txt" : "styles", "cls" : "listSimple btnCss"},{"txt" : "html", "cls" : "listSimple btnHtml"}];
+							- var customList = [{"txt" : "styles", "cls" : "m-listSimple btnCss"},{"txt" : "html", "cls" : "m-listSimple btnHtml"}];
 							include ../molecules/list/buttonText
 
 							h3(class="main-article__component--device")
 								| Responsive
-							- var cmp = 'listSimple';
-							- var variants = ['list-bold', 'list-light', 'list-pipe'];
-							- var mode = cmp+'__'+variants[2]
-							include ../resources/variants
+							- var el = "m-listSimple"
+							- var modifiers = ['bold', 'light', 'normal'];
+							- var modifier = el+'--'+modifiers[1]
+							include ../resources/modifiers
 							- var customList = false;
-							include ../molecules/list/listSimple
+							include ../molecules/list/simple
 						div(class="main-article__component--code")
 							h2(class="main-article__component--title")
 								| listSimple-code
-							- var codeComponent = 'code-listSimple';
+							- var codeComponent = 'code-m-listSimple';
 							include ../resources/code
 
 					// --------------------------------------------------------
 
-					//- div(class="main-article__component")
-					//- 	div(class="main-article__component--view")
-					//- 		h2(class="main-article__component--title")
-					//- 			| List-icon
-					//- 		- var action = true;
-					//- 		- var customList = [{"txt" : "styles", "cls" : "list-icon btnCss"},{"txt" : "html", "cls" : "list-icon btnHtml"}];
-					//- 		include ../molecules/list/buttonText
+					div(class="main-article__component")
+						div(class="main-article__component--view")
+							h2(class="main-article__component--title")
+								| listIcon
+							- var action = true;
+							- var customList = [{"txt" : "styles", "cls" : "m-listIcon btnCss"},{"txt" : "html", "cls" : "m-listIcon btnHtml"}];
+							include ../molecules/list/buttonText
 
 
-					//- 		h3(class="main-article__component--device")
-					//- 			| Responsive
-					//- 		- var customList = false;
-					//- 		include ../resources/list-icon
-					//- 	div(class="main-article__component--code")
-					//- 		h2(class="main-article__component--title")
-					//- 			| List-icon-code
-					//- 		- var codeComponent = 'code-list-icon';
-					//- 		include ../resources/code
-
-					//- // --------------------------------------------------------
-
-					//- div(class="main-article__component")
-					//- 	div(class="main-article__component--view")
-					//- 		h2(class="main-article__component--title")
-					//- 			| List-complete
-					//- 		- var action = true;
-					//- 		- var customList = [{"txt" : "styles", "cls" : "list-complete btnCss"},{"txt" : "html", "cls" : "list-complete btnHtml"}];
-					//- 		include ../molecules/list/buttonText
-
-					//- 		h3(class="main-article__component--device")
-					//- 			| Responsive
-					//- 		- var cmp = 'list-complete';
-					//- 		- var variants = ['list-vrtPipe', 'list-hrtPipe', 'list-vrt', 'list-hrt'];
-					//- 		- var mode = cmp+'__'+variants[2];
-					//- 		include ../resources/variants
-
-					//- 		- var customList = [{"txt" : "", "ico" : "icon-office"},{"txt" : "Inicia session", "ico" : ""},{"txt" : "Cart", "ico" : "material-icons", "icoName" : "search"}];
-					//- 		include ../resources/list-complete
-					//- 	div(class="main-article__component--code")
-					//- 		h2(class="main-article__component--title")
-					//- 			| List-complete-code
-					//- 		- var codeComponent = 'code-list-complete';
-					//- 		include ../resources/code
-
+							h3(class="main-article__component--device")
+								| Responsive
+							- var customList = false;
+							include ../molecules/list/icon
+						div(class="main-article__component--code")
+							h2(class="main-article__component--title")
+								| listIcon-code
+							- var codeComponent = 'code-m-listIcon';
+							include ../resources/code
 
 					//- // --------------------------------------------------------
 
-					//- div(class="main-article__component")
-					//- 	div(class="main-article__component--view")
-					//- 		h2(class="main-article__component--title")
-					//- 			| buttonText
-					//- 		- var action = true;
-					//- 		- var customList = [{"txt" : "styles", "cls" : "buttonText btnCss"},{"txt" : "html", "cls" : "buttonText btnHtml"}];
-					//- 		include ../molecules/list/buttonText
+					div(class="main-article__component")
+						div(class="main-article__component--view")
+							h2(class="main-article__component--title")
+								| List-complete
+							- var action = true;
+							- var customList = [{"txt" : "styles", "cls" : "m-listComplete btnCss"},{"txt" : "html", "cls" : "m-listComplete btnHtml"}];
+							include ../molecules/list/buttonText
 
+							h3(class="main-article__component--device")
+								| Responsive
+							- var el = 'm-listComplete';
+							- var modifiers = ['verticalPipe', 'horizontalPipe', 'vertical', 'horizontal'];
+							- var modifier = el+'--'+modifiers[1]
+							include ../resources/modifiers
 
-					//- 		- var menu = false;
-					//- 		h3(class="main-article__component--device")
-					//- 			| Responsive
-					//- 		- var customList = false
-					//- 		include ../molecules/list/buttonText
-					//- 	div(class="main-article__component--code")
-					//- 		h2(class="main-article__component--title")
-					//- 			| buttonText-code
-					//- 		- var codeComponent = 'code-buttonText';
-					//- 		include ../resources/code
+							- var customList = [{"txt" : "", "ico" : "icon-office"},{"txt" : "Inicia session", "ico" : ""},{"txt" : "Cart", "ico" : "material-icons", "icoName" : "search"}];
+							include ../molecules/list/complete
+						div(class="main-article__component--code")
+							h2(class="main-article__component--title")
+								| List-complete-code
+							- var codeComponent = 'code-m-listComplete';
+							include ../resources/code
+
 
 					//- // --------------------------------------------------------
 
-					//- div(class="main-article__component")
-					//- 	div(class="main-article__component--view")
-					//- 		h2(class="main-article__component--title")
-					//- 			| List-galerias-login
-					//- 		- var action = true;
-					//- 		- var customList = [{"txt" : "styles", "cls" : "list-galerias-login btnCss"},{"txt" : "html", "cls" : "list-galerias-login btnHtml"}];
-					//- 		include ../molecules/list/buttonText
+					div(class="main-article__component")
+						div(class="main-article__component--view")
+							h2(class="main-article__component--title")
+								| buttonText
+							- var action = true;
+							- var customList = [{"txt" : "styles", "cls" : "m-listButtonText btnCss"},{"txt" : "html", "cls" : "m-listButtonText btnHtml"}];
+							include ../molecules/list/buttonText
 
 
-					//- 		- var menu = false;
-					//- 		h3(class="main-article__component--device")
-					//- 			| Responsive
-					//- 		- var customList = [{"txt" : "ACCEDER", "cls" : "buttonText"},{"txt" : "REGÍSTRATE", "cls" : "buttonText"}];                        				
-					//- 		include ../resources/list-galerias-login
-					//- 	div(class="main-article__component--code")
-					//- 		h2(class="main-article__component--title")
-					//- 			| List-galerias-login-code
-					//- 		- var codeComponent = 'code-list-galerias-login';
-					//- 		include ../resources/code
+							- var menu = false;
+							h3(class="main-article__component--device")
+								| Responsive
+							- var customList = false
+							include ../molecules/list/buttonText
+						div(class="main-article__component--code")
+							h2(class="main-article__component--title")
+								| buttonText-code
+							- var codeComponent = 'code-m-listButtonText';
+							include ../resources/code
+
+					//- // --------------------------------------------------------
+
+					div(class="main-article__component")
+						div(class="main-article__component--view")
+							h2(class="main-article__component--title")
+								| List-galerias-login
+							- var action = true;
+							- var customList = [{"txt" : "styles", "cls" : "m-listGaleriasLogin btnCss"},{"txt" : "html", "cls" : "m-listGaleriasLogin btnHtml"}];
+							include ../molecules/list/buttonText
+
+
+							- var menu = false;
+							h3(class="main-article__component--device")
+								| Responsive
+							- var customList = [{"txt" : "ACCEDER", "cls" : "buttonText"},{"txt" : "REGÍSTRATE", "cls" : "buttonText"}];                        				
+							include ../molecules/list/galeriasLogin
+						div(class="main-article__component--code")
+							h2(class="main-article__component--title")
+								| List-galerias-login-code
+							- var codeComponent = 'code-m-listGaleriasLogin';
+							include ../resources/code

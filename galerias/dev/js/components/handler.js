@@ -140,13 +140,15 @@ export const Handler = (function() {
 	let changeModes = function(){
 		// Evento para poder modificar los modos de los componentes
 		// Revisar que el evento exista 
-		let variantComponent = document.getElementsByClassName("variantComponent");
+		let modifiersComponent = document.getElementsByClassName("modifiersComponent");
 		let idComponent;
-		for (var i = 0; i < variantComponent.length; i++) {
-			variantComponent[i].addEventListener("click", function(event){
+		for (var i = 0; i < modifiersComponent.length; i++) {
+			modifiersComponent[i].addEventListener("click", function(event){
 				document.getElementById(this.getAttribute('for')).checked = true;
-				let preId = this.getAttribute('for').split('__')[0];
-				document.getElementById(preId).setAttribute('data-mode',this.getAttribute('for'));
+				let preId = this.getAttribute('for').split('--')[0];
+				let elId = document.getElementById(preId);
+				elId.classList.remove(elId.classList[1])
+				elId.classList.add(this.getAttribute('for'))
 				// Verificar si el codigo HTML del componente ya esta visualizado
 				if( document.getElementById('code-'+preId).innerText  != '' ){
 					idComponent = document.getElementById(preId);

@@ -1,10 +1,10 @@
 if customList
-	ul(class="list-icon" id="list-icon")
+	ul(class="m-listIcon" id="m-listIcon")
 		each val, index in customList
-			li(class='list-icon-item')
+			li(class='m-listIcon__item')
 				span(class='icon-'+val)
 else
-	ul(class="list-icon" id="list-icon")
+	ul(class="m-listIcon" id="m-listIcon")
 		each val, index in ['office', 'home', 'eyedropper', 'droplet', 'pencil', 'headphones', 'film', 'dice', 'library']
-			li(class='list-icon-item')
+			li(class='m-listIcon__item')
 				span(class='icon-'+val)

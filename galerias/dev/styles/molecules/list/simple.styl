@@ -1,57 +1,56 @@
-// Responsive ----------
-.list-simple
+.m-listSimple
 	list-style-type none
 	margin-bottom 10px
 	overflow hidden
 	display flex
 	flex-direction row
 	justify-content center
-.list-simple-item
+	
+.m-listSimple__item
 	width auto
 	text-align center
 	padding 5px
-.list-simple-item > *
+.m-listSimple__item > *
 	color inherit
 	
-.list-simple-item:hover
+.m-listSimple__item:hover
 	cursor pointer
 	font-weight bold
 	
 
-[data-mode="list-simple__list-pipe"] li
+.m-listSimple--normal li
 	font-family 'Source Sans Pro', sans-serif
 	border-right 1px solid gray
-	
-[data-mode="list-simple__list-pipe"] li:last-child
-	border-right 0px solid transparent
+.m-listSimple--normal li:last-child
+	border-right 0px
 
-[data-mode="list-simple__list-light"] li
+.m-listSimple--light li
 	font-family 'Source Sans Pro', sans-serif
 	font-weight lighter
 
-[data-mode="list-simple__list-bold"] li
+.m-listSimple--bold li
 	font-family 'Source Sans Pro', sans-serif
 	font-weight bold
 
 	
 @media screen and (max-width:1300px){
-	.list-simple{
+	.m-listSimple{
 		flex-direction: column;
 		margin-bottom: 0px;
 	}
-	.list-simple-item{
+	.m-listSimple__item{
 		border: 0px;
 		text-align: left;
 		margin-bottom: 15px;
 		border: 0px !important;
 	}
-	.list-simple-item:last-child{
+	.m-listSimple__item:last-child{
 		border-bottom: 0px solid transparent;
 	}
 	
-	[data-mode="list-simple__list-pipe"] li,
-	[data-mode="list-simple__list-light"] li,
-	[data-mode="list-simple__list-bold"] li{
+	.m-listSimple--normal li,
+	.m-listSimple--light li,
+	.m-listSimple--bold li{
 		font-weight normal
 	}
 		

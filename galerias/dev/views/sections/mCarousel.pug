@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 html(lang="es")
-	- var currentPage = 'organismsMalls'
-	include ../components/structureConfiguration
-	include ../components/headers
+	- var currentPage = 'mCarousel'
+	include ../resources/configuration
+	include ../resources/headers
 	body
 		section(class="header")
 			section.projectName
@@ -13,10 +13,10 @@ html(lang="es")
 
 			section(class="breadcrums")
 				p(class="breadcrums-title")
-					| Organisms > Malls
+					| Components > Carousel
 			section.mainMenu
 		section(class="body")
-			include ../components/awdMenu
+			include ../resources/menu
 			
 
 
@@ -24,7 +24,7 @@ html(lang="es")
 			section(class="main")
 				article(class="main-article")
 					h1(class="main-article__title")
-						| Malls
+						| Carousel
 					nav(class="main-article__btnCodes")
 						button(id="allCssList" class="getStyle all") Show CSS
 						button(id="allHtmlList" class="getHTML all") Show HTML
@@ -37,30 +37,24 @@ html(lang="es")
 
 					// --------------------------------------------------------
 					
-					div(class="main-article__organisms")
-						div(class="main-article__organisms--view")
-							h2(class="main-article__organisms--title")
-								| Malls-list
+					div(class="main-article__component")
+						div(class="main-article__component--view")
+							h2(class="main-article__component--title")
+								| Carousel
 							- var action = true;
-							- var customList = [{"txt" : "styles", "cls" : "malls-list btnCss"},{"txt" : "html", "cls" : "malls-list btnHtml"}];
-							include ../components/list-buttonText
+							- var customList = [{"txt" : "styles", "cls" : "carousel btnCss"},{"txt" : "html", "cls" : "carousel btnHtml"}];
+							include ../molecules/list/buttonText
 
-							h3(class="main-article__organisms--device")
+							h3(class="main-article__component--device")
 								| Responsive
-							- var cmp = 'malls-list';
-							- var variants = ['list-Vertical', 'list-Horizontal'];
-							- var mode = cmp+'__'+variants[1]
-							include ../components/variants
-							- var customList = {elements : 25, include: 'card-mall'};
-							include ../organisms/malls-list
-
-
-
-
-
-						div(class="main-article__organisms--code")
-							h2(class="main-article__organisms--title")
-								| Malls-list-code
-							- var codeComponent = 'code-malls-list';
-							include ../components/code
-
+							- var cmp = 'carousel'; // Aqui se puede poner el nombre unico del carrusel (id)
+							- var modifiers = ['100', '80_20', '100_btn'];
+							- var mode = cmp+'__'+modifiers[0]
+							include ../resources/modifiers
+							- var customList = false;
+							include ../molecules/carousel/carousel
+						div(class="main-article__component--code")
+							h2(class="main-article__component--title")
+								| Carousel-code
+							- var codeComponent = 'code-carousel';
+							include ../resources/code

@@ -6,15 +6,19 @@
     <title>UX Design</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed|Roboto+Mono" type="text/css"/>
     <link rel="stylesheet" href="../css/guide.css" type="text/css"/>
+    <link rel="stylesheet" href="../css/mCarousel.css" type="text/css"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Source+Sans+Pro:300,400,700" type="text/css"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" type="text/css"/>
     <script src="../js/bundle-handlerComponent.js" type="text/javascript"></script>
+    <script src="../js/bundle-handlerCarousel.js" type="text/javascript"></script>
     <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.10/lodash.min.js" type="text/javascript"></script>
   </head>
   <body>
     <section class="header">
-      <section class="projectName"><a href="#"><span class="icon-home"></span><span>	UX Design</span></a></section>
-      <section class="breadcrums"></section>
+      <section class="projectName"><a href="/"><span class="icon-home"></span><span>	UX Design</span></a></section>
+      <section class="breadcrums">
+        <p class="breadcrums-title">Components > Carousel</p>
+      </section>
       <section class="mainMenu"></section>
     </section>
     <section class="body">
@@ -50,6 +54,66 @@
           <li class="side-nav__menu-item"><a class="side-nav__link" href="oFooter.html" target="_self">Footer</a></li>
         </ul>
       </nav>
+      <!-- ============================================================================================-->
+      <section class="main">
+        <article class="main-article">
+          <h1 class="main-article__title">Carousel</h1>
+          <nav class="main-article__btnCodes">
+            <button class="getStyle all" id="allCssList">Show CSS</button>
+            <button class="getHTML all" id="allHtmlList">Show HTML</button>
+          </nav>
+          <div class="showAllCssRules hiddeCssRule" id="showAllCssRules"></div>
+          <div class="showAllHtmlRules hiddeHtmlRule" id="showAllHtmlRules"></div>
+          <p class="main-article__description">Navigational transitions occur when users move between screens, such as from a home screen to a detail screen.</p>
+          <!-- ---------------------------------------------------------->
+          <div class="main-article__component">
+            <div class="main-article__component--view">
+              <h2 class="main-article__component--title">Carousel</h2>
+              <ul class="m-listButtonText action" id="m-listButtonText">
+                <li class="m-listButtonText__item">
+                  <button class="carousel btnCss">styles</button>
+                </li>
+                <li class="m-listButtonText__item">
+                  <button class="carousel btnHtml">html</button>
+                </li>
+              </ul>
+              <h3 class="main-article__component--device">Responsive</h3>
+              <div class="variants-section">
+                <ul class="variants-section__modes">
+                  <li>
+                    <input type="radio" name="Variant__undefined" checked="true" id="undefined--100"/>
+                    <label class="modifiersComponent" for="undefined--100">100</label>
+                  </li>
+                  <li>
+                    <input type="radio" name="Variant__undefined" checked="true" id="undefined--80_20"/>
+                    <label class="modifiersComponent" for="undefined--80_20">80_20</label>
+                  </li>
+                  <li>
+                    <input type="radio" name="Variant__undefined" checked="true" id="undefined--100_btn"/>
+                    <label class="modifiersComponent" for="undefined--100_btn">100_btn</label>
+                  </li>
+                </ul>
+              </div>
+              <article class="carousel" id="carousel" data-mode="carousel__100">
+                <ul class="carousel__container" id="carousel__container">
+                  <li class="carousel__container-item">Mercury</li>
+                  <li class="carousel__container-item">Venus</li>
+                  <li class="carousel__container-item">Earth</li>
+                  <li class="carousel__container-item">Mars</li>
+                  <li class="carousel__container-item">Jupiter</li>
+                  <li class="carousel__container-item">Saturn</li>
+                </ul>
+                <button class="prevBtnCarousel" id="carousel__prev"></button>
+                <button class="nextBtnCarousel" id="carousel__next"></button>
+              </article>
+            </div>
+            <div class="main-article__component--code">
+              <h2 class="main-article__component--title">Carousel-code</h2>
+              <pre><code id="code-carousel"></code></pre>
+            </div>
+          </div>
+        </article>
+      </section>
     </section>
   </body>
 </html>

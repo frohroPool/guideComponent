@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 html(lang="es")
-	- var currentPage = 'organismHeader'
-	include ../components/structureConfiguration
-	include ../components/headers
+	- var currentPage = 'oHeader'
+	include ../resources/configuration
+	include ../resources/headers
 	body
 		section(class="header")
 			section.projectName
@@ -16,7 +16,7 @@ html(lang="es")
 					| Organism > Header
 			section.mainMenu
 		section(class="body")
-			include ../components/awdMenu
+			include ../resources/menu
 
 				
 			
@@ -42,14 +42,14 @@ html(lang="es")
 								| Organism-header
 							- var action = true;
 							- var customList = [{"txt" : "styles", "cls" : "org-header btnCss"},{"txt" : "html", "cls" : "org-header btnHtml"}];
-							include ../components/list-buttonText
+							include ../molecules/list/buttonText
 
-							include ../components/org-header
+							include ../organisms/header
 						div(class="main-article__organisms--code")
 							h2(class="main-article__organisms--title")
 								| Organism-header-code
 							- var codeComponent = 'code-org-header';
-							include ../components/code
+							include ../resources/code
 
 
 
@@ -59,11 +59,11 @@ html(lang="es")
 								| Organism-header-single
 							- var action = true;
 							- var customList = [{"txt" : "styles", "cls" : "org-header-single btnCss"},{"txt" : "html", "cls" : "org-header-single btnHtml"}];
-							include ../components/list-buttonText
+							include ../molecules/list/buttonText
 
-							include ../components/org-header-single
+							include ../organisms/headerSingle
 						div(class="main-article__organisms--code")
 							h2(class="main-article__organisms--title")
 								| Organism-header-single-code
 							- var codeComponent = 'code-org-header-single';
-							include ../components/code
+							include ../resources/code

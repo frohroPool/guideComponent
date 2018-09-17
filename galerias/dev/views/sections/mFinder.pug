@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 html(lang="es")
-	- var currentPage = 'componentFinder'
-	include ../components/structureConfiguration
-	include ../components/headers
+	- var currentPage = 'mFinder'
+	include ../resources/configuration
+	include ../resources/headers
 	link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous")
 	body
 		section(class="header")
@@ -17,7 +17,7 @@ html(lang="es")
 					| Components > Finder
 			section.mainMenu
 		section(class="body")
-			include ../components/awdMenu
+			include ../resources/menu
 			
 
 			section(class="main")
@@ -41,16 +41,16 @@ html(lang="es")
 								| Finder-simple
 							- var action = true;
 							- var customList = [{"txt" : "styles", "cls" : "finder-simple btnCss"},{"txt" : "html", "cls" : "finder-simple btnHtml"}];
-							include ../components/list-buttonText							
+							include ../molecules/list/buttonText							
 
 							h3(class="main-article__component--device")
 								| Responsive
-							include ../components/finder-simple
+							include ../molecules/finder/simple
 						div(class="main-article__component--code")
 							h2(class="main-article__component--title")
 								| Finder-simple-code
 							- var codeComponent = 'code-finder-simple';
-							include ../components/code
+							include ../resources/code
 
 
 
@@ -60,16 +60,16 @@ html(lang="es")
 								| Finder-right-icon
 							- var action = true;
 							- var customList = [{"txt" : "styles", "cls" : "finder-right-icon btnCss"},{"txt" : "html", "cls" : "finder-right-icon btnHtml"}];
-							include ../components/list-buttonText
+							include ../molecules/list/buttonText
 
 							h3(class="main-article__component--device")
 								| Responsive
-							include ../components/finder-right-icon
+							include ../molecules/finder/rightIcon
 						div(class="main-article__component--code")
 							h2(class="main-article__component--title")
 								| Finder-right-icon-code
 							- var codeComponent = 'code-finder-right-icon';
-							include ../components/code
+							include ../resources/code
 
 
 					
@@ -80,21 +80,18 @@ html(lang="es")
 								| Finder-left-icon
 							- var action = true;
 							- var customList = [{"txt" : "styles", "cls" : "finder-left-icon btnCss"},{"txt" : "html", "cls" : "finder-left-icon btnHtml"}];
-							include ../components/list-buttonText
+							include ../molecules/list/buttonText
 
 							h3(class="main-article__component--device")
 								| Responsive
-							include ../components/finder-left-icon
+							include ../molecules/finder/leftIcon
 						div(class="main-article__component--code")
 							h2(class="main-article__component--title")
 								| Finder-right-icon-left-code
 							- var codeComponent = 'code-finder-left-icon';
-							include ../components/code
+							include ../resources/code
 
 					
-
-
-
 
 					div(class="main-article__component")
 						div(class="main-article__component--view")
@@ -102,13 +99,13 @@ html(lang="es")
 								| Finder-animated
 							- var action = true;
 							- var customList = [{"txt" : "styles", "cls" : "finder-animated btnCss"},{"txt" : "html", "cls" : "finder-animated btnHtml"}];
-							include ../components/list-buttonText
+							include ../molecules/list/buttonText
 
 							h3(class="main-article__component--device")
 								| Responsive
-							include ../components/finder-animated
+							include ../molecules/finder/animated
 						div(class="main-article__component--code")
 							h2(class="main-article__component--title")
 								| Finder-animated-code
 							- var codeComponent = 'code-finder-animated';
-							include ../components/code
+							include ../resources/code

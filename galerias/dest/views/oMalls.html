@@ -1,0 +1,1182 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, user=scalable=no, initial-scale-1.0, minimum-scale=1.0, maximum-scale=1.0"/>
+    <title>UX Design</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed|Roboto+Mono" type="text/css"/>
+    <link rel="stylesheet" href="../css/guide.css" type="text/css"/>
+    <link rel="stylesheet" href="../css/oMalls.css" type="text/css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Source+Sans+Pro:300,400,700" type="text/css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" type="text/css"/>
+    <script src="../js/bundle-handlerComponent.js" type="text/javascript"></script>
+    <script src="../js/bundle-handlerCards.js" type="text/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.10/lodash.min.js" type="text/javascript"></script>
+  </head>
+  <body>
+    <section class="header">
+      <section class="projectName"><a href="/"><span class="icon-home"></span><span>	UX Design</span></a></section>
+      <section class="breadcrums">
+        <p class="breadcrums-title">Organisms > Malls</p>
+      </section>
+      <section class="mainMenu"></section>
+    </section>
+    <section class="body">
+      <nav class="side-nav"><span class="side-nav__section-title">	Atoms</span>
+        <ul class="side-nav__menu side-nav__menu--sections">
+          <li class="side-nav__menu-item"><a class="side-nav__link" href="aButton.html" target="_self">Button</a></li>
+          <li class="side-nav__menu-item"><a class="side-nav__link" href="aCheckbox.html" target="_self">Checkbox</a></li>
+          <li class="side-nav__menu-item"><a class="side-nav__link" href="aIcon.html" target="_self">Icon</a></li>
+          <li class="side-nav__menu-item"><a class="side-nav__link" href="aLabel.html" target="_self">Label</a></li>
+          <li class="side-nav__menu-item"><a class="side-nav__link" href="aRadio.html" target="_self">Radio button</a></li>
+          <li class="side-nav__menu-item"><a class="side-nav__link" href="aSelect.html" target="_self">Select</a></li>
+          <li class="side-nav__menu-item"><a class="side-nav__link" href="aTextbox.html" target="_self">Textbox</a></li>
+          <li class="side-nav__menu-item"><a class="side-nav__link" href="aTextarea.html" target="_self">Textarea</a></li>
+        </ul><span class="side-nav__section-title">	Molecules</span>
+        <ul class="side-nav__menu side-nav__menu--sections">
+          <li class="side-nav__menu-item"><a class="side-nav__link" href="mList.html" target="_self">Lists</a></li>
+          <li class="side-nav__menu-item"><a class="side-nav__link" href="mMosaic.html" target="_self">Mosaic</a></li>
+          <li class="side-nav__menu-item"><a class="side-nav__link" href="mCard.html" target="_self">Card</a></li>
+          <li class="side-nav__menu-item"><a class="side-nav__link" href="#" target="_self">Filter</a></li>
+          <li class="side-nav__menu-item"><a class="side-nav__link" href="#" target="_self">Survey</a></li>
+          <li class="side-nav__menu-item"><a class="side-nav__link" href="mFinder.html" target="_self">Finder</a></li>
+          <li class="side-nav__menu-item"><a class="side-nav__link" href="mCarousel.html" target="_self">Carousel</a></li>
+        </ul><span class="side-nav__section-title">	Organisms</span>
+        <ul class="side-nav__menu side-nav__menu--sections">
+          <li class="side-nav__menu-item"><a class="side-nav__link" href="oMalls.html" target="_self">Malls</a></li>
+          <li class="side-nav__menu-item"><a class="side-nav__link" href="#" target="_self">Widget TV</a></li>
+          <li class="side-nav__menu-item"><a class="side-nav__link" href="#" target="_self">Widget Magazine</a></li>
+          <li class="side-nav__menu-item"><a class="side-nav__link" href="#" target="_self">Grid Brands</a></li>
+          <li class="side-nav__menu-item"><a class="side-nav__link" href="#" target="_self">Social Carousel</a></li>
+          <li class="side-nav__menu-item"><a class="side-nav__link" href="#" target="_self">Grid Carousel</a></li>
+          <li class="side-nav__menu-item"><a class="side-nav__link" href="oHeader.html" target="_self">Header</a></li>
+          <li class="side-nav__menu-item"><a class="side-nav__link" href="oCardBottomGradient.html" target="_self">Card bottom gradient</a></li>
+          <li class="side-nav__menu-item"><a class="side-nav__link" href="oFooter.html" target="_self">Footer</a></li>
+        </ul>
+      </nav>
+      <!-- ============================================================================================-->
+      <section class="main">
+        <article class="main-article">
+          <h1 class="main-article__title">Malls</h1>
+          <nav class="main-article__btnCodes">
+            <button class="getStyle all" id="allCssList">Show CSS</button>
+            <button class="getHTML all" id="allHtmlList">Show HTML</button>
+          </nav>
+          <div class="showAllCssRules hiddeCssRule" id="showAllCssRules"></div>
+          <div class="showAllHtmlRules hiddeHtmlRule" id="showAllHtmlRules"></div>
+          <p class="main-article__description">Navigational transitions occur when users move between screens, such as from a home screen to a detail screen.</p>
+          <!-- ---------------------------------------------------------->
+          <div class="main-article__organisms">
+            <div class="main-article__organisms--view">
+              <h2 class="main-article__organisms--title">Malls-list</h2>
+              <ul class="m-listButtonText action" id="m-listButtonText">
+                <li class="m-listButtonText__item">
+                  <button class="malls-list btnCss">styles</button>
+                </li>
+                <li class="m-listButtonText__item">
+                  <button class="malls-list btnHtml">html</button>
+                </li>
+              </ul>
+              <h3 class="main-article__organisms--device">Responsive</h3>
+              <div class="variants-section">
+                <ul class="variants-section__modes">
+                  <li>
+                    <input type="radio" name="Variant__undefined" checked="true" id="undefined--list-Vertical"/>
+                    <label class="modifiersComponent" for="undefined--list-Vertical">list-Vertical</label>
+                  </li>
+                  <li>
+                    <input type="radio" name="Variant__undefined" checked="true" id="undefined--list-Horizontal"/>
+                    <label class="modifiersComponent" for="undefined--list-Horizontal">list-Horizontal</label>
+                  </li>
+                </ul>
+              </div>
+              <section class="malls-list__wrapper" id="malls-list__wrapper">
+                <ul class="malls-list" id="malls-list" data-mode="malls-list__list-Horizontal">
+                  <li class="malls-list-item">
+                    <div class="card-mall" id="card-mall__0">
+                      <figure class="card-mall-media"><img src="../images/magazinePicture.png"/></figure>
+                      <div class="card-mall__brief">
+                        <div class="card-mall__brief--Title">
+                          <h3>Perisur	</h3>
+                        </div>
+                        <div class="card-mall__brief--reveal"><span class="material-icons revealModalCard modalTo-0">more_vert</span></div>
+                        <div class="card-mall__brief--anchor"><a>Ir a este centro comercial</a></div>
+                      </div>
+                      <div class="card-mall__modal card-mall__modal-modal_hidden" id="modalTo-0">
+                        <div class="card-mall__modal--close"><span class="material-icons closeModalCard modalTo-0">close</span></div>
+                        <div class="card-mall__modal--logo">
+                          <figure><img src="../images/LOGO_PERISUR.png"/></figure>
+                        </div>
+                        <div class="card-mall__modal--direction">
+                          <p>
+                             Anillo Periferico sur No. 4690 Col. Ampliacion del Pedregal, San Angel Mexico, D.F.</p>
+                        </div>
+                        <div class="card-mall__modal--thelepone">
+                          <p>
+                             Tel. 01 55 56 06 8389</p>
+                        </div>
+                        <div class="card-mall__modal--email">
+                          <p>
+                             perisur@galerias.com</p>
+                        </div>
+                        <div class="card-mall__modal--detail">
+                          <h4>Detalles del Centro comercial</h4>
+                          <ul class="card-mall__modal--detail_item">
+                            <li>
+                               Una superficie rentable construida de 51,303 m2</li>
+                            <li>
+                               Locales comerciales</li>
+                            <li>
+                               6,345 lugares de estacionamiento</li>
+                            <li>
+                               Liverpool, Palacio de Hierro, Sears, Cinepolis</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="malls-list-item">
+                    <div class="card-mall" id="card-mall__1">
+                      <figure class="card-mall-media"><img src="../images/magazinePicture.png"/></figure>
+                      <div class="card-mall__brief">
+                        <div class="card-mall__brief--Title">
+                          <h3>Perisur	</h3>
+                        </div>
+                        <div class="card-mall__brief--reveal"><span class="material-icons revealModalCard modalTo-1">more_vert</span></div>
+                        <div class="card-mall__brief--anchor"><a>Ir a este centro comercial</a></div>
+                      </div>
+                      <div class="card-mall__modal card-mall__modal-modal_hidden" id="modalTo-1">
+                        <div class="card-mall__modal--close"><span class="material-icons closeModalCard modalTo-1">close</span></div>
+                        <div class="card-mall__modal--logo">
+                          <figure><img src="../images/LOGO_PERISUR.png"/></figure>
+                        </div>
+                        <div class="card-mall__modal--direction">
+                          <p>
+                             Anillo Periferico sur No. 4690 Col. Ampliacion del Pedregal, San Angel Mexico, D.F.</p>
+                        </div>
+                        <div class="card-mall__modal--thelepone">
+                          <p>
+                             Tel. 01 55 56 06 8389</p>
+                        </div>
+                        <div class="card-mall__modal--email">
+                          <p>
+                             perisur@galerias.com</p>
+                        </div>
+                        <div class="card-mall__modal--detail">
+                          <h4>Detalles del Centro comercial</h4>
+                          <ul class="card-mall__modal--detail_item">
+                            <li>
+                               Una superficie rentable construida de 51,303 m2</li>
+                            <li>
+                               Locales comerciales</li>
+                            <li>
+                               6,345 lugares de estacionamiento</li>
+                            <li>
+                               Liverpool, Palacio de Hierro, Sears, Cinepolis</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="malls-list-item">
+                    <div class="card-mall" id="card-mall__2">
+                      <figure class="card-mall-media"><img src="../images/magazinePicture.png"/></figure>
+                      <div class="card-mall__brief">
+                        <div class="card-mall__brief--Title">
+                          <h3>Perisur	</h3>
+                        </div>
+                        <div class="card-mall__brief--reveal"><span class="material-icons revealModalCard modalTo-2">more_vert</span></div>
+                        <div class="card-mall__brief--anchor"><a>Ir a este centro comercial</a></div>
+                      </div>
+                      <div class="card-mall__modal card-mall__modal-modal_hidden" id="modalTo-2">
+                        <div class="card-mall__modal--close"><span class="material-icons closeModalCard modalTo-2">close</span></div>
+                        <div class="card-mall__modal--logo">
+                          <figure><img src="../images/LOGO_PERISUR.png"/></figure>
+                        </div>
+                        <div class="card-mall__modal--direction">
+                          <p>
+                             Anillo Periferico sur No. 4690 Col. Ampliacion del Pedregal, San Angel Mexico, D.F.</p>
+                        </div>
+                        <div class="card-mall__modal--thelepone">
+                          <p>
+                             Tel. 01 55 56 06 8389</p>
+                        </div>
+                        <div class="card-mall__modal--email">
+                          <p>
+                             perisur@galerias.com</p>
+                        </div>
+                        <div class="card-mall__modal--detail">
+                          <h4>Detalles del Centro comercial</h4>
+                          <ul class="card-mall__modal--detail_item">
+                            <li>
+                               Una superficie rentable construida de 51,303 m2</li>
+                            <li>
+                               Locales comerciales</li>
+                            <li>
+                               6,345 lugares de estacionamiento</li>
+                            <li>
+                               Liverpool, Palacio de Hierro, Sears, Cinepolis</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="malls-list-item">
+                    <div class="card-mall" id="card-mall__3">
+                      <figure class="card-mall-media"><img src="../images/magazinePicture.png"/></figure>
+                      <div class="card-mall__brief">
+                        <div class="card-mall__brief--Title">
+                          <h3>Perisur	</h3>
+                        </div>
+                        <div class="card-mall__brief--reveal"><span class="material-icons revealModalCard modalTo-3">more_vert</span></div>
+                        <div class="card-mall__brief--anchor"><a>Ir a este centro comercial</a></div>
+                      </div>
+                      <div class="card-mall__modal card-mall__modal-modal_hidden" id="modalTo-3">
+                        <div class="card-mall__modal--close"><span class="material-icons closeModalCard modalTo-3">close</span></div>
+                        <div class="card-mall__modal--logo">
+                          <figure><img src="../images/LOGO_PERISUR.png"/></figure>
+                        </div>
+                        <div class="card-mall__modal--direction">
+                          <p>
+                             Anillo Periferico sur No. 4690 Col. Ampliacion del Pedregal, San Angel Mexico, D.F.</p>
+                        </div>
+                        <div class="card-mall__modal--thelepone">
+                          <p>
+                             Tel. 01 55 56 06 8389</p>
+                        </div>
+                        <div class="card-mall__modal--email">
+                          <p>
+                             perisur@galerias.com</p>
+                        </div>
+                        <div class="card-mall__modal--detail">
+                          <h4>Detalles del Centro comercial</h4>
+                          <ul class="card-mall__modal--detail_item">
+                            <li>
+                               Una superficie rentable construida de 51,303 m2</li>
+                            <li>
+                               Locales comerciales</li>
+                            <li>
+                               6,345 lugares de estacionamiento</li>
+                            <li>
+                               Liverpool, Palacio de Hierro, Sears, Cinepolis</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="malls-list-item">
+                    <div class="card-mall" id="card-mall__4">
+                      <figure class="card-mall-media"><img src="../images/magazinePicture.png"/></figure>
+                      <div class="card-mall__brief">
+                        <div class="card-mall__brief--Title">
+                          <h3>Perisur	</h3>
+                        </div>
+                        <div class="card-mall__brief--reveal"><span class="material-icons revealModalCard modalTo-4">more_vert</span></div>
+                        <div class="card-mall__brief--anchor"><a>Ir a este centro comercial</a></div>
+                      </div>
+                      <div class="card-mall__modal card-mall__modal-modal_hidden" id="modalTo-4">
+                        <div class="card-mall__modal--close"><span class="material-icons closeModalCard modalTo-4">close</span></div>
+                        <div class="card-mall__modal--logo">
+                          <figure><img src="../images/LOGO_PERISUR.png"/></figure>
+                        </div>
+                        <div class="card-mall__modal--direction">
+                          <p>
+                             Anillo Periferico sur No. 4690 Col. Ampliacion del Pedregal, San Angel Mexico, D.F.</p>
+                        </div>
+                        <div class="card-mall__modal--thelepone">
+                          <p>
+                             Tel. 01 55 56 06 8389</p>
+                        </div>
+                        <div class="card-mall__modal--email">
+                          <p>
+                             perisur@galerias.com</p>
+                        </div>
+                        <div class="card-mall__modal--detail">
+                          <h4>Detalles del Centro comercial</h4>
+                          <ul class="card-mall__modal--detail_item">
+                            <li>
+                               Una superficie rentable construida de 51,303 m2</li>
+                            <li>
+                               Locales comerciales</li>
+                            <li>
+                               6,345 lugares de estacionamiento</li>
+                            <li>
+                               Liverpool, Palacio de Hierro, Sears, Cinepolis</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="malls-list-item">
+                    <div class="card-mall" id="card-mall__5">
+                      <figure class="card-mall-media"><img src="../images/magazinePicture.png"/></figure>
+                      <div class="card-mall__brief">
+                        <div class="card-mall__brief--Title">
+                          <h3>Perisur	</h3>
+                        </div>
+                        <div class="card-mall__brief--reveal"><span class="material-icons revealModalCard modalTo-5">more_vert</span></div>
+                        <div class="card-mall__brief--anchor"><a>Ir a este centro comercial</a></div>
+                      </div>
+                      <div class="card-mall__modal card-mall__modal-modal_hidden" id="modalTo-5">
+                        <div class="card-mall__modal--close"><span class="material-icons closeModalCard modalTo-5">close</span></div>
+                        <div class="card-mall__modal--logo">
+                          <figure><img src="../images/LOGO_PERISUR.png"/></figure>
+                        </div>
+                        <div class="card-mall__modal--direction">
+                          <p>
+                             Anillo Periferico sur No. 4690 Col. Ampliacion del Pedregal, San Angel Mexico, D.F.</p>
+                        </div>
+                        <div class="card-mall__modal--thelepone">
+                          <p>
+                             Tel. 01 55 56 06 8389</p>
+                        </div>
+                        <div class="card-mall__modal--email">
+                          <p>
+                             perisur@galerias.com</p>
+                        </div>
+                        <div class="card-mall__modal--detail">
+                          <h4>Detalles del Centro comercial</h4>
+                          <ul class="card-mall__modal--detail_item">
+                            <li>
+                               Una superficie rentable construida de 51,303 m2</li>
+                            <li>
+                               Locales comerciales</li>
+                            <li>
+                               6,345 lugares de estacionamiento</li>
+                            <li>
+                               Liverpool, Palacio de Hierro, Sears, Cinepolis</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="malls-list-item">
+                    <div class="card-mall" id="card-mall__6">
+                      <figure class="card-mall-media"><img src="../images/magazinePicture.png"/></figure>
+                      <div class="card-mall__brief">
+                        <div class="card-mall__brief--Title">
+                          <h3>Perisur	</h3>
+                        </div>
+                        <div class="card-mall__brief--reveal"><span class="material-icons revealModalCard modalTo-6">more_vert</span></div>
+                        <div class="card-mall__brief--anchor"><a>Ir a este centro comercial</a></div>
+                      </div>
+                      <div class="card-mall__modal card-mall__modal-modal_hidden" id="modalTo-6">
+                        <div class="card-mall__modal--close"><span class="material-icons closeModalCard modalTo-6">close</span></div>
+                        <div class="card-mall__modal--logo">
+                          <figure><img src="../images/LOGO_PERISUR.png"/></figure>
+                        </div>
+                        <div class="card-mall__modal--direction">
+                          <p>
+                             Anillo Periferico sur No. 4690 Col. Ampliacion del Pedregal, San Angel Mexico, D.F.</p>
+                        </div>
+                        <div class="card-mall__modal--thelepone">
+                          <p>
+                             Tel. 01 55 56 06 8389</p>
+                        </div>
+                        <div class="card-mall__modal--email">
+                          <p>
+                             perisur@galerias.com</p>
+                        </div>
+                        <div class="card-mall__modal--detail">
+                          <h4>Detalles del Centro comercial</h4>
+                          <ul class="card-mall__modal--detail_item">
+                            <li>
+                               Una superficie rentable construida de 51,303 m2</li>
+                            <li>
+                               Locales comerciales</li>
+                            <li>
+                               6,345 lugares de estacionamiento</li>
+                            <li>
+                               Liverpool, Palacio de Hierro, Sears, Cinepolis</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="malls-list-item">
+                    <div class="card-mall" id="card-mall__7">
+                      <figure class="card-mall-media"><img src="../images/magazinePicture.png"/></figure>
+                      <div class="card-mall__brief">
+                        <div class="card-mall__brief--Title">
+                          <h3>Perisur	</h3>
+                        </div>
+                        <div class="card-mall__brief--reveal"><span class="material-icons revealModalCard modalTo-7">more_vert</span></div>
+                        <div class="card-mall__brief--anchor"><a>Ir a este centro comercial</a></div>
+                      </div>
+                      <div class="card-mall__modal card-mall__modal-modal_hidden" id="modalTo-7">
+                        <div class="card-mall__modal--close"><span class="material-icons closeModalCard modalTo-7">close</span></div>
+                        <div class="card-mall__modal--logo">
+                          <figure><img src="../images/LOGO_PERISUR.png"/></figure>
+                        </div>
+                        <div class="card-mall__modal--direction">
+                          <p>
+                             Anillo Periferico sur No. 4690 Col. Ampliacion del Pedregal, San Angel Mexico, D.F.</p>
+                        </div>
+                        <div class="card-mall__modal--thelepone">
+                          <p>
+                             Tel. 01 55 56 06 8389</p>
+                        </div>
+                        <div class="card-mall__modal--email">
+                          <p>
+                             perisur@galerias.com</p>
+                        </div>
+                        <div class="card-mall__modal--detail">
+                          <h4>Detalles del Centro comercial</h4>
+                          <ul class="card-mall__modal--detail_item">
+                            <li>
+                               Una superficie rentable construida de 51,303 m2</li>
+                            <li>
+                               Locales comerciales</li>
+                            <li>
+                               6,345 lugares de estacionamiento</li>
+                            <li>
+                               Liverpool, Palacio de Hierro, Sears, Cinepolis</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="malls-list-item">
+                    <div class="card-mall" id="card-mall__8">
+                      <figure class="card-mall-media"><img src="../images/magazinePicture.png"/></figure>
+                      <div class="card-mall__brief">
+                        <div class="card-mall__brief--Title">
+                          <h3>Perisur	</h3>
+                        </div>
+                        <div class="card-mall__brief--reveal"><span class="material-icons revealModalCard modalTo-8">more_vert</span></div>
+                        <div class="card-mall__brief--anchor"><a>Ir a este centro comercial</a></div>
+                      </div>
+                      <div class="card-mall__modal card-mall__modal-modal_hidden" id="modalTo-8">
+                        <div class="card-mall__modal--close"><span class="material-icons closeModalCard modalTo-8">close</span></div>
+                        <div class="card-mall__modal--logo">
+                          <figure><img src="../images/LOGO_PERISUR.png"/></figure>
+                        </div>
+                        <div class="card-mall__modal--direction">
+                          <p>
+                             Anillo Periferico sur No. 4690 Col. Ampliacion del Pedregal, San Angel Mexico, D.F.</p>
+                        </div>
+                        <div class="card-mall__modal--thelepone">
+                          <p>
+                             Tel. 01 55 56 06 8389</p>
+                        </div>
+                        <div class="card-mall__modal--email">
+                          <p>
+                             perisur@galerias.com</p>
+                        </div>
+                        <div class="card-mall__modal--detail">
+                          <h4>Detalles del Centro comercial</h4>
+                          <ul class="card-mall__modal--detail_item">
+                            <li>
+                               Una superficie rentable construida de 51,303 m2</li>
+                            <li>
+                               Locales comerciales</li>
+                            <li>
+                               6,345 lugares de estacionamiento</li>
+                            <li>
+                               Liverpool, Palacio de Hierro, Sears, Cinepolis</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="malls-list-item">
+                    <div class="card-mall" id="card-mall__9">
+                      <figure class="card-mall-media"><img src="../images/magazinePicture.png"/></figure>
+                      <div class="card-mall__brief">
+                        <div class="card-mall__brief--Title">
+                          <h3>Perisur	</h3>
+                        </div>
+                        <div class="card-mall__brief--reveal"><span class="material-icons revealModalCard modalTo-9">more_vert</span></div>
+                        <div class="card-mall__brief--anchor"><a>Ir a este centro comercial</a></div>
+                      </div>
+                      <div class="card-mall__modal card-mall__modal-modal_hidden" id="modalTo-9">
+                        <div class="card-mall__modal--close"><span class="material-icons closeModalCard modalTo-9">close</span></div>
+                        <div class="card-mall__modal--logo">
+                          <figure><img src="../images/LOGO_PERISUR.png"/></figure>
+                        </div>
+                        <div class="card-mall__modal--direction">
+                          <p>
+                             Anillo Periferico sur No. 4690 Col. Ampliacion del Pedregal, San Angel Mexico, D.F.</p>
+                        </div>
+                        <div class="card-mall__modal--thelepone">
+                          <p>
+                             Tel. 01 55 56 06 8389</p>
+                        </div>
+                        <div class="card-mall__modal--email">
+                          <p>
+                             perisur@galerias.com</p>
+                        </div>
+                        <div class="card-mall__modal--detail">
+                          <h4>Detalles del Centro comercial</h4>
+                          <ul class="card-mall__modal--detail_item">
+                            <li>
+                               Una superficie rentable construida de 51,303 m2</li>
+                            <li>
+                               Locales comerciales</li>
+                            <li>
+                               6,345 lugares de estacionamiento</li>
+                            <li>
+                               Liverpool, Palacio de Hierro, Sears, Cinepolis</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="malls-list-item">
+                    <div class="card-mall" id="card-mall__10">
+                      <figure class="card-mall-media"><img src="../images/magazinePicture.png"/></figure>
+                      <div class="card-mall__brief">
+                        <div class="card-mall__brief--Title">
+                          <h3>Perisur	</h3>
+                        </div>
+                        <div class="card-mall__brief--reveal"><span class="material-icons revealModalCard modalTo-10">more_vert</span></div>
+                        <div class="card-mall__brief--anchor"><a>Ir a este centro comercial</a></div>
+                      </div>
+                      <div class="card-mall__modal card-mall__modal-modal_hidden" id="modalTo-10">
+                        <div class="card-mall__modal--close"><span class="material-icons closeModalCard modalTo-10">close</span></div>
+                        <div class="card-mall__modal--logo">
+                          <figure><img src="../images/LOGO_PERISUR.png"/></figure>
+                        </div>
+                        <div class="card-mall__modal--direction">
+                          <p>
+                             Anillo Periferico sur No. 4690 Col. Ampliacion del Pedregal, San Angel Mexico, D.F.</p>
+                        </div>
+                        <div class="card-mall__modal--thelepone">
+                          <p>
+                             Tel. 01 55 56 06 8389</p>
+                        </div>
+                        <div class="card-mall__modal--email">
+                          <p>
+                             perisur@galerias.com</p>
+                        </div>
+                        <div class="card-mall__modal--detail">
+                          <h4>Detalles del Centro comercial</h4>
+                          <ul class="card-mall__modal--detail_item">
+                            <li>
+                               Una superficie rentable construida de 51,303 m2</li>
+                            <li>
+                               Locales comerciales</li>
+                            <li>
+                               6,345 lugares de estacionamiento</li>
+                            <li>
+                               Liverpool, Palacio de Hierro, Sears, Cinepolis</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="malls-list-item">
+                    <div class="card-mall" id="card-mall__11">
+                      <figure class="card-mall-media"><img src="../images/magazinePicture.png"/></figure>
+                      <div class="card-mall__brief">
+                        <div class="card-mall__brief--Title">
+                          <h3>Perisur	</h3>
+                        </div>
+                        <div class="card-mall__brief--reveal"><span class="material-icons revealModalCard modalTo-11">more_vert</span></div>
+                        <div class="card-mall__brief--anchor"><a>Ir a este centro comercial</a></div>
+                      </div>
+                      <div class="card-mall__modal card-mall__modal-modal_hidden" id="modalTo-11">
+                        <div class="card-mall__modal--close"><span class="material-icons closeModalCard modalTo-11">close</span></div>
+                        <div class="card-mall__modal--logo">
+                          <figure><img src="../images/LOGO_PERISUR.png"/></figure>
+                        </div>
+                        <div class="card-mall__modal--direction">
+                          <p>
+                             Anillo Periferico sur No. 4690 Col. Ampliacion del Pedregal, San Angel Mexico, D.F.</p>
+                        </div>
+                        <div class="card-mall__modal--thelepone">
+                          <p>
+                             Tel. 01 55 56 06 8389</p>
+                        </div>
+                        <div class="card-mall__modal--email">
+                          <p>
+                             perisur@galerias.com</p>
+                        </div>
+                        <div class="card-mall__modal--detail">
+                          <h4>Detalles del Centro comercial</h4>
+                          <ul class="card-mall__modal--detail_item">
+                            <li>
+                               Una superficie rentable construida de 51,303 m2</li>
+                            <li>
+                               Locales comerciales</li>
+                            <li>
+                               6,345 lugares de estacionamiento</li>
+                            <li>
+                               Liverpool, Palacio de Hierro, Sears, Cinepolis</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="malls-list-item">
+                    <div class="card-mall" id="card-mall__12">
+                      <figure class="card-mall-media"><img src="../images/magazinePicture.png"/></figure>
+                      <div class="card-mall__brief">
+                        <div class="card-mall__brief--Title">
+                          <h3>Perisur	</h3>
+                        </div>
+                        <div class="card-mall__brief--reveal"><span class="material-icons revealModalCard modalTo-12">more_vert</span></div>
+                        <div class="card-mall__brief--anchor"><a>Ir a este centro comercial</a></div>
+                      </div>
+                      <div class="card-mall__modal card-mall__modal-modal_hidden" id="modalTo-12">
+                        <div class="card-mall__modal--close"><span class="material-icons closeModalCard modalTo-12">close</span></div>
+                        <div class="card-mall__modal--logo">
+                          <figure><img src="../images/LOGO_PERISUR.png"/></figure>
+                        </div>
+                        <div class="card-mall__modal--direction">
+                          <p>
+                             Anillo Periferico sur No. 4690 Col. Ampliacion del Pedregal, San Angel Mexico, D.F.</p>
+                        </div>
+                        <div class="card-mall__modal--thelepone">
+                          <p>
+                             Tel. 01 55 56 06 8389</p>
+                        </div>
+                        <div class="card-mall__modal--email">
+                          <p>
+                             perisur@galerias.com</p>
+                        </div>
+                        <div class="card-mall__modal--detail">
+                          <h4>Detalles del Centro comercial</h4>
+                          <ul class="card-mall__modal--detail_item">
+                            <li>
+                               Una superficie rentable construida de 51,303 m2</li>
+                            <li>
+                               Locales comerciales</li>
+                            <li>
+                               6,345 lugares de estacionamiento</li>
+                            <li>
+                               Liverpool, Palacio de Hierro, Sears, Cinepolis</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="malls-list-item">
+                    <div class="card-mall" id="card-mall__13">
+                      <figure class="card-mall-media"><img src="../images/magazinePicture.png"/></figure>
+                      <div class="card-mall__brief">
+                        <div class="card-mall__brief--Title">
+                          <h3>Perisur	</h3>
+                        </div>
+                        <div class="card-mall__brief--reveal"><span class="material-icons revealModalCard modalTo-13">more_vert</span></div>
+                        <div class="card-mall__brief--anchor"><a>Ir a este centro comercial</a></div>
+                      </div>
+                      <div class="card-mall__modal card-mall__modal-modal_hidden" id="modalTo-13">
+                        <div class="card-mall__modal--close"><span class="material-icons closeModalCard modalTo-13">close</span></div>
+                        <div class="card-mall__modal--logo">
+                          <figure><img src="../images/LOGO_PERISUR.png"/></figure>
+                        </div>
+                        <div class="card-mall__modal--direction">
+                          <p>
+                             Anillo Periferico sur No. 4690 Col. Ampliacion del Pedregal, San Angel Mexico, D.F.</p>
+                        </div>
+                        <div class="card-mall__modal--thelepone">
+                          <p>
+                             Tel. 01 55 56 06 8389</p>
+                        </div>
+                        <div class="card-mall__modal--email">
+                          <p>
+                             perisur@galerias.com</p>
+                        </div>
+                        <div class="card-mall__modal--detail">
+                          <h4>Detalles del Centro comercial</h4>
+                          <ul class="card-mall__modal--detail_item">
+                            <li>
+                               Una superficie rentable construida de 51,303 m2</li>
+                            <li>
+                               Locales comerciales</li>
+                            <li>
+                               6,345 lugares de estacionamiento</li>
+                            <li>
+                               Liverpool, Palacio de Hierro, Sears, Cinepolis</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="malls-list-item">
+                    <div class="card-mall" id="card-mall__14">
+                      <figure class="card-mall-media"><img src="../images/magazinePicture.png"/></figure>
+                      <div class="card-mall__brief">
+                        <div class="card-mall__brief--Title">
+                          <h3>Perisur	</h3>
+                        </div>
+                        <div class="card-mall__brief--reveal"><span class="material-icons revealModalCard modalTo-14">more_vert</span></div>
+                        <div class="card-mall__brief--anchor"><a>Ir a este centro comercial</a></div>
+                      </div>
+                      <div class="card-mall__modal card-mall__modal-modal_hidden" id="modalTo-14">
+                        <div class="card-mall__modal--close"><span class="material-icons closeModalCard modalTo-14">close</span></div>
+                        <div class="card-mall__modal--logo">
+                          <figure><img src="../images/LOGO_PERISUR.png"/></figure>
+                        </div>
+                        <div class="card-mall__modal--direction">
+                          <p>
+                             Anillo Periferico sur No. 4690 Col. Ampliacion del Pedregal, San Angel Mexico, D.F.</p>
+                        </div>
+                        <div class="card-mall__modal--thelepone">
+                          <p>
+                             Tel. 01 55 56 06 8389</p>
+                        </div>
+                        <div class="card-mall__modal--email">
+                          <p>
+                             perisur@galerias.com</p>
+                        </div>
+                        <div class="card-mall__modal--detail">
+                          <h4>Detalles del Centro comercial</h4>
+                          <ul class="card-mall__modal--detail_item">
+                            <li>
+                               Una superficie rentable construida de 51,303 m2</li>
+                            <li>
+                               Locales comerciales</li>
+                            <li>
+                               6,345 lugares de estacionamiento</li>
+                            <li>
+                               Liverpool, Palacio de Hierro, Sears, Cinepolis</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="malls-list-item">
+                    <div class="card-mall" id="card-mall__15">
+                      <figure class="card-mall-media"><img src="../images/magazinePicture.png"/></figure>
+                      <div class="card-mall__brief">
+                        <div class="card-mall__brief--Title">
+                          <h3>Perisur	</h3>
+                        </div>
+                        <div class="card-mall__brief--reveal"><span class="material-icons revealModalCard modalTo-15">more_vert</span></div>
+                        <div class="card-mall__brief--anchor"><a>Ir a este centro comercial</a></div>
+                      </div>
+                      <div class="card-mall__modal card-mall__modal-modal_hidden" id="modalTo-15">
+                        <div class="card-mall__modal--close"><span class="material-icons closeModalCard modalTo-15">close</span></div>
+                        <div class="card-mall__modal--logo">
+                          <figure><img src="../images/LOGO_PERISUR.png"/></figure>
+                        </div>
+                        <div class="card-mall__modal--direction">
+                          <p>
+                             Anillo Periferico sur No. 4690 Col. Ampliacion del Pedregal, San Angel Mexico, D.F.</p>
+                        </div>
+                        <div class="card-mall__modal--thelepone">
+                          <p>
+                             Tel. 01 55 56 06 8389</p>
+                        </div>
+                        <div class="card-mall__modal--email">
+                          <p>
+                             perisur@galerias.com</p>
+                        </div>
+                        <div class="card-mall__modal--detail">
+                          <h4>Detalles del Centro comercial</h4>
+                          <ul class="card-mall__modal--detail_item">
+                            <li>
+                               Una superficie rentable construida de 51,303 m2</li>
+                            <li>
+                               Locales comerciales</li>
+                            <li>
+                               6,345 lugares de estacionamiento</li>
+                            <li>
+                               Liverpool, Palacio de Hierro, Sears, Cinepolis</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="malls-list-item">
+                    <div class="card-mall" id="card-mall__16">
+                      <figure class="card-mall-media"><img src="../images/magazinePicture.png"/></figure>
+                      <div class="card-mall__brief">
+                        <div class="card-mall__brief--Title">
+                          <h3>Perisur	</h3>
+                        </div>
+                        <div class="card-mall__brief--reveal"><span class="material-icons revealModalCard modalTo-16">more_vert</span></div>
+                        <div class="card-mall__brief--anchor"><a>Ir a este centro comercial</a></div>
+                      </div>
+                      <div class="card-mall__modal card-mall__modal-modal_hidden" id="modalTo-16">
+                        <div class="card-mall__modal--close"><span class="material-icons closeModalCard modalTo-16">close</span></div>
+                        <div class="card-mall__modal--logo">
+                          <figure><img src="../images/LOGO_PERISUR.png"/></figure>
+                        </div>
+                        <div class="card-mall__modal--direction">
+                          <p>
+                             Anillo Periferico sur No. 4690 Col. Ampliacion del Pedregal, San Angel Mexico, D.F.</p>
+                        </div>
+                        <div class="card-mall__modal--thelepone">
+                          <p>
+                             Tel. 01 55 56 06 8389</p>
+                        </div>
+                        <div class="card-mall__modal--email">
+                          <p>
+                             perisur@galerias.com</p>
+                        </div>
+                        <div class="card-mall__modal--detail">
+                          <h4>Detalles del Centro comercial</h4>
+                          <ul class="card-mall__modal--detail_item">
+                            <li>
+                               Una superficie rentable construida de 51,303 m2</li>
+                            <li>
+                               Locales comerciales</li>
+                            <li>
+                               6,345 lugares de estacionamiento</li>
+                            <li>
+                               Liverpool, Palacio de Hierro, Sears, Cinepolis</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="malls-list-item">
+                    <div class="card-mall" id="card-mall__17">
+                      <figure class="card-mall-media"><img src="../images/magazinePicture.png"/></figure>
+                      <div class="card-mall__brief">
+                        <div class="card-mall__brief--Title">
+                          <h3>Perisur	</h3>
+                        </div>
+                        <div class="card-mall__brief--reveal"><span class="material-icons revealModalCard modalTo-17">more_vert</span></div>
+                        <div class="card-mall__brief--anchor"><a>Ir a este centro comercial</a></div>
+                      </div>
+                      <div class="card-mall__modal card-mall__modal-modal_hidden" id="modalTo-17">
+                        <div class="card-mall__modal--close"><span class="material-icons closeModalCard modalTo-17">close</span></div>
+                        <div class="card-mall__modal--logo">
+                          <figure><img src="../images/LOGO_PERISUR.png"/></figure>
+                        </div>
+                        <div class="card-mall__modal--direction">
+                          <p>
+                             Anillo Periferico sur No. 4690 Col. Ampliacion del Pedregal, San Angel Mexico, D.F.</p>
+                        </div>
+                        <div class="card-mall__modal--thelepone">
+                          <p>
+                             Tel. 01 55 56 06 8389</p>
+                        </div>
+                        <div class="card-mall__modal--email">
+                          <p>
+                             perisur@galerias.com</p>
+                        </div>
+                        <div class="card-mall__modal--detail">
+                          <h4>Detalles del Centro comercial</h4>
+                          <ul class="card-mall__modal--detail_item">
+                            <li>
+                               Una superficie rentable construida de 51,303 m2</li>
+                            <li>
+                               Locales comerciales</li>
+                            <li>
+                               6,345 lugares de estacionamiento</li>
+                            <li>
+                               Liverpool, Palacio de Hierro, Sears, Cinepolis</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="malls-list-item">
+                    <div class="card-mall" id="card-mall__18">
+                      <figure class="card-mall-media"><img src="../images/magazinePicture.png"/></figure>
+                      <div class="card-mall__brief">
+                        <div class="card-mall__brief--Title">
+                          <h3>Perisur	</h3>
+                        </div>
+                        <div class="card-mall__brief--reveal"><span class="material-icons revealModalCard modalTo-18">more_vert</span></div>
+                        <div class="card-mall__brief--anchor"><a>Ir a este centro comercial</a></div>
+                      </div>
+                      <div class="card-mall__modal card-mall__modal-modal_hidden" id="modalTo-18">
+                        <div class="card-mall__modal--close"><span class="material-icons closeModalCard modalTo-18">close</span></div>
+                        <div class="card-mall__modal--logo">
+                          <figure><img src="../images/LOGO_PERISUR.png"/></figure>
+                        </div>
+                        <div class="card-mall__modal--direction">
+                          <p>
+                             Anillo Periferico sur No. 4690 Col. Ampliacion del Pedregal, San Angel Mexico, D.F.</p>
+                        </div>
+                        <div class="card-mall__modal--thelepone">
+                          <p>
+                             Tel. 01 55 56 06 8389</p>
+                        </div>
+                        <div class="card-mall__modal--email">
+                          <p>
+                             perisur@galerias.com</p>
+                        </div>
+                        <div class="card-mall__modal--detail">
+                          <h4>Detalles del Centro comercial</h4>
+                          <ul class="card-mall__modal--detail_item">
+                            <li>
+                               Una superficie rentable construida de 51,303 m2</li>
+                            <li>
+                               Locales comerciales</li>
+                            <li>
+                               6,345 lugares de estacionamiento</li>
+                            <li>
+                               Liverpool, Palacio de Hierro, Sears, Cinepolis</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="malls-list-item">
+                    <div class="card-mall" id="card-mall__19">
+                      <figure class="card-mall-media"><img src="../images/magazinePicture.png"/></figure>
+                      <div class="card-mall__brief">
+                        <div class="card-mall__brief--Title">
+                          <h3>Perisur	</h3>
+                        </div>
+                        <div class="card-mall__brief--reveal"><span class="material-icons revealModalCard modalTo-19">more_vert</span></div>
+                        <div class="card-mall__brief--anchor"><a>Ir a este centro comercial</a></div>
+                      </div>
+                      <div class="card-mall__modal card-mall__modal-modal_hidden" id="modalTo-19">
+                        <div class="card-mall__modal--close"><span class="material-icons closeModalCard modalTo-19">close</span></div>
+                        <div class="card-mall__modal--logo">
+                          <figure><img src="../images/LOGO_PERISUR.png"/></figure>
+                        </div>
+                        <div class="card-mall__modal--direction">
+                          <p>
+                             Anillo Periferico sur No. 4690 Col. Ampliacion del Pedregal, San Angel Mexico, D.F.</p>
+                        </div>
+                        <div class="card-mall__modal--thelepone">
+                          <p>
+                             Tel. 01 55 56 06 8389</p>
+                        </div>
+                        <div class="card-mall__modal--email">
+                          <p>
+                             perisur@galerias.com</p>
+                        </div>
+                        <div class="card-mall__modal--detail">
+                          <h4>Detalles del Centro comercial</h4>
+                          <ul class="card-mall__modal--detail_item">
+                            <li>
+                               Una superficie rentable construida de 51,303 m2</li>
+                            <li>
+                               Locales comerciales</li>
+                            <li>
+                               6,345 lugares de estacionamiento</li>
+                            <li>
+                               Liverpool, Palacio de Hierro, Sears, Cinepolis</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="malls-list-item">
+                    <div class="card-mall" id="card-mall__20">
+                      <figure class="card-mall-media"><img src="../images/magazinePicture.png"/></figure>
+                      <div class="card-mall__brief">
+                        <div class="card-mall__brief--Title">
+                          <h3>Perisur	</h3>
+                        </div>
+                        <div class="card-mall__brief--reveal"><span class="material-icons revealModalCard modalTo-20">more_vert</span></div>
+                        <div class="card-mall__brief--anchor"><a>Ir a este centro comercial</a></div>
+                      </div>
+                      <div class="card-mall__modal card-mall__modal-modal_hidden" id="modalTo-20">
+                        <div class="card-mall__modal--close"><span class="material-icons closeModalCard modalTo-20">close</span></div>
+                        <div class="card-mall__modal--logo">
+                          <figure><img src="../images/LOGO_PERISUR.png"/></figure>
+                        </div>
+                        <div class="card-mall__modal--direction">
+                          <p>
+                             Anillo Periferico sur No. 4690 Col. Ampliacion del Pedregal, San Angel Mexico, D.F.</p>
+                        </div>
+                        <div class="card-mall__modal--thelepone">
+                          <p>
+                             Tel. 01 55 56 06 8389</p>
+                        </div>
+                        <div class="card-mall__modal--email">
+                          <p>
+                             perisur@galerias.com</p>
+                        </div>
+                        <div class="card-mall__modal--detail">
+                          <h4>Detalles del Centro comercial</h4>
+                          <ul class="card-mall__modal--detail_item">
+                            <li>
+                               Una superficie rentable construida de 51,303 m2</li>
+                            <li>
+                               Locales comerciales</li>
+                            <li>
+                               6,345 lugares de estacionamiento</li>
+                            <li>
+                               Liverpool, Palacio de Hierro, Sears, Cinepolis</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="malls-list-item">
+                    <div class="card-mall" id="card-mall__21">
+                      <figure class="card-mall-media"><img src="../images/magazinePicture.png"/></figure>
+                      <div class="card-mall__brief">
+                        <div class="card-mall__brief--Title">
+                          <h3>Perisur	</h3>
+                        </div>
+                        <div class="card-mall__brief--reveal"><span class="material-icons revealModalCard modalTo-21">more_vert</span></div>
+                        <div class="card-mall__brief--anchor"><a>Ir a este centro comercial</a></div>
+                      </div>
+                      <div class="card-mall__modal card-mall__modal-modal_hidden" id="modalTo-21">
+                        <div class="card-mall__modal--close"><span class="material-icons closeModalCard modalTo-21">close</span></div>
+                        <div class="card-mall__modal--logo">
+                          <figure><img src="../images/LOGO_PERISUR.png"/></figure>
+                        </div>
+                        <div class="card-mall__modal--direction">
+                          <p>
+                             Anillo Periferico sur No. 4690 Col. Ampliacion del Pedregal, San Angel Mexico, D.F.</p>
+                        </div>
+                        <div class="card-mall__modal--thelepone">
+                          <p>
+                             Tel. 01 55 56 06 8389</p>
+                        </div>
+                        <div class="card-mall__modal--email">
+                          <p>
+                             perisur@galerias.com</p>
+                        </div>
+                        <div class="card-mall__modal--detail">
+                          <h4>Detalles del Centro comercial</h4>
+                          <ul class="card-mall__modal--detail_item">
+                            <li>
+                               Una superficie rentable construida de 51,303 m2</li>
+                            <li>
+                               Locales comerciales</li>
+                            <li>
+                               6,345 lugares de estacionamiento</li>
+                            <li>
+                               Liverpool, Palacio de Hierro, Sears, Cinepolis</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="malls-list-item">
+                    <div class="card-mall" id="card-mall__22">
+                      <figure class="card-mall-media"><img src="../images/magazinePicture.png"/></figure>
+                      <div class="card-mall__brief">
+                        <div class="card-mall__brief--Title">
+                          <h3>Perisur	</h3>
+                        </div>
+                        <div class="card-mall__brief--reveal"><span class="material-icons revealModalCard modalTo-22">more_vert</span></div>
+                        <div class="card-mall__brief--anchor"><a>Ir a este centro comercial</a></div>
+                      </div>
+                      <div class="card-mall__modal card-mall__modal-modal_hidden" id="modalTo-22">
+                        <div class="card-mall__modal--close"><span class="material-icons closeModalCard modalTo-22">close</span></div>
+                        <div class="card-mall__modal--logo">
+                          <figure><img src="../images/LOGO_PERISUR.png"/></figure>
+                        </div>
+                        <div class="card-mall__modal--direction">
+                          <p>
+                             Anillo Periferico sur No. 4690 Col. Ampliacion del Pedregal, San Angel Mexico, D.F.</p>
+                        </div>
+                        <div class="card-mall__modal--thelepone">
+                          <p>
+                             Tel. 01 55 56 06 8389</p>
+                        </div>
+                        <div class="card-mall__modal--email">
+                          <p>
+                             perisur@galerias.com</p>
+                        </div>
+                        <div class="card-mall__modal--detail">
+                          <h4>Detalles del Centro comercial</h4>
+                          <ul class="card-mall__modal--detail_item">
+                            <li>
+                               Una superficie rentable construida de 51,303 m2</li>
+                            <li>
+                               Locales comerciales</li>
+                            <li>
+                               6,345 lugares de estacionamiento</li>
+                            <li>
+                               Liverpool, Palacio de Hierro, Sears, Cinepolis</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="malls-list-item">
+                    <div class="card-mall" id="card-mall__23">
+                      <figure class="card-mall-media"><img src="../images/magazinePicture.png"/></figure>
+                      <div class="card-mall__brief">
+                        <div class="card-mall__brief--Title">
+                          <h3>Perisur	</h3>
+                        </div>
+                        <div class="card-mall__brief--reveal"><span class="material-icons revealModalCard modalTo-23">more_vert</span></div>
+                        <div class="card-mall__brief--anchor"><a>Ir a este centro comercial</a></div>
+                      </div>
+                      <div class="card-mall__modal card-mall__modal-modal_hidden" id="modalTo-23">
+                        <div class="card-mall__modal--close"><span class="material-icons closeModalCard modalTo-23">close</span></div>
+                        <div class="card-mall__modal--logo">
+                          <figure><img src="../images/LOGO_PERISUR.png"/></figure>
+                        </div>
+                        <div class="card-mall__modal--direction">
+                          <p>
+                             Anillo Periferico sur No. 4690 Col. Ampliacion del Pedregal, San Angel Mexico, D.F.</p>
+                        </div>
+                        <div class="card-mall__modal--thelepone">
+                          <p>
+                             Tel. 01 55 56 06 8389</p>
+                        </div>
+                        <div class="card-mall__modal--email">
+                          <p>
+                             perisur@galerias.com</p>
+                        </div>
+                        <div class="card-mall__modal--detail">
+                          <h4>Detalles del Centro comercial</h4>
+                          <ul class="card-mall__modal--detail_item">
+                            <li>
+                               Una superficie rentable construida de 51,303 m2</li>
+                            <li>
+                               Locales comerciales</li>
+                            <li>
+                               6,345 lugares de estacionamiento</li>
+                            <li>
+                               Liverpool, Palacio de Hierro, Sears, Cinepolis</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="malls-list-item">
+                    <div class="card-mall" id="card-mall__24">
+                      <figure class="card-mall-media"><img src="../images/magazinePicture.png"/></figure>
+                      <div class="card-mall__brief">
+                        <div class="card-mall__brief--Title">
+                          <h3>Perisur	</h3>
+                        </div>
+                        <div class="card-mall__brief--reveal"><span class="material-icons revealModalCard modalTo-24">more_vert</span></div>
+                        <div class="card-mall__brief--anchor"><a>Ir a este centro comercial</a></div>
+                      </div>
+                      <div class="card-mall__modal card-mall__modal-modal_hidden" id="modalTo-24">
+                        <div class="card-mall__modal--close"><span class="material-icons closeModalCard modalTo-24">close</span></div>
+                        <div class="card-mall__modal--logo">
+                          <figure><img src="../images/LOGO_PERISUR.png"/></figure>
+                        </div>
+                        <div class="card-mall__modal--direction">
+                          <p>
+                             Anillo Periferico sur No. 4690 Col. Ampliacion del Pedregal, San Angel Mexico, D.F.</p>
+                        </div>
+                        <div class="card-mall__modal--thelepone">
+                          <p>
+                             Tel. 01 55 56 06 8389</p>
+                        </div>
+                        <div class="card-mall__modal--email">
+                          <p>
+                             perisur@galerias.com</p>
+                        </div>
+                        <div class="card-mall__modal--detail">
+                          <h4>Detalles del Centro comercial</h4>
+                          <ul class="card-mall__modal--detail_item">
+                            <li>
+                               Una superficie rentable construida de 51,303 m2</li>
+                            <li>
+                               Locales comerciales</li>
+                            <li>
+                               6,345 lugares de estacionamiento</li>
+                            <li>
+                               Liverpool, Palacio de Hierro, Sears, Cinepolis</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </section>
+            </div>
+            <div class="main-article__organisms--code">
+              <h2 class="main-article__organisms--title">Malls-list-code</h2>
+              <pre><code id="code-malls-list"></code></pre>
+            </div>
+          </div>
+        </article>
+      </section>
+    </section>
+  </body>
+</html>

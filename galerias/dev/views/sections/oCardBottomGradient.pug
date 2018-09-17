@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 html(lang="es")
-	- var currentPage = 'aLabel'
+	- var currentPage = 'oCardBottomGradient'
 	include ../resources/configuration
 	include ../resources/headers
 	body
@@ -13,18 +13,16 @@ html(lang="es")
 
 			section(class="breadcrums")
 				p(class="breadcrums-title")
-					| Atoms > Label
+					| Organism > Card bottom gradient
 			section.mainMenu
 		section(class="body")
 			include ../resources/menu
 			
 
-
-			// ============================================================================================
 			section(class="main")
 				article(class="main-article")
 					h1(class="main-article__title")
-						| Cards
+						| Card bottom gradient
 					nav(class="main-article__btnCodes")
 						button(id="allCssList" class="getStyle all") Show CSS
 						button(id="allHtmlList" class="getHTML all") Show HTML
@@ -33,3 +31,20 @@ html(lang="es")
 					p(class="main-article__description")
 						| Navigational transitions occur when users move between screens, such as from a home screen to a detail screen.
 					
+
+
+
+					div(class="main-article__organisms")
+						div(class="main-article__organisms--view")
+							h2(class="main-article__organisms--title")
+								| Card-bottom-gradient
+							- var action = true;
+							- var customList = [{"txt" : "styles", "cls" : "org-Card-bottom-gradient btnCss"},{"txt" : "html", "cls" : "org-Card-bottom-gradient btnHtml"}];
+							include ../molecules/list/buttonText
+
+							include ../organisms/cardBottomGradient
+						div(class="main-article__organisms--code")
+							h2(class="main-article__organisms--title")
+								| Card-bottom-gradient-code
+							- var codeComponent = 'code-org-Card-bottom-gradient';
+							include ../resources/code

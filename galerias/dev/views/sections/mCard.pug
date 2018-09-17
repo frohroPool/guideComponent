@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 html(lang="es")
-	- var currentPage = 'componentCard'
-	include ../components/structureConfiguration
-	include ../components/headers
+	- var currentPage = 'mCard'
+	include ../resources/configuration
+	include ../resources/headers
 	body
 		section(class="header")
 			section.projectName
@@ -16,7 +16,7 @@ html(lang="es")
 					| Components > Card
 			section.mainMenu
 		section(class="body")
-			include ../components/awdMenu
+			include ../resources/menu
 			
 
 
@@ -40,16 +40,16 @@ html(lang="es")
 								| Card-text
 							- var action = true;
 							- var customList = [{"txt" : "styles", "cls" : "card-text btnCss"},{"txt" : "html", "cls" : "card-text btnHtml"}];
-							include ../components/list-buttonText
+							include ../molecules/list/buttonText
 
 							h3(class="main-article__component--device")
 								| Responsive
-							include ../components/card-text
+							include ../molecules/card/text
 						div(class="main-article__component--code")
 							h2(class="main-article__component--title")
 								| Card-text-code
 							- var codeComponent = 'code-card-text';
-							include ../components/code
+							include ../resources/code
 
 
 					div(class="main-article__component")
@@ -58,16 +58,16 @@ html(lang="es")
 								| Card-brief
 							- var action = true;
 							- var customList = [{"txt" : "styles", "cls" : "card-brief btnCss"},{"txt" : "html", "cls" : "card-brief btnHtml"}];
-							include ../components/list-buttonText
+							include ../molecules/list/buttonText
 
 							h3(class="main-article__component--device")
 								| Responsive
-							include ../components/card-brief
+							include ../molecules/card/brief
 						div(class="main-article__component--code")
 							h2(class="main-article__component--title")
 								| Card-brief-code
 							- var codeComponent = 'code-card-brief';
-							include ../components/code
+							include ../resources/code
 
 
 					div(class="main-article__component")
@@ -76,16 +76,16 @@ html(lang="es")
 								| Card-image
 							- var action = true;
 							- var customList = [{"txt" : "styles", "cls" : "card-image btnCss"},{"txt" : "html", "cls" : "card-image btnHtml"}];
-							include ../components/list-buttonText
+							include ../molecules/list/buttonText
 
 							h3(class="main-article__component--device")
 								| Responsive
-							include ../components/card-image
+							include ../molecules/card/image
 						div(class="main-article__component--code")
 							h2(class="main-article__component--title")
 								| Card-image-code
 							- var codeComponent = 'code-card-image';
-							include ../components/code
+							include ../resources/code
 
 
 					div(class="main-article__component")
@@ -94,17 +94,17 @@ html(lang="es")
 								| Card-mall
 							- var action = true;
 							- var customList = [{"txt" : "styles", "cls" : "card-mall btnCss"},{"txt" : "html", "cls" : "card-mall btnHtml"}];
-							include ../components/list-buttonText
+							include ../molecules/list/buttonText
 
 							h3(class="main-article__component--device")
 								| Responsive
 							- var idCard = 0
-							include ../components/card-mall
+							include ../molecules/card/mall
 						div(class="main-article__component--code")
 							h2(class="main-article__component--title")
 								| Card-mall-code
 							- var codeComponent = 'code-card-mall';
-							include ../components/code		
+							include ../resources/code		
 
 
 					div(class="main-article__component")
@@ -113,16 +113,16 @@ html(lang="es")
 								| Card-coverMagazine
 							- var action = true;
 							- var customList = [{"txt" : "styles", "cls" : "card-coverMagazine btnCss"},{"txt" : "html", "cls" : "card-coverMagazine btnHtml"}];
-							include ../components/list-buttonText
+							include ../molecules/list/buttonText
 
 							h3(class="main-article__component--device")
 								| Responsive
-							include ../components/card-coverMagazine
+							include ../molecules/card/magazine
 						div(class="main-article__component--code")
 							h2(class="main-article__component--title")
 								| Card-coverMagazine-code
 							- var codeComponent = 'code-card-coverMagazine';
-							include ../components/code
+							include ../resources/code
 
 					div(class="main-article__component")
 						div(class="main-article__component--view")
@@ -130,16 +130,16 @@ html(lang="es")
 								| Card-video
 							- var action = true;
 							- var customList = [{"txt" : "styles", "cls" : "card-video btnCss"},{"txt" : "html", "cls" : "card-video btnHtml"}];
-							include ../components/list-buttonText
+							include ../molecules/list/buttonText
 
 							h3(class="main-article__component--device")
 								| Responsive
-							include ../components/card-video
+							include ../molecules/card/video
 						div(class="main-article__component--code")
 							h2(class="main-article__component--title")
 								| Card-video-code
 							- var codeComponent = 'code-card-video';
-							include ../components/code
+							include ../resources/code
 
 										
 
