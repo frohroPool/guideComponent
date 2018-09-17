@@ -39,17 +39,17 @@ html(lang="es")
 							h2(class="main-article__component--title")
 								| Mosaic-simple
 							- var action = true;
-							- var customList = [{"txt" : "styles", "cls" : "mosaic-simple btnCss"},{"txt" : "html", "cls" : "mosaic-simple btnHtml"}];
+							- var customList = [{"txt" : "styles", "cls" : "m-mosaicSimple btnCss"},{"txt" : "html", "cls" : "m-mosaicSimple btnHtml"}];
 							include ../molecules/list/buttonText
 
-
+							h3(class="main-article__component--device")
+								| Responsive
 							include ../molecules/mosaic/simple
 						div(class="main-article__component--code")
 							h2(class="main-article__component--title")
 								| Mosaic-simple-code
-							- var codeComponent = 'code-mosaic-simple';
+							- var codeComponent = 'code-m-mosaicSimple';
 							include ../resources/code
-
 
 
 					div(class="main-article__component")
@@ -80,19 +80,19 @@ html(lang="es")
 							h2(class="main-article__component--title")
 								| Mosaic-square
 							- var action = true;
-							- var customList = [{"txt" : "styles", "cls" : "mosaic-square btnCss"},{"txt" : "html", "cls" : "mosaic-square btnHtml"}];
+							- var customList = [{"txt" : "styles", "cls" : "m-mosaicSquare btnCss"},{"txt" : "html", "cls" : "m-mosaicSquare btnHtml"}];
 							include ../molecules/list/buttonText
 
 							h3(class="main-article__component--device")
 								| Responsive
-							- var cmp = 'mosaic-square';
-							- var modifiers = ['mosaic-2', 'mosaic-3', 'mosaic-4', 'mosaic-5'];
-							- var mode = cmp+'__'+modifiers[2]
+							- var el = 'm-mosaicSquare';
+							- var modifiers = ['two', 'three', 'four', 'five'];
+							- var modifier = el+'--'+modifiers[1]
 							include ../resources/modifiers
 							- var customList = false;
 							include ../molecules/mosaic/square
 						div(class="main-article__component--code")
 							h2(class="main-article__component--title")
 								| Mosaic-square-code
-							- var codeComponent = 'code-mosaic-square';
+							- var codeComponent = 'code-m-mosaicSquare';
 							include ../resources/code

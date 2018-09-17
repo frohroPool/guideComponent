@@ -1,4 +1,4 @@
-.mosaic-square
+.m-mosaicSquare
 	list-style-type none
 	width 100%
 	height 100%
@@ -9,7 +9,7 @@
 	justify-content flex-start
 	align-content flex-start
 
-.mosaic-square-item{
+.m-mosaicSquare__item{
 	margin: 1px;
 	padding: 0;
 	background: #7b4397;
@@ -19,25 +19,25 @@
 	height: 100%;
 }
 
-[data-mode="mosaic-square__mosaic-5"] li
+.m-mosaicSquare--five li
 	width: 19%;
 	height: 19%;
-[data-mode="mosaic-square__mosaic-4"] li
+.m-mosaicSquare--four li
 	width: 24%;
 	height: 24%;
-[data-mode="mosaic-square__mosaic-3"] li
+.m-mosaicSquare--three li
 	width: 32%;
 	height: 32%;
-[data-mode="mosaic-square__mosaic-2"] li
+.m-mosaicSquare--two li
 	width: 49%;
 	height: 49%;
 	
 @media screen and (max-width:1300px){
 	
-	[data-mode="mosaic-square__mosaic-5"] li,
-	[data-mode="mosaic-square__mosaic-4"] li,
-	[data-mode="mosaic-square__mosaic-3"] li,
-	[data-mode="mosaic-square__mosaic-2"] li{
+	.m-mosaicSquare--five li,
+	.m-mosaicSquare--four li,
+	.m-mosaicSquare--three li,
+	.m-mosaicSquare--two li{
 		flex-direction: column;
 		width: 100%;
 		height: 30%;

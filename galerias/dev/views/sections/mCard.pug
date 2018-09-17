@@ -13,7 +13,7 @@ html(lang="es")
 
 			section(class="breadcrums")
 				p(class="breadcrums-title")
-					| Components > Card
+					| Molecules > Card
 			section.mainMenu
 		section(class="body")
 			include ../resources/menu
@@ -39,7 +39,7 @@ html(lang="es")
 							h2(class="main-article__component--title")
 								| Card-text
 							- var action = true;
-							- var customList = [{"txt" : "styles", "cls" : "card-text btnCss"},{"txt" : "html", "cls" : "card-text btnHtml"}];
+							- var customList = [{"txt" : "styles", "cls" : "m-cardText btnCss"},{"txt" : "html", "cls" : "m-cardText btnHtml"}];
 							include ../molecules/list/buttonText
 
 							h3(class="main-article__component--device")
@@ -48,7 +48,7 @@ html(lang="es")
 						div(class="main-article__component--code")
 							h2(class="main-article__component--title")
 								| Card-text-code
-							- var codeComponent = 'code-card-text';
+							- var codeComponent = 'code-m-cardText';
 							include ../resources/code
 
 
@@ -57,7 +57,7 @@ html(lang="es")
 							h2(class="main-article__component--title")
 								| Card-brief
 							- var action = true;
-							- var customList = [{"txt" : "styles", "cls" : "card-brief btnCss"},{"txt" : "html", "cls" : "card-brief btnHtml"}];
+							- var customList = [{"txt" : "styles", "cls" : "m-cardBrief btnCss"},{"txt" : "html", "cls" : "m-cardBrief btnHtml"}];
 							include ../molecules/list/buttonText
 
 							h3(class="main-article__component--device")
@@ -66,7 +66,7 @@ html(lang="es")
 						div(class="main-article__component--code")
 							h2(class="main-article__component--title")
 								| Card-brief-code
-							- var codeComponent = 'code-card-brief';
+							- var codeComponent = 'code-m-cardBrief';
 							include ../resources/code
 
 
@@ -75,7 +75,7 @@ html(lang="es")
 							h2(class="main-article__component--title")
 								| Card-image
 							- var action = true;
-							- var customList = [{"txt" : "styles", "cls" : "card-image btnCss"},{"txt" : "html", "cls" : "card-image btnHtml"}];
+							- var customList = [{"txt" : "styles", "cls" : "m-cardImage btnCss"},{"txt" : "html", "cls" : "m-cardImage btnHtml"}];
 							include ../molecules/list/buttonText
 
 							h3(class="main-article__component--device")
@@ -84,7 +84,7 @@ html(lang="es")
 						div(class="main-article__component--code")
 							h2(class="main-article__component--title")
 								| Card-image-code
-							- var codeComponent = 'code-card-image';
+							- var codeComponent = 'code-m-cardImage';
 							include ../resources/code
 
 

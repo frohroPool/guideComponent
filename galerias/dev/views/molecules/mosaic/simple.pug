@@ -1,6 +1,8 @@
-h3(class="main-article__component--device")
-    | Responsive
-div(class="mosaic-simple" id="mosaic-simple")
-    each val, index in ['mosaic-simple__item','mosaic-simple__item','mosaic-simple__item','mosaic-simple__item','mosaic-simple__item','mosaic-simple__item']
-        div(class=val)
-            | Contenido
+div(class="m-mosaicSimple" id="m-mosaicSimple")
+	if customList.elements
+		- for (var x = 0; x < customList.elements; x++)
+			div(class="m-mosaicSimple__item")
+				| Contenido
+	else
+		each v0,i0 in config.defaultText
+			div(class="m-mosaicSimple__item") #{v0.txt}
