@@ -112,7 +112,7 @@ var HandlerCarousel = exports.HandlerCarousel = function () {
 	var evtCarousel = function evtCarousel() {
 		// taking control of all carousels
 		var carouselsData = [];
-		var carousels = document.getElementsByClassName('carousel__container');
+		var carousels = document.getElementsByClassName('m-carousel__container');
 		for (var i = 0; i < carousels.length; i++) {
 			carouselsData.push({
 				carouselWrapper: document.getElementById(carousels[i].id.split('__')[0]),

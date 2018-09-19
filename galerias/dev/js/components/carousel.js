@@ -108,7 +108,7 @@ export const HandlerCarousel = (function() {
 	let evtCarousel = function() {
 		// taking control of all carousels
 		let carouselsData = [];
-		let carousels = document.getElementsByClassName('carousel__container');
+		let carousels = document.getElementsByClassName('m-carousel__container');
 		for (var i = 0; i < carousels.length; i++) {
 			carouselsData.push({
 				carouselWrapper : document.getElementById(carousels[i].id.split('__')[0]),

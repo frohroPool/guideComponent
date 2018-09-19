@@ -1,4 +1,4 @@
-.carousel
+.m-carousel
 	height 200px // temporal
 	position relative
 	width 100%
@@ -6,7 +6,7 @@
 	margin 0
 	padding 0
 	
-.carousel__container
+.m-carousel__container
 	list-style-type none
 	width 100%
 	height 100%
@@ -18,7 +18,7 @@
 	position absolute
 	
 
-.carousel__container-item
+.m-carousel__item
 	margin 0
 	padding 0
 	background #7b4397
@@ -28,8 +28,8 @@
 	height 100%
 
 
-.prevBtnCarousel,
-.nextBtnCarousel
+.m-carousel__prev,
+.m-carousel__next
 	position absolute
 	width 30px
 	height 30px
@@ -38,24 +38,24 @@
 	border-radius 15px
 	display none
 
-.prevBtnCarousel:hover,
-.nextBtnCarousel:hover
+.m-carousel__prev:hover,
+.m-carousel__next:hover
 	cursor pointer
 
-.prevBtnCarousel
+.m-carousel__prev
 	left 3%
 	top 48%
 
-.nextBtnCarousel
+.m-carousel__next
 	left 89%
 	top 48%
 
+.m-carousel--complete > button
+	display block
 
-[data-mode="carousel__100_btn"] > button
-	display: block;
 
 
-// .carousel button{
+// .m-carousel button{
 //   display: none;
 // }
 // .prev, .next{
@@ -153,7 +153,7 @@
 //   border-radius: 15px;
 // }
 // /*.prev:hover, .next:hover*/
-// .carousel button{
+// .m-carousel button{
 //   display: none;
 // }
 // .crs-2 button:hover{

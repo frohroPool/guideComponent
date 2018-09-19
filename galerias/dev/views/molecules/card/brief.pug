@@ -1,12 +1,16 @@
 div(class="m-cardBrief" id="m-cardBrief")
-	p(class="m-cardBrief__section")
-		| Politics
-	h3(class="m-cardBrief__title")
-		a 
-			| Trump Predicts Stock Market Crash If He’s Impeached
+	- var txt = "Politics"
+	- var classElement = "m-cardBrief__section"
+	include ../../atoms/texts/paragraph
 
-	p(class="m-cardBrief__description")
-		| Donald Trump says the stock market would plummet and Americans would be poorer if lawmakers impeached him.
-	time(class="m-cardBrief__time")
-		| updated 37 minutes ago
+	- var txt = "Trump Predicts Stock Market Crash If He’s Impeached"
+	- var classElement = "m-cardBrief__title--isH3"
+	include ../../atoms/texts/inline/textLink
 
+	- var txt = "Donald Trump says the stock market would plummet and Americans would be poorer if lawmakers impeached him."
+	- var classElement = "m-cardBrief__description"
+	include ../../atoms/texts/paragraph
+
+	- var txt = "updated 37 minutes ago"
+	- var classElement = "m-cardBrief__time"
+	include ../../atoms/texts/inline/textTime

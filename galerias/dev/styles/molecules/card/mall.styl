@@ -1,4 +1,4 @@
-.card-mall
+.m-cardMall
 	width 400px
 	height 340px
 	display flex
@@ -7,12 +7,12 @@
 	box-shadow 1px 1px 5px 1px #92949c
 	margin 5px
 
-.card-mall__modal-modal_hidden
+.m-cardMall__modal--hidden
 	display none
-.card-mall__modal-modal_show
+.m-cardMall__modal--show
 	display block
 	
-.card-mall__modal
+.m-cardMall__modal
 	position absolute
 	left 0
 	top 0
@@ -21,54 +21,56 @@
 	height 100%
 	z-index 2
 	font-family 'Source Sans Pro', sans-serif
-.card-mall__modal > *
+.m-cardMall__modal > *
 	margin-bottom 5px
 	
-.card-mall__modal--close
+.m-cardMall__close
 	text-align right
 	padding-right 12px
 	padding-top 12px
-.card-mall__modal--logo
+.m-cardMall__logoWrapper
 	padding-left 20px
+	width 100%
+	height auto
+.m-cardMall__logo
+	margin 0
 	height 92px
 	width 92px
-.card-mall__modal--logo figure
-	margin 0
 
-.card-mall__modal--direction,
-.card-mall__modal--thelepone,
-.card-mall__modal--email
+.m-cardMall__direction,
+.m-cardMall__thelepone,
+.m-cardMall__email
 	padding-left 20px
 	font-size 12px
 	margin 0
 
-.card-mall__modal--email p
+.m-cardMall__paragraph
 	margin 0
 		
-.card-mall__modal--detail
+.m-cardMall__descriptionWrapper
 	padding-left 20px
 	padding-top 5px
-.card-mall__modal--detail h4
+.m-cardMall__description
 	font-size 16px
 	margin 0
 	
-.card-mall__modal--detail_item
+.m-cardMall__detail
 	padding-top 10px
 	padding-left 30px
 	list-style-type initial
 	font-size 12px
 	margin 0
 
-.card-mall-media
+.m-cardMall__media
 	width 100%
 	height 251px
 	margin 0
 		
-.card-mall-media img
+.m-cardMall__media img
 	width 100%
 	height 100%
 
-.card-mall__brief
+.m-cardMall__brief
 	width inherit
 	height 20%
 	display flex
@@ -76,13 +78,13 @@
 	position relative
 	z-index 1
 	
-.card-mall__brief--Title
+.m-cardMall__titleWrapper
 	width 82%
 	height 22px
 	margin-left 20px
 	margin-top 10px
 	
-.card-mall__brief--Title h3
+.m-cardMall__title
 	font-size 22px
 	font-family 'Source Sans Pro', sans-serif
 	font-weight normal
@@ -90,25 +92,25 @@
 	margin 0
 	
 	
-.card-mall__brief--reveal
+.m-cardMall__reveal
 	font-size 22px
 	width 10%
 	height 22px
 	margin-top 10px
-.card-mall__brief--reveal span:hover,
-.card-mall__modal--close span:hover
+.m-cardMall__switchReveal:hover,
+.m-cardMall__switchClose:hover
 	cursor pointer
 	
 	
-.card-mall__brief--anchor
+.m-cardMall__anchorWrapper
 	width 100%
 	margin-left 20px
 	
-.card-mall__brief--anchor a
+.m-cardMall__anchor
 	font-size 12px
 	font-family 'Source Sans Pro', sans-serif
 	font-weight normal
 	color #0D1227
-.card-mall__brief--anchor a:hover
+.m-cardMall__anchor:hover
 	color #F5A623
 	cursor pointer
