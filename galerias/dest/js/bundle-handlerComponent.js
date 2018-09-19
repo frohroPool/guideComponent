@@ -9,6 +9,22 @@ var Handler = exports.Handler = function () {
 	var showCssRule = false;
 	var showHtmlRule = false;
 
+	var showHiddeCode = function showHiddeCode(el) {
+		var codeNode = document.getElementById('code-' + el).parentNode.parentNode;
+		var viewNode = codeNode.previousElementSibling;
+		viewNode.classList.add("hiddeView");
+		document.getElementById('code-' + el).parentNode.classList.add("showCode");
+
+		var btnClose = document.getElementById('code-' + el).nextElementSibling;
+		btnClose.classList.remove("closeBtnCodeNode--hidde");
+		btnClose.addEventListener("click", function (event) {
+			this.previousElementSibling.innerText = "";
+			this.previousElementSibling.parentNode.classList.remove("showCode");
+			this.classList.add("closeBtnCodeNode--hidde");
+			this.parentNode.parentNode.previousElementSibling.classList.remove("hiddeView");
+		}, false);
+	};
+
 	var getAllCss = function getAllCss() {
 		// Evento para obtener el codigo CSS de la lista de componentes
 		// Revisar que el evento exista 
@@ -104,6 +120,7 @@ var Handler = exports.Handler = function () {
 				}
 				// console.log(idComponent.outerHTML);
 				document.getElementById('code-' + this.classList[0]).innerText = idComponent.outerHTML;
+				showHiddeCode(this.classList[0]);
 			}, false);
 		}
 	};
@@ -141,6 +158,8 @@ var Handler = exports.Handler = function () {
 				}
 				document.getElementById('code-' + this.classList[0]).innerText = css;
 				css = '';
+
+				showHiddeCode(this.classList[0]);
 			}, false);
 		}
 	};

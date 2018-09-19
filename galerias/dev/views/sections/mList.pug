@@ -49,9 +49,8 @@ html(lang="es")
 							include ../resources/modifiers
 							- var customList = false;
 							include ../molecules/list/simple
+						
 						div(class="main-article__component--code")
-							h2(class="main-article__component--title")
-								| listSimple-code
 							- var codeComponent = 'code-m-listSimple';
 							include ../resources/code
 
@@ -71,8 +70,6 @@ html(lang="es")
 							- var customList = false;
 							include ../molecules/list/icon
 						div(class="main-article__component--code")
-							h2(class="main-article__component--title")
-								| listIcon-code
 							- var codeComponent = 'code-m-listIcon';
 							include ../resources/code
 
@@ -81,7 +78,7 @@ html(lang="es")
 					div(class="main-article__component")
 						div(class="main-article__component--view")
 							h2(class="main-article__component--title")
-								| List-complete
+								| listComplete
 							- var action = true;
 							- var customList = [{"txt" : "styles", "cls" : "m-listComplete btnCss"},{"txt" : "html", "cls" : "m-listComplete btnHtml"}];
 							include ../molecules/list/buttonText
@@ -96,8 +93,6 @@ html(lang="es")
 							- var customList = [{"txt" : "", "ico" : "icon-office"},{"txt" : "Inicia session", "ico" : ""},{"txt" : "Cart", "ico" : "material-icons", "icoName" : "search"}];
 							include ../molecules/list/complete
 						div(class="main-article__component--code")
-							h2(class="main-article__component--title")
-								| List-complete-code
 							- var codeComponent = 'code-m-listComplete';
 							include ../resources/code
 
@@ -119,8 +114,6 @@ html(lang="es")
 							- var customList = false
 							include ../molecules/list/buttonText
 						div(class="main-article__component--code")
-							h2(class="main-article__component--title")
-								| buttonText-code
 							- var codeComponent = 'code-m-listButtonText';
 							include ../resources/code
 
@@ -141,7 +134,5 @@ html(lang="es")
 							- var customList = [{"txt" : "ACCEDER", "cls" : "buttonText"},{"txt" : "REGÍSTRATE", "cls" : "buttonText"}];                        				
 							include ../molecules/list/galeriasLogin
 						div(class="main-article__component--code")
-							h2(class="main-article__component--title")
-								| List-galerias-login-code
 							- var codeComponent = 'code-m-listGaleriasLogin';
 							include ../resources/code

@@ -20,13 +20,38 @@ img
 	width 100%
 	
 pre
-	background-color #212124
+	// background-color #212124
 	color #fff
 	width 100%
 	white-space pre-wrap
 	// padding 5px
-	overflow scroll
+	overflow-y scroll
+	overflow-x hidden
+	// height 100%
 	
+.showCode
+	background-color #212124
+	height 100%
+	position relative
+.closeBtnCodeNode
+	width 30px
+	height 23px
+	border 1px solid white
+	position absolute
+	left calc(100% - 31px)
+	top -1px
+	background-color white
+	color red
+	text-align center
+.closeBtnCodeNode:hover
+	cursor pointer
+	
+.closeBtnCodeNode--hidde
+	display none	!important
+
+
+.hiddeView
+	z-index 0 !important
 
 code
 	font-size 1.1em
@@ -154,12 +179,14 @@ button
 	
 .main-article__component
 	width 90%
-	height 40vh
+	height 55vh
 	display flex
 	flex-direction row
-	justify-content space-around
+	justify-content flex-start
 	padding-bottom 10px
 	border-bottom 1px solid #202124
+	
+	position relative
 .main-article__component:last-child
 	margin-bottom 50px
 	
@@ -167,12 +194,19 @@ button
 	overflow-y scroll
 
 .main-article__component--view
-	width 40%
+	width 100%
+	z-index 2
 .main-article__component--code
-	width 55%
+	width 100%
+	position absolute
+	left 0
+	height 90%
+	overflow hidden
+	
 .main-article__component--title
 	font-size 30px
 	margin-bottom 20px
+	text-align center
 
 .main-article__component--device
 	font-size 15px

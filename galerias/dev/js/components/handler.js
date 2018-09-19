@@ -3,6 +3,22 @@ export const Handler = (function() {
 	let showCssRule = false;
 	let showHtmlRule = false;
 
+	let showHiddeCode = function(el){
+		let codeNode = document.getElementById('code-'+el).parentNode.parentNode;
+		let viewNode = codeNode.previousElementSibling;
+		viewNode.classList.add("hiddeView");
+		document.getElementById('code-'+el).parentNode.classList.add("showCode");
+
+		let btnClose = document.getElementById('code-'+el).nextElementSibling;
+		btnClose.classList.remove("closeBtnCodeNode--hidde");
+		btnClose.addEventListener("click", function(event){
+			this.previousElementSibling.innerText = "";
+			this.previousElementSibling.parentNode.classList.remove("showCode");
+			this.classList.add("closeBtnCodeNode--hidde");
+			this.parentNode.parentNode.previousElementSibling.classList.remove("hiddeView");
+		}, false);
+	}
+
 	let getAllCss = function(){
 		// Evento para obtener el codigo CSS de la lista de componentes
 		// Revisar que el evento exista 
@@ -98,6 +114,7 @@ export const Handler = (function() {
 				}
 				// console.log(idComponent.outerHTML);
 				document.getElementById('code-'+this.classList[0]).innerText = idComponent.outerHTML;
+				showHiddeCode(this.classList[0]);
 			}, false);
 		}
 	}
@@ -133,6 +150,8 @@ export const Handler = (function() {
 				}
 				document.getElementById('code-'+this.classList[0]).innerText = css;
 				css='';
+
+				showHiddeCode(this.classList[0]);
 			}, false);
 		}
 	}
