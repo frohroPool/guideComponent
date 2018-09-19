@@ -101,8 +101,9 @@
 	=================================================================
 
 	.- Names for blocks, elements, and modifiers should be in camelCase
-	.- Before the block name should have an identifier, eg. (a-,m-,o-,t-)
+	.- Before the name block should have an identifier, eg. (a-,m-,o-,t-)
 	.- Blocks and Elements should be descriptive
+	.- The modifiers only apply to the same element that contains it and not to its content.
 </pre>
 <pre>
 	==========================   EG   ===============================
