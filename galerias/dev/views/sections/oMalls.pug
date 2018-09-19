@@ -37,19 +37,19 @@ html(lang="es")
 
 					// --------------------------------------------------------
 					
-					div(class="main-article__organisms")
-						div(class="main-article__organisms--view")
-							h2(class="main-article__organisms--title")
+					div(class="main-article__component")
+						div(class="main-article__component--view")
+							h2(class="main-article__component--title")
 								| Malls-list
 							- var action = true;
-							- var customList = [{"txt" : "styles", "cls" : "malls-list btnCss"},{"txt" : "html", "cls" : "malls-list btnHtml"}];
+							- var customList = [{"txt" : "styles", "cls" : "o-containerMalls btnCss"},{"txt" : "html", "cls" : "o-containerMalls btnHtml"}];
 							include ../molecules/list/buttonText
 
-							h3(class="main-article__organisms--device")
+							h3(class="main-article__component--device")
 								| Responsive
-							- var cmp = 'malls-list';
-							- var modifiers = ['list-Vertical', 'list-Horizontal'];
-							- var mode = cmp+'__'+modifiers[1]
+							- var el = 'o-containerMalls';
+							- var modifiers = ['vertical', 'horizontal'];
+							- var modifier = el+'--'+modifiers[0]
 							include ../resources/modifiers
 							- var customList = {elements : 25, include: 'mall'};
 							include ../organisms/malls
@@ -58,9 +58,7 @@ html(lang="es")
 
 
 
-						div(class="main-article__organisms--code")
-							h2(class="main-article__organisms--title")
-								| Malls-list-code
+						div(class="main-article__component--code")
 							- var codeComponent = 'code-malls-list';
 							include ../resources/code
 

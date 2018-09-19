@@ -1,8 +1,9 @@
-section(class=cmp+"__wrapper" id=cmp+"__wrapper")
+//- section(class=el+"__wrapper" id=el+"__wrapper")
+section(class="o-containerMalls "+modifier id=el+"__wrapper")
 	if customList.elements
-		ul(class=cmp id=cmp data-mode=mode)
+		ul(class=el+"__list "+modifier id=el)
 			- for (var x = 0; x < customList.elements; x++)
-				li(class=cmp+'-item')
+				li(class=el+'__item')
 					if customList.include == 'card-brief'
 						include ../molecules/card/brief
 					if customList.include == 'mall'
@@ -17,6 +18,6 @@ section(class=cmp+"__wrapper" id=cmp+"__wrapper")
 					if customList.include == 'magazine'
 						include ../molecules/card/magazine
 	else
-		ul(class=cmp id=cmp data-mode=mode)
+		ul(class=el+"__list "+modifier id=el)
 			each v0,i0 in config.lists
-				li(class=cmp+'-item')
+				li(class=el+'__item')

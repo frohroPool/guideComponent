@@ -1,8 +1,8 @@
 // Responsive ----------
-.malls-list__wrapper
+.o-containerMalls
 	width 100%
 	height 100%
-.malls-list
+.o-containerMalls__list
 	list-style-type none
 	margin-bottom 10px
 	display flex
@@ -10,20 +10,18 @@
 	justify-content flex-start
 	width 100%
 	height 100%
-.malls-list-item
+.o-containerMalls__item
 	width auto
 	height auto
 	padding 5px
-
-[data-mode="malls-list__list-Horizontal"]
+	
+.o-containerMalls--horizontal
 	flex-flow column wrap
-
-[data-mode="malls-list__list-Vertical"]
+.o-containerMalls--vertical
 	flex-flow row wrap
-
 	
 @media screen and (max-width:1300px){
-	.malls-list{
+	.o-containerMalls{
 		flex-flow row wrap
 	}
 }
