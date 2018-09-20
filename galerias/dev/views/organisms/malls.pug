@@ -4,7 +4,7 @@ section(class="o-containerMalls "+modifier id=el+"__wrapper")
 		ul(class=el+"__list "+modifier id=el)
 			- for (var x = 0; x < customList.elements; x++)
 				li(class=el+'__item')
-					if customList.include == 'card-brief'
+					if customList.include == 'brief'
 						include ../molecules/card/brief
 					if customList.include == 'mall'
 						- var idCard = x

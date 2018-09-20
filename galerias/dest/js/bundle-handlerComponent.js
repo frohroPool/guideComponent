@@ -9,6 +9,20 @@ var Handler = exports.Handler = function () {
 	var showCssRule = false;
 	var showHtmlRule = false;
 
+	var findOtherBlocks = function findOtherBlocks(block, classBlock) {
+		var classListNames = [classBlock];
+		var listChild = block.children;
+		var numChilds = listChild.length;
+		for (var i = 0; i < numChilds; i++) {
+			if (_.includes(listChild[i].classList[0], classBlock)) {
+				if (_.indexOf(classListNames, listChild[i].children[0].className) == -1) {
+					classListNames.push(listChild[i].children[0].className);
+				}
+			}
+		}
+		return classListNames;
+	};
+
 	var showHiddeCode = function showHiddeCode(el) {
 		var codeNode = document.getElementById('code-' + el).parentNode.parentNode;
 		var viewNode = codeNode.previousElementSibling;
@@ -106,9 +120,9 @@ var Handler = exports.Handler = function () {
 		var idComponent = void 0;
 		for (var i = 0; i < btnHtml.length; i++) {
 			btnHtml[i].addEventListener("click", function (event) {
-				// console.log('clases contenidas dentro del componente selecionados ....',this.classList);
+				console.log('clases contenidas dentro del componente selecionados ....', this.classList);
 				var allClassMatch = document.getElementsByClassName(this.classList[0]);
-				// console.log(allClassMatch)
+				console.log(allClassMatch);
 				if (allClassMatch.length > 1) {
 					for (var x = 0; x < allClassMatch.length; x++) {
 						if (allClassMatch[x].id != "") {
@@ -139,20 +153,37 @@ var Handler = exports.Handler = function () {
 			btnCss[i].addEventListener("click", function (event) {
 				// console.log('rules ...  ',rules);
 				var idComponent = document.getElementById(this.classList[0]);
-				currentComponent = '.' + this.classList[0];
+				var elmt = this.classList[0].split('-')[0],
+				    cls = [];
+				if (elmt == 'o' || elmt == 't' || elmt == 'p') {
+					cls = findOtherBlocks(idComponent, this.classList[0]);
+					console.log(cls);
+				} else {
+					cls.push(this.classList[0]);
+				}
+				var lengthCls = cls.length;
+				// currentComponent = '.'+this.classList[0];
+				// console.log('currentComponent :',currentComponent, idComponent)
 				for (var i = 0; i < rules.length; i++) {
 					currentRule = rules[i].selectorText;
 					if (currentRule != undefined) {
 						// console.log( 'currentRule : ',currentRule )
 						// console.log( 'currentComponent : ',currentComponent )
-						if (_.includes(currentRule, currentComponent)) {
-							css += rules[i].cssText + '\n';
-						} else if (_.includes(currentRule, this.classList[0])) {
-							css += rules[i].cssText + '\n';
+						debugger;
+						for (var a = 0; a < lengthCls; a++) {
+							currentComponent = '.' + cls[a];
+							if (_.includes(currentRule, currentComponent)) {
+								css += rules[i].cssText + '\n';
+							} else if (_.includes(currentRule, this.classList[0])) {
+								css += rules[i].cssText + '\n';
+							}
 						}
 					} else {
-						if (_.includes(rules[i].cssText, currentComponent)) {
-							css += rules[i].cssText + '\n';
+						for (var a = 0; a < lengthCls; a++) {
+							currentComponent = '.' + cls[a];
+							if (_.includes(rules[i].cssText, currentComponent)) {
+								css += rules[i].cssText + '\n';
+							}
 						}
 					}
 				}
