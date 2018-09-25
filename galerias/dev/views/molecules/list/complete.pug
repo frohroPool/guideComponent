@@ -1,18 +1,22 @@
 if customList
-	ul(class="m-listComplete "+modifier id="m-listComplete")
+	ul(class=el id=el)
 		each v0,i0 in customList
-			li(class='m-listComplete__item')
-				if v0.ico
-					span(class=v0.ico id= idB)
-
-						if v0.icoName
-							| #{v0.icoName}
+			li(class=el+'__item')
 				if v0.txt
-					p #{v0.txt}
+					- var chunk = v0.ico ? true : false
+					- var txt = v0.txt
+					- var classElement = el+"__text"
+					include ../../atoms/texts/paragraph
+				else
+					if v0.ico
+						- var txt = v0.icoName ? v0.icoName : ''
+						- var classElement = v0.ico
+						include ../../atoms/texts/inline/textChunk
+				
 else
 	- var ico = ['office', 'home', 'eyedropper', 'droplet', 'pencil', 'headphones', 'film', 'dice', 'library'];
-	ul(class="m-listComplete "+modifier id="m-listComplete")
+	ul(class=el id=el)
 		each v0,i0 in config.defaultText
-			li(class='m-listComplete__item') 
+			li(class=el+'__item') 
 				span(class='icon-'+ico[i0]) 
 				p #{v0.txt}

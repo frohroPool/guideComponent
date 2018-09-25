@@ -60,6 +60,7 @@ html(lang="es")
 						div(class="main-article__component--view")
 							h2(class="main-article__component--title")
 								| listIcon
+							- var el = "m-listIcon"
 							- var action = true;
 							- var customList = [{"txt" : "styles", "cls" : "m-listIcon btnCss"},{"txt" : "html", "cls" : "m-listIcon btnHtml"}];
 							include ../molecules/list/buttonText
@@ -86,9 +87,6 @@ html(lang="es")
 							h3(class="main-article__component--device")
 								| Responsive
 							- var el = 'm-listComplete';
-							- var modifiers = ['verticalPipe', 'horizontalPipe', 'vertical', 'horizontal'];
-							- var modifier = el+'--'+modifiers[1]
-							include ../resources/modifiers
 
 							- var customList = [{"txt" : "", "ico" : "icon-office"},{"txt" : "Inicia session", "ico" : ""},{"txt" : "Cart", "ico" : "material-icons", "icoName" : "search"}];
 							include ../molecules/list/complete

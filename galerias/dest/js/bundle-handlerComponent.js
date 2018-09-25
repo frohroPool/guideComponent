@@ -157,24 +157,16 @@ var Handler = exports.Handler = function () {
 				    cls = [];
 				if (elmt == 'o' || elmt == 't' || elmt == 'p') {
 					cls = findOtherBlocks(idComponent, this.classList[0]);
-					console.log(cls);
 				} else {
 					cls.push(this.classList[0]);
 				}
 				var lengthCls = cls.length;
-				// currentComponent = '.'+this.classList[0];
-				// console.log('currentComponent :',currentComponent, idComponent)
 				for (var i = 0; i < rules.length; i++) {
 					currentRule = rules[i].selectorText;
 					if (currentRule != undefined) {
-						// console.log( 'currentRule : ',currentRule )
-						// console.log( 'currentComponent : ',currentComponent )
-						debugger;
 						for (var a = 0; a < lengthCls; a++) {
 							currentComponent = '.' + cls[a];
 							if (_.includes(currentRule, currentComponent)) {
-								css += rules[i].cssText + '\n';
-							} else if (_.includes(currentRule, this.classList[0])) {
 								css += rules[i].cssText + '\n';
 							}
 						}
@@ -189,7 +181,6 @@ var Handler = exports.Handler = function () {
 				}
 				document.getElementById('code-' + this.classList[0]).innerText = css;
 				css = '';
-
 				showHiddeCode(this.classList[0]);
 			}, false);
 		}

@@ -1,10 +1,14 @@
 if customList
-	ul(class="m-listIcon" id="m-listIcon")
+	ul(class=el id=el)
 		each val, index in customList
-			li(class='m-listIcon__item')
-				span(class='icon-'+val)
+			li(class=el+'__item')
+				- var txt = val
+				- var classElement = el+"__text icon-"+val
+				include ../../atoms/texts/inline/textChunk
 else
-	ul(class="m-listIcon" id="m-listIcon")
+	ul(class=el id=el)
 		each val, index in ['office', 'home', 'eyedropper', 'droplet', 'pencil', 'headphones', 'film', 'dice', 'library']
-			li(class='m-listIcon__item')
-				span(class='icon-'+val)
+			li(class=el+'__item')
+				- var txt = ''
+				- var classElement = el+"__text icon-"+val
+				include ../../atoms/texts/inline/textChunk

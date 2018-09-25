@@ -3,14 +3,14 @@ div(class="m-cardMall" id="m-cardMall__"+idCard)
 	- var img = "magazinePicture.png"
 	include ../../atoms/images/image
 	div(class="m-cardMall__brief")
-		div(class="m-cardMall__titleWrapper")
+		div(class="m-cardMall__titleContainer")
 			- var txt = "Perisur"
 			- var classElement = "m-cardMall__title"
 			include ../../atoms/texts/headlines/h3
 		div(class="m-cardMall__reveal")
 			span(class="material-icons m-cardMall__switchReveal modalTo-"+idCard)
 				| more_vert
-		div(class="m-cardMall__anchorWrapper")
+		div(class="m-cardMall__anchorContainer")
 			- var txt = "Ir a este centro comercial"
 			- var classElement = "m-cardMall__anchor"
 			include ../../atoms/texts/inline/textLink
@@ -19,7 +19,7 @@ div(class="m-cardMall" id="m-cardMall__"+idCard)
 		div(class="m-cardMall__close")
 			span(class="material-icons m-cardMall__switchClose modalTo-"+idCard)
 				| close
-		div(class="m-cardMall__logoWrapper")
+		div(class="m-cardMall__logoContainer")
 			- var classElement = "m-cardMall__logo"
 			- var img = "LOGO_PERISUR.png"
 			include ../../atoms/images/image
@@ -38,7 +38,7 @@ div(class="m-cardMall" id="m-cardMall__"+idCard)
 			- var classElement = "m-cardMall__paragraph"
 			include ../../atoms/texts/paragraph
 			
-		div(class="m-cardMall__descriptionWrapper")
+		div(class="m-cardMall__descriptionContainer")
 			- var txt = "Detalles del Centro comercial"
 			- var classElement = "m-cardMall__description"
 			include ../../atoms/texts/headlines/h4
