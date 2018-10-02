@@ -1,0 +1,226 @@
+- 
+	var config = { 
+		"siteName":"UX Design",
+		"prefix":"",
+		"urlLoader":"",
+		"logoSite":"",
+		"headersCss":[
+			{"page"	:	"all", "media"	:	"all",	"src"	:	"https://fonts.googleapis.com/css?family=Roboto+Condensed|Roboto+Mono", "rel":"stylesheet", "type":"text/css"},
+			
+			{"page"	:	"all", "media"	:	"all",	"src"	:	"../css/guide.css", "rel":"stylesheet", "type":"text/css"},
+			
+			{"page"	:	"aColor", "media"	:	"all",	"src"	:	"../css/aColors.css", "rel":"stylesheet", "type":"text/css"},
+			{"page"	:	"aButton", "media"	:	"all",	"src"	:	"../css/aButton.css", "rel":"stylesheet", "type":"text/css"},
+			{"page"	:	"aCheckbox", "media"	:	"all",	"src"	:	"../css/aCheckbox.css", "rel":"stylesheet", "type":"text/css"},
+			{"page"	:	"aIcon", "media"	:	"all",	"src"	:	"../css/aIcon.css", "rel":"stylesheet", "type":"text/css"},
+			{"page"	:	"aLabel", "media"	:	"all",	"src"	:	"../css/aLabel.css", "rel":"stylesheet", "type":"text/css"},
+			{"page"	:	"aRadio", "media"	:	"all",	"src"	:	"../css/aRadio.css", "rel":"stylesheet", "type":"text/css"},
+			{"page"	:	"aSelect", "media"	:	"all",	"src"	:	"../css/aSelect.css", "rel":"stylesheet", "type":"text/css"},
+			{"page"	:	"aTextBox", "media"	:	"all",	"src"	:	"../css/aTextBox.css", "rel":"stylesheet", "type":"text/css"},
+			{"page"	:	"aTextarea", "media"	:	"all",	"src"	:	"../css/aTextarea.css", "rel":"stylesheet", "type":"text/css"},
+
+			{"page"	:	"mList", "media"	:	"all",	"src"	:	"../css/mList.css", "rel":"stylesheet", "type":"text/css"},
+			{"page"	:	"mCard", "media"	:	"all",	"src"	:	"../css/mCard.css", "rel":"stylesheet", "type":"text/css"},
+			{"page"	:	"mMosaic", "media"	:	"all",	"src"	:	"../css/mMosaic.css", "rel":"stylesheet", "type":"text/css"},
+			{"page"	:	"mFinder", "media"	:	"all",	"src"	:	"../css/mFinder.css", "rel":"stylesheet", "type":"text/css"},
+			{"page"	:	"mCarousel", "media"	:	"all",	"src"	:	"../css/mCarousel.css", "rel":"stylesheet", "type":"text/css"},
+
+			{"page"	:	"oHeader", "media"	:	"all",	"src"	:	"../css/oHeader.css", "rel":"stylesheet", "type":"text/css"},
+			{"page"	:	"oCard-bottom-gradient", "media"	:	"all",	"src"	:	"../css/oCardBottomGradient.css", "rel":"stylesheet", "type":"text/css"},
+			{"page"	:	"oMalls", "media"	:	"all",	"src"	:	"../css/oMalls.css", "rel":"stylesheet", "type":"text/css"},
+			{"page"	:	"oFooter", "media"	:	"all",	"src"	:	"../css/orFooter.css", "rel":"stylesheet", "type":"text/css"},
+
+			{"page"	:	"all", "media"	:	"all",	"src"	:	"https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Source+Sans+Pro:300,400,700", "rel":"stylesheet", "type":"text/css"},
+			{"page"	:	"all", "media"	:	"all",	"src"	:	"https://fonts.googleapis.com/icon?family=Material+Icons", "rel":"stylesheet", "type":"text/css"}
+		],
+		"headersJs":[
+			{"page":"all","src":"../js/bundle-handlerComponent.js"},
+			{"page":"mCard","src":"../js/bundle-handlerCards.js"},
+			{"page":"mList","src":"../js/bundle-handlerCards.js"},
+			{"page":"mFinder","src":"../js/bundle-handlerFinder.js"},
+			{"page":"mCarousel","src":"../js/bundle-handlerCarousel.js"},
+			{"page":"oHeader","src":"../js/bundle-handlerFinder.js"},
+			{"page":"oMalls","src":"../js/bundle-handlerCards.js"},
+			{"page":"all","src":"https://cdn.jsdelivr.net/npm/lodash@4.17.10/lodash.min.js"}
+
+		],
+		"components":[
+			{
+				"name":"Lists",
+				"src":"mList.html", 
+				"target":"_self", 
+				"active":false 
+			},
+			{
+				"name":"Mosaic",
+				"src":"mMosaic.html", 
+				"target":"_self", 
+				"active":false
+			},
+			{
+				"name":"Card",
+				"src":"mCard.html", 
+				"target":"_self", 
+				"active":false
+			},
+			{
+				"name":"Filter",
+				"src":"#", 
+				"target":"_self", 
+				"active":false
+			},
+			{
+				"name":"Survey",
+				"src":"#", 
+				"target":"_self", 
+				"active":false
+			},			
+			{
+				"name":"Finder",
+				"src":"mFinder.html", 
+				"target":"_self", 
+				"active":false
+			},
+			{
+				"name":"Carousel",
+				"src":"mCarousel.html", 
+				"target":"_self", 
+				"active":false
+			}
+		],
+		"atoms":[
+			{
+				"name":"Colors",
+				"src":"aColor.html", 
+				"target":"_self", 
+				"active":false
+			},
+			{
+				"name":"Button",
+				"src":"aButton.html", 
+				"target":"_self", 
+				"active":false
+			},
+			{
+				"name":"Checkbox",
+				"src":"aCheckbox.html", 
+				"target":"_self", 
+				"active":false
+			},
+			{
+				"name":"Icon",
+				"src":"aIcon.html", 
+				"target":"_self", 
+				"active":false
+			},
+			{
+				"name":"Label",
+				"src":"aLabel.html", 
+				"target":"_self", 
+				"active":false
+			},
+			{
+				"name":"Radio button",
+				"src":"aRadio.html", 
+				"target":"_self", 
+				"active":false
+			},
+			{
+				"name":"Select",
+				"src":"aSelect.html", 
+				"target":"_self", 
+				"active":false
+			},
+			{
+				"name":"Textbox",
+				"src":"aTextbox.html", 
+				"target":"_self", 
+				"active":false
+			},
+				{
+				"name":"Textarea",
+				"src":"aTextarea.html", 
+				"target":"_self", 
+				"active":false
+			}
+		],
+		"molecules":[
+			
+		],
+		"organisms":[
+			{
+				"name":"Malls",
+				"src":"oMalls.html", 
+				"target":"_self", 
+				"active":false
+			},
+			{
+				"name":"Widget TV",
+				"src":"#", 
+				"target":"_self", 
+				"active":false
+			},
+			{
+				"name":"Widget Magazine",
+				"src":"#", 
+				"target":"_self", 
+				"active":false
+			},
+			{
+				"name":"Grid Brands",
+				"src":"#", 
+				"target":"_self", 
+				"active":false
+			},
+			{
+				"name":"Social Carousel",
+				"src":"#", 
+				"target":"_self", 
+				"active":false
+			},
+			{
+				"name":"Grid Carousel",
+				"src":"#", 
+				"target":"_self", 
+				"active":false
+			},
+			{
+				"name":"Header",
+				"src":"oHeader.html", 
+				"target":"_self", 
+				"active":false
+			},
+				{
+				"name":"Card bottom gradient",
+				"src":"oCardBottomGradient.html", 
+				"target":"_self", 
+				"active":false
+			},
+			{
+				"name":"Footer",
+				"src":"oFooter.html", 
+				"target":"_self", 
+				"active":false
+			}
+		],
+		"templates":[
+	
+		],
+		"pages":[
+	
+		],
+		"defaultText" : [
+			{ "txt":"Mercury"},
+			{ "txt":"Venus"},
+			{ "txt":"Earth"},
+			{ "txt":"Mars"},
+			{ "txt":"Jupiter"},
+			{ "txt":"Saturn"}
+		],
+		"colors" : [
+			{ color :'blue', code : '#111735'},
+			{ color :'purple', code : '#333163'},
+			{ color :'orange', code : '#F5891F'},
+			{ color :'white', code : '#FFFFFF'}
+		]
+	};

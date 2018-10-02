@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, user=scalable=no, initial-scale-1.0, minimum-scale=1.0, maximum-scale=1.0"/>
+    <title>UX Design</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed|Roboto+Mono" type="text/css"/>
+    <link rel="stylesheet" href="../css/guide.css" type="text/css"/>
+    <link rel="stylesheet" href="../css/mCard.css" type="text/css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Source+Sans+Pro:300,400,700" type="text/css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" type="text/css"/>
+    <script src="../js/bundle-handlerComponent.js" type="text/javascript"></script>
+    <script src="../js/bundle-handlerCards.js" type="text/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.10/lodash.min.js" type="text/javascript"></script>
+  </head>
+  <body>
+    <section class="header">
+      <section class="projectName"><a href="/"><span class="icon-home"></span><span>	UX Design</span></a></section>
+      <section class="breadcrums">
+        <p class="breadcrums-title">Molecules > Card</p>
+      </section>
+      <section class="mainMenu"></section>
+    </section>
+    <section class="body">
+      <nav class="side-nav"><span class="side-nav__section-title">	Atoms</span>
+        <ul class="side-nav__menu side-nav__menu--sections">
+          <li class="side-nav__menu-item"><a class="side-nav__link" href="aColor.html" target="_self">Colors</a></li>
+          <li class="side-nav__menu-item"><a class="side-nav__link" href="aButton.html" target="_self">Button</a></li>
+          <li class="side-nav__menu-item"><a class="side-nav__link" href="aCheckbox.html" target="_self">Checkbox</a></li>
+          <li class="side-nav__menu-item"><a class="side-nav__link" href="aIcon.html" target="_self">Icon</a></li>
+          <li class="side-nav__menu-item"><a class="side-nav__link" href="aLabel.html" target="_self">Label</a></li>
+          <li class="side-nav__menu-item"><a class="side-nav__link" href="aRadio.html" target="_self">Radio button</a></li>
+          <li class="side-nav__menu-item"><a class="side-nav__link" href="aSelect.html" target="_self">Select</a></li>
+          <li class="side-nav__menu-item"><a class="side-nav__link" href="aTextbox.html" target="_self">Textbox</a></li>
+          <li class="side-nav__menu-item"><a class="side-nav__link" href="aTextarea.html" target="_self">Textarea</a></li>
+        </ul><span class="side-nav__section-title">	Molecules</span>
+        <ul class="side-nav__menu side-nav__menu--sections">
+          <li class="side-nav__menu-item"><a class="side-nav__link" href="mList.html" target="_self">Lists</a></li>
+          <li class="side-nav__menu-item"><a class="side-nav__link" href="mMosaic.html" target="_self">Mosaic</a></li>
+          <li class="side-nav__menu-item"><a class="side-nav__link" href="mCard.html" target="_self">Card</a></li>
+          <li class="side-nav__menu-item"><a class="side-nav__link" href="#" target="_self">Filter</a></li>
+          <li class="side-nav__menu-item"><a class="side-nav__link" href="#" target="_self">Survey</a></li>
+          <li class="side-nav__menu-item"><a class="side-nav__link" href="mFinder.html" target="_self">Finder</a></li>
+          <li class="side-nav__menu-item"><a class="side-nav__link" href="mCarousel.html" target="_self">Carousel</a></li>
+        </ul><span class="side-nav__section-title">	Organisms</span>
+        <ul class="side-nav__menu side-nav__menu--sections">
+          <li class="side-nav__menu-item"><a class="side-nav__link" href="oMalls.html" target="_self">Malls</a></li>
+          <li class="side-nav__menu-item"><a class="side-nav__link" href="#" target="_self">Widget TV</a></li>
+          <li class="side-nav__menu-item"><a class="side-nav__link" href="#" target="_self">Widget Magazine</a></li>
+          <li class="side-nav__menu-item"><a class="side-nav__link" href="#" target="_self">Grid Brands</a></li>
+          <li class="side-nav__menu-item"><a class="side-nav__link" href="#" target="_self">Social Carousel</a></li>
+          <li class="side-nav__menu-item"><a class="side-nav__link" href="#" target="_self">Grid Carousel</a></li>
+          <li class="side-nav__menu-item"><a class="side-nav__link" href="oHeader.html" target="_self">Header</a></li>
+          <li class="side-nav__menu-item"><a class="side-nav__link" href="oCardBottomGradient.html" target="_self">Card bottom gradient</a></li>
+          <li class="side-nav__menu-item"><a class="side-nav__link" href="oFooter.html" target="_self">Footer</a></li>
+        </ul>
+      </nav>
+      <!-- ============================================================================================-->
+      <section class="main">
+        <article class="main-article">
+          <h1 class="main-article__title">Cards</h1>
+          <nav class="main-article__btnCodes">
+            <button class="getStyle all" id="allCssList">Show CSS</button>
+            <button class="getHTML all" id="allHtmlList">Show HTML</button>
+          </nav>
+          <div class="showAllCssRules hiddeCssRule" id="showAllCssRules"></div>
+          <div class="showAllHtmlRules hiddeHtmlRule" id="showAllHtmlRules"></div>
+          <p class="main-article__description">Navigational transitions occur when users move between screens, such as from a home screen to a detail screen.</p>
+          <div class="main-article__component">
+            <div class="main-article__component--view">
+              <h2 class="main-article__component--title">Card-text</h2>
+              <ul class="m-listButtonText action" id="m-listButtonText">
+                <li class="m-listButtonText__item">
+                  <button class="m-cardText btnCss">styles</button>
+                </li>
+                <li class="m-listButtonText__item">
+                  <button class="m-cardText btnHtml">html</button>
+                </li>
+              </ul>
+              <h3 class="main-article__component--device">Responsive</h3>
+              <div class="m-cardText" id="m-cardText">
+                <p class="m-cardText__item">Placeholder
+                </p>
+              </div>
+            </div>
+            <div class="main-article__component--code">
+              <pre><code id="code-m-cardText"></code><span class="closeBtnCodeNode closeBtnCodeNode--hidde material-icons">close</span></pre>
+            </div>
+          </div>
+          <div class="main-article__component">
+            <div class="main-article__component--view">
+              <h2 class="main-article__component--title">Card-brief</h2>
+              <ul class="m-listButtonText action" id="m-listButtonText">
+                <li class="m-listButtonText__item">
+                  <button class="m-cardBrief btnCss">styles</button>
+                </li>
+                <li class="m-listButtonText__item">
+                  <button class="m-cardBrief btnHtml">html</button>
+                </li>
+              </ul>
+              <h3 class="main-article__component--device">Responsive</h3>
+              <div class="m-cardBrief" id="m-cardBrief">
+                <p class="m-cardBrief__section">Politics
+                </p><a class="m-cardBrief__title--isH3" href="#" target="_self">Trump Predicts Stock Market Crash If He’s Impeached</a>
+                <p class="m-cardBrief__description">Donald Trump says the stock market would plummet and Americans would be poorer if lawmakers impeached him.
+                </p>
+                <time class="m-cardBrief__time">updated 37 minutes ago</time>
+              </div>
+            </div>
+            <div class="main-article__component--code">
+              <pre><code id="code-m-cardBrief"></code><span class="closeBtnCodeNode closeBtnCodeNode--hidde material-icons">close</span></pre>
+            </div>
+          </div>
+          <div class="main-article__component">
+            <div class="main-article__component--view">
+              <h2 class="main-article__component--title">Card-image</h2>
+              <ul class="m-listButtonText action" id="m-listButtonText">
+                <li class="m-listButtonText__item">
+                  <button class="m-cardImage btnCss">styles</button>
+                </li>
+                <li class="m-listButtonText__item">
+                  <button class="m-cardImage btnHtml">html</button>
+                </li>
+              </ul>
+              <h3 class="main-article__component--device">Responsive</h3>
+              <div class="m-cardImage" id="m-cardImage">
+                <figure class="m-cardImage__media"><img src="../images/magazinePicture.png"/></figure>
+                <p class="m-cardImage__section">Politics
+                </p><a class="m-cardImage__title--isH3" href="#" target="_self">Trump Predicts Stock Market Crash If He’s Impeached</a>
+                <time class="m-cardImage__time">updated 37 minutes ago</time>
+              </div>
+            </div>
+            <div class="main-article__component--code">
+              <pre><code id="code-m-cardImage"></code><span class="closeBtnCodeNode closeBtnCodeNode--hidde material-icons">close</span></pre>
+            </div>
+          </div>
+          <div class="main-article__component">
+            <div class="main-article__component--view">
+              <h2 class="main-article__component--title">Card-mall</h2>
+              <ul class="m-listButtonText action" id="m-listButtonText">
+                <li class="m-listButtonText__item">
+                  <button class="m-cardMall btnCss">styles</button>
+                </li>
+                <li class="m-listButtonText__item">
+                  <button class="m-cardMall btnHtml">html</button>
+                </li>
+              </ul>
+              <h3 class="main-article__component--device">Responsive</h3>
+              <div class="m-cardMall" id="m-cardMall__0">
+                <figure class="m-cardMall__media"><img src="../images/magazinePicture.png"/></figure>
+                <div class="m-cardMall__brief">
+                  <div class="m-cardMall__titleContainer">
+                    <h3 class="m-cardMall__title">Perisur</h3>
+                  </div>
+                  <div class="m-cardMall__reveal"><span class="material-icons m-cardMall__switchReveal modalTo-0">more_vert</span></div>
+                  <div class="m-cardMall__anchorContainer"><a class="m-cardMall__anchor" href="#" target="_self">Ir a este centro comercial</a>
+                  </div>
+                </div>
+                <div class="m-cardMall__modal m-cardMall__modal--hidden" id="modalTo-0">
+                  <div class="m-cardMall__close"><span class="material-icons m-cardMall__switchClose modalTo-0">close</span></div>
+                  <div class="m-cardMall__logoContainer">
+                    <figure class="m-cardMall__logo"><img src="../images/LOGO_PERISUR.png"/></figure>
+                    <p class="m-cardMall__paragraph">Anillo Periferico sur No. 4690 Col. Ampliacion del Pedregal, San Angel Mexico, D.F.
+                    </p>
+                  </div>
+                  <div class="m-cardMall__thelepone">
+                    <p class="m-cardMall__paragraph">Tel. 01 55 56 06 8389
+                    </p>
+                  </div>
+                  <div class="m-cardMall__email">
+                    <p class="m-cardMall__paragraph">perisur@galerias.com
+                    </p>
+                  </div>
+                  <div class="m-cardMall__descriptionContainer">
+                    <h4 class="m-cardMall__description">Detalles del Centro comercial</h4>
+                    <ul class="m-cardMall__detail">
+                      <li>
+                        <p class="m-cardMall__paragraph">Una superficie rentable construida de 51,303 m2
+                        </p>
+                      </li>
+                      <li>
+                        <p class="m-cardMall__paragraph">Locales comerciales
+                        </p>
+                      </li>
+                      <li>
+                        <p class="m-cardMall__paragraph">6,345 lugares de estacionamiento
+                        </p>
+                      </li>
+                      <li>
+                        <p class="m-cardMall__paragraph">Liverpool, Palacio de Hierro, Sears, Cinepolis
+                        </p>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="main-article__component--code">
+              <pre><code id="code-m-cardMall"></code><span class="closeBtnCodeNode closeBtnCodeNode--hidde material-icons">close</span></pre>
+            </div>
+          </div>
+          <div class="main-article__component">
+            <div class="main-article__component--view">
+              <h2 class="main-article__component--title">Card-coverMagazine</h2>
+              <ul class="m-listButtonText action" id="m-listButtonText">
+                <li class="m-listButtonText__item">
+                  <button class="m-cardMagazine btnCss">styles</button>
+                </li>
+                <li class="m-listButtonText__item">
+                  <button class="m-cardMagazine btnHtml">html</button>
+                </li>
+              </ul>
+              <h3 class="main-article__component--device">Responsive</h3>
+              <div class="m-cardMagazine" id="m-cardMagazine">
+                <div class="m-cardMagazine__wrapper">
+                  <figure class="m-cardMagazine__media"><img src="../images/cardMagazine.png"/></figure><a class="m-cardMagazine__title--isH3" href="#" target="_self">Trump Predicts Stock Market Crash If He’s Impeached</a>
+                  <p class="m-cardMagazine__brief">Musk has long been celebrated by the business press for his work ethic. His extraordinary schedule – a long working day broken into five-minute increments
+                  </p>
+                  <p class="m-cardMagazine__author">@TBaez
+                  </p>
+                  <time class="m-cardMagazine__time">Spring 2017</time>
+                </div>
+              </div>
+            </div>
+            <div class="main-article__component--code">
+              <pre><code id="code-m-cardMagazine"></code><span class="closeBtnCodeNode closeBtnCodeNode--hidde material-icons">close</span></pre>
+            </div>
+          </div>
+          <div class="main-article__component">
+            <div class="main-article__component--view">
+              <h2 class="main-article__component--title">Card-video</h2>
+              <ul class="m-listButtonText action" id="m-listButtonText">
+                <li class="m-listButtonText__item">
+                  <button class="m-cardVideo btnCss">styles</button>
+                </li>
+                <li class="m-listButtonText__item">
+                  <button class="m-cardVideo btnHtml">html</button>
+                </li>
+              </ul>
+              <h3 class="main-article__component--device">Responsive</h3>
+              <div class="m-cardVideo" id="m-cardVideo">
+                <video class="m-cardVideo__media" controls="controls" src="https://ak1.picdn.net/shutterstock/videos/8882311/preview/stock-footage--k-few-shots-group-of-paparazzi-photo-shoot-on-green-screen-slow-motion-shot-on-red-epic-cinema.mp4"></video>
+                <p class="m-cardVideo__section">Politics
+                </p><a class="m-cardVideo__title--isH3" href="#" target="_self">Trump Predicts Stock Market Crash If He’s Impeached</a>
+                <time class="m-cardVideo__time">updated 37 minutes ago</time>
+              </div>
+            </div>
+            <div class="main-article__component--code">
+              <pre><code id="code-m-cardVideo"></code><span class="closeBtnCodeNode closeBtnCodeNode--hidde material-icons">close</span></pre>
+            </div>
+          </div>
+        </article>
+      </section>
+    </section>
+  </body>
+</html>

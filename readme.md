@@ -1,4 +1,4 @@
-# Multisitios
+# ComponentGuide
 <h2>!Configuración del proyecto¡</h2>
 <ul>
 	<li>
@@ -59,3 +59,92 @@
 	</li>
 </ul>
 <h3>SITE_NAME=[site-name] gulp [task]</h3>
+<h3>Convenciones para el desarrollo</h3>
+<h4>A-BEM</h4>
+<pre>
+	============================= B E M =============================
+	=================================================================
+
+	eg. 1 --------
+	nameBlock
+		nameBlock__nameElement
+		nameBlock__nameElement
+			nameBlock__nameElement nameBlock__nameElement--nameModifier
+		nameBlock__nameElement nameBlock__nameElement--nameModifier
+
+	eg. 2 --------
+	nameBlock nameBlock--nameModifier
+		nameBlock__nameElement
+		nameBlock__nameElement
+			nameBlock__nameElement
+		nameBlock__nameElement nameBlock__nameElement--nameModifier
+
+
+	=========================== A-B E M =============================
+	=================================================================
+
+	eg. 1 --------
+	m-nameBlock
+		m-nameBlock__nameElement
+		m-nameBlock__nameElement
+			m-nameBlock__nameElement m-nameBlock__nameElement--nameModifier
+		m-nameBlock__nameElement m-nameBlock__nameElement--nameModifier
+
+	eg. 2 --------
+	o-nameBlock o-nameBlock--nameModifier
+		o-nameBlock__nameElement
+		o-nameBlock__nameElement
+			o-nameBlock__nameElement
+		o-nameBlock__nameElement o-nameBlock__nameElement--nameModifier
+	
+	============================ CONVENTION =========================
+	=================================================================
+
+	.- Names for blocks, elements, and modifiers should be in camelCase
+	.- Before the name block should have an identifier, eg. (a-,m-,o-,t-)
+	.- Blocks and Elements should be descriptive
+	.- The modifiers only apply to the same element that contains it and not to its content.
+</pre>
+<pre>
+	==========================   EG   ===============================
+	=================================================================
+
+	<div class="m-cardMall">
+	  <figure class="m-cardMall__media"><img src="#"></figure>
+	  <div class="m-cardMall__brief">
+	    <div class="m-cardMall__titleContainer">
+	      <h3 class="m-cardMall__title">Perisur</h3>
+	    </div>
+	    <div class="m-cardMall__reveal">
+	    	<span class="material-icons m-cardMall__switchReveal">more_vert</span>
+	    </div>
+	    <div class="m-cardMall__anchorContainer">
+	    	<a class="m-cardMall__anchor" href="#">Ir a este centro comercial</a>
+	    </div>
+	  </div>
+	  <div class="m-cardMall__modal m-cardMall__modal--hidden">
+	    <div class="m-cardMall__close">
+	    	<span class="material-icons m-cardMall__switchClose">close</span>
+	    </div>
+	    <div class="m-cardMall__logoContainer">
+	      <figure class="m-cardMall__logo"><img src="#"></figure>
+	      <p class="m-cardMall__paragraph">Anillo Periferico sur No. 4690 Col. Ampliacion del Pedregal, San Angel Mexico, D.F.</p>
+	    </div>
+	    <div class="m-cardMall__thelepone">
+	      <p class="m-cardMall__paragraph">Tel. 01 55 56 06 8389</p>
+	    </div>
+	    <div class="m-cardMall__email">
+	      <p class="m-cardMall__paragraph">perisur@galerias.com</p>
+	    </div>
+	    <div class="m-cardMall__descriptionContainer">
+	      <h4 class="m-cardMall__description">Detalles del Centro comercial</h4>
+	      <ul class="m-cardMall__detail">
+	        <li><p class="m-cardMall__paragraph">Una superficie rentable construida de 51,303 m2</p></li>
+	        <li><p class="m-cardMall__paragraph">Locales comerciales</p></li>
+	        <li><p class="m-cardMall__paragraph">6,345 lugares de estacionamiento</p></li>
+	        <li><p class="m-cardMall__paragraph">Liverpool, Palacio de Hierro, Sears, Cinepolis</p></li>
+	      </ul>
+	    </div>
+	  </div>
+	</div>
+</pre>

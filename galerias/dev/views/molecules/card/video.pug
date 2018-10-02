@@ -1,0 +1,15 @@
+div(class="m-cardVideo" id="m-cardVideo")
+	- var classElement = "m-cardVideo__media"
+	include ../../atoms/video/video
+	
+	- var txt = "Politics"
+	- var classElement = "m-cardVideo__section"
+	include ../../atoms/texts/paragraph
+	
+	- var txt = "Trump Predicts Stock Market Crash If He’s Impeached"
+	- var classElement = "m-cardVideo__title--isH3"
+	include ../../atoms/texts/inline/textLink
+
+	- var txt = "updated 37 minutes ago"
+	- var classElement = "m-cardVideo__time"
+	include ../../atoms/texts/inline/textTime

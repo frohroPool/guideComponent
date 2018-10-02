@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+html(lang="es")
+	- var currentPage = 'aButton'
+	include ../resources/configuration
+	include ../resources/headers
+	body
+		section(class="header")
+			section.projectName
+				a(href="/")
+					span(class="icon-home")
+					span
+						|	UX Design
+
+			section(class="breadcrums")
+				p(class="breadcrums-title")
+					| Atoms > Button
+			section.mainMenu
+		section(class="body")
+			include ../resources/menu
+			
+
+
+			// ============================================================================================
+			section(class="main")
+				article(class="main-article")
+					h1(class="main-article__title")
+						| Button
+					nav(class="main-article__btnCodes")
+						button(id="allCssList" class="getStyle all") Show CSS
+						button(id="allHtmlList" class="getHTML all") Show HTML
+					div(class="showAllCssRules hiddeCssRule" id="showAllCssRules")
+					div(class="showAllHtmlRules hiddeHtmlRule" id="showAllHtmlRules")
+					p(class="main-article__description")
+						| Navigational transitions occur when users move between screens, such as from a home screen to a detail screen.
+					

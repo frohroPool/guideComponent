@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, user=scalable=no, initial-scale-1.0, minimum-scale=1.0, maximum-scale=1.0"/>
+    <title>UX Design</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed|Roboto+Mono" type="text/css"/>
+    <link rel="stylesheet" href="../css/guide.css" type="text/css"/>
+    <link rel="stylesheet" href="../css/aColors.css" type="text/css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Source+Sans+Pro:300,400,700" type="text/css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" type="text/css"/>
+    <script src="../js/bundle-handlerComponent.js" type="text/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.10/lodash.min.js" type="text/javascript"></script>
+  </head>
+  <body>
+    <section class="header">
+      <section class="projectName"><a href="/"><span class="icon-home"></span><span>	UX Design</span></a></section>
+      <section class="breadcrums">
+        <p class="breadcrums-title">Atoms > Colors</p>
+      </section>
+      <section class="mainMenu"></section>
+    </section>
+    <section class="body">
+      <nav class="side-nav"><span class="side-nav__section-title">	Atoms</span>
+        <ul class="side-nav__menu side-nav__menu--sections">
+          <li class="side-nav__menu-item"><a class="side-nav__link" href="aColor.html" target="_self">Colors</a></li>
+          <li class="side-nav__menu-item"><a class="side-nav__link" href="aButton.html" target="_self">Button</a></li>
+          <li class="side-nav__menu-item"><a class="side-nav__link" href="aCheckbox.html" target="_self">Checkbox</a></li>
+          <li class="side-nav__menu-item"><a class="side-nav__link" href="aIcon.html" target="_self">Icon</a></li>
+          <li class="side-nav__menu-item"><a class="side-nav__link" href="aLabel.html" target="_self">Label</a></li>
+          <li class="side-nav__menu-item"><a class="side-nav__link" href="aRadio.html" target="_self">Radio button</a></li>
+          <li class="side-nav__menu-item"><a class="side-nav__link" href="aSelect.html" target="_self">Select</a></li>
+          <li class="side-nav__menu-item"><a class="side-nav__link" href="aTextbox.html" target="_self">Textbox</a></li>
+          <li class="side-nav__menu-item"><a class="side-nav__link" href="aTextarea.html" target="_self">Textarea</a></li>
+        </ul><span class="side-nav__section-title">	Molecules</span>
+        <ul class="side-nav__menu side-nav__menu--sections">
+          <li class="side-nav__menu-item"><a class="side-nav__link" href="mList.html" target="_self">Lists</a></li>
+          <li class="side-nav__menu-item"><a class="side-nav__link" href="mMosaic.html" target="_self">Mosaic</a></li>
+          <li class="side-nav__menu-item"><a class="side-nav__link" href="mCard.html" target="_self">Card</a></li>
+          <li class="side-nav__menu-item"><a class="side-nav__link" href="#" target="_self">Filter</a></li>
+          <li class="side-nav__menu-item"><a class="side-nav__link" href="#" target="_self">Survey</a></li>
+          <li class="side-nav__menu-item"><a class="side-nav__link" href="mFinder.html" target="_self">Finder</a></li>
+          <li class="side-nav__menu-item"><a class="side-nav__link" href="mCarousel.html" target="_self">Carousel</a></li>
+        </ul><span class="side-nav__section-title">	Organisms</span>
+        <ul class="side-nav__menu side-nav__menu--sections">
+          <li class="side-nav__menu-item"><a class="side-nav__link" href="oMalls.html" target="_self">Malls</a></li>
+          <li class="side-nav__menu-item"><a class="side-nav__link" href="#" target="_self">Widget TV</a></li>
+          <li class="side-nav__menu-item"><a class="side-nav__link" href="#" target="_self">Widget Magazine</a></li>
+          <li class="side-nav__menu-item"><a class="side-nav__link" href="#" target="_self">Grid Brands</a></li>
+          <li class="side-nav__menu-item"><a class="side-nav__link" href="#" target="_self">Social Carousel</a></li>
+          <li class="side-nav__menu-item"><a class="side-nav__link" href="#" target="_self">Grid Carousel</a></li>
+          <li class="side-nav__menu-item"><a class="side-nav__link" href="oHeader.html" target="_self">Header</a></li>
+          <li class="side-nav__menu-item"><a class="side-nav__link" href="oCardBottomGradient.html" target="_self">Card bottom gradient</a></li>
+          <li class="side-nav__menu-item"><a class="side-nav__link" href="oFooter.html" target="_self">Footer</a></li>
+        </ul>
+      </nav>
+      <section class="main">
+        <article class="main-article">
+          <h1 class="main-article__title">Colors</h1>
+          <nav class="main-article__btnCodes">
+            <button class="getStyle all" id="allCssList">Show CSS</button>
+            <button class="getHTML all" id="allHtmlList">Show HTML</button>
+          </nav>
+          <div class="showAllCssRules hiddeCssRule" id="showAllCssRules"></div>
+          <div class="showAllHtmlRules hiddeHtmlRule" id="showAllHtmlRules"></div>
+          <p class="main-article__description">Navigational transitions occur when users move between screens, such as from a home screen to a detail screen.</p>
+          <div class="main-article__component">
+            <div class="main-article__component--view">
+              <h2 class="main-article__component--title">Colors</h2>
+              <!-- - var action = true;-->
+              <!-- - var customList = [{"txt" : "styles", "cls" : "m-listSimple btnCss"},{"txt" : "html", "cls" : "m-listSimple btnHtml"}];-->
+              <!-- include ../molecules/list/buttonText-->
+              <!-- h3(class="main-article__component--device")// | Responsive
+              -->
+              <!-- - var el = "m-listSimple"-->
+              <!-- - var modifiers = ['bold', 'light', 'normal'];-->
+              <!-- - var modifier = el+'--'+modifiers[1]-->
+              <!-- include ../resources/modifiers-->
+              <!-- - var customList = false;-->
+              <ul class="a-color" id="a-color">
+                <li class="a-color__sample a-color__blue">#111735</li>
+                <li class="a-color__sample a-color__purple">#333163</li>
+                <li class="a-color__sample a-color__orange">#F5891F</li>
+                <li class="a-color__sample a-color__white">#FFFFFF</li>
+              </ul>
+            </div>
+            <!-- div(class="main-article__component--code")
+            // - var codeComponent = 'code-m-listSimple';
+            // include ../resources/code
+            -->
+          </div>
+        </article>
+      </section>
+    </section>
+  </body>
+</html>

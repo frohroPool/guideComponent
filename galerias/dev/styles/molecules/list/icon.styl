@@ -1,0 +1,34 @@
+// Responsive m-listIcon ----------
+.m-listIcon
+	// margin-bottom 10px
+	overflow hidden
+	display flex
+	flex-direction row
+	justify-content center
+	list-style-type none
+.m-listIcon__item
+	width 20px
+	height 20px
+	text-align center
+	padding 15px
+	font-size 20px
+.m-listIcon__item:last-child
+	border-right 0px solid transparent
+.m-listIcon__item:hover
+	cursor pointer
+	color #F5A623
+	
+
+@media screen and (max-width:1300px){
+	.m-listIcon{
+		flex-direction: column;
+	}
+	.m-listIcon__item{
+		text-align: left;
+	}
+	.m-listIcon__item:hover{
+		cursor: pointer;
+		color: #F5A623;
+		border-bottom: 0;
+	}
+}

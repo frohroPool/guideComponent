@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+html(lang="es")
+	- var currentPage = 'aColor'
+	include ../resources/configuration
+	include ../resources/headers
+	body
+		section(class="header")
+			section.projectName
+				a(href="/")
+					span(class="icon-home")
+					span
+						|	UX Design
+
+			section(class="breadcrums")
+				p(class="breadcrums-title")
+					| Atoms > Colors
+			section.mainMenu
+		section(class="body")
+			include ../resources/menu
+			
+
+			section(class="main")
+				article(class="main-article")
+					h1(class="main-article__title")
+						| Colors
+					nav(class="main-article__btnCodes")
+						button(id="allCssList" class="getStyle all") Show CSS
+						button(id="allHtmlList" class="getHTML all") Show HTML
+					div(class="showAllCssRules hiddeCssRule" id="showAllCssRules")
+					div(class="showAllHtmlRules hiddeHtmlRule" id="showAllHtmlRules")
+					p(class="main-article__description")
+						| Navigational transitions occur when users move between screens, such as from a home screen to a detail screen.
+					
+
+					div(class="main-article__component")
+						div(class="main-article__component--view")
+							h2(class="main-article__component--title")
+								| Colors
+							// - var action = true;
+							// - var customList = [{"txt" : "styles", "cls" : "m-listSimple btnCss"},{"txt" : "html", "cls" : "m-listSimple btnHtml"}];
+							// include ../molecules/list/buttonText
+
+							// h3(class="main-article__component--device")
+								// | Responsive
+							// - var el = "m-listSimple"
+							// - var modifiers = ['bold', 'light', 'normal'];
+							// - var modifier = el+'--'+modifiers[1]
+							// include ../resources/modifiers
+							// - var customList = false;
+							
+							include ../atoms/colors/color
+						
+						// div(class="main-article__component--code")
+							// - var codeComponent = 'code-m-listSimple';
+							// include ../resources/code

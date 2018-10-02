@@ -1,0 +1,15 @@
+if customList
+	ul(class="m-listSimple "+modifier id="m-listSimple")
+		each v0,i0 in customList
+			li(class='m-listSimple__item')
+				- var txt = v0
+				- var classElement = "m-listSimple__opcion"
+				include ../../atoms/texts/inline/textLink
+				
+else
+	ul(class="m-listSimple "+modifier id="m-listSimple")
+		each v0,i0 in config.defaultText
+			li(class='m-listSimple__item')
+				- var txt = v0.txt
+				- var classElement = "m-listSimple__opcion"
+				include ../../atoms/texts/inline/textLink

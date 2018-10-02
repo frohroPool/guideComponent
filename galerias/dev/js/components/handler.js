@@ -3,6 +3,36 @@ export const Handler = (function() {
 	let showCssRule = false;
 	let showHtmlRule = false;
 
+	let findOtherBlocks = function(block,classBlock){
+		let classListNames = [classBlock]; 
+		let listChild = block.children;
+		let numChilds = listChild.length;
+		for (var i = 0; i < numChilds; i++) {
+			if(_.includes(listChild[i].classList[0],classBlock)){
+				if(_.indexOf(classListNames,listChild[i].children[0].className) == -1){
+					classListNames.push(listChild[i].children[0].className);
+				}
+			}
+		}
+		return classListNames;
+	}
+
+	let showHiddeCode = function(el){
+		let codeNode = document.getElementById('code-'+el).parentNode.parentNode;
+		let viewNode = codeNode.previousElementSibling;
+		viewNode.classList.add("hiddeView");
+		document.getElementById('code-'+el).parentNode.classList.add("showCode");
+
+		let btnClose = document.getElementById('code-'+el).nextElementSibling;
+		btnClose.classList.remove("closeBtnCodeNode--hidde");
+		btnClose.addEventListener("click", function(event){
+			this.previousElementSibling.innerText = "";
+			this.previousElementSibling.parentNode.classList.remove("showCode");
+			this.classList.add("closeBtnCodeNode--hidde");
+			this.parentNode.parentNode.previousElementSibling.classList.remove("hiddeView");
+		}, false);
+	}
+
 	let getAllCss = function(){
 		// Evento para obtener el codigo CSS de la lista de componentes
 		// Revisar que el evento exista 
@@ -84,9 +114,9 @@ export const Handler = (function() {
 		let idComponent;
 		for (var i = 0; i < btnHtml.length; i++) {
 			btnHtml[i].addEventListener("click", function(event){
-				// console.log('clases contenidas dentro del componente selecionados ....',this.classList);
+				console.log('clases contenidas dentro del componente selecionados ....',this.classList);
 				let allClassMatch = document.getElementsByClassName(this.classList[0]);
-				// console.log(allClassMatch)
+				console.log(allClassMatch)
 				if(allClassMatch.length > 1){
 					for (var x = 0; x < allClassMatch.length; x++) {
 						if(allClassMatch[x].id != ""){
@@ -98,6 +128,7 @@ export const Handler = (function() {
 				}
 				// console.log(idComponent.outerHTML);
 				document.getElementById('code-'+this.classList[0]).innerText = idComponent.outerHTML;
+				showHiddeCode(this.classList[0]);
 			}, false);
 		}
 	}
@@ -114,25 +145,34 @@ export const Handler = (function() {
 			btnCss[i].addEventListener("click", function(event){
 				// console.log('rules ...  ',rules);
 				let idComponent = document.getElementById(this.classList[0]);
-				currentComponent = '.'+this.classList[0];
+				let elmt = this.classList[0].split('-')[0], cls=[];
+				if( elmt == 'o' || elmt == 't' || elmt == 'p'){
+					cls = findOtherBlocks(idComponent,this.classList[0]);
+				}else{
+					cls.push(this.classList[0]);
+				}
+				let lengthCls = cls.length;
 				for (var i = 0; i < rules.length; i++) {
 					currentRule = rules[i].selectorText;
 					if(currentRule != undefined){
-						// console.log( 'currentRule : ',currentRule )
-						// console.log( 'currentComponent : ',currentComponent )
-						if(_.includes(currentRule,currentComponent)){
-							css += rules[i].cssText + '\n';
-						}else if(_.includes(currentRule,this.classList[0])){
-							css += rules[i].cssText + '\n';
+						for (var a = 0; a < lengthCls; a++) {
+							currentComponent = '.'+cls[a];
+							if(_.includes(currentRule,currentComponent)){
+								css += rules[i].cssText + '\n';
+							}
 						}
 					}else{
-						if(_.includes(rules[i].cssText,currentComponent)){
-							css += rules[i].cssText + '\n';
+						for (var a = 0; a < lengthCls; a++) {
+							currentComponent = '.'+cls[a];
+							if(_.includes(rules[i].cssText,currentComponent) ){
+								css += rules[i].cssText + '\n';
+							}
 						}
 					}
 				}
 				document.getElementById('code-'+this.classList[0]).innerText = css;
 				css='';
+				showHiddeCode(this.classList[0]);
 			}, false);
 		}
 	}
@@ -140,13 +180,15 @@ export const Handler = (function() {
 	let changeModes = function(){
 		// Evento para poder modificar los modos de los componentes
 		// Revisar que el evento exista 
-		let variantComponent = document.getElementsByClassName("variantComponent");
+		let modifiersComponent = document.getElementsByClassName("modifiersComponent");
 		let idComponent;
-		for (var i = 0; i < variantComponent.length; i++) {
-			variantComponent[i].addEventListener("click", function(event){
+		for (var i = 0; i < modifiersComponent.length; i++) {
+			modifiersComponent[i].addEventListener("click", function(event){
 				document.getElementById(this.getAttribute('for')).checked = true;
-				let preId = this.getAttribute('for').split('__')[0];
-				document.getElementById(preId).setAttribute('data-mode',this.getAttribute('for'));
+				let preId = this.getAttribute('for').split('--')[0];
+				let elId = document.getElementById(preId);
+				elId.classList.remove(elId.classList[1])
+				elId.classList.add(this.getAttribute('for'))
 				// Verificar si el codigo HTML del componente ya esta visualizado
 				if( document.getElementById('code-'+preId).innerText  != '' ){
 					idComponent = document.getElementById(preId);

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+html(lang="es")
+	- var currentPage = 'mMosaic'
+	include ../resources/configuration
+	include ../resources/headers
+	body
+		section(class="header")
+			section.projectName
+				a(href="/")
+					span(class="icon-home")
+					span
+						|	UX Design
+
+			section(class="breadcrums")
+				p(class="breadcrums-title")
+					| Molecules > Mosaic
+			section.mainMenu
+		section(class="body")
+			include ../resources/menu
+			
+
+			section(class="main")
+				article(class="main-article")
+					h1(class="main-article__title")
+						| Mosaic
+					nav(class="main-article__btnCodes")
+						button(id="allCssList" class="getStyle all") Show CSS
+						button(id="allHtmlList" class="getHTML all") Show HTML
+					div(class="showAllCssRules hiddeCssRule" id="showAllCssRules")
+					div(class="showAllHtmlRules hiddeHtmlRule" id="showAllHtmlRules")
+					p(class="main-article__description")
+						| Navigational transitions occur when users move between screens, such as from a home screen to a detail screen.
+					
+
+
+
+					div(class="main-article__component")
+						div(class="main-article__component--view")
+							h2(class="main-article__component--title")
+								| Mosaic-simple
+							- var action = true;
+							- var customList = [{"txt" : "styles", "cls" : "m-mosaicSimple btnCss"},{"txt" : "html", "cls" : "m-mosaicSimple btnHtml"}];
+							include ../molecules/list/buttonText
+
+							h3(class="main-article__component--device")
+								| Responsive
+							include ../molecules/mosaic/simple
+						div(class="main-article__component--code")
+							- var codeComponent = 'code-m-mosaicSimple';
+							include ../resources/code
+
+
+					div(class="main-article__component")
+						div(class="main-article__component--view")
+							h2(class="main-article__component--title")
+								| Mosaic-full
+							- var action = true;
+							- var customList = [{"txt" : "styles", "cls" : "mosaic-full btnCss"},{"txt" : "html", "cls" : "mosaic-full btnHtml"}];
+							include ../molecules/list/buttonText
+							
+							h3(class="main-article__component--device")
+								| Responsive
+							- var cmp = 'mosaic-full';
+							- var modifiers = ['responsive', 'adaptative'];
+							- var mode = cmp+'__'+modifiers[1]
+							include ../resources/modifiers
+							- var customList = false;
+							include ../molecules/mosaic/full
+						div(class="main-article__component--code")
+							- var codeComponent = 'code-mosaic-full';
+							include ../resources/code
+
+
+					div(class="main-article__component")
+						div(class="main-article__component--view")
+							h2(class="main-article__component--title")
+								| Mosaic-square
+							- var action = true;
+							- var customList = [{"txt" : "styles", "cls" : "m-mosaicSquare btnCss"},{"txt" : "html", "cls" : "m-mosaicSquare btnHtml"}];
+							include ../molecules/list/buttonText
+
+							h3(class="main-article__component--device")
+								| Responsive
+							- var el = 'm-mosaicSquare';
+							- var modifiers = ['two', 'three', 'four', 'five'];
+							- var modifier = el+'--'+modifiers[1]
+							include ../resources/modifiers
+							- var customList = false;
+							include ../molecules/mosaic/square
+						div(class="main-article__component--code")
+							- var codeComponent = 'code-m-mosaicSquare';
+							include ../resources/code

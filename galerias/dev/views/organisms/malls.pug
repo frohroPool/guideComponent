@@ -1,0 +1,23 @@
+//- section(class=el+"__wrapper" id=el+"__wrapper")
+section(class="o-containerMalls "+modifier id=el+"__wrapper")
+	if customList.elements
+		ul(class=el+"__list "+modifier id=el)
+			- for (var x = 0; x < customList.elements; x++)
+				li(class=el+'__item')
+					if customList.include == 'brief'
+						include ../molecules/card/brief
+					if customList.include == 'mall'
+						- var idCard = x
+						include ../molecules/card/mall
+					if customList.include == 'image'
+						include ../molecules/card/image
+					if customList.include == 'text'
+						include ../molecules/card/text
+					if customList.include == 'video'
+						include ../molecules/card/video
+					if customList.include == 'magazine'
+						include ../molecules/card/magazine
+	else
+		ul(class=el+"__list "+modifier id=el)
+			each v0,i0 in config.lists
+				li(class=el+'__item')
