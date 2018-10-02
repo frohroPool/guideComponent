@@ -119,7 +119,9 @@ html(lang="es")
 							- var menu = false;
 							h3(class="main-article__component--device")
 								| Responsive
-							- var customList = false
+							- var customList = [{"txt" : "Todas las tiendas", "cls" : "atom-round-button"},{"txt" : "CDMX / Area Metropolitana", "cls" : "atom-round-button"},{"txt" : "Norte", "cls" : "atom-round-button"},{"txt" : "Pacífico", "cls" : "atom-round-button"},{"txt" : "Centro", "cls" : "atom-round-button"},{"txt" : "Sur", "cls" : "atom-round-button"},{"txt" : "Sureste", "cls" : "atom-round-button"}];
+							- var mode = "atom-round-button__border"
+							- var action = false;
 							include ../components/list-buttonText
 						div(class="main-article__component--code")
 							h2(class="main-article__component--title")

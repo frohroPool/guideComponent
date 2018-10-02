@@ -10,7 +10,9 @@ div(class="org-header-single" id="org-header-single")
             include list-complete
 
         div(class="org-header-single__menu-bar__login-button")
-            button(class="login-button" id="login-button") Iniciar sesión
+            - var text ="Iniciar sesión"
+            - var mode ="atom-round-button__flat"
+             include atom-round-button
 
     div(class="org-header-single__search-bar hidden-top-search-bar" id="top-search-bar") 
         include finder-left-icon 

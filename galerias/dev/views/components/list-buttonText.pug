@@ -1,8 +1,15 @@
 if customList
-	ul(class=action ? 'list-buttonText action' : 'list-buttonText')
-		each val, index in customList
-			li(class='list-buttonText-item')
-				button(class=""+val.cls) #{val.txt}
+	if action
+		ul(class=action ? 'list-buttonText action' : 'list-buttonText' id="list-buttonText")
+			each val, index in customList
+				li(class='list-buttonText-item')
+					button(class=""+val.cls data-mode=mode) #{val.txt}
+	else
+		ul(class=action ? 'list-buttonText action' : 'list-buttonText' id="list-buttonText")
+			each val, index in customList
+				li(class='list-buttonText-item')
+					button(class=""+val.cls data-mode=mode) #{val.txt}
+		hr(class="list-buttonText-under-hr")
 else
 	ul(class="list-buttonText" id="list-buttonText")
 		each v0,i0 in config.lists
