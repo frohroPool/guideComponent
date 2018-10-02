@@ -1,4 +1,6 @@
-ul(class="a-color" id="a-color")
+ul(class="a-color")
 	each v,i in config.colors
-		li(class='a-color__sample a-color__'+v.color)
+		li(class='a-color__sample color__'+v.color)
 			| #{v.code}
+			br
+			| .color__#{v.color}

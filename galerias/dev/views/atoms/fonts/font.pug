@@ -1,0 +1,7 @@
+ul(class="a-font" id="a-font")
+	each v,i in config.fonts
+		li(class='a-font__sample')
+			span(class='a-font__'+v.name+' font__'+v.name+'--'+v.modifier)
+				| #{v.txt}
+				br
+				| .font__#{v.name}--#{v.modifier}
