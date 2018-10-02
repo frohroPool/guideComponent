@@ -6,6 +6,7 @@
     <title>UX Design</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed|Roboto+Mono" type="text/css"/>
     <link rel="stylesheet" href="../css/guide.css" type="text/css"/>
+    <link rel="stylesheet" href="../css/aColors.css" type="text/css"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Source+Sans+Pro:300,400,700" type="text/css"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" type="text/css"/>
     <script src="../js/bundle-handlerComponent.js" type="text/javascript"></script>
@@ -15,7 +16,7 @@
     <section class="header">
       <section class="projectName"><a href="/"><span class="icon-home"></span><span>	UX Design</span></a></section>
       <section class="breadcrums">
-        <p class="breadcrums-title">Atoms > Textbox</p>
+        <p class="breadcrums-title">Atoms > Colors</p>
       </section>
       <section class="mainMenu"></section>
     </section>
@@ -53,10 +54,9 @@
           <li class="side-nav__menu-item"><a class="side-nav__link" href="oFooter.html" target="_self">Footer</a></li>
         </ul>
       </nav>
-      <!-- ============================================================================================-->
       <section class="main">
         <article class="main-article">
-          <h1 class="main-article__title">Cards</h1>
+          <h1 class="main-article__title">Colors</h1>
           <nav class="main-article__btnCodes">
             <button class="getStyle all" id="allCssList">Show CSS</button>
             <button class="getHTML all" id="allHtmlList">Show HTML</button>
@@ -64,6 +64,31 @@
           <div class="showAllCssRules hiddeCssRule" id="showAllCssRules"></div>
           <div class="showAllHtmlRules hiddeHtmlRule" id="showAllHtmlRules"></div>
           <p class="main-article__description">Navigational transitions occur when users move between screens, such as from a home screen to a detail screen.</p>
+          <div class="main-article__component">
+            <div class="main-article__component--view">
+              <h2 class="main-article__component--title">Colors</h2>
+              <!-- - var action = true;-->
+              <!-- - var customList = [{"txt" : "styles", "cls" : "m-listSimple btnCss"},{"txt" : "html", "cls" : "m-listSimple btnHtml"}];-->
+              <!-- include ../molecules/list/buttonText-->
+              <!-- h3(class="main-article__component--device")// | Responsive
+              -->
+              <!-- - var el = "m-listSimple"-->
+              <!-- - var modifiers = ['bold', 'light', 'normal'];-->
+              <!-- - var modifier = el+'--'+modifiers[1]-->
+              <!-- include ../resources/modifiers-->
+              <!-- - var customList = false;-->
+              <ul class="a-color" id="a-color">
+                <li class="a-color__sample a-color__blue">#111735</li>
+                <li class="a-color__sample a-color__purple">#333163</li>
+                <li class="a-color__sample a-color__orange">#F5891F</li>
+                <li class="a-color__sample a-color__white">#FFFFFF</li>
+              </ul>
+            </div>
+            <!-- div(class="main-article__component--code")
+            // - var codeComponent = 'code-m-listSimple';
+            // include ../resources/code
+            -->
+          </div>
         </article>
       </section>
     </section>
