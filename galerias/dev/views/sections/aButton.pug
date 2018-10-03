@@ -32,4 +32,25 @@ html(lang="es")
 					div(class="showAllHtmlRules hiddeHtmlRule" id="showAllHtmlRules")
 					p(class="main-article__description")
 						| Navigational transitions occur when users move between screens, such as from a home screen to a detail screen.
+
+					div(class="main-article__component")
+						div(class="main-article__component--view")
+							h2(class="main-article__component--title")
+								| floatingButton
+							- var action = true;
+							- var customList = [{"txt" : "styles", "cls" : "a-floatingButton btnCss"},{"txt" : "html", "cls" : "a-floatingButton btnHtml"}];
+							include ../molecules/list/buttonText
+
+							h3(class="main-article__component--device")
+								| Responsive
+							- var el = "a-floatingButton"
+							- var modifiers = ['standard', 'mini', 'normal'];
+							- var modifier = el+'--'+modifiers[1]
+							include ../resources/modifiers
+							- var customList = false;
+							include ../atoms/buttons/simple
+						
+						div(class="main-article__component--code")
+							- var codeComponent = 'code-a-floatingButton';
+							include ../resources/code
 					
