@@ -133,3 +133,28 @@ html(lang="es")
 						div(class="main-article__component--code")
 							- var codeComponent = 'code-m-listGaleriasLogin';
 							include ../resources/code
+
+
+
+
+
+					div(class="main-article__component")
+						div(class="main-article__component--view")
+							h2(class="main-article__component--title")
+								| listOptions
+							- var action = true;
+							- var customList = [{"txt" : "styles", "cls" : "m-listOptions btnCss"},{"txt" : "html", "cls" : "m-listOptions btnHtml"}];
+							include ../molecules/list/buttonText
+
+							h3(class="main-article__component--device")
+								| Responsive
+							- var el = "m-listOptions"
+							- var modifiers = ['horizontal', 'vertical'];
+							- var modifier = el+'--'+modifiers[0]
+							include ../resources/modifiers
+							- var customList = false;
+							include ../molecules/list/optionsRadio
+						
+						div(class="main-article__component--code")
+							- var codeComponent = 'code-m-listOptions';
+							include ../resources/code

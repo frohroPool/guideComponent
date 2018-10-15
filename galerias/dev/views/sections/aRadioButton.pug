@@ -40,9 +40,9 @@ html(lang="es")
 							h3(class="main-article__component--device")
 								| Responsive
 
-							- var customList = {id:'radioComponentChk', name:'radioComponentChk', value:'checked', chk:true};
+							- var dataRadio = {id:'radioComponentChk', name:'radioComponentChk', value:'checked', chk:true};
 							include ../atoms/radioButtons/radioButton
-							- var customList = {id:'radioComponent', name:'radioComponent', value:'unchecked', chk:false};
+							- var dataRadio = {id:'radioComponent', name:'radioComponent', value:'unchecked', chk:false};
 							include ../atoms/radioButtons/radioButton
 						
 						div(class="main-article__component--code")

@@ -1,8 +1,8 @@
-if customList.chk
-	input(type="radio", id=""+customList.id, name=""+customList.name, value=""+customList.value, class="a-radioButton a-radioButton--checked" checked) 
-	label(class="a-labelRadio" for=""+customList.id)
-		| #{customList.value}
+if dataRadio.chk
+	input(type="radio", id=""+dataRadio.id, name=""+dataRadio.name, value=""+dataRadio.value, class="a-radioButton" checked) 
+	label(class="a-labelRadio" for=""+dataRadio.id)
+		| #{dataRadio.value}
 else
-	input(type="radio", id=""+customList.id, name=""+customList.name, value=""+customList.value, class="a-radioButton a-radioButton--unchecked") 
-	label(class="a-labelRadio" for=""+customList.id)
-		| #{customList.value}
+	input(type="radio", id=""+dataRadio.id, name=""+dataRadio.name, value=""+dataRadio.value, class="a-radioButton") 
+	label(class="a-labelRadio" for=""+dataRadio.id)
+		| #{dataRadio.value}
