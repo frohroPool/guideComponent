@@ -38,17 +38,19 @@ html(lang="es")
 							h2(class="main-article__component--title")
 								| floatingButton
 							- var action = true;
-							- var customList = [{"txt" : "styles", "cls" : "a-floatingButton btnCss"},{"txt" : "html", "cls" : "a-floatingButton btnHtml"}];
-							include ../molecules/list/buttonText
+							//- var customList = [{"txt" : "styles", "cls" : "m-listSimple btnCss"},{"txt" : "html", "cls" : "m-listSimple btnHtml"}];
+							//- var customList = [{"txt" : "styles", "cls" : "a-floatingButton btnCss"},{"txt" : "html", "cls" : "a-floatingButton btnHtml"}];
+							//- include ../molecules/list/buttonText
 
 							h3(class="main-article__component--device")
 								| Responsive
-							- var el = "a-floatingButton"
-							- var modifiers = ['standard', 'mini', 'normal'];
-							- var modifier = el+'--'+modifiers[1]
-							include ../resources/modifiers
-							- var customList = false;
-							include ../atoms/buttons/simple
+							//- var el = "a-floatingButton"
+							//- var modifiers = ['standard', 'mini', 'iconText', 'textIcon', 'text', 'curly', 'square', 'iconTextSquare'];
+							//- var modifier = el+'--'+modifiers[1]
+							- var txt = "create"
+							// include ../resources/modifiers
+							// - var customList = false;
+							include ../atoms/buttons/floatingButton
 						
 						div(class="main-article__component--code")
 							- var codeComponent = 'code-a-floatingButton';

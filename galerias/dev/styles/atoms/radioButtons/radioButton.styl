@@ -1,0 +1,30 @@
+.a-radioButton
+	position absolute
+	opacity 0
+	visibility hidden
+		
+.a-radioButton:checked + .a-labelRadio
+	color: colors.blue
+.a-radioButton:checked + .a-labelRadio::before
+	border: 0.5rem solid colors.blue
+	background: white
+	
+.a-labelRadio
+	align-items center
+	color gray
+	color: colors.blue
+	cursor pointer
+	display flex
+	font-size 1.25rem
+	padding 0.75rem 0
+	
+.a-labelRadio::before
+	background: colors.blue
+	border-radius 50%
+	border: 0.5rem solid colors.blue
+	content ""
+	display inline-block
+	height 1.125rem
+	margin-right 0.625rem
+	width 1.125rem
+	

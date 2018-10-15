@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 html(lang="es")
-	- var currentPage = 'aRadio'
+	- var currentPage = 'aRadioButton'
 	include ../resources/configuration
 	include ../resources/headers
 	body
@@ -19,8 +19,6 @@ html(lang="es")
 			include ../resources/menu
 			
 
-
-			// ============================================================================================
 			section(class="main")
 				article(class="main-article")
 					h1(class="main-article__title")
@@ -34,4 +32,20 @@ html(lang="es")
 						| Navigational transitions occur when users move between screens, such as from a home screen to a detail screen.
 					
 
+					div(class="main-article__component")
+						div(class="main-article__component--view")
+							h2(class="main-article__component--title")
+								| radioButton
+
+							h3(class="main-article__component--device")
+								| Responsive
+
+							- var customList = {id:'radioComponentChk', name:'radioComponentChk', value:'checked', chk:true};
+							include ../atoms/radioButtons/radioButton
+							- var customList = {id:'radioComponent', name:'radioComponent', value:'unchecked', chk:false};
+							include ../atoms/radioButtons/radioButton
+						
+						div(class="main-article__component--code")
+							- var codeComponent = 'code-a-floatingButton';
+							include ../resources/code
 					

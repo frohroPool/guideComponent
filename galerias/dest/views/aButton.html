@@ -6,7 +6,7 @@
     <title>UX Design</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed|Roboto+Mono" type="text/css"/>
     <link rel="stylesheet" href="../css/guide.css" type="text/css"/>
-    <link rel="stylesheet" href="../css/aButton.css" type="text/css"/>
+    <link rel="stylesheet" href="../css/aButtons.css" type="text/css"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Source+Sans+Pro:300,400,700" type="text/css"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" type="text/css"/>
     <script src="../js/bundle-handlerComponent.js" type="text/javascript"></script>
@@ -29,7 +29,7 @@
           <li class="side-nav__menu-item"><a class="side-nav__link" href="aCheckbox.html" target="_self">Checkbox</a></li>
           <li class="side-nav__menu-item"><a class="side-nav__link" href="aIcon.html" target="_self">Icon</a></li>
           <li class="side-nav__menu-item"><a class="side-nav__link" href="aLabel.html" target="_self">Label</a></li>
-          <li class="side-nav__menu-item"><a class="side-nav__link" href="aRadio.html" target="_self">Radio button</a></li>
+          <li class="side-nav__menu-item"><a class="side-nav__link" href="aRadioButton.html" target="_self">Radio button</a></li>
           <li class="side-nav__menu-item"><a class="side-nav__link" href="aSelect.html" target="_self">Select</a></li>
           <li class="side-nav__menu-item"><a class="side-nav__link" href="aTextbox.html" target="_self">Textbox</a></li>
           <li class="side-nav__menu-item"><a class="side-nav__link" href="aTextarea.html" target="_self">Textarea</a></li>
@@ -66,6 +66,30 @@
           <div class="showAllCssRules hiddeCssRule" id="showAllCssRules"></div>
           <div class="showAllHtmlRules hiddeHtmlRule" id="showAllHtmlRules"></div>
           <p class="main-article__description">Navigational transitions occur when users move between screens, such as from a home screen to a detail screen.</p>
+          <div class="main-article__component">
+            <div class="main-article__component--view">
+              <h2 class="main-article__component--title">floatingButton</h2>
+              <h3 class="main-article__component--device">Responsive</h3>
+              <!-- include ../resources/modifiers-->
+              <!-- - var customList = false;-->
+              <button class="a-floatingButton a-floatingButton--extended"><span class="a-floatingButton__text"></span>create</button>
+              <p>.a-floatingButton .a-floatingButton--extended</p>
+              <button class="a-floatingButton a-floatingButton--extendedLeftIcon"><span class="material-icons a-floatingButton__icon">add</span><span class="a-floatingButton__text"></span>create</button>
+              <p>.a-floatingButton .a-floatingButton--extendedLeftIcon</p>
+              <button class="a-floatingButton a-floatingButton--extendedRightIcon"><span class="a-floatingButton__text"></span>create<span class="material-icons a-floatingButton__icon">add</span></button>
+              <p>.a-floatingButton .a-floatingButton--extendedRightIcon</p>
+              <button class="a-floatingButton a-floatingButton--icon"><span class="material-icons a-floatingButton__icon">add</span></button>
+              <p>.a-floatingButton .a-floatingButton--icon</p>
+              <button class="a-floatingButton a-floatingButton--iconMini"><span class="material-icons a-floatingButton__icon">add</span></button>
+              <p>.a-floatingButton .a-floatingButton--iconMini</p>
+              <button class="a-floatingButton a-floatingButton--shaped"><span class="material-icons a-floatingButton__icon">add</span></button>
+              <p>.a-floatingButton .a-floatingButton--shaped</p>
+              <p class="shortText">Lorem simpson es aquel amigo que toma colores como el amigo de la clase de enfrente Lorem simpson es aquel amigo que toma colores como el amigo de la clase de enfrente</p>
+            </div>
+            <div class="main-article__component--code">
+              <pre><code id="code-a-floatingButton"></code><span class="closeBtnCodeNode closeBtnCodeNode--hidde material-icons">close</span></pre>
+            </div>
+          </div>
         </article>
       </section>
     </section>

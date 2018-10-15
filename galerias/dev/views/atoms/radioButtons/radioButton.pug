@@ -1,0 +1,8 @@
+if customList.chk
+	input(type="radio", id=""+customList.id, name=""+customList.name, value=""+customList.value, class="a-radioButton a-radioButton--checked" checked) 
+	label(class="a-labelRadio" for=""+customList.id)
+		| #{customList.value}
+else
+	input(type="radio", id=""+customList.id, name=""+customList.name, value=""+customList.value, class="a-radioButton a-radioButton--unchecked") 
+	label(class="a-labelRadio" for=""+customList.id)
+		| #{customList.value}
