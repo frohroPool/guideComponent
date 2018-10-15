@@ -51,11 +51,9 @@ html(lang="es")
 							- var modifiers = ['vertical', 'horizontal'];
 							- var modifier = el+'--'+modifiers[0]
 							include ../resources/modifiers
-							- var customList = {elements : 25, include: 'mall'};
+
+							- var dataOrganisms = {elements : 25, include: 'mall', el: el, modifier: modifier};
 							include ../organisms/malls
-
-
-
 
 
 						div(class="main-article__component--code")

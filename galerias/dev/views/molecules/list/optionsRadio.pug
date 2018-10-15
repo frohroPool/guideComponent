@@ -1,12 +1,12 @@
-if customList
-	ul(class=el+" "+modifier id=el)
-		each v0,i0 in customList
-			li(class=el+'__item')
+if dataMolecules.default
+	ul(class=dataMolecules.el+" "+dataMolecules.modifier id=dataMolecules.el)
+		each v0,i0 in dataMolecules.options
+			li(class=dataMolecules.el+'__item')
 				- var dataRadio = {id:'radioComponent', name:'radioComponent', value:v0, chk:false};
 				include ../../atoms/radioButtons/radioButton			
 else
-	ul(class=el+" "+modifier id=el)
+	ul(class=dataMolecules.el+" "+dataMolecules.modifier id=dataMolecules.el)
 		each v0,i0 in config.defaultText
-			li(class=el+'__item')
+			li(class=dataMolecules.el+'__item')
 				- var dataRadio = {id:'radioComponent'+i0, name:'radioComponent', value:v0.txt, chk:false};
 				include ../../atoms/radioButtons/radioButton

@@ -152,7 +152,7 @@ html(lang="es")
 							- var modifiers = ['horizontal', 'vertical'];
 							- var modifier = el+'--'+modifiers[0]
 							include ../resources/modifiers
-							- var customList = false;
+							- var dataMolecules = {default : false, el: el, modifier: modifier, options:[a,b,c,d,e]};
 							include ../molecules/list/optionsRadio
 						
 						div(class="main-article__component--code")
