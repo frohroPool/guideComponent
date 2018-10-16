@@ -1,25 +1,25 @@
 // Responsive ----------
 .o-containerMalls
-	width 100%
 	height 100%
+	width 100%
+	margin-bottom 100px;
+.o-containerMalls__title
+	border-bottom: 1px solid colors.blue
+	
 .o-containerMalls__list
+	display flex
+	flex-flow row wrap
+	height 100%
+	justify-content flex-start
 	list-style-type none
 	margin-bottom 10px
-	display flex
-	flex-flow column wrap
-	justify-content flex-start
+	padding 0
 	width 100%
-	height 100%
 .o-containerMalls__item
-	width auto
 	height auto
 	padding 5px
-	
-.o-containerMalls--horizontal
-	flex-flow column wrap
-.o-containerMalls--vertical
-	flex-flow row wrap
-	
+	width auto
+
 @media screen and (max-width:1300px){
 	.o-containerMalls{
 		flex-flow row wrap

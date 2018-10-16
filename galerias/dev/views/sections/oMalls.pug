@@ -52,7 +52,15 @@ html(lang="es")
 							- var modifier = el+'--'+modifiers[0]
 							include ../resources/modifiers
 
-							- var dataOrganisms = {elements : 25, include: 'mall', el: el, modifier: modifier};
+							- var dataOrganisms = {elements : 15, include: 'video', el: el, modifier: modifier};
+							include ../organisms/malls
+
+							//- - var el = 'o-containerMalls';
+							//- - var dataOrganisms = {elements : 5, include: 'brief', el: el, modifier: modifier};
+							//- include ../organisms/malls
+							
+							- var el = 'o-containerMalls';
+							- var dataOrganisms = {elements : 20, include: 'mall', el: el, modifier: modifier};
 							include ../organisms/malls
 
 
