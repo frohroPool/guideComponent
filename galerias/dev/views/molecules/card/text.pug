@@ -1,4 +1,5 @@
 div(class="m-cardText" id="m-cardText")
 	- var txt = "Placeholder"
-	- var classElement = "m-cardText__item"
-	include ../../atoms/texts/paragraph
+	- var aModifier = "gradient"
+	div(class="m-cardText__item")
+		include ../../atoms/texts/inline/textChunk
