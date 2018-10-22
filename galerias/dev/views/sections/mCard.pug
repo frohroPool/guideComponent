@@ -53,82 +53,120 @@ html(lang="es")
 					div(class="main-article__component")
 						div(class="main-article__component--view")
 							h2(class="main-article__component--title")
-								| Card-brief
+								| Card-offer
 							- var action = true;
-							- var customList = [{"txt" : "styles", "cls" : "m-cardBrief btnCss"},{"txt" : "html", "cls" : "m-cardBrief btnHtml"}];
+							- var customList = [{"txt" : "styles", "cls" : "m-cardOffer btnCss"},{"txt" : "html", "cls" : "m-cardOffer btnHtml"}];
 							include ../molecules/list/buttonText
 
 							h3(class="main-article__component--device")
 								| Responsive
-							include ../molecules/card/brief
+							- var el = 'm-cardOffer';
+							- var dataMolecule = {img: 'ella.png', el: el, modifier : 'portraitBig'};
+
+							include ../molecules/card/offer
 						div(class="main-article__component--code")
-							- var codeComponent = 'code-m-cardBrief';
-							include ../resources/code
-
-
-					div(class="main-article__component")
-						div(class="main-article__component--view")
-							h2(class="main-article__component--title")
-								| Card-image
-							- var action = true;
-							- var customList = [{"txt" : "styles", "cls" : "m-cardImage btnCss"},{"txt" : "html", "cls" : "m-cardImage btnHtml"}];
-							include ../molecules/list/buttonText
-
-							h3(class="main-article__component--device")
-								| Responsive
-							include ../molecules/card/image
-						div(class="main-article__component--code")
-							- var codeComponent = 'code-m-cardImage';
-							include ../resources/code
-
-
-					div(class="main-article__component")
-						div(class="main-article__component--view")
-							h2(class="main-article__component--title")
-								| Card-mall
-							- var action = true;
-							- var customList = [{"txt" : "styles", "cls" : "m-cardMall btnCss"},{"txt" : "html", "cls" : "m-cardMall btnHtml"}];
-							include ../molecules/list/buttonText
-
-							h3(class="main-article__component--device")
-								| Responsive
-							- var idCard = 0
-							include ../molecules/card/mall
-						div(class="main-article__component--code")
-							- var codeComponent = 'code-m-cardMall';
-							include ../resources/code		
-
-
-					div(class="main-article__component")
-						div(class="main-article__component--view")
-							h2(class="main-article__component--title")
-								| Card-coverMagazine
-							- var action = true;
-							- var customList = [{"txt" : "styles", "cls" : "m-cardMagazine btnCss"},{"txt" : "html", "cls" : "m-cardMagazine btnHtml"}];
-							include ../molecules/list/buttonText
-
-							h3(class="main-article__component--device")
-								| Responsive
-							include ../molecules/card/magazine
-						div(class="main-article__component--code")
-							- var codeComponent = 'code-m-cardMagazine';
+							- var codeComponent = 'code-m-cardOffer';
 							include ../resources/code
 
 					div(class="main-article__component")
 						div(class="main-article__component--view")
 							h2(class="main-article__component--title")
-								| Card-video
+								| Card-ella
 							- var action = true;
-							- var customList = [{"txt" : "styles", "cls" : "m-cardVideo btnCss"},{"txt" : "html", "cls" : "m-cardVideo btnHtml"}];
+							- var customList = [{"txt" : "styles", "cls" : "m-cardElla btnCss"},{"txt" : "html", "cls" : "m-cardElla btnHtml"}];
 							include ../molecules/list/buttonText
 
 							h3(class="main-article__component--device")
 								| Responsive
-							include ../molecules/card/video
+							- var el = 'm-cardElla';
+							- var dataMolecule = {img: 'ella.png', el: el, modifier : 'portraitBig'};
+
+							include ../molecules/card/she
 						div(class="main-article__component--code")
-							- var codeComponent = 'code-m-cardVideo';
+							- var codeComponent = 'code-m-cardElla';
 							include ../resources/code
+
+
+
+					//- div(class="main-article__component")
+					//- 	div(class="main-article__component--view")
+					//- 		h2(class="main-article__component--title")
+					//- 			| Card-brief
+					//- 		- var action = true;
+					//- 		- var customList = [{"txt" : "styles", "cls" : "m-cardBrief btnCss"},{"txt" : "html", "cls" : "m-cardBrief btnHtml"}];
+					//- 		include ../molecules/list/buttonText
+
+					//- 		h3(class="main-article__component--device")
+					//- 			| Responsive
+					//- 		include ../molecules/card/brief
+					//- 	div(class="main-article__component--code")
+					//- 		- var codeComponent = 'code-m-cardBrief';
+					//- 		include ../resources/code
+
+
+					//- div(class="main-article__component")
+					//- 	div(class="main-article__component--view")
+					//- 		h2(class="main-article__component--title")
+					//- 			| Card-image
+					//- 		- var action = true;
+					//- 		- var customList = [{"txt" : "styles", "cls" : "m-cardImage btnCss"},{"txt" : "html", "cls" : "m-cardImage btnHtml"}];
+					//- 		include ../molecules/list/buttonText
+
+					//- 		h3(class="main-article__component--device")
+					//- 			| Responsive
+					//- 		include ../molecules/card/image
+					//- 	div(class="main-article__component--code")
+					//- 		- var codeComponent = 'code-m-cardImage';
+					//- 		include ../resources/code
+
+
+					//- div(class="main-article__component")
+					//- 	div(class="main-article__component--view")
+					//- 		h2(class="main-article__component--title")
+					//- 			| Card-mall
+					//- 		- var action = true;
+					//- 		- var customList = [{"txt" : "styles", "cls" : "m-cardMall btnCss"},{"txt" : "html", "cls" : "m-cardMall btnHtml"}];
+					//- 		include ../molecules/list/buttonText
+
+					//- 		h3(class="main-article__component--device")
+					//- 			| Responsive
+					//- 		- var idCard = 0
+					//- 		include ../molecules/card/mall
+					//- 	div(class="main-article__component--code")
+					//- 		- var codeComponent = 'code-m-cardMall';
+					//- 		include ../resources/code		
+
+
+					//- div(class="main-article__component")
+					//- 	div(class="main-article__component--view")
+					//- 		h2(class="main-article__component--title")
+					//- 			| Card-coverMagazine
+					//- 		- var action = true;
+					//- 		- var customList = [{"txt" : "styles", "cls" : "m-cardMagazine btnCss"},{"txt" : "html", "cls" : "m-cardMagazine btnHtml"}];
+					//- 		include ../molecules/list/buttonText
+
+					//- 		h3(class="main-article__component--device")
+					//- 			| Responsive
+					//- 		include ../molecules/card/magazine
+					//- 	div(class="main-article__component--code")
+					//- 		- var codeComponent = 'code-m-cardMagazine';
+					//- 		include ../resources/code
+
+					//- div(class="main-article__component")
+					//- 	div(class="main-article__component--view")
+					//- 		h2(class="main-article__component--title")
+					//- 			| Card-video
+					//- 		- var action = true;
+					//- 		- var customList = [{"txt" : "styles", "cls" : "m-cardVideo btnCss"},{"txt" : "html", "cls" : "m-cardVideo btnHtml"}];
+					//- 		include ../molecules/list/buttonText
+
+					//- 		h3(class="main-article__component--device")
+					//- 			| Responsive
+					//- 		include ../molecules/card/video
+					//- 	div(class="main-article__component--code")
+					//- 		- var codeComponent = 'code-m-cardVideo';
+					//- 		include ../resources/code
 
 										
 
-							- var menu = false;
+					//- 		- var menu = false;

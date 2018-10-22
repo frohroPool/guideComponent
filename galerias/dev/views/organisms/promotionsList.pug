@@ -1,0 +1,9 @@
+//- section(class=el+"__wrapper" id=el+"__wrapper")
+section(class=dataOrganisms.el id=dataOrganisms.el)
+	ul(class=dataOrganisms.el+"__list" id=dataOrganisms.el)
+		- for (var x = 0; x < dataOrganisms.elements; x++)
+			li(class=dataOrganisms.el+'__item')
+				- var el = 'm-cardOffer';
+				- var dataMolecule = {img: 'zapatos.png', el: el, modifier : dataOrganisms.modifier};
+				include ../molecules/card/offer
+	

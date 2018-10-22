@@ -1,2 +1,17 @@
-figure(class=classElement)
-	img(src="../images/"+img)
+figure(class="a-figure a-figure--"+dataAtom.modifier)
+	img(class="a-figure__image" src="../images/"+dataAtom.img)
+	figcaption(class="a-figure__figcaption a-figure__figcaption--"+dataAtom.modifier)
+		p(class="a-figure__title a-figure__title--"+dataAtom.modifier)
+			| #{dataAtom.title}
+		p(class="a-figure__description a-figure__description--"+dataAtom.modifier)
+			if dataAtom.description != ""
+				label(class="a-figure__descriptionComplete")
+					| #{dataAtom.description}
+			else
+				label(class="a-figure__descriptionLeft")
+					| #{dataAtom.descriptionLeft}
+				label(class="a-figure__discount")
+					| #{dataAtom.discount}
+				label(class="a-figure__descriptionRight")
+					| #{dataAtom.descriptionRight}
+					

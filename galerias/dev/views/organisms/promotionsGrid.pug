@@ -1,0 +1,18 @@
+//- section(class=el+"__wrapper" id=el+"__wrapper")
+section(class=dataOrganisms.el id=dataOrganisms.el)
+	
+	div(class=dataOrganisms.el+"__left" id=dataOrganisms.el+"__left")
+		- var el = 'm-cardOffer';
+		- var dataMolecule = {img: 'ella.png', el: el, modifier : 'landscapeBig'};
+		include ../molecules/card/offer
+
+	div(class=dataOrganisms.el+"__top" id=dataOrganisms.el+"__top")
+		- var el = 'm-cardOffer';
+		- var dataMolecule = {img: 'deportes.png', el: el, modifier : 'landscapeSmall'};
+		include ../molecules/card/offer
+
+	div(class=dataOrganisms.el+"__bottom" id=dataOrganisms.el+"__bottom")
+		- var el = 'm-cardOffer';
+		- var dataMolecule = {img: 'sonido.png', el: el, modifier : 'landscapeSmall'};
+		include ../molecules/card/offer
+	

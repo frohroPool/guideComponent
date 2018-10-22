@@ -1,0 +1,36 @@
+// Responsive ----------
+.o-containerPromotionsGrid
+	display grid
+	grid-gap 0px 10px
+	grid-template-columns 50% 50%
+	grid-template-rows 50% 50%
+	height 1192px
+	width 1600px
+	justify-content center
+
+.o-containerPromotionsGrid__top
+	grid-column 2
+	grid-row 1
+.o-containerPromotionsGrid__bottom
+	grid-column 2
+	grid-row 2/2
+.o-containerPromotionsGrid__left
+	grid-column 1
+	grid-row 1/2
+
+
+@media screen and (max-width:1300px){
+	.o-containerPromotionsGrid{
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: center;
+		width: 100%;
+	}
+	.o-containerPromotionsGrid__top,
+	.o-containerPromotionsGrid__bottom,
+	.o-containerPromotionsGrid__left{
+		grid-column: unset;
+		grid-row: unset;
+		margin-bottom: 120px;
+	}
+}
