@@ -1,0 +1,6 @@
+article(class="m-carousel "+modifier id=el)
+	ul(class="m-carousel__container" id=el+"__container")
+		each v0,i0 in config.defaultText
+			li(class='m-carousel__item') #{v0.txt}
+	button(class="m-carousel__prev" id=el+"__prev")
+	button(class="m-carousel__next" id=el+"__next")

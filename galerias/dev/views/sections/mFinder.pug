@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+html(lang="es")
+	- var currentPage = 'mFinder'
+	include ../resources/configuration
+	include ../resources/headers
+	link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous")
+	body
+		section(class="header")
+			section.projectName
+				a(href="/")
+					span(class="icon-home")
+					span
+						|	UX Design
+
+			section(class="breadcrums")
+				p(class="breadcrums-title")
+					| Molecules > Finder
+			section.mainMenu
+		section(class="body")
+			include ../resources/menu
+			
+
+			section(class="main")
+				article(class="main-article")
+					h1(class="main-article__title")
+						| Finder
+					nav(class="main-article__btnCodes")
+						button(id="allCssList" class="getStyle all") Show CSS
+						button(id="allHtmlList" class="getHTML all") Show HTML
+					div(class="showAllCssRules hiddeCssRule" id="showAllCssRules")
+					div(class="showAllHtmlRules hiddeHtmlRule" id="showAllHtmlRules")
+					p(class="main-article__description")
+						| Navigational transitions occur when users move between screens, such as from a home screen to a detail screen.
+					
+
+					// --------------------------------------------------------				
+
+					div(class="main-article__component")
+						div(class="main-article__component--view")
+							h2(class="main-article__component--title")
+								| Finder-simple
+							- var action = true;
+							- var customList = [{"txt" : "styles", "cls" : "finder-simple btnCss"},{"txt" : "html", "cls" : "finder-simple btnHtml"}];
+							include ../molecules/list/buttonText							
+
+							h3(class="main-article__component--device")
+								| Responsive
+							include ../molecules/finder/simple
+						div(class="main-article__component--code")
+							- var codeComponent = 'code-finder-simple';
+							include ../resources/code
+
+
+
+					div(class="main-article__component")
+						div(class="main-article__component--view")
+							h2(class="main-article__component--title")
+								| Finder-right-icon
+							- var action = true;
+							- var customList = [{"txt" : "styles", "cls" : "finder-right-icon btnCss"},{"txt" : "html", "cls" : "finder-right-icon btnHtml"}];
+							include ../molecules/list/buttonText
+
+							h3(class="main-article__component--device")
+								| Responsive
+							include ../molecules/finder/rightIcon
+						div(class="main-article__component--code")
+							- var codeComponent = 'code-finder-right-icon';
+							include ../resources/code
+
+
+					
+					
+					div(class="main-article__component")
+						div(class="main-article__component--view")
+							h2(class="main-article__component--title")
+								| Finder-left-icon
+							- var action = true;
+							- var customList = [{"txt" : "styles", "cls" : "finder-left-icon btnCss"},{"txt" : "html", "cls" : "finder-left-icon btnHtml"}];
+							include ../molecules/list/buttonText
+
+							h3(class="main-article__component--device")
+								| Responsive
+							include ../molecules/finder/leftIcon
+						div(class="main-article__component--code")
+							- var codeComponent = 'code-finder-left-icon';
+							include ../resources/code
+
+					
+
+					div(class="main-article__component")
+						div(class="main-article__component--view")
+							h2(class="main-article__component--title")
+								| Finder-animated
+							- var action = true;
+							- var customList = [{"txt" : "styles", "cls" : "finder-animated btnCss"},{"txt" : "html", "cls" : "finder-animated btnHtml"}];
+							include ../molecules/list/buttonText
+
+							h3(class="main-article__component--device")
+								| Responsive
+							include ../molecules/finder/animated
+						div(class="main-article__component--code")
+							- var codeComponent = 'code-finder-animated';
+							include ../resources/code

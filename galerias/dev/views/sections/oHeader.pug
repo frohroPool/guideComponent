@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+html(lang="es")
+	- var currentPage = 'oHeader'
+	include ../resources/configuration
+	include ../resources/headers
+	body
+		section(class="header")
+			section.projectName
+				a(href="/")
+					span(class="icon-home")
+					span
+						|	UX Design
+
+			section(class="breadcrums")
+				p(class="breadcrums-title")
+					| Organism > Header
+			section.mainMenu
+		section(class="body")
+			include ../resources/menu
+
+				
+			
+
+			section(class="main")
+				article(class="main-article")
+					h1(class="main-article__title")
+						| Header
+					nav(class="main-article__btnCodes")
+						button(id="allCssList" class="getStyle all") Show CSS
+						button(id="allHtmlList" class="getHTML all") Show HTML
+					div(class="showAllCssRules hiddeCssRule" id="showAllCssRules")
+					div(class="showAllHtmlRules hiddeHtmlRule" id="showAllHtmlRules")
+					p(class="main-article__description")
+						| Navigational transitions occur when users move between screens, such as from a home screen to a detail screen.
+					
+
+
+
+					div(class="main-article__organisms")
+						div(class="main-article__organisms--view")
+							h2(class="main-article__organisms--title")
+								| Organism-header
+							- var action = true;
+							- var customList = [{"txt" : "styles", "cls" : "org-header btnCss"},{"txt" : "html", "cls" : "org-header btnHtml"}];
+							include ../molecules/list/buttonText
+
+							include ../organisms/header
+						div(class="main-article__organisms--code")
+							h2(class="main-article__organisms--title")
+								| Organism-header-code
+							- var codeComponent = 'code-org-header';
+							include ../resources/code
+
+
+
+					div(class="main-article__organisms")
+						div(class="main-article__organisms--view")
+							h2(class="main-article__organisms--title")
+								| Organism-header-single
+							- var action = true;
+							- var customList = [{"txt" : "styles", "cls" : "org-header-single btnCss"},{"txt" : "html", "cls" : "org-header-single btnHtml"}];
+							include ../molecules/list/buttonText
+
+							include ../organisms/headerSingle
+						div(class="main-article__organisms--code")
+							h2(class="main-article__organisms--title")
+								| Organism-header-single-code
+							- var codeComponent = 'code-org-header-single';
+							include ../resources/code

@@ -1,0 +1,16 @@
+div(class="m-cardImage" id="m-cardImage")
+	- var classElement = "m-cardImage__media"
+	- var img = "magazinePicture.png"
+	include ../../atoms/images/image
+
+	- var txt = "Politics"
+	- var classElement = "m-cardImage__section"
+	include ../../atoms/texts/paragraph
+
+	- var txt = "Trump Predicts Stock Market Crash If He’s Impeached"
+	- var classElement = "m-cardImage__title--isH3"
+	include ../../atoms/texts/inline/textLink
+
+	- var txt = "updated 37 minutes ago"
+	- var classElement = "m-cardImage__time"
+	include ../../atoms/texts/inline/textTime

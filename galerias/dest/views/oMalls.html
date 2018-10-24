@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, user=scalable=no, initial-scale-1.0, minimum-scale=1.0, maximum-scale=1.0"/>
+    <title>UX Design</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed|Roboto+Mono" type="text/css"/>
+    <link rel="stylesheet" href="../css/guide.css" type="text/css"/>
+    <link rel="stylesheet" href="../css/oMalls.css" type="text/css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Source+Sans+Pro:300,400,700" type="text/css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" type="text/css"/>
+    <script src="../js/bundle-handlerComponent.js" type="text/javascript"></script>
+    <script src="../js/bundle-handlerCards.js" type="text/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.10/lodash.min.js" type="text/javascript"></script>
+  </head>
+  <body>
+    <section class="header">
+      <section class="projectName"><a href="/"><span class="icon-home"></span><span>	UX Design</span></a></section>
+      <section class="breadcrums">
+        <p class="breadcrums-title">Organisms > Malls</p>
+      </section>
+      <section class="mainMenu"></section>
+    </section>
+    <section class="body">
+      <nav class="side-nav"><span class="side-nav__section-title">	Atoms</span>
+        <ul class="side-nav__menu side-nav__menu--sections">
+          <li class="side-nav__menu-item"><a class="side-nav__link" href="aFont.html" target="_self">Fonts</a></li>
+          <li class="side-nav__menu-item"><a class="side-nav__link" href="aColor.html" target="_self">Colors</a></li>
+          <li class="side-nav__menu-item"><a class="side-nav__link" href="aButton.html" target="_self">Button</a></li>
+          <li class="side-nav__menu-item"><a class="side-nav__link" href="aRadioButton.html" target="_self">Radio</a></li>
+          <li class="side-nav__menu-item"><a class="side-nav__link" href="aImage.html" target="_self">Image</a></li>
+        </ul><span class="side-nav__section-title">	Molecules</span>
+        <ul class="side-nav__menu side-nav__menu--sections">
+          <li class="side-nav__menu-item"><a class="side-nav__link" href="mList.html" target="_self">Lists</a></li>
+          <li class="side-nav__menu-item"><a class="side-nav__link" href="mMosaic.html" target="_self">Mosaic</a></li>
+          <li class="side-nav__menu-item"><a class="side-nav__link" href="mCard.html" target="_self">Card</a></li>
+          <li class="side-nav__menu-item"><a class="side-nav__link" href="mFinder.html" target="_self">Finder</a></li>
+          <li class="side-nav__menu-item"><a class="side-nav__link" href="mCarousel.html" target="_self">Carousel</a></li>
+        </ul><span class="side-nav__section-title">	Organisms</span>
+        <ul class="side-nav__menu side-nav__menu--sections">
+          <li class="side-nav__menu-item"><a class="side-nav__link" href="oMalls.html" target="_self">Malls</a></li>
+          <li class="side-nav__menu-item"><a class="side-nav__link" href="oPromotions.html" target="_self">Promotions</a></li>
+          <li class="side-nav__menu-item"><a class="side-nav__link" href="oHeader.html" target="_self">Header</a></li>
+          <li class="side-nav__menu-item"><a class="side-nav__link" href="oCardBottomGradient.html" target="_self">Card bottom gradient</a></li>
+          <li class="side-nav__menu-item"><a class="side-nav__link" href="oFooter.html" target="_self">Footer</a></li>
+        </ul>
+      </nav>
+      <!-- ============================================================================================-->
+      <section class="main">
+        <article class="main-article">
+          <h1 class="main-article__title">Malls</h1>
+          <nav class="main-article__btnCodes">
+            <button class="getStyle all" id="allCssList">Show CSS</button>
+            <button class="getHTML all" id="allHtmlList">Show HTML</button>
+          </nav>
+          <div class="showAllCssRules hiddeCssRule" id="showAllCssRules"></div>
+          <div class="showAllHtmlRules hiddeHtmlRule" id="showAllHtmlRules"></div>
+          <p class="main-article__description">Navigational transitions occur when users move between screens, such as from a home screen to a detail screen.</p>
+          <!-- ---------------------------------------------------------->
+          <div class="main-article__component">
+            <div class="main-article__component--view">
+              <h2 class="main-article__component--title">Malls</h2>
+              <ul class="m-listButtonText action" id="m-listButtonText">
+                <li class="m-listButtonText__item">
+                  <button class="o-containerMalls btnCss">styles</button>
+                </li>
+                <li class="m-listButtonText__item">
+                  <button class="o-containerMalls btnHtml">html</button>
+                </li>
+              </ul>
+              <h3 class="main-article__component--device">Responsive</h3>
+              <div class="variants-section">
+                <ul class="variants-section__modes">
+                  <li>
+                    <input type="radio" name="Variant__o-containerMalls" id="o-containerMalls--vertical"/>
+                    <label class="modifiersComponent" for="o-containerMalls--vertical">vertical</label>
+                  </li>
+                  <li>
+                    <input type="radio" name="Variant__o-containerMalls" id="o-containerMalls--horizontal"/>
+                    <label class="modifiersComponent" for="o-containerMalls--horizontal">horizontal</label>
+                  </li>
+                </ul>
+              </div>
+              <section class="o-containerMalls o-containerMalls--vertical" id="o-containerMalls__wrapper">
+                <div class="o-containerMalls__title" id="o-containerMalls__title">
+                  <h2 class="a-headerH2">Centros Comerciales</h2>
+                </div>
+                <div class="o-containerMalls__nav" id="o-containerMalls__nav">
+                  <ul class="m-listOptions m-listOptions--horizontal" id="m-listOptions">
+                    <li class="m-listOptions__item">
+                      <input class="a-radioButton" type="radio" id="radioComponent0" name="radioComponent" value="Mercury"/>
+                      <label class="a-labelRadio" for="radioComponent0">Mercury</label>
+                    </li>
+                    <li class="m-listOptions__item">
+                      <input class="a-radioButton" type="radio" id="radioComponent1" name="radioComponent" value="Venus"/>
+                      <label class="a-labelRadio" for="radioComponent1">Venus</label>
+                    </li>
+                    <li class="m-listOptions__item">
+                      <input class="a-radioButton" type="radio" id="radioComponent2" name="radioComponent" value="Earth"/>
+                      <label class="a-labelRadio" for="radioComponent2">Earth</label>
+                    </li>
+                    <li class="m-listOptions__item">
+                      <input class="a-radioButton" type="radio" id="radioComponent3" name="radioComponent" value="Mars"/>
+                      <label class="a-labelRadio" for="radioComponent3">Mars</label>
+                    </li>
+                    <li class="m-listOptions__item">
+                      <input class="a-radioButton" type="radio" id="radioComponent4" name="radioComponent" value="Jupiter"/>
+                      <label class="a-labelRadio" for="radioComponent4">Jupiter</label>
+                    </li>
+                    <li class="m-listOptions__item">
+                      <input class="a-radioButton" type="radio" id="radioComponent5" name="radioComponent" value="Saturn"/>
+                      <label class="a-labelRadio" for="radioComponent5">Saturn</label>
+                    </li>
+                  </ul>
+                </div>
+                <div class="o-containerMalls__content" id="o-containerMalls__content">
+                  <ul class="o-containerMalls__list" id="o-containerMalls">
+                    <li class="o-containerMalls__item">
+                      <div class="m-cardText" id="m-cardText">
+                        <div class="m-cardText__item"><span class="a-span a-span--gradient">Placeholder</span></div>
+                      </div>
+                    </li>
+                    <li class="o-containerMalls__item">
+                      <div class="m-cardText" id="m-cardText">
+                        <div class="m-cardText__item"><span class="a-span a-span--gradient">Placeholder</span></div>
+                      </div>
+                    </li>
+                    <li class="o-containerMalls__item">
+                      <div class="m-cardText" id="m-cardText">
+                        <div class="m-cardText__item"><span class="a-span a-span--gradient">Placeholder</span></div>
+                      </div>
+                    </li>
+                    <li class="o-containerMalls__item">
+                      <div class="m-cardText" id="m-cardText">
+                        <div class="m-cardText__item"><span class="a-span a-span--gradient">Placeholder</span></div>
+                      </div>
+                    </li>
+                    <li class="o-containerMalls__item">
+                      <div class="m-cardText" id="m-cardText">
+                        <div class="m-cardText__item"><span class="a-span a-span--gradient">Placeholder</span></div>
+                      </div>
+                    </li>
+                    <li class="o-containerMalls__item">
+                      <div class="m-cardText" id="m-cardText">
+                        <div class="m-cardText__item"><span class="a-span a-span--gradient">Placeholder</span></div>
+                      </div>
+                    </li>
+                    <li class="o-containerMalls__item">
+                      <div class="m-cardText" id="m-cardText">
+                        <div class="m-cardText__item"><span class="a-span a-span--gradient">Placeholder</span></div>
+                      </div>
+                    </li>
+                    <li class="o-containerMalls__item">
+                      <div class="m-cardText" id="m-cardText">
+                        <div class="m-cardText__item"><span class="a-span a-span--gradient">Placeholder</span></div>
+                      </div>
+                    </li>
+                    <li class="o-containerMalls__item">
+                      <div class="m-cardText" id="m-cardText">
+                        <div class="m-cardText__item"><span class="a-span a-span--gradient">Placeholder</span></div>
+                      </div>
+                    </li>
+                    <li class="o-containerMalls__item">
+                      <div class="m-cardText" id="m-cardText">
+                        <div class="m-cardText__item"><span class="a-span a-span--gradient">Placeholder</span></div>
+                      </div>
+                    </li>
+                    <li class="o-containerMalls__item">
+                      <div class="m-cardText" id="m-cardText">
+                        <div class="m-cardText__item"><span class="a-span a-span--gradient">Placeholder</span></div>
+                      </div>
+                    </li>
+                    <li class="o-containerMalls__item">
+                      <div class="m-cardText" id="m-cardText">
+                        <div class="m-cardText__item"><span class="a-span a-span--gradient">Placeholder</span></div>
+                      </div>
+                    </li>
+                    <li class="o-containerMalls__item">
+                      <div class="m-cardText" id="m-cardText">
+                        <div class="m-cardText__item"><span class="a-span a-span--gradient">Placeholder</span></div>
+                      </div>
+                    </li>
+                    <li class="o-containerMalls__item">
+                      <div class="m-cardText" id="m-cardText">
+                        <div class="m-cardText__item"><span class="a-span a-span--gradient">Placeholder</span></div>
+                      </div>
+                    </li>
+                    <li class="o-containerMalls__item">
+                      <div class="m-cardText" id="m-cardText">
+                        <div class="m-cardText__item"><span class="a-span a-span--gradient">Placeholder</span></div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </section>
+            </div>
+            <div class="main-article__component--code">
+              <pre><code id="code-o-containerMalls"></code><span class="closeBtnCodeNode closeBtnCodeNode--hidde material-icons">close</span></pre>
+            </div>
+          </div>
+        </article>
+      </section>
+    </section>
+  </body>
+</html>

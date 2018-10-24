@@ -1,0 +1,10 @@
+if customList
+	ul(class=action ? 'm-listButtonText action' : 'm-listButtonText' id="m-listButtonText")
+		each val, index in customList
+			li(class='m-listButtonText__item')
+				button(class=""+val.cls) #{val.txt}
+else
+	ul(class="m-listButtonText" id="m-listButtonText")
+		each v0,i0 in config.defaultText
+			li(class='m-listButtonText__item')
+				button #{v0.txt}

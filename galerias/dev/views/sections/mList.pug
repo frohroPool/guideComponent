@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+html(lang="es")
+	- var currentPage = 'mList'
+	include ../resources/configuration
+	include ../resources/headers
+	body
+		section(class="header")
+			section.projectName
+				a(href="/")
+					span(class="icon-home")
+					span
+						|	UX Design
+
+			section(class="breadcrums")
+				p(class="breadcrums-title")
+					| Molecules > List
+			section.mainMenu
+		section(class="body")
+			include ../resources/menu
+
+			section(class="main")
+				article(class="main-article")
+					h1(class="main-article__title")
+						| Lists
+					nav(class="main-article__btnCodes")
+						button(id="allCssList" class="getStyle all") Show CSS
+						button(id="allHtmlList" class="getHTML all") Show HTML
+					div(class="showAllCssRules hiddeCssRule" id="showAllCssRules")
+					div(class="showAllHtmlRules hiddeHtmlRule" id="showAllHtmlRules")
+					p(class="main-article__description")
+						| Navigational transitions occur when users move between screens, such as from a home screen to a detail screen.
+					
+					// --------------------------------------------------------
+					
+					div(class="main-article__component")
+						div(class="main-article__component--view")
+							h2(class="main-article__component--title")
+								| listSimple
+							- var action = true;
+							- var customList = [{"txt" : "styles", "cls" : "m-listSimple btnCss"},{"txt" : "html", "cls" : "m-listSimple btnHtml"}];
+							include ../molecules/list/buttonText
+
+							h3(class="main-article__component--device")
+								| Responsive
+							- var el = "m-listSimple"
+							- var modifiers = ['bold', 'light', 'normal'];
+							- var modifier = el+'--'+modifiers[1]
+							include ../resources/modifiers
+							- var customList = false;
+							include ../molecules/list/simple
+						
+						div(class="main-article__component--code")
+							- var codeComponent = 'code-m-listSimple';
+							include ../resources/code
+
+					// --------------------------------------------------------
+
+					div(class="main-article__component")
+						div(class="main-article__component--view")
+							h2(class="main-article__component--title")
+								| listIcon
+							- var el = "m-listIcon"
+							- var action = true;
+							- var customList = [{"txt" : "styles", "cls" : "m-listIcon btnCss"},{"txt" : "html", "cls" : "m-listIcon btnHtml"}];
+							include ../molecules/list/buttonText
+
+
+							h3(class="main-article__component--device")
+								| Responsive
+							- var customList = false;
+							include ../molecules/list/icon
+						div(class="main-article__component--code")
+							- var codeComponent = 'code-m-listIcon';
+							include ../resources/code
+
+					//- // --------------------------------------------------------
+
+					div(class="main-article__component")
+						div(class="main-article__component--view")
+							h2(class="main-article__component--title")
+								| listComplete
+							- var action = true;
+							- var customList = [{"txt" : "styles", "cls" : "m-listComplete btnCss"},{"txt" : "html", "cls" : "m-listComplete btnHtml"}];
+							include ../molecules/list/buttonText
+
+							h3(class="main-article__component--device")
+								| Responsive
+							- var el = 'm-listComplete';
+
+							- var customList = [{"txt" : "", "ico" : "icon-office"},{"txt" : "Inicia session", "ico" : ""},{"txt" : "Cart", "ico" : "material-icons", "icoName" : "search"}];
+							include ../molecules/list/complete
+						div(class="main-article__component--code")
+							- var codeComponent = 'code-m-listComplete';
+							include ../resources/code
+
+
+					//- // --------------------------------------------------------
+
+					div(class="main-article__component")
+						div(class="main-article__component--view")
+							h2(class="main-article__component--title")
+								| buttonText
+							- var action = true;
+							- var customList = [{"txt" : "styles", "cls" : "m-listButtonText btnCss"},{"txt" : "html", "cls" : "m-listButtonText btnHtml"}];
+							include ../molecules/list/buttonText
+
+
+							- var menu = false;
+							h3(class="main-article__component--device")
+								| Responsive
+							- var customList = false
+							include ../molecules/list/buttonText
+						div(class="main-article__component--code")
+							- var codeComponent = 'code-m-listButtonText';
+							include ../resources/code
+
+					//- // --------------------------------------------------------
+
+					div(class="main-article__component")
+						div(class="main-article__component--view")
+							h2(class="main-article__component--title")
+								| List-galerias-login
+							- var action = true;
+							- var customList = [{"txt" : "styles", "cls" : "m-listGaleriasLogin btnCss"},{"txt" : "html", "cls" : "m-listGaleriasLogin btnHtml"}];
+							include ../molecules/list/buttonText
+
+
+							- var menu = false;
+							h3(class="main-article__component--device")
+								| Responsive
+							- var customList = [{"txt" : "ACCEDER", "cls" : "buttonText"},{"txt" : "REGÍSTRATE", "cls" : "buttonText"}];                        				
+							include ../molecules/list/galeriasLogin
+						div(class="main-article__component--code")
+							- var codeComponent = 'code-m-listGaleriasLogin';
+							include ../resources/code
+
+
+
+
+
+					div(class="main-article__component")
+						div(class="main-article__component--view")
+							h2(class="main-article__component--title")
+								| listOptions
+							- var action = true;
+							- var customList = [{"txt" : "styles", "cls" : "m-listOptions btnCss"},{"txt" : "html", "cls" : "m-listOptions btnHtml"}];
+							include ../molecules/list/buttonText
+
+							h3(class="main-article__component--device")
+								| Responsive
+							- var el = "m-listOptions"
+							- var modifiers = ['horizontal', 'vertical'];
+							- var modifier = el+'--'+modifiers[0]
+							include ../resources/modifiers
+							- var dataMolecules = {default : false, el: el, modifier: modifier, options:[a,b,c,d,e]};
+							include ../molecules/list/optionsRadio
+						
+						div(class="main-article__component--code")
+							- var codeComponent = 'code-m-listOptions';
+							include ../resources/code

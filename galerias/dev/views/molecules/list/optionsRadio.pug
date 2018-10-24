@@ -1,0 +1,12 @@
+if dataMolecules.default
+	ul(class=dataMolecules.el+" "+dataMolecules.modifier id=dataMolecules.el)
+		each v0,i0 in dataMolecules.options
+			li(class=dataMolecules.el+'__item')
+				- var dataRadio = {id:'radioComponent', name:'radioComponent', value:v0, chk:false};
+				include ../../atoms/radioButtons/radioButton			
+else
+	ul(class=dataMolecules.el+" "+dataMolecules.modifier id=dataMolecules.el)
+		each v0,i0 in config.defaultText
+			li(class=dataMolecules.el+'__item')
+				- var dataRadio = {id:'radioComponent'+i0, name:'radioComponent', value:v0.txt, chk:false};
+				include ../../atoms/radioButtons/radioButton

@@ -1,0 +1,56 @@
+/*INICIA HEADER CONTAINER*/
+.org-header-single
+    display grid
+    grid-template-columns repeat(12, 1fr)
+    grid-template-rows auto
+
+.org-header-single__menu-bar
+    grid-column 1 / span 12    
+    background #343851    
+    display grid
+    grid-template-columns repeat(8, 1fr)
+    grid-template-rows auto
+    align-items center
+    justify-items center
+
+.org-header-single__menu-bar__logo
+    grid-column 2 / span 1
+    justify-self start
+    
+.org-header-single__menu-bar__logo img
+    width 100px
+    height 100px    
+
+.org-header-single__menu-bar__links
+    grid-column 3 / span 4
+    justify-self flex-end
+    color #FFF;
+
+.org-header-single__menu-bar__login-button
+    grid-column 7 / span 2
+    color #FFF
+    justify-self center
+
+
+.searchIcon-pressed
+    color #343851;
+
+.searchIcon:hover
+   cursor pointer
+
+.org-header-single__search-bar
+    grid-column 1 / span 12
+
+.hidden-top-search-bar
+    opacity 0
+    transition height 0s, width 0s, padding 0s, visibility 0s, opacity 0.3s ease-out
+
+.show-top-search-bar
+    background none
+    transition height 1s, width 1s, padding 1s, visibility 1s, opacity 0.3s ease-out
+
+.list-complete 
+     margin-bottom:0px;
+
+.list-complete-item
+    width auto

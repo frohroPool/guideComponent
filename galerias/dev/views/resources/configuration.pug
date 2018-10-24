@@ -1,0 +1,170 @@
+- 
+	var config = { 
+		"siteName":"UX Design",
+		"prefix":"",
+		"urlLoader":"",
+		"logoSite":"",
+		"headersCss":[
+			{"page"	:	"all", "media"	:	"all",	"src"	:	"https://fonts.googleapis.com/css?family=Roboto+Condensed|Roboto+Mono", "rel":"stylesheet", "type":"text/css"},
+			
+			{"page"	:	"all", "media"	:	"all",	"src"	:	"../css/guide.css", "rel":"stylesheet", "type":"text/css"},
+			
+			{"page"	:	"aFont", "media"	:	"all",	"src"	:	"../css/aFonts.css", "rel":"stylesheet", "type":"text/css"},
+			{"page"	:	"aColor", "media"	:	"all",	"src"	:	"../css/aColors.css", "rel":"stylesheet", "type":"text/css"},
+			{"page"	:	"aButton", "media"	:	"all",	"src"	:	"../css/aButtons.css", "rel":"stylesheet", "type":"text/css"},
+			{"page"	:	"aRadioButton", "media"	:	"all",	"src"	:	"../css/aRadioButtons.css", "rel":"stylesheet", "type":"text/css"},
+			{"page"	:	"aImage", "media"	:	"all",	"src"	:	"../css/aImages.css", "rel":"stylesheet", "type":"text/css"},
+		
+
+			{"page"	:	"mList", "media"	:	"all",	"src"	:	"../css/mList.css", "rel":"stylesheet", "type":"text/css"},
+			{"page"	:	"mCard", "media"	:	"all",	"src"	:	"../css/mCard.css", "rel":"stylesheet", "type":"text/css"},
+			{"page"	:	"mMosaic", "media"	:	"all",	"src"	:	"../css/mMosaic.css", "rel":"stylesheet", "type":"text/css"},
+			{"page"	:	"mFinder", "media"	:	"all",	"src"	:	"../css/mFinder.css", "rel":"stylesheet", "type":"text/css"},
+			{"page"	:	"mCarousel", "media"	:	"all",	"src"	:	"../css/mCarousel.css", "rel":"stylesheet", "type":"text/css"},
+
+			{"page"	:	"oHeader", "media"	:	"all",	"src"	:	"../css/oHeader.css", "rel":"stylesheet", "type":"text/css"},
+			{"page"	:	"oCard-bottom-gradient", "media"	:	"all",	"src"	:	"../css/oCardBottomGradient.css", "rel":"stylesheet", "type":"text/css"},
+			{"page"	:	"oMalls", "media"	:	"all",	"src"	:	"../css/oMalls.css", "rel":"stylesheet", "type":"text/css"},
+			{"page"	:	"oPromotions", "media"	:	"all",	"src"	:	"../css/oPromotions.css", "rel":"stylesheet", "type":"text/css"},
+			{"page"	:	"oFooter", "media"	:	"all",	"src"	:	"../css/orFooter.css", "rel":"stylesheet", "type":"text/css"},
+
+			{"page"	:	"all", "media"	:	"all",	"src"	:	"https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Source+Sans+Pro:300,400,700", "rel":"stylesheet", "type":"text/css"},
+			{"page"	:	"all", "media"	:	"all",	"src"	:	"https://fonts.googleapis.com/icon?family=Material+Icons", "rel":"stylesheet", "type":"text/css"}
+		],
+		"headersJs":[
+			{"page":"all","src":"../js/bundle-handlerComponent.js"},
+			{"page":"mCard","src":"../js/bundle-handlerCards.js"},
+			{"page":"mList","src":"../js/bundle-handlerCards.js"},
+			{"page":"mFinder","src":"../js/bundle-handlerFinder.js"},
+			{"page":"mCarousel","src":"../js/bundle-handlerCarousel.js"},
+			{"page":"oHeader","src":"../js/bundle-handlerFinder.js"},
+			{"page":"oMalls","src":"../js/bundle-handlerCards.js"},
+			{"page":"oPromotions","src":"../js/bundle-handlerCards.js"},
+			{"page":"all","src":"https://cdn.jsdelivr.net/npm/lodash@4.17.10/lodash.min.js"}
+
+		],
+		"atoms":[
+			{
+				"name":"Fonts",
+				"src":"aFont.html", 
+				"target":"_self", 
+				"active":false
+			},
+			{
+				"name":"Colors",
+				"src":"aColor.html", 
+				"target":"_self", 
+				"active":false
+			},
+			{
+				"name":"Button",
+				"src":"aButton.html", 
+				"target":"_self", 
+				"active":false
+			},
+			{
+				"name":"Radio",
+				"src":"aRadioButton.html", 
+				"target":"_self", 
+				"active":false
+			},
+			{
+				"name":"Image",
+				"src":"aImage.html", 
+				"target":"_self", 
+				"active":false
+			}
+		],
+		"molecules":[
+			{
+				"name":"Lists",
+				"src":"mList.html", 
+				"target":"_self", 
+				"active":false 
+			},
+			{
+				"name":"Mosaic",
+				"src":"mMosaic.html", 
+				"target":"_self", 
+				"active":false
+			},
+			{
+				"name":"Card",
+				"src":"mCard.html", 
+				"target":"_self", 
+				"active":false
+			},		
+			{
+				"name":"Finder",
+				"src":"mFinder.html", 
+				"target":"_self", 
+				"active":false
+			},
+			{
+				"name":"Carousel",
+				"src":"mCarousel.html", 
+				"target":"_self", 
+				"active":false
+			}
+		],
+		"organisms":[
+			{
+				"name":"Malls",
+				"src":"oMalls.html", 
+				"target":"_self", 
+				"active":false
+			},
+			{
+				"name":"Promotions",
+				"src":"oPromotions.html", 
+				"target":"_self", 
+				"active":false
+			},
+			{
+				"name":"Header",
+				"src":"oHeader.html", 
+				"target":"_self", 
+				"active":false
+			},
+				{
+				"name":"Card bottom gradient",
+				"src":"oCardBottomGradient.html", 
+				"target":"_self", 
+				"active":false
+			},
+			{
+				"name":"Footer",
+				"src":"oFooter.html", 
+				"target":"_self", 
+				"active":false
+			}
+		],
+		"templates":[
+	
+		],
+		"pages":[
+	
+		],
+		"defaultText" : [
+			{ "txt":"Mercury"},
+			{ "txt":"Venus"},
+			{ "txt":"Earth"},
+			{ "txt":"Mars"},
+			{ "txt":"Jupiter"},
+			{ "txt":"Saturn"}
+		],
+		"colors" : [
+			{ color :'blue', code : '#111735'},
+			{ color :'purple', code : '#333163'},
+			{ color :'orange', code : '#F5891F'},
+			{ color :'white', code : '#FFFFFF'}
+		],
+		"fonts" : [
+			{ name :'SansPro', modifier : 'normal', txt : 'Navigational transitions occur when users move between screens, such as from a home screen to a detail screen.'},
+			{ name :'SansPro', modifier : 'lighter', txt : 'Navigational transitions occur when users move between screens, such as from a home screen to a detail screen.'},
+			{ name :'SansPro', modifier : 'bold', txt : 'Navigational transitions occur when users move between screens, such as from a home screen to a detail screen.'},
+			{ name :'Montserrat', modifier : 'normal', txt : 'Navigational transitions occur when users move between screens, such as from a home screen to a detail screen.'},
+			{ name :'Montserrat', modifier : 'light', txt : 'Navigational transitions occur when users move between screens, such as from a home screen to a detail screen.'},
+			{ name :'Montserrat', modifier : 'bold', txt : 'Navigational transitions occur when users move between screens, such as from a home screen to a detail screen.'}
+		]
+	};

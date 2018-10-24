@@ -1,0 +1,62 @@
+div(class="m-cardMall" id="m-cardMall__"+idCard)
+	- var classElement = "m-cardMall__media"
+	- var img = "magazinePicture.png"
+	include ../../atoms/images/image
+	div(class="m-cardMall__brief")
+		div(class="m-cardMall__titleContainer")
+			- var txt = "Perisur"
+			- var classElement = "m-cardMall__title"
+			include ../../atoms/texts/headlines/h3
+		div(class="m-cardMall__reveal")
+			span(class="material-icons m-cardMall__switchReveal modalTo-"+idCard)
+				| more_vert
+		div(class="m-cardMall__anchorContainer")
+			- var txt = "Ir a este centro comercial"
+			- var classElement = "m-cardMall__anchor"
+			include ../../atoms/texts/inline/textLink
+	
+	div(class="m-cardMall__modal m-cardMall__modal--hidden" id="modalTo-"+idCard)
+		div(class="m-cardMall__close")
+			span(class="material-icons m-cardMall__switchClose modalTo-"+idCard)
+				| close
+		div(class="m-cardMall__logoContainer")
+			- var classElement = "m-cardMall__logo"
+			- var img = "LOGO_PERISUR.png"
+			include ../../atoms/images/image
+
+			- var txt = "Anillo Periferico sur No. 4690 Col. Ampliacion del Pedregal, San Angel Mexico, D.F."
+			- var classElement = "m-cardMall__paragraph"
+			include ../../atoms/texts/paragraph
+		
+		div(class="m-cardMall__thelepone")
+			- var txt = "Tel. 01 55 56 06 8389"
+			- var classElement = "m-cardMall__paragraph"
+			include ../../atoms/texts/paragraph
+	
+		div(class="m-cardMall__email")
+			- var txt = "perisur@galerias.com"
+			- var classElement = "m-cardMall__paragraph"
+			include ../../atoms/texts/paragraph
+			
+		div(class="m-cardMall__descriptionContainer")
+			- var txt = "Detalles del Centro comercial"
+			- var classElement = "m-cardMall__description"
+			include ../../atoms/texts/headlines/h4
+			
+			ul(class="m-cardMall__detail")
+				li
+					- var txt = "Una superficie rentable construida de 51,303 m2"
+					- var classElement = "m-cardMall__paragraph"
+					include ../../atoms/texts/paragraph
+				li
+					- var txt = "Locales comerciales"
+					- var classElement = "m-cardMall__paragraph"
+					include ../../atoms/texts/paragraph
+				li
+					- var txt = "6,345 lugares de estacionamiento"
+					- var classElement = "m-cardMall__paragraph"
+					include ../../atoms/texts/paragraph
+				li
+					- var txt = "Liverpool, Palacio de Hierro, Sears, Cinepolis"
+					- var classElement = "m-cardMall__paragraph"
+					include ../../atoms/texts/paragraph

@@ -1,0 +1,14 @@
+if customList
+	ul(class=el id=el)
+		each val, index in customList
+			li(class=el+'__item')
+				- var txt = val
+				- var classElement = el+"__text icon-"+val
+				include ../../atoms/texts/inline/textChunk
+else
+	ul(class=el id=el)
+		each val, index in ['office', 'home', 'eyedropper', 'droplet', 'pencil', 'headphones', 'film', 'dice', 'library']
+			li(class=el+'__item')
+				- var txt = ''
+				- var classElement = el+"__text icon-"+val
+				include ../../atoms/texts/inline/textChunk

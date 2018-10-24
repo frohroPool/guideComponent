@@ -7,8 +7,8 @@ const gulp = require('gulp'),
 	buffer = require('vinyl-buffer'),
 	// util = require('gulp-util'),
 	// cleanCss = require('gulp-clean-css'),
-	glob = require('glob'),
-	notify = require('gulp-notify');
+	glob = require('glob');
+	//notify = require('gulp-notify');
 
 var env = process.env.SITE_NAME;
 
@@ -23,31 +23,31 @@ gulp.task('es6', function(){
 				bundle.pipe(source('bundle-' + fileName ))
 							.pipe(buffer())
 							// .pipe(uglify())
-							.pipe(notify('ES6 to JS ('+ fileName +') in ('+env+') -> OK'))
+							//.pipe(notify('ES6 to JS ('+ fileName +') in ('+env+') -> OK'))
 							.pipe(gulp.dest(destDir));
 		});
 	};
-	glob('./'+env+'/dev/js/product/*.js',function(er,files){
+	glob('./'+env+'/dev/js/sections/*.js',function(er,files){
 		bundleThis(files);
 	});
 });
 
 gulp.task('pug', () =>
-	gulp.src('./'+env+'/dev/views/product/*.pug')
+	gulp.src('./'+env+'/dev/views/sections/*.pug')
 		.pipe(pug({
 			pretty:true
 		}))
-		.pipe(notify('PUG to HTML ('+env+') -> OK'))
+		// .pipe(notify('PUG to HTML ('+env+') -> OK'))
 		.pipe(gulp.dest('./'+env+'/dest/views/'))
 );
 
 gulp.task('styl', () =>
-	gulp.src('./'+env+'/dev/styles/product/*.styl')
+	gulp.src('./'+env+'/dev/styles/sections/*.styl')
 		// .pipe(styl())
 		.pipe(styl({ 
 			compress : true 
 		}))
-		.pipe(notify('STYL to CSS ('+env+') -> OK'))
+		// .pipe(notify('STYL to CSS ('+env+') -> OK'))
 		// .pipe(cleanCss({compatibility: 'ie8'}))
 		.pipe(gulp.dest('./'+env+'/dest/css/'))
 );

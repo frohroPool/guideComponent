@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+html(lang="es")
+	- var currentPage = 'oMalls'
+	include ../resources/configuration
+	include ../resources/headers
+	body
+		section(class="header")
+			section.projectName
+				a(href="/")
+					span(class="icon-home")
+					span
+						|	UX Design
+
+			section(class="breadcrums")
+				p(class="breadcrums-title")
+					| Organisms > Malls
+			section.mainMenu
+		section(class="body")
+			include ../resources/menu
+			
+
+
+			// ============================================================================================
+			section(class="main")
+				article(class="main-article")
+					h1(class="main-article__title")
+						| Malls
+					nav(class="main-article__btnCodes")
+						button(id="allCssList" class="getStyle all") Show CSS
+						button(id="allHtmlList" class="getHTML all") Show HTML
+					div(class="showAllCssRules hiddeCssRule" id="showAllCssRules")
+					div(class="showAllHtmlRules hiddeHtmlRule" id="showAllHtmlRules")
+					p(class="main-article__description")
+						| Navigational transitions occur when users move between screens, such as from a home screen to a detail screen.
+					
+
+
+					// --------------------------------------------------------
+					
+					div(class="main-article__component")
+						div(class="main-article__component--view")
+							h2(class="main-article__component--title")
+								| Malls
+							- var action = true;
+							- var customList = [{"txt" : "styles", "cls" : "o-containerMalls btnCss"},{"txt" : "html", "cls" : "o-containerMalls btnHtml"}];
+							include ../molecules/list/buttonText
+
+							h3(class="main-article__component--device")
+								| Responsive
+							- var el = 'o-containerMalls';
+							- var modifiers = ['vertical', 'horizontal'];
+							- var modifier = el+'--'+modifiers[0]
+							include ../resources/modifiers
+
+							- var dataOrganisms = {elements : 15, include: 'text', el: el, modifier: modifier};
+							include ../organisms/malls
+							
+						div(class="main-article__component--code")
+							- var codeComponent = 'code-o-containerMalls';
+							include ../resources/code

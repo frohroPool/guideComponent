@@ -1,0 +1,22 @@
+if customList
+	ul(class=el id=el)
+		each v0,i0 in customList
+			li(class=el+'__item')
+				if v0.txt
+					- var chunk = v0.ico ? true : false
+					- var txt = v0.txt
+					- var classElement = el+"__text"
+					include ../../atoms/texts/paragraph
+				else
+					if v0.ico
+						- var txt = v0.icoName ? v0.icoName : ''
+						- var classElement = v0.ico
+						include ../../atoms/texts/inline/textChunk
+				
+else
+	- var ico = ['office', 'home', 'eyedropper', 'droplet', 'pencil', 'headphones', 'film', 'dice', 'library'];
+	ul(class=el id=el)
+		each v0,i0 in config.defaultText
+			li(class=el+'__item') 
+				span(class='icon-'+ico[i0]) 
+				p #{v0.txt}

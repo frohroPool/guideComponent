@@ -1,0 +1,37 @@
+
+backgroundColor(color)
+	background: color;
+textColor(color)
+	color: color;
+typeFont(font, modifier)
+	if font is 'SansPro'
+		font-family 'Source Sans Pro', sans-serif
+	else
+		font-family font, font
+	
+	font-weight modifier
+	
+textShadow(font, fontVariant, textColor, colorShadow)
+	color textColor
+	font-size 40px
+	letter-spacing 10px
+	text-shadow 0 1px 0 colorShadow, 0 -1px 0 colorShadow, 1px 0 0 colorShadow, -1px 0 0 colorShadow
+	text-transform uppercase
+	typeFont(font, fontVariant)
+	
+textOverflow(wBox)
+	overflow hidden
+	text-overflow ellipsis
+	white-space nowrap
+	width wBox
+	
+tooltip(data, textColor, bgColor, zIndex)
+	background backgroundColor
+	border 1px solid bgColor
+	color textColor
+	content: attr(data);
+	left 0
+	padding 10px
+	position absolute
+	top 24px
+	z-index zIndex

@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, user=scalable=no, initial-scale-1.0, minimum-scale=1.0, maximum-scale=1.0"/>
+    <title>UX Design</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed|Roboto+Mono" type="text/css"/>
+    <link rel="stylesheet" href="../css/guide.css" type="text/css"/>
+    <link rel="stylesheet" href="../css/atomIcon.css" type="text/css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Source+Sans+Pro:300,400,700" type="text/css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" type="text/css"/>
+    <script src="../js/bundle-handlerComponent.js" type="text/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.10/lodash.min.js" type="text/javascript"></script>
+  </head>
+  <body>
+    <section class="header">
+      <section class="projectName"><a href="/"><span class="icon-home"></span><span>	UX Design</span></a></section>
+      <section class="breadcrums">
+        <p class="breadcrums-title">Atoms > Icon</p>
+      </section>
+      <section class="mainMenu"></section>
+    </section>
+    <section class="body">
+      <nav class="side-nav"><span class="side-nav__section-title">	Atoms</span>
+        <ul class="side-nav__menu side-nav__menu--sections">
+          <li class="side-nav__menu-item"><a class="side-nav__link" href="atomButton.html" target="_self">Button</a></li>
+          <li class="side-nav__menu-item"><a class="side-nav__link" href="atomCheckbox.html" target="_self">Checkbox</a></li>
+          <li class="side-nav__menu-item"><a class="side-nav__link" href="atomIcon.html" target="_self">Icon</a></li>
+          <li class="side-nav__menu-item"><a class="side-nav__link" href="atomLabel.html" target="_self">Label</a></li>
+          <li class="side-nav__menu-item"><a class="side-nav__link" href="atomRadio.html" target="_self">Radio button</a></li>
+          <li class="side-nav__menu-item"><a class="side-nav__link" href="atomSelect.html" target="_self">Select</a></li>
+          <li class="side-nav__menu-item"><a class="side-nav__link" href="atomTextbox.html" target="_self">Textbox</a></li>
+          <li class="side-nav__menu-item"><a class="side-nav__link" href="atomTextarea.html" target="_self">Textarea</a></li>
+        </ul><span class="side-nav__section-title">	Molecules</span>
+        <ul class="side-nav__menu side-nav__menu--sections">
+          <li class="side-nav__menu-item"><a class="side-nav__link" href="componentList.html" target="_self">Lists</a></li>
+          <li class="side-nav__menu-item"><a class="side-nav__link" href="componentMosaic.html" target="_self">Mosaic</a></li>
+          <li class="side-nav__menu-item"><a class="side-nav__link" href="componentCard.html" target="_self">Card</a></li>
+          <li class="side-nav__menu-item"><a class="side-nav__link" href="/tienda/utensilios/cat_307_1001" target="_self">Filter</a></li>
+          <li class="side-nav__menu-item"><a class="side-nav__link" href="/tienda/utensilios/cat_307_1001" target="_self">Survey</a></li>
+          <li class="side-nav__menu-item"><a class="side-nav__link" href="componentFinder.html" target="_self">Finder</a></li>
+          <li class="side-nav__menu-item"><a class="side-nav__link" href="componentCarousel.html" target="_self">Carousel</a></li>
+        </ul><span class="side-nav__section-title">	Organisms</span>
+        <ul class="side-nav__menu side-nav__menu--sections">
+          <li class="side-nav__menu-item"><a class="side-nav__link" href="organismsMalls.html" target="_self">Malls</a></li>
+          <li class="side-nav__menu-item"><a class="side-nav__link" href="/tienda/utensilios/cat_307_1001" target="_self">Widget TV</a></li>
+          <li class="side-nav__menu-item"><a class="side-nav__link" href="/tienda/utensilios/cat_307_1001" target="_self">Widget Magazine</a></li>
+          <li class="side-nav__menu-item"><a class="side-nav__link" href="/tienda/utensilios/cat_307_1001" target="_self">Grid Brands</a></li>
+          <li class="side-nav__menu-item"><a class="side-nav__link" href="/tienda/utensilios/cat_307_1001" target="_self">Social Carousel</a></li>
+          <li class="side-nav__menu-item"><a class="side-nav__link" href="/tienda/utensilios/cat_307_1001" target="_self">Grid Carousel</a></li>
+          <li class="side-nav__menu-item"><a class="side-nav__link" href="organismHeader.html" target="_self">Header</a></li>
+          <li class="side-nav__menu-item"><a class="side-nav__link" href="organismCard-bottom-gradient.html" target="_self">Card bottom gradient</a></li>
+          <li class="side-nav__menu-item"><a class="side-nav__link" href="organismsFooter.html" target="_self">Footer</a></li>
+        </ul>
+      </nav>
+      <!-- ============================================================================================-->
+      <section class="main">
+        <article class="main-article">
+          <h1 class="main-article__title">Cards</h1>
+          <nav class="main-article__btnCodes">
+            <button class="getStyle all" id="allCssList">Show CSS</button>
+            <button class="getHTML all" id="allHtmlList">Show HTML</button>
+          </nav>
+          <div class="showAllCssRules hiddeCssRule" id="showAllCssRules"></div>
+          <div class="showAllHtmlRules hiddeHtmlRule" id="showAllHtmlRules"></div>
+          <p class="main-article__description">Navigational transitions occur when users move between screens, such as from a home screen to a detail screen.</p>
+          <div class="main-article__component">
+            <div class="main-article__component--view">
+              <h2 class="main-article__component--title">Card-text</h2>
+              <ul class="list-buttonText action" id="list-buttonText">
+                <li class="list-buttonText-item">
+                  <button class="card-text btnCss">styles</button>
+                </li>
+                <li class="list-buttonText-item">
+                  <button class="card-text btnHtml">html</button>
+                </li>
+              </ul>
+              <h3 class="main-article__component--device">Responsive</h3>
+              <div class="card-text" id="card-text">
+                <p class="card-text-item">Placeholder</p>
+              </div>
+            </div>
+            <div class="main-article__component--code">
+              <h2 class="main-article__component--title">Card-text-code</h2>
+              <pre><code id="code-card-text"></code></pre>
+            </div>
+          </div>
+          <div class="main-article__component">
+            <div class="main-article__component--view">
+              <h2 class="main-article__component--title">Card-brief</h2>
+              <ul class="list-buttonText action" id="list-buttonText">
+                <li class="list-buttonText-item">
+                  <button class="card-brief btnCss">styles</button>
+                </li>
+                <li class="list-buttonText-item">
+                  <button class="card-brief btnHtml">html</button>
+                </li>
+              </ul>
+              <h3 class="main-article__component--device">Responsive</h3>
+              <div class="card-brief" id="card-brief">
+                <p class="card-brief-section">Politics</p>
+                <h3 class="card-brief-title"><a>
+                     Trump Predicts Stock Market Crash If He’s Impeached</a></h3>
+                <p class="card-brief-description">Donald Trump says the stock market would plummet and Americans would be poorer if lawmakers impeached him.</p>
+                <time class="card-brief-time">updated 37 minutes ago</time>
+              </div>
+            </div>
+            <div class="main-article__component--code">
+              <h2 class="main-article__component--title">Card-brief-code</h2>
+              <pre><code id="code-card-brief"></code></pre>
+            </div>
+          </div>
+          <div class="main-article__component">
+            <div class="main-article__component--view">
+              <h2 class="main-article__component--title">Card-image</h2>
+              <ul class="list-buttonText action" id="list-buttonText">
+                <li class="list-buttonText-item">
+                  <button class="card-image btnCss">styles</button>
+                </li>
+                <li class="list-buttonText-item">
+                  <button class="card-image btnHtml">html</button>
+                </li>
+              </ul>
+              <h3 class="main-article__component--device">Responsive</h3>
+              <div class="card-image" id="card-image">
+                <figure class="card-image-media"><img src="../images/magazinePicture.png"/></figure>
+                <p class="card-image-section">Politics</p>
+                <h3 class="card-image-title"><a>
+                     Trump Predicts Stock Market Crash If He’s Impeached</a></h3>
+                <time class="card-image-time">updated 37 minutes ago</time>
+              </div>
+            </div>
+            <div class="main-article__component--code">
+              <h2 class="main-article__component--title">Card-image-code</h2>
+              <pre><code id="code-card-image"></code></pre>
+            </div>
+          </div>
+          <div class="main-article__component">
+            <div class="main-article__component--view">
+              <h2 class="main-article__component--title">Card-mall</h2>
+              <ul class="list-buttonText action" id="list-buttonText">
+                <li class="list-buttonText-item">
+                  <button class="card-mall btnCss">styles</button>
+                </li>
+                <li class="list-buttonText-item">
+                  <button class="card-mall btnHtml">html</button>
+                </li>
+              </ul>
+              <h3 class="main-article__component--device">Responsive</h3>
+              <div class="card-mall" id="card-mall__undefined">
+                <figure class="card-mall-media"><img src="../images/magazinePicture.png"/></figure>
+                <div class="card-mall__brief">
+                  <div class="card-mall__brief--Title">
+                    <h3>Perisur	</h3>
+                  </div>
+                  <div class="card-mall__brief--reveal"><span class="material-icons revealModalCard modalTo-undefined">more_vert</span></div>
+                  <div class="card-mall__brief--anchor"><a>Ir a este centro comercial</a></div>
+                </div>
+                <div class="card-mall__modal card-mall__modal-modal_hidden" id="modalTo-undefined">
+                  <div class="card-mall__modal--close"><span class="material-icons closeModalCard modalTo-undefined">close</span></div>
+                  <div class="card-mall__modal--logo">
+                    <figure><img src="../images/LOGO_PERISUR.png"/></figure>
+                  </div>
+                  <div class="card-mall__modal--direction">
+                    <p>
+                       Anillo Periferico sur No. 4690 Col. Ampliacion del Pedregal, San Angel Mexico, D.F.</p>
+                  </div>
+                  <div class="card-mall__modal--thelepone">
+                    <p>
+                       Tel. 01 55 56 06 8389</p>
+                  </div>
+                  <div class="card-mall__modal--email">
+                    <p>
+                       perisur@galerias.com</p>
+                  </div>
+                  <div class="card-mall__modal--detail">
+                    <h4>Detalles del Centro comercial</h4>
+                    <ul class="card-mall__modal--detail_item">
+                      <li>
+                         Una superficie rentable construida de 51,303 m2</li>
+                      <li>
+                         Locales comerciales</li>
+                      <li>
+                         6,345 lugares de estacionamiento</li>
+                      <li>
+                         Liverpool, Palacio de Hierro, Sears, Cinepolis</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="main-article__component--code">
+              <h2 class="main-article__component--title">Card-mall-code</h2>
+              <pre><code id="code-card-mall"></code></pre>
+            </div>
+          </div>
+          <div class="main-article__component">
+            <div class="main-article__component--view">
+              <h2 class="main-article__component--title">Card-coverMagazine</h2>
+              <ul class="list-buttonText action" id="list-buttonText">
+                <li class="list-buttonText-item">
+                  <button class="card-coverMagazine btnCss">styles</button>
+                </li>
+                <li class="list-buttonText-item">
+                  <button class="card-coverMagazine btnHtml">html</button>
+                </li>
+              </ul>
+              <h3 class="main-article__component--device">Responsive</h3>
+              <div class="card-coverMagazine" id="card-coverMagazine">
+                <div class="card-coverMagazine__wrapper">
+                  <figure class="card-coverMagazine__wrapper-media"><img src="../images/cardMagazine.png"/></figure>
+                  <h3 class="card-coverMagazine__wrapper-title"><a>
+                       Trump Predicts Stock Market Crash If He’s Impeached</a></h3>
+                  <p class="card-coverMagazine__wrapper-brief">Musk has long been celebrated by the business press for his work ethic. His extraordinary schedule – a long working day broken into five-minute increments</p>
+                  <p class="card-coverMagazine__wrapper-author">@TBaez</p>
+                  <time class="card-coverMagazine__wrapper-time">Spring 2017</time>
+                </div>
+              </div>
+            </div>
+            <div class="main-article__component--code">
+              <h2 class="main-article__component--title">Card-coverMagazine-code</h2>
+              <pre><code id="code-card-coverMagazine"></code></pre>
+            </div>
+          </div>
+          <div class="main-article__component">
+            <div class="main-article__component--view">
+              <h2 class="main-article__component--title">Card-video</h2>
+              <ul class="list-buttonText action" id="list-buttonText">
+                <li class="list-buttonText-item">
+                  <button class="card-video btnCss">styles</button>
+                </li>
+                <li class="list-buttonText-item">
+                  <button class="card-video btnHtml">html</button>
+                </li>
+              </ul>
+              <h3 class="main-article__component--device">Responsive</h3>
+              <div class="card-video" id="card-video">
+                <video class="card-video-media" controls="controls" src="https://ak1.picdn.net/shutterstock/videos/8882311/preview/stock-footage--k-few-shots-group-of-paparazzi-photo-shoot-on-green-screen-slow-motion-shot-on-red-epic-cinema.mp4"></video>
+                <p class="card-video-section">Politics</p>
+                <h3 class="card-video-title"><a>
+                     Trump Predicts Stock Market Crash If He’s Impeached</a></h3>
+                <time class="card-video-time">updated 37 minutes ago</time>
+              </div>
+            </div>
+            <div class="main-article__component--code">
+              <h2 class="main-article__component--title">Card-video-code</h2>
+              <pre><code id="code-card-video"></code></pre>
+            </div>
+          </div>
+        </article>
+      </section>
+    </section>
+  </body>
+</html>

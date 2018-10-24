@@ -1,0 +1,36 @@
+@import '../../resources/colors'
+// Responsive ----------
+.m-listGaleriasLogin
+	overflow hidden
+	display flex
+	flex-direction row
+	justify-content flex-end
+	list-style-type none
+	background #343851
+
+.m-listGaleriasLogin__item
+	width 15%
+
+.m-listGaleriasLogin__item:last-child button
+	background #e0e1e6
+	color #343851
+
+.m-listGaleriasLogin__item:hover, .m-listGaleriasLogin__item button:hover
+	cursor pointer
+	
+.m-listGaleriasLogin__item button
+	border 0
+	padding 10px
+	background none
+	color white
+	margin 0 auto
+
+@media screen and (max-width:1300px){
+	.m-listGaleriasLogin{
+		flex-direction: column;
+	}
+	.m-listGaleriasLogin__item, .m-listGaleriasLogin__item button{
+		text-align: center;
+		width: 100%;
+	}
+}

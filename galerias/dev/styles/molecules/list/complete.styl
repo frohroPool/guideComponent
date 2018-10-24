@@ -1,0 +1,40 @@
+// Responsive ----------
+.m-listComplete
+	margin-bottom 10px
+	overflow hidden
+	display flex
+	flex-direction row
+	justify-content center
+	list-style-type none
+.m-listComplete__item
+	width 100%
+	font-family 'Source Sans Pro', sans-serif
+	text-align center
+	padding 5px
+	display flex
+	flex-direction column
+	justify-content center
+	align-items center
+	width auto
+.m-listComplete__item:hover
+	cursor pointer
+	
+@media screen and (max-width:1300px){
+	.m-listComplete{
+		flex-direction: column;
+	}
+	.m-listComplete__item{
+		border-right: 0px;
+		text-align: left;
+		border-bottom: 1px solid gray;
+	}
+	// .m-listComplete__text{
+	// 	display: inline-block;
+	// }
+	// .m-listComplete__item span{
+	// 	margin-right: 10px;
+	// }
+	// .m-listComplete__item:last-child{
+	// 	border-bottom: 0px solid transparent;
+	// }
+}

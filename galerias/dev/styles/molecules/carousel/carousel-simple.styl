@@ -1,0 +1,184 @@
+.m-carousel
+	height 200px // temporal
+	position relative
+	width 100%
+	overflow hidden
+	margin 0
+	padding 0
+	
+.m-carousel__container
+	list-style-type none
+	width 100%
+	height 100%
+	margin 0
+	padding 0
+	display flex
+	flex-flow column wrap
+	justify-content flex-start
+	position absolute
+	
+
+.m-carousel__item
+	margin 0
+	padding 0
+	background #7b4397
+	background -webkit-linear-gradient(to right, #7b4397, #dc2430)
+	background linear-gradient(to right, #7b4397, #dc2430)
+	width 100%
+	height 100%
+
+
+.m-carousel__prev,
+.m-carousel__next
+	position absolute
+	width 30px
+	height 30px
+	background rgba(255,255,255,0.3)
+	borde: 1px solid rgba(255,255,255,0.3)
+	border-radius 15px
+	display none
+
+.m-carousel__prev:hover,
+.m-carousel__next:hover
+	cursor pointer
+
+.m-carousel__prev
+	left 3%
+	top 48%
+
+.m-carousel__next
+	left 89%
+	top 48%
+
+.m-carousel--complete > button
+	display block
+
+
+
+// .m-carousel button{
+//   display: none;
+// }
+// .prev, .next{
+// 	display: block;
+// 	position: absolute;
+// 	width: 30px;
+// 	height: 30px;
+// 	background: rgba(255,255,255,0.3);
+// 	border: 1px solid rgba(255,255,255,0.3);
+// 	border-radius: 15px;
+// }
+// .prev:hover, .next:hover{
+// 	cursor: pointer;
+// }
+// .prev{
+// 	left: 3%;
+// 	top: 48%;
+// }
+// .next{
+// 	left: 89%;
+// 	top: 48%;
+// }
+// .listContent{
+// 	list-style-type: none;
+// 	width: 100%;
+// 	height: auto;
+// 	margin: 0;
+// 	padding: 0;
+// 	display: flex;
+// 	flex-flow: row wrap;
+// 	justify-content: space-between;
+// }
+// .listContent li{
+// 	margin: 0;
+// 	padding: 0;
+// 	flex-basis: 20%;
+// }
+// .listContent li figure{
+// 	width: 100%;
+// 	height: 99%;
+// 	margin: 0;
+// 	padding: 0;
+// 	position: relative;
+// 	overflow: hidden;
+// }
+// .listContent li figure img{
+// 	width: 100%;
+// 	height: 100%;
+// 	margin: 0;
+// 	padding: 0;
+// }
+// .listContent li figure figcaption{
+// 	position: absolute;
+// 	top: 100%;
+// 	width: 100%;
+// 	height: 20px;
+// 	padding: 4px;
+// 	background: rgba(255,255,255,0.5);
+// 	color: black;
+// 	font-size: 14px;
+// 	font-family: 'Josefin Slab', serif;
+// 	font-weight: bold;
+// 	transition: top 0.5s ease;
+// }
+
+// .listContent li figure img:hover{ 
+// 	cursor: pointer;
+// }
+// .listContent li figure img:hover + figcaption{ 
+// 	top: calc(100% - 20px);
+// }
+
+// .crs-2{
+//   width: 100%;
+//   margin-bottom: 30px;
+//   height: 247px;
+//   overflow: hidden;
+//   position: relative;
+//   margin: 0;
+//   padding: 0;
+// }
+// .crs-2 .listContent{
+//   flex-direction: column;
+//   height: 100%;
+//   width: 100%;
+//   position: absolute;
+// }
+// .crs-2 .prev, .crs-2 .next{
+//   display: block;
+//   position: absolute;
+//   width: 30px;
+//   height: 30px;
+//   background: rgba(255,255,255,0.3);
+//   border: 1px solid rgba(255,255,255,0.3);
+//   border-radius: 15px;
+// }
+// /*.prev:hover, .next:hover*/
+// .m-carousel button{
+//   display: none;
+// }
+// .crs-2 button:hover{
+//   cursor: pointer;
+// }
+// .crs-2 button.prev{
+//   /*prev*/
+//   left: 3%;
+//   top: 48%;
+// }
+// .crs-2 button.next{
+//   /*next*/
+//   left: 89%;
+//   top: 48%;
+// }
+// .crs-2 .listContent li{
+//   width: 100%;
+//   height: 100%;
+// }
+// .crs-2 .videoList li{
+//   flex-basis: 100%;
+// }
+// .crs-2 .listContent li figure, .crs-2 .videoList li video{
+//   width: 100%;
+//   height: 99%;
+//   margin: 0;
+//   padding: 0;
+// }

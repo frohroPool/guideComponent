@@ -1,0 +1,31 @@
+//- section(class=el+"__wrapper" id=el+"__wrapper")
+section(class=dataOrganisms.el+" "+dataOrganisms.modifier id=dataOrganisms.el+"__wrapper")
+	
+	div(class=dataOrganisms.el+"__title" id=dataOrganisms.el+"__title")
+		- var txt = "Centros Comerciales"
+		include ../atoms/texts/headlines/h2
+
+	div(class=dataOrganisms.el+"__nav" id=dataOrganisms.el+"__nav")
+		- var el = "m-listOptions"
+		- var modifier = el+'--horizontal'
+		- var dataMolecules = {default : false, el: el, modifier: modifier, options:[a,b,c,d,e]};
+		include ../molecules/list/optionsRadio
+
+	div(class=dataOrganisms.el+"__content" id=dataOrganisms.el+"__content")
+		if dataOrganisms.elements
+			ul(class=dataOrganisms.el+"__list" id=dataOrganisms.el)
+				- for (var x = 0; x < dataOrganisms.elements; x++)
+					li(class=dataOrganisms.el+'__item')
+						if dataOrganisms.include == 'brief'
+							include ../molecules/card/brief
+						if dataOrganisms.include == 'mall'
+							- var idCard = x
+							include ../molecules/card/mall
+						if dataOrganisms.include == 'image'
+							include ../molecules/card/image
+						if dataOrganisms.include == 'text'
+							include ../molecules/card/text
+						if dataOrganisms.include == 'video'
+							include ../molecules/card/video
+						if dataOrganisms.include == 'magazine'
+							include ../molecules/card/magazine

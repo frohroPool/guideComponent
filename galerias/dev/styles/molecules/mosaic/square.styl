@@ -1,0 +1,49 @@
+.m-mosaicSquare
+	list-style-type none
+	width 100%
+	height 100%
+	margin 0
+	padding 0
+	display flex
+	flex-flow row wrap
+	justify-content flex-start
+	align-content flex-start
+
+.m-mosaicSquare__item{
+	margin: 1px;
+	padding: 0;
+	background: #7b4397;
+	background: -webkit-linear-gradient(to right, #7b4397, #dc2430);
+	background: linear-gradient(to right, #7b4397, #dc2430);
+	width: 100%;
+	height: 100%;
+}
+
+.m-mosaicSquare--five li
+	width: 19%;
+	height: 19%;
+.m-mosaicSquare--four li
+	width: 24%;
+	height: 24%;
+.m-mosaicSquare--three li
+	width: 32%;
+	height: 32%;
+.m-mosaicSquare--two li
+	width: 49%;
+	height: 49%;
+	
+@media screen and (max-width:1300px){
+	
+	.m-mosaicSquare--five li,
+	.m-mosaicSquare--four li,
+	.m-mosaicSquare--three li,
+	.m-mosaicSquare--two li{
+		flex-direction: column;
+		width: 100%;
+		height: 30%;
+	}
+}
+
+
+
+

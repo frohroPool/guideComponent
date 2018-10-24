@@ -1,0 +1,6 @@
+p(class='a-paragraph')
+	| #{txt}
+	if chunk
+		- var txt = v0.icoName ? v0.icoName : ''
+		- var classElement = v0.ico
+		include inline/textChunk

@@ -1,0 +1,56 @@
+.finder-left-icon
+  display grid
+  grid-template-columns repeat(10,1fr)
+  background rgba(17, 23, 53, 0.5)
+  padding 2%
+  
+
+.finder-left-icon__container
+  grid-column 2 / span 8
+  background rgba(255, 255, 255, 0.5)
+  border-radius 3px
+  display grid
+  grid-template-columns repeat(6,1fr)
+  grid-gap: 1px
+
+.finder-left-icon__item-button
+  grid-column 1 / span 1  
+  align-self center
+
+.finder-left-icon__button      
+  color #ffffff
+  cursor pointer
+  font-size 20px
+  padding-left 20px
+
+
+.finder-left-icon__item-text  
+  grid-column 2 / span 4
+  padding 0
+  margin-top 1%
+  align-self center 
+
+.finder-left-icon__text    
+  width 100%
+  border none
+  background none
+  height 30px
+  outline none
+  color #FFF
+  font-size 13px
+  font-style normal
+  font-weight lighter
+
+.finder-left-icon__text::placeholder
+  color: #fff;
+
+.finder-left-icon__text:focus
+  color: #fff
+
+@media screen and (max-width:1300px)
+    .finder-left-icon__text        
+      padding 5px
+      font-size 11px    
+
+    .finder-left-icon__button 
+      font-size 10px

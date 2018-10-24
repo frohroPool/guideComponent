@@ -1,0 +1,21 @@
+div(class="m-cardMagazine" id="m-cardMagazine")
+	div(class="m-cardMagazine__wrapper")
+		- var classElement = "m-cardMagazine__media"
+		- var img = "cardMagazine.png"
+		include ../../atoms/images/image
+		
+		- var txt = "Trump Predicts Stock Market Crash If He’s Impeached"
+		- var classElement = "m-cardMagazine__title--isH3"
+		include ../../atoms/texts/inline/textLink
+		
+		- var txt = "Musk has long been celebrated by the business press for his work ethic. His extraordinary schedule – a long working day broken into five-minute increments"
+		- var classElement = "m-cardMagazine__brief"
+		include ../../atoms/texts/paragraph
+		
+		- var txt = "@TBaez"
+		- var classElement = "m-cardMagazine__author"
+		include ../../atoms/texts/paragraph
+		
+		- var txt = "Spring 2017"
+		- var classElement = "m-cardMagazine__time"
+		include ../../atoms/texts/inline/textTime

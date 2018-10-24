@@ -1,0 +1,40 @@
+.m-listOptions
+	list-style-type none
+	margin-bottom 10px
+	overflow hidden
+	display flex
+	
+	justify-content center
+	
+.m-listOptions__item
+	width auto
+	text-align center
+	padding 5px
+	
+.m-listOptions__item:hover
+	cursor pointer
+	font-weight bold
+	
+.m-listOptions--horizontal
+	flex-direction row
+
+.m-listOptions--vertical
+	flex-direction column
+	
+@media screen and (max-width:1300px){
+	.m-listOptions{
+		flex-direction: column;
+		margin-bottom: 0px;
+	}
+	.m-listOptions__item{
+		border: 0px;
+		text-align: left;
+		margin-bottom: 15px;
+	}
+	
+	.m-listOptions--horizontal,
+	.m-listOptions--vertical{
+		font-weight normal
+	}
+		
+}
