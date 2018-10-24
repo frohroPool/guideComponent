@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+html(lang="es")
+	- var currentPage = 'aImage'
+	include ../resources/configuration
+	include ../resources/headers
+	body
+		section(class="header")
+			section.projectName
+				a(href="/")
+					span(class="icon-home")
+					span
+						|	UX Design
+
+			section(class="breadcrums")
+				p(class="breadcrums-title")
+					| Atoms > Image
+			section.mainMenu
+		section(class="body")
+			include ../resources/menu
+			
+			section(class="main")
+				article(class="main-article")
+					h1(class="main-article__title")
+						| Images
+					nav(class="main-article__btnCodes")
+						button(id="allCssList" class="getStyle all") Show CSS
+						button(id="allHtmlList" class="getHTML all") Show HTML
+					div(class="showAllCssRules hiddeCssRule" id="showAllCssRules")
+					div(class="showAllHtmlRules hiddeHtmlRule" id="showAllHtmlRules")
+					p(class="main-article__description")
+						| Navigational transitions occur when users move between screens, such as from a home screen to a detail screen.
+
+					div(class="main-article__component")
+						div(class="main-article__component--view")
+							h2(class="main-article__component--title")
+								| Hero
+							- var el = "a-heroImage"
+							- var modifiers = ['ellipse', 'blur', 'opacity'];
+							include ../resources/modifiers
+
+							- var dataAtom = { img : 'hero.png', modifiers: true, modifier: '', el : el };
+							include ../atoms/images/img
+
+					div(class="main-article__component")
+						div(class="main-article__component--view")
+							h2(class="main-article__component--title")
+								| Image Landscape
+							h3(class="main-article__component--device")
+								| Double
+							- var el = "a-landScapeDoubleImage"
+							- var dataAtom = { img : 'landscapeDouble.png', modifiers: false, modifier: '', el : el };
+							include ../atoms/images/img
+					
+					div(class="main-article__component")
+						div(class="main-article__component--view")
+							h2(class="main-article__component--title")
+								| Simple
+							h3(class="main-article__component--device")
+								|
+							- var el = "a-simpleImage"
+							- var dataAtom = { img : 'simple.png', modifiers: false, modifier: '', el : el };
+							include ../atoms/images/img

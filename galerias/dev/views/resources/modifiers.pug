@@ -2,11 +2,7 @@ div(class='variants-section')
 	ul(class="variants-section__modes")
 		each val,index in modifiers
 			li
-				if !{val} == modifier
-					input(type='radio' name='Variant__'+el checked='true' id=''+el+'--'+val)
-					label(for=''+el+'--'+val class='modifiersComponent') #{val}
-				else
-					input(type='radio' name='Variant__'+el checked='false' id=''+el+'--'+val)
-					label(for=''+el+'--'+val class='modifiersComponent') #{val}
+				input(type='radio' name='Variant__'+el id=''+el+'--'+val)
+				label(for=''+el+'--'+val class='modifiersComponent') #{val}
 
 
