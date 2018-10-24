@@ -6,6 +6,7 @@
     <title>UX Design</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed|Roboto+Mono" type="text/css"/>
     <link rel="stylesheet" href="../css/guide.css" type="text/css"/>
+    <link rel="stylesheet" href="../css/aTexts.css" type="text/css"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Source+Sans+Pro:300,400,700" type="text/css"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" type="text/css"/>
     <script src="../js/bundle-handlerComponent.js" type="text/javascript"></script>
@@ -15,7 +16,7 @@
     <section class="header">
       <section class="projectName"><a href="/"><span class="icon-home"></span><span>	UX Design</span></a></section>
       <section class="breadcrums">
-        <p class="breadcrums-title">Atoms > Textarea</p>
+        <p class="breadcrums-title">Atoms > Text</p>
       </section>
       <section class="mainMenu"></section>
     </section>
@@ -44,10 +45,9 @@
           <li class="side-nav__menu-item"><a class="side-nav__link" href="oFooter.html" target="_self">Footer</a></li>
         </ul>
       </nav>
-      <!-- ============================================================================================-->
       <section class="main">
         <article class="main-article">
-          <h1 class="main-article__title">Cards</h1>
+          <h1 class="main-article__title">Texts</h1>
           <nav class="main-article__btnCodes">
             <button class="getStyle all" id="allCssList">Show CSS</button>
             <button class="getHTML all" id="allHtmlList">Show HTML</button>
@@ -55,6 +55,50 @@
           <div class="showAllCssRules hiddeCssRule" id="showAllCssRules"></div>
           <div class="showAllHtmlRules hiddeHtmlRule" id="showAllHtmlRules"></div>
           <p class="main-article__description">Navigational transitions occur when users move between screens, such as from a home screen to a detail screen.</p>
+          <div class="main-article__component">
+            <div class="main-article__component--view">
+              <h2 class="main-article__component--title">Headings</h2>
+              <h1 class="a-heading1" id="a-heading1">Heading level 1</h1>
+              <h2 class="a-heading2" id="a-heading2">Heading level 2</h2>
+              <h3 class="a-heading3" id="a-heading3">Heading level 3</h3>
+              <h4 class="a-heading4" id="a-heading4">Heading level 4</h4>
+              <h5 class="a-heading5" id="a-heading5">Heading level 5</h5>
+            </div>
+          </div>
+          <div class="main-article__component">
+            <div class="main-article__component--view">
+              <h2 class="main-article__component--title">Inline</h2>
+              <p><a class="a-link" id="a-link" href="#" target="_self">This is a text link</a></p>
+              <p><strong class="a-strong" id="a-strong">Strong is used to indicate strong importance</strong></p>
+              <p><em class="a-emphasis" id="a-emphasis">This text has added emphasis</em></p>
+              <p><b class="a-bold" id="a-bold">The bold element</b></p>
+              <p><i class="a-italic" id="a-italic">The italic element</i></p>
+              <p>
+                <u class="a-underline" id="a-underline">The underline element</u>
+              </p>
+              <p>
+                <del class="a-deleted" id="a-deleted">The del element</del>
+              </p>
+              <p>Marca<sup class="a-sup" id="a-sup">@</sup></p>
+              <p>H<sub class="a-sub" id="a-sub">2</sub>O</p>
+              <p><abbr class="a-abbreviation" title="HyperText Markup Language" id="a-abbreviation">HTML</abbr></p>
+              <p>
+                <q class="a-quotation" cite="https://developer.mozilla.org/en-US/docs/HTML/Element/q" id="a-quotation">This text is a short inline quotation</q>
+              </p>
+              <p>
+                <cite class="a-cite" id="a-cite">This is a citation</cite>
+              </p>
+              <p>The
+                <mark class="a-mark" id="a-mark">mark element</mark> indicates a highlight
+              </p>
+            </div>
+          </div>
+          <div class="main-article__component">
+            <div class="main-article__component--view">
+              <h2 class="main-article__component--title">Blocks</h2>
+              <p class="a-paragraph" id="a-paragraph">A paragraph (from the Greek paragraphos, &quot;to write beside&quot; or &quot;written beside&quot;) is a self-contained unit of a discourse in writing dealing with a particular point or idea. A paragraph consists of one or more sentences. Though not required by the syntax of any language, paragraphs are usually an expected part of formal writing, used to organize longer prose.</p>
+            </div>
+          </div>
         </article>
       </section>
     </section>

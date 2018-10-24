@@ -2,8 +2,9 @@
 section(class=dataOrganisms.el+" "+dataOrganisms.modifier id=dataOrganisms.el+"__wrapper")
 	
 	div(class=dataOrganisms.el+"__title" id=dataOrganisms.el+"__title")
-		- var txt = "Centros Comerciales"
-		include ../atoms/texts/headlines/h2
+		- var el = "a-heading1"
+		- var dataAtom = { txt : 'Centros Comerciales', modifiers: false, modifier: '', el : '' };
+		include ../atoms/texts/headings/h2
 
 	div(class=dataOrganisms.el+"__nav" id=dataOrganisms.el+"__nav")
 		- var el = "m-listOptions"
