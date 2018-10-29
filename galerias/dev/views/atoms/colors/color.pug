@@ -1,6 +1,10 @@
-ul(class="a-color")
-	each v,i in config.colors
-		li(class='a-color__sample color__'+v.color)
-			| #{v.code}
-			br
-			| .color__#{v.color}
+each v,i in config.colors
+	h2(class="main-article__component--title")
+		| #{v.project}
+	ul(class="a-color")
+		div(class="m-mosaicSimple" id="m-mosaicSimple")
+			each x, o in v.colors
+				li(class='a-color__sample color__'+ x.color)
+					| #{x.code}
+					br
+					| .color__#{x.color}
