@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+html(lang="es")
+	- var currentPage = 'aForm'
+	include ../resources/configuration
+	include ../resources/headers
+	body
+		section(class="header")
+			section.projectName
+				a(href="/")
+					span(class="icon-home")
+					span
+						|	UX Design
+
+			section(class="breadcrums")
+				p(class="breadcrums-title")
+					| Atoms > Forms
+			section.mainMenu
+		section(class="body")
+			include ../resources/menu
+			
+			section(class="main")
+				article(class="main-article")
+					h1(class="main-article__title")
+						| Forms
+					nav(class="main-article__btnCodes")
+						button(id="allCssList" class="getStyle all") Show CSS
+						button(id="allHtmlList" class="getHTML all") Show HTML
+					div(class="showAllCssRules hiddeCssRule" id="showAllCssRules")
+					div(class="showAllHtmlRules hiddeHtmlRule" id="showAllHtmlRules")
+					p(class="main-article__description")
+						| Navigational transitions occur when users move between screens, such as from a home screen to a detail screen.
+
+					div(class="main-article__component")
+						div(class="main-article__component--view")
+							h2(class="main-article__component--title")
+								| Forms
+							- var el = "a-inputText"
+							- var dataAtom = { txt : 'Text input', modifiers: false, modifier: '', el : el };
+							p
+								| Input Text
+							include ../atoms/forms/inputText
+
+							- var el = "a-inputSubmit"
+							- var dataAtom = { txt : 'Submit', modifiers: false, modifier: '', el : el };
+							p
+								| Submit
+							include ../atoms/forms/inputSubmit
+
+							- var el = "a-inputReset"
+							- var dataAtom = { txt : 'Clear', modifiers: false, modifier: '', el : el };
+							p
+								| Reset
+							include ../atoms/forms/inputReset
+
+							- var el = "a-inputButton"
+							- var dataAtom = { txt : 'Click Me!', modifiers: false, modifier: '', el : el };
+							p
+								| Button
+							include ../atoms/forms/inputButton
+
+							- var el = "a-inputColor"
+							- var dataAtom = { txt : '', modifiers: false, modifier: '', el : el };
+							p
+								| Color
+							include ../atoms/forms/inputColor
+
+							- var el = "a-inputDate"
+							- var dataAtom = { txt : '', modifiers: false, modifier: '', el : el };
+							p
+								| Date
+							include ../atoms/forms/inputDate
+
+							- var el = "a-inputFile"
+							- var dataAtom = { txt : '', modifiers: false, modifier: '', el : el };
+							p
+								| File
+							include ../atoms/forms/inputFile
+
+							- var el = "a-inputTextarea"
+							- var dataAtom = { txt : '', modifiers: false, modifier: '', el : el };
+							p
+								| Textarea
+							include ../atoms/forms/inputTextarea
+
+							- var el = "a-inputRadio"
+							- var dataAtom = { id:'radioComponentChk', name:'radioComponentChk', value:'checked', chk:true, el: el};
+							p
+								| Radio
+							include ../atoms/forms/inputRadio
+							- var dataAtom = {id:'radioComponent', name:'radioComponent', value:'unchecked', chk:false, el: el};
+							include ../atoms/forms/inputRadio
+
+							- var el = "a-inputSelect"
+							- var dataAtom = { txt : '', modifiers: false, modifier: '', el : el, group: true };
+							p
+								| Select
+							include ../atoms/forms/inputSelect
+
+
+							

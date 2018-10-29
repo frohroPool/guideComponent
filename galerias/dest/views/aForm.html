@@ -6,7 +6,7 @@
     <title>UX Design</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed|Roboto+Mono" type="text/css"/>
     <link rel="stylesheet" href="../css/guide.css" type="text/css"/>
-    <link rel="stylesheet" href="../css/aColors.css" type="text/css"/>
+    <link rel="stylesheet" href="../css/aForms.css" type="text/css"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Source+Sans+Pro:300,400,700" type="text/css"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" type="text/css"/>
     <script src="../js/bundle-handlerComponent.js" type="text/javascript"></script>
@@ -16,7 +16,7 @@
     <section class="header">
       <section class="projectName"><a href="/"><span class="icon-home"></span><span>	UX Design</span></a></section>
       <section class="breadcrums">
-        <p class="breadcrums-title">Atoms > Colors</p>
+        <p class="breadcrums-title">Atoms > Forms</p>
       </section>
       <section class="mainMenu"></section>
     </section>
@@ -48,7 +48,7 @@
       </nav>
       <section class="main">
         <article class="main-article">
-          <h1 class="main-article__title">Colors</h1>
+          <h1 class="main-article__title">Forms</h1>
           <nav class="main-article__btnCodes">
             <button class="getStyle all" id="allCssList">Show CSS</button>
             <button class="getHTML all" id="allHtmlList">Show HTML</button>
@@ -58,28 +58,38 @@
           <p class="main-article__description">Navigational transitions occur when users move between screens, such as from a home screen to a detail screen.</p>
           <div class="main-article__component">
             <div class="main-article__component--view">
-              <h2 class="main-article__component--title">Colors</h2>
-              <!-- - var action = true;-->
-              <!-- - var customList = [{"txt" : "styles", "cls" : "m-listSimple btnCss"},{"txt" : "html", "cls" : "m-listSimple btnHtml"}];-->
-              <!-- include ../molecules/list/buttonText-->
-              <!-- h3(class="main-article__component--device")// | Responsive
-              -->
-              <!-- - var el = "m-listSimple"-->
-              <!-- - var modifiers = ['bold', 'light', 'normal'];-->
-              <!-- - var modifier = el+'--'+modifiers[1]-->
-              <!-- include ../resources/modifiers-->
-              <!-- - var customList = false;-->
-              <ul class="a-color">
-                <li class="a-color__sample color__blue">#111735<br/>.color__blue</li>
-                <li class="a-color__sample color__purple">#333163<br/>.color__purple</li>
-                <li class="a-color__sample color__orange">#F5891F<br/>.color__orange</li>
-                <li class="a-color__sample color__white">#FFFFFF<br/>.color__white</li>
-              </ul>
+              <h2 class="main-article__component--title">Forms</h2>
+              <p>Input Text</p>
+              <input class="a-inputText" type="text" id="a-inputText" name="a-inputText" placeholder="Text input"/>
+              <p>Submit</p>
+              <input class="a-inputSubmit" type="submit" id="a-inputSubmit" value="Submit"/>
+              <p>Reset</p>
+              <input class="a-inputReset" type="reset" id="a-inputReset" value="Clear"/>
+              <p>Button</p>
+              <input class="a-inputButton" type="button" id="a-inputButton" value="Click Me!"/>
+              <p>Color</p>
+              <input class="a-inputColor" type="color" id="a-inputColor" name="a-inputColor"/>
+              <p>Date</p>
+              <input class="a-inputDate" type="date" id="a-inputDate" name="a-inputDate"/>
+              <p>File</p>
+              <input class="a-inputFile" type="file" id="a-inputFile" name="a-inputFile"/>
+              <p>Textarea</p>
+              <textarea class="a-inputTextarea" id="a-inputTextarea" name="a-inputTextarea"></textarea>
+              <p>Radio</p>
+              <input class="a-radioButton" type="radio" id="radioComponentChk" name="radioComponentChk" value="checked" checked="checked"/>
+              <label class="a-labelRadio" for="radioComponentChk">checked</label>
+              <input class="a-radioButton" type="radio" id="radioComponent" name="radioComponent" value="unchecked"/>
+              <label class="a-labelRadio" for="radioComponent">unchecked</label>
+              <p>Select</p>
+              <select class="a-inputSelect" id="a-inputSelect">
+                <optgroup label="options">
+                  <option>option 1</option>
+                  <option>option 2</option>
+                  <option>option 3</option>
+                  <option>option 4</option>
+                </optgroup>
+              </select>
             </div>
-            <!-- div(class="main-article__component--code")
-            // - var codeComponent = 'code-m-listSimple';
-            // include ../resources/code
-            -->
           </div>
         </article>
       </section>

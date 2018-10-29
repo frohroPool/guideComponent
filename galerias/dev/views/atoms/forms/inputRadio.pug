@@ -1,0 +1,8 @@
+if dataAtom.chk
+	input(type="radio", id=""+dataAtom.id, name=""+dataAtom.name, value=""+dataAtom.value, class="a-radioButton" checked) 
+	label(class="a-labelRadio" for=""+dataAtom.id)
+		| #{dataAtom.value}
+else
+	input(type="radio", id=""+dataAtom.id, name=""+dataAtom.name, value=""+dataAtom.value, class="a-radioButton") 
+	label(class="a-labelRadio" for=""+dataAtom.id)
+		| #{dataAtom.value}

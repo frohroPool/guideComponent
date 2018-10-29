@@ -79,6 +79,13 @@
 			nameBlock__nameElement
 		nameBlock__nameElement nameBlock__nameElement--nameModifier
 
+	eg. 3 --------
+	nameBlock nameBlock--nameModifier--nameModifier
+		nameBlock__nameElement
+		nameBlock__nameElement
+			nameBlock__nameElement nameBlock__nameElement--nameModifier--nameModifier
+		nameBlock__nameElement nameBlock__nameElement--nameModifier
+
 
 	=========================== A-B E M =============================
 	=================================================================
@@ -96,14 +103,28 @@
 		o-nameBlock__nameElement
 			o-nameBlock__nameElement
 		o-nameBlock__nameElement o-nameBlock__nameElement--nameModifier
+
+	eg. 3 --------
+	m-nameBlock m-nameBlock--nameModifier--nameModifier
+		m-nameBlock__nameElement
+		m-nameBlock__nameElement
+			m-nameBlock__nameElement m-nameBlock__nameElement--nameModifier--nameModifier
+		m-nameBlock__nameElement m-nameBlock__nameElement--nameModifier
 	
 	============================ CONVENTION =========================
 	=================================================================
 
 	.- Names for blocks, elements, and modifiers should be in camelCase
-	.- Before the name block should have an identifier, eg. (a-,m-,o-,t-)
+	.- The block should have an identifier, eg. (a-,m-,o-,t-,p-), before the name of the element.
 	.- Blocks and Elements should be descriptive
-	.- The modifiers only apply to the same element that contains it and not to its content.
+	.- The modifiers only apply to the same element that contains them, and not to the content.
+
+	============================ RESTRICTION =========================
+	=================================================================
+
+	.- Don't use inline styles inside the HTML code.
+	.- Don't use rules for id selector and tag selector inside the CSS code.
+	.- Don't use "!important" Inside the CSS code.
 </pre>
 <pre>
 	==========================   EG   ===============================
