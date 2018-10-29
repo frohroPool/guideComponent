@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+html(lang="es")
+	- var currentPage = 'aText'
+	include ../resources/configuration
+	include ../resources/headers
+	body
+		section(class="header")
+			section.projectName
+				a(href="/")
+					span(class="icon-home")
+					span
+						|	UX Design
+
+			section(class="breadcrums")
+				p(class="breadcrums-title")
+					| Atoms > Text
+			section.mainMenu
+		section(class="body")
+			include ../resources/menu
+			
+			section(class="main")
+				article(class="main-article")
+					h1(class="main-article__title")
+						| Texts
+					nav(class="main-article__btnCodes")
+						button(id="allCssList" class="getStyle all") Show CSS
+						button(id="allHtmlList" class="getHTML all") Show HTML
+					div(class="showAllCssRules hiddeCssRule" id="showAllCssRules")
+					div(class="showAllHtmlRules hiddeHtmlRule" id="showAllHtmlRules")
+					p(class="main-article__description")
+						| Navigational transitions occur when users move between screens, such as from a home screen to a detail screen.
+
+					div(class="main-article__component")
+						div(class="main-article__component--view")
+							h2(class="main-article__component--title")
+								| Headings
+							- var el = "a-heading1"
+							- var dataAtom = { txt : 'Heading level 1', modifiers: false, modifier: '', el : el };
+							include ../atoms/texts/headings/h1
+							- var el = "a-heading2"
+							- var dataAtom = { txt : 'Heading level 2', modifiers: false, modifier: '', el : el };
+							include ../atoms/texts/headings/h2
+							- var el = "a-heading3"
+							- var dataAtom = { txt : 'Heading level 3', modifiers: false, modifier: '', el : el };
+							include ../atoms/texts/headings/h3
+							- var el = "a-heading4"
+							- var dataAtom = { txt : 'Heading level 4', modifiers: false, modifier: '', el : el };
+							include ../atoms/texts/headings/h4
+							- var el = "a-heading5"
+							- var dataAtom = { txt : 'Heading level 5', modifiers: false, modifier: '', el : el };
+							include ../atoms/texts/headings/h5
+
+
+					div(class="main-article__component")
+						div(class="main-article__component--view")
+							h2(class="main-article__component--title")
+								| Inline
+							- var el = "a-link"
+							- var dataAtom = { txt : 'This is a text link', modifiers: false, modifier: '', el : el };
+							p
+								include ../atoms/texts/inline/link
+							- var el = "a-strong"
+							- var dataAtom = { txt : 'Strong is used to indicate strong importance', modifiers: false, modifier: '', el : el };
+							p
+								include ../atoms/texts/inline/strong
+							- var el = "a-emphasis"
+							- var dataAtom = { txt : 'This text has added emphasis', modifiers: false, modifier: '', el : el };
+							p
+								include ../atoms/texts/inline/emphasis
+							- var el = "a-bold"
+							- var dataAtom = { txt : 'The bold element', modifiers: false, modifier: '', el : el };
+							p
+								include ../atoms/texts/inline/bold
+							- var el = "a-italic"
+							- var dataAtom = { txt : 'The italic element', modifiers: false, modifier: '', el : el };
+							p
+								include ../atoms/texts/inline/italic
+							- var el = "a-underline"
+							- var dataAtom = { txt : 'The underline element', modifiers: false, modifier: '', el : el };
+							p
+								include ../atoms/texts/inline/underline
+							- var el = "a-deleted"
+							- var dataAtom = { txt : 'The del element', modifiers: false, modifier: '', el : el };
+							p
+								include ../atoms/texts/inline/deleted
+							- var el = "a-sup"
+							- var dataAtom = { txt : '@', modifiers: false, modifier: '', el : el };
+							p
+								| Marca
+								include ../atoms/texts/inline/sup
+							- var el = "a-sub"
+							- var dataAtom = { txt : '2', modifiers: false, modifier: '', el : el };
+							p
+								| H
+								include ../atoms/texts/inline/sub
+								| O
+							- var el = "a-abbreviation"
+							- var dataAtom = { txt : 'HTML', modifiers: false, modifier: '', el : el, title: 'HyperText Markup Language' };
+							p
+								include ../atoms/texts/inline/abbreviation
+							- var el = "a-quotation"
+							- var dataAtom = { txt : 'This text is a short inline quotation', modifiers: false, modifier: '', el : el, cite: 'https://developer.mozilla.org/en-US/docs/HTML/Element/q' };
+							p
+								include ../atoms/texts/inline/quotation
+							- var el = "a-cite"
+							- var dataAtom = { txt : 'This is a citation', modifiers: false, modifier: '', el : el };
+							p
+								include ../atoms/texts/inline/cite
+							- var el = "a-mark"
+							- var dataAtom = { txt : 'mark element', modifiers: false, modifier: '', el : el };
+							p
+								| The
+								include ../atoms/texts/inline/mark
+								|  indicates a highlight
+
+					div(class="main-article__component")
+						div(class="main-article__component--view")
+							h2(class="main-article__component--title")
+								| Blocks
+							- var el = "a-paragraph"
+							- var dataAtom = { txt : 'A paragraph (from the Greek paragraphos, "to write beside" or "written beside") is a self-contained unit of a discourse in writing dealing with a particular point or idea. A paragraph consists of one or more sentences. Though not required by the syntax of any language, paragraphs are usually an expected part of formal writing, used to organize longer prose.', modifiers: false, modifier: '', el : el };
+							include ../atoms/texts/block/paragraph

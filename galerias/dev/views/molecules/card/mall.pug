@@ -4,9 +4,9 @@ div(class="m-cardMall" id="m-cardMall__"+idCard)
 	include ../../atoms/images/image
 	div(class="m-cardMall__brief")
 		div(class="m-cardMall__titleContainer")
-			- var txt = "Perisur"
-			- var classElement = "m-cardMall__title"
-			include ../../atoms/texts/headlines/h3
+			- var el = "a-heading1"
+			- var dataAtom = { txt : 'Perisur', modifiers: false, modifier: '', el : 'm-cardMall__title' };
+			include ../../atoms/texts/headings/h3
 		div(class="m-cardMall__reveal")
 			span(class="material-icons m-cardMall__switchReveal modalTo-"+idCard)
 				| more_vert
@@ -39,9 +39,9 @@ div(class="m-cardMall" id="m-cardMall__"+idCard)
 			include ../../atoms/texts/paragraph
 			
 		div(class="m-cardMall__descriptionContainer")
-			- var txt = "Detalles del Centro comercial"
-			- var classElement = "m-cardMall__description"
-			include ../../atoms/texts/headlines/h4
+			- var el = "a-heading1"
+			- var dataAtom = { txt : 'Detalles del Centro comercial', modifiers: false, modifier: '', el : 'm-cardMall__description' };
+			include ../../atoms/texts/headings/h4
 			
 			ul(class="m-cardMall__detail")
 				li
