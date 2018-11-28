@@ -30,33 +30,62 @@ html(lang="es")
 					p(class="main-article__description")
 						| Navigational transitions occur when users move between screens, such as from a home screen to a detail screen.
 
+					//div(class="main-article__component")
+					//	div(class="main-article__component--view")
+					//		h2(class="main-article__component--title")
+					//			| Hero
+					//		- var el = "a-heroImage";
+					//		- var modifiers = ['ellipse--blur','ellipse', 'blur', 'opacity'];
+					//		include ../resources/modifiers
+					//		- var dataAtom = { img : 'hero.png', modifiers: true, modifier: '', el : el };
+					//		include ../atoms/images/img
+
 					div(class="main-article__component")
 						div(class="main-article__component--view")
 							h2(class="main-article__component--title")
-								| Hero
-							- var el = "a-heroImage"
-							- var modifiers = ['ellipse--blur','ellipse', 'blur', 'opacity'];
-							include ../resources/modifiers
-
-							- var dataAtom = { img : 'hero.png', modifiers: true, modifier: '', el : el };
-							include ../atoms/images/img
-
-					div(class="main-article__component")
-						div(class="main-article__component--view")
-							h2(class="main-article__component--title")
-								| Image Landscape
+								| Banner
 							h3(class="main-article__component--device")
-								| Double
-							- var el = "a-landScapeDoubleImage"
-							- var dataAtom = { img : 'landscapeDouble.png', modifiers: false, modifier: '', el : el };
+								| Portrait
+							- var el = "a-portraitBanner"
+							- var dataAtom = { img : 'portraitBanner.png', modifiers: false, modifier: '', el : el };
 							include ../atoms/images/img
 					
 					div(class="main-article__component")
 						div(class="main-article__component--view")
 							h2(class="main-article__component--title")
-								| Simple
+								| Banner
 							h3(class="main-article__component--device")
-								|
-							- var el = "a-simpleImage"
-							- var dataAtom = { img : 'simple.png', modifiers: false, modifier: '', el : el };
+								| PortraitSlim
+							- var el = "a-portraitBannerSlim"
+							- var dataAtom = { img : 'portraitBannerSlim.png', modifiers: false, modifier: '', el : el };
+							include ../atoms/images/img
+
+					div(class="main-article__component")
+						div(class="main-article__component--view")
+							h2(class="main-article__component--title")
+								| Banner
+							h3(class="main-article__component--device")
+								| Landscape
+							- var el = "a-landscapeBanner"
+							- var dataAtom = { img : 'landscapeBanner.png', modifiers: false, modifier: '', el : el };
+							include ../atoms/images/img
+
+					div(class="main-article__component")
+						div(class="main-article__component--view")
+							h2(class="main-article__component--title")
+								| Banner
+							h3(class="main-article__component--device")
+								| LandscapeHero
+							- var el = "a-landscapeBannerHero"
+							- var dataAtom = { img : 'landscapeBannerHero.png', modifiers: false, modifier: '', el : el };
+							include ../atoms/images/img
+
+					div(class="main-article__component")
+						div(class="main-article__component--view")
+							h2(class="main-article__component--title")
+								| Banner
+							h3(class="main-article__component--device")
+								| simple
+							- var el = "a-simpleBanner"
+							- var dataAtom = { img : 'simpleBanner.png', modifiers: false, modifier: '', el : el };
 							include ../atoms/images/img

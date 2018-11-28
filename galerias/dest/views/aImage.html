@@ -56,41 +56,43 @@
           <div class="showAllCssRules hiddeCssRule" id="showAllCssRules"></div>
           <div class="showAllHtmlRules hiddeHtmlRule" id="showAllHtmlRules"></div>
           <p class="main-article__description">Navigational transitions occur when users move between screens, such as from a home screen to a detail screen.</p>
+          <!--div(class="main-article__component")-->
+          <!--	div(class="main-article__component--view")-->
+          <!--		h2(class="main-article__component--title")-->
+          <!--			| Hero-->
+          <!--		- var el = "a-heroImage";-->
+          <!--		- var modifiers = ['ellipse--blur','ellipse', 'blur', 'opacity'];-->
+          <!--		include ../resources/modifiers-->
+          <!--		- var dataAtom = { img : 'hero.png', modifiers: true, modifier: '', el : el };-->
+          <!--		include ../atoms/images/img-->
           <div class="main-article__component">
             <div class="main-article__component--view">
-              <h2 class="main-article__component--title">Hero</h2>
-              <div class="variants-section">
-                <ul class="variants-section__modes">
-                  <li>
-                    <input type="radio" name="Variant__a-heroImage" id="a-heroImage--ellipse--blur"/>
-                    <label class="modifiersComponent" for="a-heroImage--ellipse--blur">ellipse--blur</label>
-                  </li>
-                  <li>
-                    <input type="radio" name="Variant__a-heroImage" id="a-heroImage--ellipse"/>
-                    <label class="modifiersComponent" for="a-heroImage--ellipse">ellipse</label>
-                  </li>
-                  <li>
-                    <input type="radio" name="Variant__a-heroImage" id="a-heroImage--blur"/>
-                    <label class="modifiersComponent" for="a-heroImage--blur">blur</label>
-                  </li>
-                  <li>
-                    <input type="radio" name="Variant__a-heroImage" id="a-heroImage--opacity"/>
-                    <label class="modifiersComponent" for="a-heroImage--opacity">opacity</label>
-                  </li>
-                </ul>
-              </div><img class="a-heroImage a-heroImage" alt="" id="a-heroImage" src="../images/hero.png"/>
+              <h2 class="main-article__component--title">Banner</h2>
+              <h3 class="main-article__component--device">Portrait</h3><img class="a-portraitBanner" alt="imageDescription" id="a-portraitBanner" src="../images/portraitBanner.png"/>
             </div>
           </div>
           <div class="main-article__component">
             <div class="main-article__component--view">
-              <h2 class="main-article__component--title">Image Landscape</h2>
-              <h3 class="main-article__component--device">Double</h3><img class="a-landScapeDoubleImage" alt="" id="a-landScapeDoubleImage" src="../images/landscapeDouble.png"/>
+              <h2 class="main-article__component--title">Banner</h2>
+              <h3 class="main-article__component--device">PortraitSlim</h3><img class="a-portraitBannerSlim" alt="imageDescription" id="a-portraitBannerSlim" src="../images/portraitBannerSlim.png"/>
             </div>
           </div>
           <div class="main-article__component">
             <div class="main-article__component--view">
-              <h2 class="main-article__component--title">Simple</h2>
-              <h3 class="main-article__component--device"></h3><img class="a-simpleImage" alt="" id="a-simpleImage" src="../images/simple.png"/>
+              <h2 class="main-article__component--title">Banner</h2>
+              <h3 class="main-article__component--device">Landscape</h3><img class="a-landscapeBanner" alt="imageDescription" id="a-landscapeBanner" src="../images/landscapeBanner.png"/>
+            </div>
+          </div>
+          <div class="main-article__component">
+            <div class="main-article__component--view">
+              <h2 class="main-article__component--title">Banner</h2>
+              <h3 class="main-article__component--device">LandscapeHero</h3><img class="a-landscapeBannerHero" alt="imageDescription" id="a-landscapeBannerHero" src="../images/landscapeBannerHero.png"/>
+            </div>
+          </div>
+          <div class="main-article__component">
+            <div class="main-article__component--view">
+              <h2 class="main-article__component--title">Banner</h2>
+              <h3 class="main-article__component--device">simple</h3><img class="a-simpleBanner" alt="imageDescription" id="a-simpleBanner" src="../images/simpleBanner.png"/>
             </div>
           </div>
         </article>
