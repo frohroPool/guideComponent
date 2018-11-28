@@ -1,0 +1,16 @@
+head
+	meta(charset="utf-8")
+	meta(name="viewport", content="width=device-width, user=scalable=no, initial-scale-1.0, minimum-scale=1.0, maximum-scale=1.0")
+	title !{config.siteName}
+
+	each v,i in config.headersCss
+		if v.page == 'all'
+			link(rel='' + v.rel, href=''+ v.src, type=''+ v.type)
+		else if v.page == currentPage
+			link(rel='' + v.rel, href=''+ v.src, type=''+ v.type)
+
+	each v,i in config.headersJs
+		if v.page == 'all'
+			script(src=''+ v.src, type='text/javascript')
+		else if v.page == currentPage
+			script(src=''+ v.src, type='text/javascript')
